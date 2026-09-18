@@ -127,3 +127,7 @@ node catalog.mjs --stats
 
 Değerleme katmanları, karar bantları ve flag kuralları: `modes/degerleme.md`.
 Katalog verisinin nasıl büyütüleceği: `docs/VERI-TOPLAMA.md`.
+
+
+# 4) Şehir bazlı arama URL'leri (doğrulanmış desenler)
+node geo-urls.mjs --iller "İzmir,Manisa,Aydın" --providerlar sahibinden,arabam,renewturkiye

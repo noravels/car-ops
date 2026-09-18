@@ -166,3 +166,52 @@ node valuation-cli.mjs --katalog --fiyat 1015000 --marka "Fiat" --model "Egea Cr
 ## 10. Bant genişletme (değerleme)
 
 Katı bant (yıl ±1, km ±%35) sonrası örneklem 4'ün altındaysa otomatik genişletilir: **km ±%60 → yıl ±2**. Genişletme raporda `bant genişletildi:` olarak yazılır; motor ailesi filtresi her durumda korunur.
+
+
+---
+
+## 11. Yeni provider'lar (2026-09-18 keşfi ve doğrulaması)
+
+İzmir çevresinden başlanarak ulusal kurumsal galeri siteleri tarandı:
+
+| Provider | Erişim | Kart alanları | Toplanan |
+|---|---|---|---|
+| **renewturkiye.com** | ✅ | marka model · varyant · yıl · km · yakıt · vites · fiyat (21 kart/sayfa) | 63 ilan (İzmir/İstanbul/Ankara) |
+| **otoplus.com** | ✅ | marka · yıl · varyant · fiyat (**km yok**) | 72 ilan (yalnızca İstanbul şehir sayfası + genel liste) |
+| **otofora.com** | ✅ | yıl + marka model varyant · fiyat · yakıt · kasa · vites (İzmir merkezli) | 10 ilan |
+| **otosor.com.tr** | ⚠️ | marka model varyant · fiyat · taksit · vites · km · yıl | Liste **statik blok**: tüm il/sayfa kombinasyonları aynı 8 kartı döndürüyor → doğrulanana kadar kullanılmıyor |
+| **spoticar.com.tr** | ⚠️ | — | Şehir sayfaları var (`/ikinci-el-araclar/izmir`) ama liste JS ile geliyor |
+| **otosistem.com** | ⚠️ | — | Galeri rehberi (İzmir 810 galeri); ilan kartı yok, dizin olarak değerli |
+
+**Kart ayrıştırma tuzakları (düzeltildi ve teste bağlandı):**
+- `Peugeot 2008 / 3008 / 5008` → model adı yıl sanılıyordu. Yıl artık önce **tek başına duran yıl segmentinden** alınır; modele gömülü 4 haneli sayılar Peugeot ailesi için yıl sayılmaz.
+- `₺130.743 x 12 ay` → taksit tutarı ana fiyat sanılıyordu. Yalnızca `x N ay` ile takip edilen tutarlar elenir; `₺` önekli ana fiyat korunur.
+- `0 KM` beyanı → km istatistiğini bozmasın diye km=null yapılır ve `notes` alanına gerekçe yazılır.
+- `Istanbul / İstanbul` ikilemi → şehir adları normalize edilir.
+
+## 12. Coğrafi tarama (İzmir çevresi → İstanbul/Ankara)
+
+Repo verisi: **İzmir'in komşuları Manisa, Aydın, Balıkesir** (`config/locations/tr-provinces.json`).
+
+`geo-urls.mjs` provider başına **doğrulanmış** şehir URL'lerini üretir; doğrulanmamış desende URL üretilmez (sessiz filtresiz arama tuzağı — arabam `cityId=34` yok sayılıyordu):
+
+```bash
+node geo-urls.mjs --iller "İzmir,Manisa,Aydın" --providerlar sahibinden,arabam,renewturkiye
+```
+
+| Provider | Şehir mekanizması | Örnek | Durum |
+|---|---|---|---|
+| sahibinden | `address_city=<plaka, sıfırsız>` | `?address_city=35` | ✅ doğrulandı |
+| arabam | yol: `/ikinci-el/<slug>` | `/ikinci-el/aydin` | ✅ doğrulandı (şehir sayfasında km kolonu yok) |
+| renewturkiye | yol: `/otomobil/<slug>` | `/otomobil/manisa` | ✅ doğrulandı |
+| otoplus | yol: `/<slug>-ikinci-el-araba` | `istanbul-ikinci-el-araba?sayfa=N` | ✅ sadece İstanbul |
+| otosor | yol: `/araclar/<slug>-ikinci-el-araba` | — | ⚠️ statik blok |
+| vavacars / otokoc / carvak / ikinciyeni | URL ile taşınmıyor | — | URL üretilmez |
+
+**Toplanan coğrafi veri (2026-09-18):**
+
+| Dosya | Kaynak | Adet | İller |
+|---|---|---|---|
+| `data/market/tr-geo-sahibinden-2026-09-18.json` | sahibinden | 507 | İzmir 102, Manisa 102, Aydın 101, İstanbul 101, Ankara 101 |
+| `data/market/tr-geo-arabam-2026-09-18.json` | arabam | 499 | İzmir 99, Manisa 100, Aydın 100, İstanbul 100, Ankara 100 |
+| `data/market/tr-yeni-providerlar-2026-09-18.json` | renew/otoplus/otofora | 145 | İzmir 31, İstanbul 68, Ankara 21 |
