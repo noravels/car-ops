@@ -153,6 +153,26 @@ güncellemesi bunlara dokunmaz.
 | Tüm providerlar boş liste | Marka/model yolu hatalı olabilir; `config/filters.json` içindeki yol/parametre şemasını sitede doğrula. |
 | `doctor.mjs` "unpersonalized" diyor | Profil hâlâ şablon içeriği taşıyor; doldur. |
 
+## Filtre parametrelerini öğrenme (bloklanan siteler için)
+
+Bazı siteler otomatik gezintiyi engeller, bu yüzden filtre parametre adlarını
+sistem kendi kendine keşfedemez. Uydurmak yerine şu yolu izle:
+
+1. Kendi tarayıcında siteyi aç, **tek bir filtre** uygula (ör. sadece "Otomatik vites").
+2. Adres çubuğundaki URL'i kopyala.
+3. Aracı çalıştır:
+
+```bash
+node learn-params.mjs --provider sahibinden \
+  --base "https://www.sahibinden.com/fiat-egea-cross" \
+  --filter gearbox --filtered "<vites filtrelenmiş URL>" \
+  --filter fuel  --filtered "<yakıt filtrelenmiş URL>"
+```
+
+Araç iki URL'i karşılaştırır, farktan parametre adını (query) veya yol ekini (path)
+çıkarır ve `config/filters.json` için yapıştırılabilir bir yama bastırır.
+Fark yoksa filtreyi dürüstçe "rapor süzmesi" olarak önerir — parametre adı uydurulmaz.
+
 ## Diğer marketler
 
 Şu an TR tam destekli. Başka bir ülke için:
