@@ -84,7 +84,23 @@ Ancak hem sitenin kendi çağrısı hem 8 gövde varyasyonu **`totalCount: 0`** 
 
 ## P5 — Oto360 Araç Değerleme otomasyonu
 
-**Durum:** `açık`
+**Durum:** `devam` (otomasyon `bloklu`, referans akışı bitti) · 2026-09-19
+
+**Otomasyon denemesi (neden bloklu):** Değerleme sayfası taze oturumda **form render etmiyor** (`select: 0`, `formVar: false`),
+bantlar görünüyor ama "Araç Değerle" tıklaması ve **girişli oturum** gerekiyor. Sayfa "Giriş Yap" gösteriyor. Yani sadece
+script ile sorgu mümkün değil; giriş yapılmış oturumda `tools/capture-api.mjs` ile değerleme isteği yakalanıp bağlanabilir.
+
+**Biten kısım — `valuation-ref.mjs`:** bant yapıştırılıp **tarihli referans** olarak saklanıyor; bant yoksa kayıt yapılmaz
+(uydurma yasak). Değerleme CLI'sı `--oto360 @data/valuations/<dosya>.json` ile bu kaydı kullanıyor.
+
+```bash
+npm run degerleme:ref -- --kaydet --marka Fiat --model "Egea Cross" --yil 2023 --km 26000 --bant "<5 bant metni>"
+npm run degerleme:ref -- --listele
+node valuation-cli.mjs --katalog ... --oto360 @data/valuations/2026-09-18-fiat-egea-cross-2023.json
+```
+
+**Kanıt:** kullanıcının kendi S-Aracım aracından okunan gerçek bant kaydedildi (piyasa ortalaması 950.000–980.000 TL,
+orta 965.000 TL) ve değerlemede referans olarak kullanıldı.
 
 **Ne biliniyor:** Değerleme sayfası 5 bantlı aralık veriyor (Düşük/Ortalama Altı/**Piyasa Ortalaması**/Ortalama Üstü/Yüksek) ve "boya/hasar gözetilmez" diyor. Form JS tabanlı, URL parametresiyle sorgulanamıyor; sayfa S-Aracım kaydı üzerinden sonuç gösteriyor.
 

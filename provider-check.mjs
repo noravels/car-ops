@@ -137,12 +137,17 @@ if (args.live) {
   const targets = providers.filter(
     (p) => (!wanted || wanted.includes(p.id)) && (p.extraction === 'text-pattern' || p.extraction === 'table') && p.listingUrl,
   );
-  const avail = await cdpAvailable();
+  // Chrome /devtools/browser TEK istemci kabul eder: agent'ın tarayıcı oturumu bağlıysa
+  // --bekle <saniye> ile serbest kalana kadar tekrar denenir.
+  const bekleS = Number(args.bekle) || 15;
+  const attempts = Math.max(2, Math.ceil((bekleS * 1000) / 2500));
+  const avail = await cdpAvailable(undefined, { attempts, delayMs: 2500 });
   if (!avail.ok) {
     console.error(`\n❌ Chrome debug oturumuna bağlanılamadı: ${avail.error}`);
     console.error('   Chrome\'u şu şekilde başlatın: open -na "Google Chrome" --args --remote-debugging-port=9222');
     console.error('   Not: Chrome HTTP /json uçlarını reddediyorsa bu araç /devtools/browser WebSocket yolunu dener.');
-    console.error('   Alternatif: node provider-check.mjs --from-dump data/provider-dumps/<tarih>.json');
+    console.error('   Alternatif 1: agent tarayıcı oturumu boşta kalınca tekrar deneyin (--bekle 120).');
+    console.error('   Alternatif 2: node provider-check.mjs --from-dump data/provider-dumps/<tarih>.json');
     process.exitCode = 2;
   } else {
     console.log(`\n## Canlı kontrol (CDP: ${avail.transport} · ${avail.browser})\n`);

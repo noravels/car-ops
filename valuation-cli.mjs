@@ -14,6 +14,7 @@ import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { valueListing, renderValuation, parseOto360Bands, ASSUMPTION_FACTORS } from './valuation.mjs';
 import { loadCatalogFile, exportSamples } from './catalog.mjs';
 import { normalizeAmountTufe, classifySeverity } from './tramer-normalize.mjs';
+import { loadBandText } from './valuation-ref.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 
@@ -32,7 +33,7 @@ if (args.help || (!args.fiyat && !args['json-ilan'])) {
   --aciklama "<metin>"  İlan açıklaması (beyan/kayıt çelişkisi taraması)
   --katalog [dosya]     Karşılaştırma setini katalogdan al (data/catalog/catalog.json) — --marka/--model ile
   --data <dosya.json>   Karşılaştırma seti (market tarama çıktısı)
-  --oto360 "<bant metni>"  Oto360 Araç Değerleme çıktısı
+  --oto360 "<bant metni>"  Oto360 Araç Değerleme çıktısı (veya @data/valuations/<dosya>.json)
   --out <dosya.md>      Raporu dosyaya yaz
   --katsayi <dosya.json> Katsayı dosyası (varsayılan: data/catalog/factors.json)
 `);
@@ -90,9 +91,21 @@ if (existsSync(factorPath)) {
   }
 }
 
-const oto360 = args.oto360
-  ? parseOto360Bands(typeof args.oto360 === 'string' && existsSync(args.oto360) ? readFileSync(args.oto360, 'utf8') : args.oto360)
-  : null;
+// --oto360  "<bant metni>"  veya  --oto360 @data/valuations/<dosya>.json
+let oto360Text = null;
+if (args.oto360 && typeof args.oto360 === 'string') {
+  if (args.oto360.startsWith('@')) {
+    const refPath = args.oto360.slice(1);
+    if (!existsSync(refPath)) throw new Error(`referans dosyası yok: ${refPath}`);
+    oto360Text = loadBandText(refPath);
+    console.error(`(referans: ${refPath})`);
+  } else if (existsSync(args.oto360)) {
+    oto360Text = readFileSync(args.oto360, 'utf8');
+  } else {
+    oto360Text = args.oto360;
+  }
+}
+const oto360 = oto360Text ? parseOto360Bands(oto360Text) : null;
 
 const result = valueListing({
   listing: {

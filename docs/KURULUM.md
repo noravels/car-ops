@@ -244,3 +244,16 @@ npm run rapor:pdf
 
 Adaylarda tramer tutarı **ve yılı** yazılıysa enflasyon normalizasyonu otomatik yapılır; ekspertiz yokluğu değeri
 düşürmez, yalnızca belirsizliği artırır. Sayfa yazdırılabilir (print CSS) ve karar bantları renk kodludur.
+
+### 6) Oto360 değerleme bandını referans olarak sakla
+
+Oto360 sorgusu giriş gerektiriyor (form taze oturumda render edilmiyor). Bantı bir kez alıp kaydet:
+
+```bash
+node valuation-ref.mjs --kaydet --marka Fiat --model "Egea Cross" --yil 2023 --km 26000 \
+  --bant "Düşük Fiyat 916.000 - 933.000 TL ... Piyasa Ortalaması 950.000 - 980.000 TL ..."
+node valuation-ref.mjs --listele
+node valuation-cli.mjs --katalog ... --oto360 @data/valuations/<dosya>.json
+```
+
+Bant metni yoksa ya da "Piyasa Ortalaması" satırı eksikse kayıt **reddedilir** — değerleme uydurma referans kullanmaz.

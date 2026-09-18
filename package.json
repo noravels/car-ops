@@ -17,7 +17,8 @@
     "provider:defter": "node providers/generic.mjs",
     "check:all": "npm test && npm run check:providers",
     "rapor": "node report-export.mjs --adaylar data/candidates/egea-cross-2026-09-19.json --baslik 'Egea Cross — aday karşılaştırması'",
-    "rapor:pdf": "node scripts/print-pdf.mjs --html reports/karsilastirma.html --pdf reports/karsilastirma.pdf"
+    "rapor:pdf": "node scripts/print-pdf.mjs --html reports/karsilastirma.html --pdf reports/karsilastirma.pdf",
+    "degerleme:ref": "node valuation-ref.mjs"
   },
   "engines": {
     "node": ">=20"

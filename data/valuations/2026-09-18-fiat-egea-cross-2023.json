@@ -1,0 +1,34 @@
+{
+  "make": "Fiat",
+  "model": "Egea Cross",
+  "variant": null,
+  "year": 2023,
+  "km": 26000,
+  "source": "Oto360 (sahibinden.com Araç Değerleme)",
+  "fetched_at": "2026-09-18",
+  "bands": {
+    "low": [
+      916000,
+      933000
+    ],
+    "below_avg": [
+      933000,
+      950000
+    ],
+    "market": [
+      950000,
+      980000
+    ],
+    "above_avg": [
+      980000,
+      996000
+    ],
+    "high": [
+      996000,
+      1015000
+    ]
+  },
+  "market_mid_try": 965000,
+  "band_text": "Düşük Fiyat 916.000 - 933.000 TL Ortalama Altı 933.000 - 950.000 TL Piyasa Ortalaması 950.000 - 980.000 TL Ortalama Üstü 980.000 - 996.000 TL Yüksek Fiyat 996.000 - 1.015.000 TL",
+  "note": "Elle yapıştırılan bant (Oto360 sorgusu giriş gerektiriyor) — değerlemede --oto360 @dosya ile kullanılır."
+}
