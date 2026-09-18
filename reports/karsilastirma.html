@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Egea Cross — aday karşılaştırması</title>
+<style>
+  :root { --line:#e3e3e8; --muted:#6b7280; }
+  * { box-sizing: border-box; }
+  body { font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 24px auto; max-width: 1200px; padding: 0 16px; color:#111827; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h1 + p.muted { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0 32px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; font-size: 13px; }
+  th { background: #f7f7f9; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; color:#374151; }
+  td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .flag { display:inline-block; font-size: 11px; padding: 1px 6px; border-radius: 10px; margin-right: 4px; }
+  .flag.red { background: #fee2e2; color:#991b1b; }
+  .band-cheap { background: #fff1f2; }
+  .band-below { background: #fffbeb; }
+  .band-market { background: #ffffff; }
+  .band-high { background: #fffbeb; }
+  .band-veryhigh { background: #fff1f2; }
+  .band-unknown { background: #f9fafb; }
+  section.candidate { border-top: 2px solid var(--line); padding-top: 12px; margin-top: 24px; page-break-inside: avoid; }
+  pre.valuation { white-space: pre-wrap; background: #f9fafb; border: 1px solid var(--line); border-radius: 6px; padding: 12px; font-size: 12px; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
+  @media print {
+    body { margin: 0; max-width: none; }
+    section.candidate { page-break-inside: avoid; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+<h1>Egea Cross — aday karşılaştırması</h1>
+<p class="muted">Üretildi: 2026-09-18 · 5 aday · değerleme karşılaştırma seti katalogdan (yıl ±1, km ±%35, motor ailesi)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aday</th><th>Araç</th><th>Yıl / Km / İl</th><th>İstenen</th><th>Adil değer (bant)</th><th>Sapma</th><th>Karar</th><th>Kırmızı bayrak</th><th>Güven</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      <tr class="band-below">
+        <td><b>R005</b><br><span class="muted">2024 Street · Bursa</span></td>
+        <td>Fiat Egea Cross<br><span class="muted">1.4 Fire</span></td>
+        <td>2024 · 42.500 km · Bursa</td>
+        <td class="num">1.025.000 TL</td>
+        <td class="num"><b>1.165.112 TL</b><br><span class="muted">1.071.903–1.258.321</span></td>
+        <td class="num">-12%</td>
+        <td>🟡 Piyasa altı</td>
+        <td><span class="flag red" title="Piyasa altı fiyat + bağımsız ekspertiz yok: ucuzluğun nedeni kanıtlanmamış. Ekspertiz raporu alınmadan ödeme yapılmamalı.">🔴 no_expertise_cheap</span></td>
+        <td>orta<br><span class="muted">n=10</span></td>
+      </tr>
+
+      <tr class="band-market">
+        <td><b>R007</b><br><span class="muted">2025 Urban · İstanbul (vava.cars)</span></td>
+        <td>Fiat Egea Cross<br><span class="muted">1.4 Fire</span></td>
+        <td>2025 · 8.288 km · İstanbul</td>
+        <td class="num">1.198.000 TL</td>
+        <td class="num"><b>1.301.534 TL</b><br><span class="muted">1.197.411–1.405.657</span></td>
+        <td class="num">-8%</td>
+        <td>⚪ Piyasa değerinde</td>
+        <td><span class="muted">—</span></td>
+        <td>orta<br><span class="muted">n=6</span></td>
+      </tr>
+
+      <tr class="band-market">
+        <td><b>R009</b><br><span class="muted">2025 Urban Traction+ · İzmir (yeni)</span></td>
+        <td>Fiat Egea Cross<br><span class="muted">1.4 Fire</span></td>
+        <td>2025 · 11.000 km · İzmir</td>
+        <td class="num">1.349.000 TL</td>
+        <td class="num"><b>1.289.238 TL</b><br><span class="muted">1.134.529–1.443.947</span></td>
+        <td class="num">+4.6%</td>
+        <td>⚪ Piyasa değerinde</td>
+        <td><span class="muted">—</span></td>
+        <td>düşük<br><span class="muted">n=4</span></td>
+      </tr>
+
+      <tr class="band-market">
+        <td><b>R006</b><br><span class="muted">2023 Street · Çanakkale (7.200 km)</span></td>
+        <td>Fiat Egea Cross<br><span class="muted">1.4 Fire</span></td>
+        <td>2023 · 7.200 km · Çanakkale</td>
+        <td class="num">1.165.000 TL</td>
+        <td class="num"><b>1.101.082 TL</b><br><span class="muted">1.046.028–1.156.136</span></td>
+        <td class="num">+5.8%</td>
+        <td>⚪ Piyasa değerinde</td>
+        <td><span class="muted">—</span></td>
+        <td>yüksek<br><span class="muted">n=15</span></td>
+      </tr>
+
+      <tr class="band-high">
+        <td><b>R004</b><br><span class="muted">2023 Urban · Ankara Sincan</span></td>
+        <td>Fiat Egea Cross<br><span class="muted">1.4 Fire</span></td>
+        <td>2023 · 26.000 km · Ankara</td>
+        <td class="num">1.015.000 TL</td>
+        <td class="num"><b>910.000 TL</b><br><span class="muted">800.800–1.019.200</span></td>
+        <td class="num">+11.5%</td>
+        <td>🟡 Pahalı</td>
+        <td><span class="flag red" title="Tramer kaydı (orta) fiyata yansımamış: araç hasarsız muamelesi görüyor. Onarılmış hasarın ikinci el değer kaybı pazarlık konusu olmalı.">🔴 tramer_not_priced</span> <span class="flag red" title="İlan metni &quot;hatasiz boyasiz degisensizdir sag arka camurluk degisen sag arka kapi boyali tramer: 38&quot; diyor ama kayıtta 1 değişen / 2 boyalı parça var: beyan ile kayıt çelişiyor.">🔴 claim_conflict</span></td>
+        <td>düşük<br><span class="muted">n=3</span></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2>Aday detayları</h2>
+
+    <section class="candidate">
+      <h3>R005 — 2024 Street · Bursa </h3>
+      <p class="muted">
+        arabam.com · Fiat Egea Cross 1.4 Fire · 2024 · 42.500 km
+        · tramer: ilanda yazılmamış
+        · boyalı 0 / değişen 0 · ekspertiz: yok
+      </p>
+      <p>Fiyat geçmişi belgeli: 1.042.500 → 1.025.000 TL. Tramer/ekspertiz beyanı yok.</p>
+      <pre class="valuation">### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.025.000 TL
+- **Adil değer (düzeltilmiş):** 1.165.112 TL
+- **Beklenen bant:** 1.071.903 – 1.258.321 TL
+- **Karar:** 🟡 **Piyasa altı** (sapma %-12)
+- **Güven:** orta (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; bağımsız ekspertiz raporu yok (hasar gizli olabilir); karşılaştırma örneklemi n=10)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.166.278 TL |
+| km | -0.1% | varsayım | 42.500 km (set medyanı 41.277 km) — undefined |
+| ekspertiz:yok | değer etkisi yok | kural | Bağımsız ekspertiz raporu yok: değer düşürülmez, belirsizlik artar ve fiyat pazarlık payı doğrulanamaz. |
+
+#### Saptanan riskler
+
+- 🟡 **below_market** — Adil değerin %12 altında: doğrulanırsa iyi fırsat; tramer/boya beyanı ve ekspertiz şart.
+- 🔴 **no_expertise_cheap** — Piyasa altı fiyat + bağımsız ekspertiz yok: ucuzluğun nedeni kanıtlanmamış. Ekspertiz raporu alınmadan ödeme yapılmamalı.
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+
+#### Kaynak
+
+- Karşılaştırma seti: 10 ilan (yıl ±1, km ±%35, aynı motor ailesi, yıl normalizasyonu 5.07%/yıl) — medyan 1.166.278 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.</pre>
+    </section>
+
+    <section class="candidate">
+      <h3>R007 — 2025 Urban · İstanbul (vava.cars) </h3>
+      <p class="muted">
+        vava.cars · Fiat Egea Cross 1.4 Fire · 2025 · 8.288 km
+        · tramer: ilanda yazılmamış
+        · boyalı 0 / değişen 0 · ekspertiz: var
+      </p>
+      <p>Kurumsal platform: 3 ay garanti + 14 gün iade; parça bazlı durum raporu 'orijinal'.</p>
+      <pre class="valuation">### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.198.000 TL
+- **Adil değer (düzeltilmiş):** 1.301.534 TL
+- **Beklenen bant:** 1.197.411 – 1.405.657 TL
+- **Karar:** ⚪ **Piyasa değerinde** (sapma %-8)
+- **Güven:** orta (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; karşılaştırma örneklemi n=6)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.305.450 TL |
+| km | -0.3% | varsayım | 8.288 km (set medyanı 6.006 km) — undefined |
+
+#### Saptanan riskler
+
+- 🟡 **km_outlier** — Kilometre set medyanından %38 sapıyor (8.288 km / medyan 6.006 km): fiyat etkisi ayrıca hesaplandı, km doğrulaması (servis kaydı) isteyin.
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+
+#### Kaynak
+
+- Karşılaştırma seti: 6 ilan (yıl ±1, km ±%35, aynı motor ailesi, yıl normalizasyonu 5.07%/yıl) — medyan 1.305.450 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.</pre>
+    </section>
+
+    <section class="candidate">
+      <h3>R009 — 2025 Urban Traction+ · İzmir (yeni) <a href="https://www.sahibinden.com/ilan/1340917268" rel="noreferrer">ilan</a></h3>
+      <p class="muted">
+        sahibinden.com · Fiat Egea Cross 1.4 Fire · 2025 · 11.000 km
+        · tramer: ilanda yazılmamış
+        · boyalı 0 / değişen 0 · ekspertiz: yok
+      </p>
+      <p>2026-09-18 sahibinden taramasında bulundu; bütçe üstü (rapor 003).</p>
+      <pre class="valuation">### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.349.000 TL
+- **Adil değer (düzeltilmiş):** 1.289.238 TL
+- **Beklenen bant:** 1.134.529 – 1.443.947 TL
+- **Karar:** ⚪ **Piyasa değerinde** (sapma +%4.6)
+- **Güven:** düşük (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; bağımsız ekspertiz raporu yok (hasar gizli olabilir); karşılaştırma örneklemi n=4)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.287.950 TL |
+| km | +0.1% | varsayım | 11.000 km (set medyanı 11.562 km) — undefined |
+| ekspertiz:yok | değer etkisi yok | kural | Bağımsız ekspertiz raporu yok: değer düşürülmez, belirsizlik artar ve fiyat pazarlık payı doğrulanamaz. |
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+- Karşılaştırma örneklemi küçük (n=4).
+
+#### Kaynak
+
+- Karşılaştırma seti: 4 ilan (yıl ±1, km ±%35, aynı motor ailesi, yıl normalizasyonu 5.07%/yıl) — medyan 1.287.950 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.</pre>
+    </section>
+
+    <section class="candidate">
+      <h3>R006 — 2023 Street · Çanakkale (7.200 km) <a href="https://www.sahibinden.com/ilan/1338499811" rel="noreferrer">ilan</a></h3>
+      <p class="muted">
+        sahibinden.com · Fiat Egea Cross 1.4 Fire · 2023 · 7.200 km
+        · tramer: ilanda yazılmamış
+        · boyalı 0 / değişen 0 · ekspertiz: var
+      </p>
+      <p>Satıcı bağımsız ekspertize açık; kredi kartına 3-6-9-12 taksit (faiz belirtilmemiş).</p>
+      <pre class="valuation">### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.165.000 TL
+- **Adil değer (düzeltilmiş):** 1.101.082 TL
+- **Beklenen bant:** 1.046.028 – 1.156.136 TL
+- **Karar:** ⚪ **Piyasa değerinde** (sapma +%5.8)
+- **Güven:** yüksek (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; karşılaştırma örneklemi n=15)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.049.649 TL |
+| km | +4.9% | varsayım | 7.200 km (set medyanı 48.000 km) — undefined |
+
+#### Saptanan riskler
+
+- 🟡 **km_outlier** — Kilometre set medyanından %85 sapıyor (7.200 km / medyan 48.000 km): fiyat etkisi ayrıca hesaplandı, km doğrulaması (servis kaydı) isteyin.
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+
+#### Kaynak
+
+- Karşılaştırma seti: 15 ilan (yıl ±1, km ±%35, aynı motor ailesi, yıl normalizasyonu 5.07%/yıl) — medyan 1.049.649 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.</pre>
+    </section>
+
+    <section class="candidate">
+      <h3>R004 — 2023 Urban · Ankara Sincan <a href="https://www.sahibinden.com/ilan/1340705293" rel="noreferrer">ilan</a></h3>
+      <p class="muted">
+        sahibinden.com · Fiat Egea Cross 1.4 Fire · 2023 · 26.000 km
+        · tramer: 52.490 TL (normalize, şiddet: orta)
+        · boyalı 2 / değişen 1 · ekspertiz: yok
+      </p>
+      <p>Beyan-kayıt çelişkisi: metin 'hatasız' diyor ama aynı paragrafta değişen/boyalı parça ve tramer yazılı.</p>
+      <pre class="valuation">### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.015.000 TL
+- **Adil değer (düzeltilmiş):** 910.000 TL
+- **Beklenen bant:** 800.800 – 1.019.200 TL
+- **Karar:** 🟡 **Pahalı** (sapma +%11.5)
+- **Güven:** düşük (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; bağımsız ekspertiz raporu yok (hasar gizli olabilir); karşılaştırma örneklemi n=3)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.040.000 TL |
+| tramer:orta | -6.0% | varsayım | normalize tramer 52.490 TL — undefined |
+| boyali:2 | -3.0% | varsayım | undefined |
+| degisen:1 | -4.0% | varsayım | undefined |
+| km | +0.5% | varsayım | 26.000 km (set medyanı 30.000 km) — undefined |
+| ekspertiz:yok | değer etkisi yok | kural | Bağımsız ekspertiz raporu yok: değer düşürülmez, belirsizlik artar ve fiyat pazarlık payı doğrulanamaz. |
+
+#### Saptanan riskler
+
+- 🟡 **expensive** — Adil değerin %11.5 üzerinde: gerekçe isteyin (donanım, km, bakım geçmişi).
+- 🔴 **tramer_not_priced** — Tramer kaydı (orta) fiyata yansımamış: araç hasarsız muamelesi görüyor. Onarılmış hasarın ikinci el değer kaybı pazarlık konusu olmalı.
+- 🔴 **claim_conflict** — İlan metni &quot;hatasiz boyasiz degisensizdir sag arka camurluk degisen sag arka kapi boyali tramer: 38&quot; diyor ama kayıtta 1 değişen / 2 boyalı parça var: beyan ile kayıt çelişiyor.
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+- Karşılaştırma örneklemi küçük (n=3).
+
+#### Kaynak
+
+- Karşılaştırma seti: 3 ilan (yıl ±1, km ±%35, aynı motor ailesi, yıl normalizasyonu 5.07%/yıl) — medyan 1.040.000 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.</pre>
+    </section>
+
+<footer>
+  Değerleme uydurma değer üretmez: baz değer karşılaştırma setinden (katalog) gelir, düzeltme katsayıları
+  <code>data/catalog/factors.json</code>'da etiketlidir (varsayım/kestirim). Bu sayfa yatırım/alım tavsiyesi değildir —
+  <b>karar insana aittir</b>; ödeme öncesi bağımsız ekspertiz şarttır.
+  <span class="no-print">Yazdırmak için: Ctrl/Cmd + P (PDF çıktısı).</span>
+</footer>
+</body>
+</html>

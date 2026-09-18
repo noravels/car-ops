@@ -96,6 +96,7 @@ Kullanıcı iki tür soru sorar; her sorunun cevabı ayrı modülden gelir. Ceva
 | Şehir bazlı doğrulanmış arama URL'leri | `geo-urls.mjs` |
 | Katsayı kalibrasyonu (varsayım → kestirim) | `calibrate.mjs`, `docs/KALIBRASYON.md` |
 | Veri bakımı: ham kartları yeniden işleme | `reparse.mjs` |
+| Aday karşılaştırma sayfası (HTML/PDF) | `report-export.mjs`, `scripts/print-pdf.mjs` |
 | Genel (tarif tabanlı) provider | `providers/generic.mjs` + `config/providers-generic.json` |
 | Provider entegrasyon kontrolü | `provider-check.mjs` (`npm run check:providers`, `--live`, `--from-dump`) |
 | Kart metni ayrıştırıcı (tüm text-pattern siteler) | `lib/card-parse.mjs` |

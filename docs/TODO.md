@@ -104,15 +104,22 @@ Yıl katsayısı değerlemeye bağlandı: bant genişlediğinde karşılaştırm
 
 ---
 
-## P7 — Excel/PDF rapor çıktısı
+## P7 — Karşılaştırma çıktısı (HTML + PDF)
 
-**Durum:** `açık`
+**Durum:** `bitti` · 2026-09-19
 
-**Ne biliniyor:** Raporlar markdown (`reports/`), karşılaştırma tablosu `reports/008-*`. Kullanıcı 4+ adayı yan yana görmek istiyor.
+**Çözüm:** `report-export.mjs` — aday listesi (`data/candidates/<dosya>.json`) + katalog → **tek komutla** karşılaştırma sayfası.
+Tablo, değerleme motorunun kendisini kullanır (raporların elle kopyalanması değil): adil değer, sapma, karar bandı,
+kırmızı bayraklar, güven + aday başına tam Bluebook bloğu. Sıralama sapma artan (en iyi fırsat önce).
 
-**Sonraki adım:** `reports/*.md` → tek sayfalık HTML/PDF (Bluebook bloğu + flag'ler tablo) üret; paylaşılabilir çıktı ver.
+```bash
+npm run rapor          # reports/karsilastirma.html + .md
+npm run rapor:pdf      # Chrome headless ile reports/karsilastirma.pdf
+```
 
-**Kabul kriteri:** Tek komutla tüm adayların karşılaştırma sayfası üretiliyor.
+**Not:** headless Chrome PDF'i yazdıktan sonra bazen kapanmıyor → `scripts/print-pdf.mjs` süreci arka planda başlatıp
+dosyayı bekler ve profil süreçlerini temizler (3 sn'de bitiyor). HTML ayrıca Cmd/Ctrl+P ile de yazdırılabilir.
+**Kabul kriteri karşılandı:** 5 aday tek komutla karşılaştırıldı (R005 −%12 … R004 +%11,5).
 
 ---
 

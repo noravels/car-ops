@@ -1,0 +1,24 @@
+{
+ "candidates": [
+  {
+   "id": "A001",
+   "label": "",
+   "make": "",
+   "model": "",
+   "variant": "",
+   "year": 2023,
+   "km": 30000,
+   "price_try": 1000000,
+   "tramer_try": null,
+   "tramer_year": null,
+   "painted_parts": 0,
+   "changed_parts": 0,
+   "expertise": "yok|var",
+   "description": "ilan açıklaması (beyan çelişkisi taraması için)",
+   "city": "",
+   "source": "",
+   "url": "",
+   "oto360": "Piyasa Ortalaması 950.000 - 980.000 TL"
+  }
+ ]
+}

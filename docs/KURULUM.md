@@ -233,3 +233,14 @@ node provider-check.mjs --from-dump data/provider-dumps/<tarih>.json   # gerçek
 
 Yeni site eklemek: `config/providers-generic.json`'a tarif yaz (URL, `extraction`, sayfalama,
 `geo`, `verified`, `notes`). Ayrıntı: `docs/VERI-TOPLAMA.md` §13, açık işler: `docs/TODO.md`.
+
+### 5) Aday karşılaştırma sayfası (HTML/PDF)
+
+```bash
+cp templates/candidates.template.json data/candidates/benim-adaylarim.json   # doldur
+node report-export.mjs --adaylar data/candidates/benim-adaylarim.json --baslik "Aday karşılaştırması"
+npm run rapor:pdf
+```
+
+Adaylarda tramer tutarı **ve yılı** yazılıysa enflasyon normalizasyonu otomatik yapılır; ekspertiz yokluğu değeri
+düşürmez, yalnızca belirsizliği artırır. Sayfa yazdırılabilir (print CSS) ve karar bantları renk kodludur.

@@ -155,3 +155,10 @@ node calibrate.mjs --min 20            # katsayı kestirimi (kendi ilan verimizd
 node calibrate.mjs --yaz --rapor docs/KALIBRASYON.md   # factors.json'a yaz (status: kestirim)
 node reparse.mjs --data data/market/<dosya>.json --yaz  # ham kartları yeni ayrıştırıcıyla işle
 ```
+
+## Karşılaştırma çıktısı
+
+```bash
+node report-export.mjs --adaylar data/candidates/egea-cross-2026-09-19.json --baslik "Egea Cross aday karşılaştırması"
+npm run rapor:pdf      # aynı sayfanın PDF'i (Chrome headless)
+```
