@@ -1,0 +1,43 @@
+# car-ops market tanımları (sistem katmanı)
+# Yeni market eklemek için buraya bir blok + modes/<kod>/ dizini + providers eklenir.
+# Çekirdek (modes/_shared.md, *.mjs scriptler) market-bağımsız kalır.
+
+default_market: tr
+
+markets:
+  tr:
+    name: Türkiye
+    currency: TRY
+    language: tr
+    modes_dir: modes/tr
+    locations_file: config/locations/tr-provinces.json
+    location_model: il            # il + komşu il (radius) modeli
+    inflation:
+      primary: config/inflation/tr-tufe.json
+      secondary: config/inflation/tr-usd.json
+    providers:
+      - sahibinden
+      - arabam
+      - vavacars
+      - otokoc
+    legal_notes:
+      - "Galeriden (işletmeden) alımda: motor/şanzıman/elektrik için 3 ay-5.000 km satıcı garantisi"
+      - "Bireyselden alımda: ayıba karşı tekeffül; gizli ayıpta noter ihbarı kanıt"
+      - "Ödeme: noter devri sırasında, satıcının kendi adına hesabına"
+    inspection_terms:
+      tramer: "SBM hasar kaydı (kaza tutarı + tarih, şasi bazlı)"
+      ekspertiz: "bağımsız ekspertiz raporu (boya/değişen/kaporta)"
+      muayene: "TÜVTÜRK muayene + km dizisi"
+
+  # Örnek iskelet: yeni market eklenirken kopyalanır.
+  # de:
+  #   name: Deutschland
+  #   currency: EUR
+  #   language: de
+  #   modes_dir: modes/de
+  #   locations_file: config/locations/de-regions.json
+  #   location_model: plz          # posta kodu / bölge modeli
+  #   inflation:
+  #     primary: config/inflation/de-vpi.json
+  #     secondary: null
+  #   providers: [mobile-de, kleinanzeigen]

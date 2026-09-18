@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "note": "Provider arama URL şemaları. 'verified: true' = gerçek sitede test edildi. 'verified: false' = yapı doğru, parametre adları sahada doğrulanmayı bekliyor (agent browser ile teyit edilip burada güncellenir). Parametre adı icat edilmez; bilinmeyen alan 'pending' olarak işaretlenir.",
+    "version": 1
+  },
+  "sahibinden": {
+    "base": "https://www.sahibinden.com",
+    "path": "/{make-slug}-{model-slug}",
+    "verified": true,
+    "params": {
+      "price_max": "price_max",
+      "price_min": "price_min",
+      "year_min": "a5_min",
+      "year_max": "a5_max",
+      "km_max": "a4_max",
+      "changed_parts_max": "a109_max",
+      "paging_size": "pagingSize"
+    },
+    "city_param": "address_city",
+    "city_value": "plate",
+    "notes": [
+      "İl filtresi plaka kodu ile (address_city=34).",
+      "Değişen parça sınırı a109_max (0 = değişensiz).",
+      "Sayfa boyutu pagingSize=50 ile büyütülebilir."
+    ]
+  },
+  "arabam": {
+    "base": "https://www.arabam.com",
+    "path": "/ikinci-el/otomobil/{make-slug}-{model-slug}",
+    "verified": true,
+    "params": {
+      "price_max": "maxPrice",
+      "price_min": "minPrice",
+      "year_min": "minYear",
+      "km_max": "maxKm"
+    },
+    "city_param": "city",
+    "city_value": "plate",
+    "notes": [
+      "Model yolu /ikinci-el/otomobil/fiat-egea-cross biçiminde (test edildi).",
+      "İl filtresi plaka kodu ile denenmeli; desteklenmezse il bazlı süzme raporda yapılır."
+    ]
+  },
+  "vavacars": {
+    "base": "https://tr.vava.cars",
+    "path": "/buy/cars/{Make}/{Model}",
+    "verified": true,
+    "params": {},
+    "city_param": null,
+    "city_value": null,
+    "notes": [
+      "Model yolu /buy/cars/Fiat/Egea%20Cross (test edildi); filtreler sayfa içi (Filtreler).",
+      "Kurumsal platform: sayfa içi filtre state'i URL'e yansımıyor → fiyat/yıl süzme raporda yapılır.",
+      "İndirim tutarı ve parça durum raporu liste/detayda mevcut."
+    ]
+  },
+  "otokoc": {
+    "base": "https://www.otokocikinciel.com",
+    "path": "/ikinci-el/{make-slug}/{model-slug}",
+    "verified": true,
+    "params": {},
+    "city_param": null,
+    "city_value": null,
+    "notes": [
+      "Marka/model yolu /ikinci-el/fiat/egea-cross (test edildi; stokta yoksa boş liste döner).",
+      "Filtreler JS tabanlı; URL parametresi yok → süzme raporda yapılır.",
+      "Kurumsal: Koşulsuz İade + Otokoç 2. El Garanti."
+    ]
+  }
+}

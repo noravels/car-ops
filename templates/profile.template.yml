@@ -1,0 +1,43 @@
+# car-ops — Kullanıcı profili ŞABLONU
+# Bu dosyayı `config/profile.yml` olarak kopyalayıp kendi bilgilerinle doldur.
+# `node doctor.mjs` eksik alanları söyler.
+# ÖNEMLİ: Faiz oranı/tramer tutarı gibi doğrulanabilir veriler buraya YAZILMAZ;
+# bu profilde yalnızca senin tercihlerin ve sınırların yer alır.
+
+location:
+  province: null          # ör. Kocaeli  (plaka kodu da yazılabilir: "41")
+  radius: 1               # 0 = sadece il, 1 = komşu iller (varsayılan), 2 = 2 çevre
+  include_ferry: false    # boğaz/feribot bağlantılı iller dahil edilsin mi (ör. İstanbul ↔ Bursa)
+
+budget:
+  mode: null              # pesin | kredi
+  total_max_try: null     # peşin alımda toplam bütçe üst sınırı
+  down_payment_try: null  # kredi modunda peşinat
+  monthly_max_try: null   # aylık ödeyebileceğin azami tutar
+  months: null            # vade (ay)
+  monthly_rate_max: null  # kabul ettiğin aylık faiz üst sınırı (ör. 0.035 = %3,5)
+
+vehicle_target:
+  make: null              # ör. Fiat
+  model: null             # ör. Egea Cross
+  variant: null           # ör. 1.4 Fire Urban
+  or_segment: null        # model belirsizse: hatchback | sedan | crossover | suv
+
+limits:
+  year_min: null
+  year_max: null
+  km_max: null
+  gearbox: any            # any | manuel | otomatik
+  fuel: any               # any | benzin | dizel | hibrit | elektrik | lpg
+  body: any               # any | hatchback | sedan | crossover | suv | sw
+
+risk:
+  tolerance: medium       # low | medium | high
+  max_changed_parts: null # ör. 0 (değişensiz)
+  max_painted_parts: null # ör. 2
+
+must_have: []             # ör. ["otomatik vites", "geri görüş kamerası"]
+seller_preference: any    # any | bireysel | galeri | kurumsal
+
+notify:
+  watchlist: true         # fiyat düşünce watchlist raporu üret

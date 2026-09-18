@@ -1,8 +1,39 @@
-# Kullanıcı profili — car-ops kişiselleştirme
+# car-ops — Kullanıcı profili (KULLANICI KATMANI; sistem güncellemesi dokunmaz)
+# Doldurma rehberi: docs/KURULUM.md · kontrol: node doctor.mjs
 
-# Bütçe ve tercihler buraya gelir. Örnek alanlar:
-# budget_try_max: 900000
-# preferred_body: hatchback
-# max_km: 120000
-# city: istanbul
-# risk_tolerance: low   # low => tramer şiddetine çok hassas davran
+location:
+  province: İstanbul
+  radius: 1                 # il + komşu iller (Kocaeli, Tekirdağ)
+  include_ferry: true       # Bursa/Yalova feribot bağlantılı iller dahil
+
+budget:
+  mode: kredi
+  down_payment_try: 800000
+  monthly_max_try: 28000    # 25.000-30.000 bandı; temkinli alt uç
+  months: 24
+  monthly_rate_max: 0.035   # bu oranın üstünde teklif gelirse vade kısalt / kurum değiştir
+
+vehicle_target:
+  make: Fiat
+  model: Egea Cross
+  variant: null
+  or_segment: null
+
+limits:
+  year_min: 2022
+  year_max: null
+  km_max: 120000
+  gearbox: any
+  fuel: any
+  body: crossover
+
+risk:
+  tolerance: low            # low = değişensiz/boyasız tercih, küçük tramer üstünde eleme
+  max_changed_parts: 0
+  max_painted_parts: 1
+
+must_have: []
+seller_preference: any      # any | bireysel | galeri | kurumsal
+
+notify:
+  watchlist: true
