@@ -82,7 +82,12 @@ Döküm şablonu `data/provider-dumps/2026-09-18.json`'da örnek olarak duruyor.
 
 ## P6 — Değerleme katsayılarının kalibrasyonu (`varsayım` → `kestirim`)
 
-**Durum:** `açık` (veri toplandıkça kendiliğinden tetiklenir)
+**Durum:** `bitti` · commit `calibrate.mjs` (2026-09-19, bu commit) · rapor: `docs/KALIBRASYON.md`
+
+**Sonuç:** 18 model / 813 ilan örnekleminden regresyon: **km −%1,20 / 10.000 km**, **yıl +%5,07/yıl**, medyan R² 0,837.
+Kalite filtresi (R² ≥ 0,35, km işareti negatif) 2 modeli dışladı. `factors.json` → `status: kestirim`.
+Tramer/boya/değişen katsayıları ilan verisinde hasar alanı olmadığı için `varsayım` kaldı (dosyada gerekçeli).
+Yıl katsayısı değerlemeye bağlandı: bant genişlediğinde karşılaştırmalar konu aracın yılına normalize edilir.
 
 **Ne biliniyor:** `data/catalog/factors.json` şu an `status: varsayım` (tramer küçük −%2 / orta −%6 / ağır −%12 / pert −%35; her boyalı panel −%1,5; her değişen parça −%4; km ±%10 tavan). Kalibrasyon eşiği: **model başına 20+ ilan**. 2026-09-18 itibarıyla 27 model bu eşiği geçti (Clio 67, Egea Cross 63, Corolla 48…).
 
@@ -106,7 +111,15 @@ Döküm şablonu `data/provider-dumps/2026-09-18.json`'da örnek olarak duruyor.
 
 ## P8 — Kasa bilgisinin yanlış modele yazılması (veri kalitesi)
 
-**Durum:** `açık`
+**Durum:** `bitti` (2026-09-19, bu commit)
+
+**Çözüm:** Model + sonek birleştirme (`C3` + `AirCross` → **C3 Aircross**, `Sandero` + `Stepway`, `Egea` + `Cross`,
+`Range` + `Rover`) ve kasa tespitinin yalnızca **segment başında** aranması. Ayrıca ayrı segmentteki varyant
+artık yakalanıyor (motor bilgisi kazanımı).
+Bu sırada iki ek hata bulundu ve düzeltildi: **indirim etiketi ("Özel İndirim: 15.000₺") araç fiyatı sanılıyordu**
+(1.450.000 → 15.000) ve varyant sanılıyordu → fiyat artık kartın sonundaki tutar, indirim/kampanya etiketleri elenir.
+Araç: `reparse.mjs` (ham kartlı veri setlerini yeni ayrıştırıcıyla yeniden işler). Katalog yeniden kuruldu:
+**321 model / 2360 ilan** (birleşen modeller tek çatı altında).
 
 **Ne biliniyor:** Kasa tipi ilan **kart metninden** türetiliyor; varyant satırında geçen "SUV"
 kelimesi yanlış modele yazılabiliyor (ör. `Citroen C3 Aircross` kartı → model `C3`, kasa `SUV`).

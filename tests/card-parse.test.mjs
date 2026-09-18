@@ -20,8 +20,8 @@ test('renew kartı: marka model | varyant | yıl | km | yakıt | vites | fiyat',
     { source: 'renewturkiye.com', city: 'İzmir' },
   );
   assert.equal(row.make, 'Dacia');
-  assert.equal(row.model, 'Sandero');
-  assert.equal(row.variant, 'Stepway');
+  assert.equal(row.model, 'Sandero Stepway', 'Stepway modele katılır');
+  assert.equal(row.variant, '1.0 Turbo Prestige X-Tronic CVT');
   assert.equal(row.year, 2021);
   assert.equal(row.km, 102296);
   assert.equal(row.price_try, 1129000);
@@ -143,4 +143,34 @@ test('TR_MAKES: yaygın markalar listede ve çok kelimeli olanlar önce eşleşi
   assert.equal(h.make, 'Land Rover');
   assert.equal(h.model, 'Discovery Sport', 'iki kelimeli model tek parça kalmalı');
   assert.equal(h.variant, null);
+});
+
+test('model soneki ayrı segmentteyse modele birleştirilir (C3 Aircross ≠ C3)', () => {
+  const h = splitHeading('Citroen C3');
+  assert.equal(h.model, 'C3');
+  const row = parseCardText('Citroen C3 | SUV 1.2 PureTech Feel Bold AirCross | 2023 | 40.000 KM | Benzin | Otomatik | 1.450.000 TL', { source: 'test' });
+  assert.equal(row.model, 'C3 Aircross', 'Aircross modele katılmalı');
+  assert.equal(row.variant, '1.2 PureTech Feel Bold');
+  assert.equal(row.body, 'SUV');
+});
+
+test('Egea Cross ve Sandero Stepway de doğru modele yazılır', () => {
+  const egea = parseCardText('Fiat Egea | 1.4 Fire Urban Cross | 2023 | 26.000 KM | Benzin | Manuel | 1.015.000 TL', { source: 'test' });
+  assert.equal(`${egea.make} ${egea.model}`, 'Fiat Egea Cross');
+  const sandero = parseCardText('Dacia Sandero | 1.0 Turbo Stepway Prestige | 2021 | 102.296 KM | Benzin | Otomatik | 1.129.000 TL', { source: 'test' });
+  assert.equal(`${sandero.make} ${sandero.model}`, 'Dacia Sandero Stepway');
+});
+
+test('indirim etiketi: araç fiyatı sanılmaz, varyant sanılmaz', () => {
+  const row = parseCardText(
+    'Özel İndirim: 15.000₺ | Hyundai Kona | SUV 1.6 Crdi Elite Smart | 2024 | 12.000 km | Otomatik | Dizel | 34ABC123 | 1.450.000₺',
+    { source: 'vava.cars' },
+  );
+  assert.equal(row.price_try, 1450000, 'indirim tutarı değil araç fiyatı alınmalı');
+  assert.match(row.variant, /1\.6/i, 'varyant motor bilgisi olmalı');
+  assert.equal(row.body, 'SUV');
+});
+
+test('birden fazla fiyat varsa araç fiyatı (sonuncu) alınır', () => {
+  assert.equal(pickPrice('Peşin 900.000 TL | Kredi ile 950.000 TL'), 950000);
 });

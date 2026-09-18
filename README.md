@@ -147,3 +147,11 @@ Yeni site eklemek: `config/providers-generic.json`'a tarif yaz (URL, sayfalama, 
 Tablo kazıyan sitelerde `table_layout` zorunlu. Ayrıntı: `docs/VERI-TOPLAMA.md` §13.
 
 Açık işler ve bilinen sınırlar: `docs/TODO.md`.
+
+## Değerleme katsayıları ve veri bakımı
+
+```bash
+node calibrate.mjs --min 20            # katsayı kestirimi (kendi ilan verimizden)
+node calibrate.mjs --yaz --rapor docs/KALIBRASYON.md   # factors.json'a yaz (status: kestirim)
+node reparse.mjs --data data/market/<dosya>.json --yaz  # ham kartları yeni ayrıştırıcıyla işle
+```

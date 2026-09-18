@@ -136,7 +136,16 @@ export function baselineFromComparables(listings = [], criteria = {}) {
   }
   if (!pool.length) pool = rows;
 
-  const prices = pool.map((l) => l.price_try).sort((a, b) => a - b);
+  // YIL NORMALİZASYONU: kalibre edilmiş yıl katsayısı varsa her karşılaştırma
+  // konu aracın model yılına çekilir (bant genişlediğinde ±2 yıl farkı yanıltmasın).
+  const yp = Number.isFinite(criteria.year_pct) ? criteria.year_pct : null;
+  const yearNormalized = Boolean(yp && year);
+  const adjust = (l) => {
+    if (!yearNormalized || !Number.isFinite(l.year)) return l.price_try;
+    const delta = year - l.year;
+    return Math.round(l.price_try * Math.pow(1 + yp, delta));
+  };
+  const prices = pool.map(adjust).sort((a, b) => a - b);
   const kms = pool.map((l) => l.km).filter(Number.isFinite).sort((a, b) => a - b);
   const years = pool.map((l) => l.year).filter(Number.isFinite).sort((a, b) => a - b);
   const med = median(prices);
@@ -155,6 +164,8 @@ export function baselineFromComparables(listings = [], criteria = {}) {
     engine_filtered,
     engine_loose,
     engine_mixed: !engine_filtered && new Set(pool.map(listingEngine).filter(Boolean)).size > 1,
+    year_normalized: yearNormalized,
+    year_pct_used: yp,
     relaxation,
     members: pool.length,
   };
@@ -499,6 +510,7 @@ export function valueListing({
     year: listing.year,
     km: listing.km,
     engine: listing.variant || listing.engine || null,
+    year_pct: factors.year_pct ? factors.year_pct.pct : null,
   });
   const bases = combineBaselines({ oto360, comparables: cmp });
   const baseValue = bases.reference_try ?? bases.own_median_try ?? null;
@@ -621,10 +633,13 @@ export function renderValuation(v) {
         ? ', MOTOR KARIŞIK (temkinli yorum)'
         : ''
     : '';
+  const yearInfo = v.baseline.comparables && v.baseline.comparables.year_normalized
+    ? `, yıl normalizasyonu ${(v.baseline.comparables.year_pct_used * 100).toFixed(2)}%/yıl`
+    : '';
   const relaxInfo = v.baseline.comparables && v.baseline.comparables.relaxation
     ? `, bant genişletildi: ${v.baseline.comparables.relaxation}`
     : '';
-  L.push(`- Karşılaştırma seti: ${v.baseline_sample_size} ilan (yıl ±1, km ±%35${engInfo}${relaxInfo}) — medyan ${fmt(v.baseline.own_median_try)} TL`);
+  L.push(`- Karşılaştırma seti: ${v.baseline_sample_size} ilan (yıl ±1, km ±%35${engInfo}${yearInfo}${relaxInfo}) — medyan ${fmt(v.baseline.own_median_try)} TL`);
   if (v.baseline.reference_try != null) L.push('- Oto360 Araç Değerleme (sahibinden.com, son 30 gün ilan verisiyle istatistiksel model) — boya/hasar gözetmez, bu yüzden durum düzeltmesi bizim katmanımızda yapılır.');
   L.push(`- Katsayı kaynağı: ${ASSUMPTION_FACTORS.calibrated ? 'kendi verimizden kestirim' : 'temkinli varsayım (veri biriktikçe kalibre edilecek)'}`);
   L.push('- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.');

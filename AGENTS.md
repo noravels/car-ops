@@ -94,6 +94,8 @@ Kullanıcı iki tür soru sorar; her sorunun cevabı ayrı modülden gelir. Ceva
 | Değerleme motoru ve karar bantları | `valuation.mjs` (`valueListing`, `renderValuation`) |
 | Değerleme CLI (raporun D bloğunu üretir) | `valuation-cli.mjs` (`--katalog` ile katalogdan beslenir) |
 | Şehir bazlı doğrulanmış arama URL'leri | `geo-urls.mjs` |
+| Katsayı kalibrasyonu (varsayım → kestirim) | `calibrate.mjs`, `docs/KALIBRASYON.md` |
+| Veri bakımı: ham kartları yeniden işleme | `reparse.mjs` |
 | Genel (tarif tabanlı) provider | `providers/generic.mjs` + `config/providers-generic.json` |
 | Provider entegrasyon kontrolü | `provider-check.mjs` (`npm run check:providers`, `--live`, `--from-dump`) |
 | Kart metni ayrıştırıcı (tüm text-pattern siteler) | `lib/card-parse.mjs` |
@@ -105,7 +107,10 @@ Kullanıcı iki tür soru sorar; her sorunun cevabı ayrı modülden gelir. Ceva
 1. Değerlemede adil değer **uydurulmaz**: baz değer ya karşılaştırma setinden ya Oto360
    bandından gelir; ikisi de yoksa "hesaplanamadı" denir.
 2. Düzeltme katsayıları etiketlidir (`varsayım` / `kestirim`); varsayımla verilen karar
-   "kesin" diye sunulamaz.
+   "kesin" diye sunulamaz. Katsayı yeniden kestirildiğinde `node calibrate.mjs --yaz` çalıştırılır;
+   tramer/boya katsayıları ilan verisinde hasar alanı olmadığı için varsayım kalır.
+3. Ayrıştırıcı düzeltmesinden sonra ham kartlı veri setleri `node reparse.mjs --yaz` ile yeniden
+   işlenir ve türetilmiş katalog yeniden kurulur (dosya canonical, DB derived).
 3. Karşılaştırma setine **ilanın kendisi girmemeli**; aynı modelin dizel/benzin sürümleri
    karışmamalı (motor ailesi filtresi zorunlu).
 4. Şehir filtresi **yalnızca doğrulanmış desenle** kullanılır (`geo-urls.mjs`); doğrulanmamış

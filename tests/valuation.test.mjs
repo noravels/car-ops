@@ -382,3 +382,38 @@ test('baselineFromComparables: bant hiç genişletilmezse relaxation null kalır
   const b = baselineFromComparables(CMP, { year: 2023, km: 30000 });
   assert.equal(b.relaxation, null);
 });
+
+// --- yıl normalizasyonu (kalibre edilmiş yıl katsayısıyla) --------------------
+
+test('baselineFromComparables: year_pct verilirse karşılaştırmalar konu aracın yılına çekilir', () => {
+  const pool = [
+    { year: 2021, km: 40000, price_try: 1000000 },
+    { year: 2021, km: 45000, price_try: 1000000 },
+    { year: 2023, km: 42000, price_try: 1102500 },
+  ];
+  const raw = baselineFromComparables(pool, { year: 2023, km: 42000 });
+  const adj = baselineFromComparables(pool, { year: 2023, km: 42000, year_pct: 0.05 });
+  assert.ok(adj.median > raw.median, '2021 ilanları 2023 seviyesine çekilince medyan yükselmeli');
+  assert.equal(adj.year_normalized, true);
+  assert.ok(Math.abs(adj.median - 1102500) < 3000, `beklenen ~1.102.500, gelen ${adj.median}`);
+});
+
+test('baselineFromComparables: year_pct yoksa normalize edilmez (uydurma düzeltme yok)', () => {
+  const b = baselineFromComparables([{ year: 2021, km: 40000, price_try: 1000000 }], { year: 2023, km: 40000 });
+  assert.equal(b.year_normalized, false);
+  assert.equal(b.median, 1000000);
+});
+
+test('valueListing: katsayı dosyasındaki yıl etkisi rapora yansır', () => {
+  const v = valueListing({
+    listing: { make: 'Fiat', model: 'Egea Cross', year: 2023, km: 26000, price_try: 1015000 },
+    comparables: [
+      { year: 2022, km: 26000, price_try: 950000 },
+      { year: 2022, km: 25000, price_try: 960000 },
+      { year: 2023, km: 27000, price_try: 1010000 },
+    ],
+    factors: { ...ASSUMPTION_FACTORS, year_pct: { pct: 0.05, source: 'kestirim' } },
+  });
+  assert.ok(v.baseline.comparables.year_normalized);
+  assert.match(renderValuation(v), /yıl normalizasyonu|yıl bazında/i);
+});
