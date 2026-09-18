@@ -145,3 +145,5 @@ node geo-urls.mjs --iller "İzmir,Manisa,Aydın"   # şehir bazlı doğrulanmı�
 
 Yeni site eklemek: `config/providers-generic.json`'a tarif yaz (URL, sayfalama, `extraction`, `geo`, `verified`, `notes`).
 Tablo kazıyan sitelerde `table_layout` zorunlu. Ayrıntı: `docs/VERI-TOPLAMA.md` §13.
+
+Açık işler ve bilinen sınırlar: `docs/TODO.md`.
