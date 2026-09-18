@@ -119,6 +119,24 @@ verisinden al; kart metninden türetme yalnızca varyantın kendisi kasa adıysa
 **Kabul kriteri:** `catalog.mjs --suggest --kasa SUV` çıktısında kasa bilgisi yalnızca
 doğrulanabilir modellerde görünür; yanlış atıf testi kırılır.
 
+## P9 — Public repoda kişisel finansal bilgi (KARAR BEKLİYOR)
+
+**Durum:** `bloklu` (kullanıcı kararı bekleniyor) · 2026-09-19
+
+**Ne biliniyor:** `noravels/car-ops` **PUBLIC** (anonim klonla doğrulandı). Raporlarda
+kullanıcının bütçe çerçevesi yazılı:
+`reports/003` "peşinat 800.000 TL + aylık 25–30.000 TL × 24 ay", `reports/008`
+"25-30k/ay sınırına yakın durmak istemiyorsun".
+
+**Seçenekler (kullanıcı onayı olmadan uygulanmadı):**
+1. Repoyu private yap (kod aynı kalır, en hızlı).
+2. Raporlardaki bütçeyi genelleştir ("örnek bütçe çerçevesi") — repo public kalsın.
+3. `reports/` + `watchlist.yml` `.gitignore`'a alınsın, örnekler `examples/` altına taşınsın.
+
+**Kabul kriteri:** Kullanıcı bir seçenek seçer ve uygulanır; `git log`'da karar görünür olur.
+Not: geçmiş commit'lerde de bu bilgiler var — private yapmak geçmişi de kapatır, diğer
+seçenekler yalnızca yeni commit'leri temizler (geçmiş için `git filter-repo` gerekir).
+
 ## Bilinen sınırlar (todo değil, tasarım sınırı)
 
 - **Sahibinden bot koruması:** sayfa başına ~20 sn; hızlı gezinme "olağan dışı erişim" bloğu tetikler. Aşılmaya çalışılmaz.
