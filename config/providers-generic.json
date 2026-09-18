@@ -104,7 +104,7 @@
       "model_url_template": "https://www.otokocikinciel.com/ikinci-el/{make}/{model}",
       "extraction": "none",
       "verified": "pending",
-      "notes": "Model sayfaları sunucu tarafında açılıyor (stok yok bilgisi metin olarak geliyor) ama liste JS ile geliyor; şehir filtresi URL deseni yok."
+      "notes": "Liste DOM'da render edilmiyor (gövde ~1.2 KB, sadece menü/bülten metni; gezinme zaman aşımına düşüyor). Model sayfaları açılıyor ama ilan kartı yok → API/JS şeması gerekir."
     },
     "renewturkiye": {
       "label": "Renew (kurumsal)",
@@ -159,32 +159,48 @@
       "notes": "İzmir merkezli; şehir filtresi URL ile taşınmıyor. Kart yılla başlar ve '0 KM' beyanı olabilir (km null + not)."
     },
     "otosor": {
-      "label": "Otosor",
+      "label": "otosor.com.tr",
       "homepage": "https://www.otosor.com.tr",
       "listing_url": "https://www.otosor.com.tr/araclar/izmir-ikinci-el-araba",
+      "extraction": "text-pattern",
+      "extractor": "loose-price",
       "geo": {
         "mode": "path",
         "template": "https://www.otosor.com.tr/araclar/{slug}-ikinci-el-araba",
-        "verified": false
+        "verified": true,
+        "verified_at": "2026-09-19"
       },
-      "extraction": "text-pattern",
-      "pacing_seconds": 8,
-      "verified": "pending",
-      "notes": "Desen var (30 sayfa linki) ama tüm il/sayfa kombinasyonları AYNI 8 kartı döndürdü → liste statik blok, sayfalama JS ile. Kart formatı zengin: peşin fiyat + aylık taksit ayrı."
+      "paging": {
+        "param": "page",
+        "verified": true,
+        "verified_at": "2026-09-19",
+        "note": "page=N çalışıyor: İzmir/İstanbul/Ankara'da 20 kart/sayfa, Manisa/Aydın'da 8"
+      },
+      "pacing_seconds": 6,
+      "verified": "verified",
+      "verified_at": "2026-09-19",
+      "notes": "Kart: 'Volvo XC60 2.0 D D4 ... 190HP | ₺ 2.850.000 | ₺132.758 x 12 ay | Otomatik | 112.487 KM | 2018' → peşin fiyat ile TAKSİT ayrı; taksit tutarı fiyat sanılmaz. Önceki 'statik blok' değerlendirmesi yanlıştı: liste sayfalama ile değişiyor (kırıntı fiyat blokları elenmeli)."
     },
     "spoticar": {
-      "label": "Spoticar (Stellantis)",
+      "label": "spoticar.com.tr",
       "homepage": "https://www.spoticar.com.tr",
       "listing_url": "https://www.spoticar.com.tr/ikinci-el-araclar/izmir",
+      "extraction": "text-pattern",
+      "extractor": "loose-price",
       "geo": {
         "mode": "path",
         "template": "https://www.spoticar.com.tr/ikinci-el-araclar/{slug}",
+        "verified": true,
+        "verified_at": "2026-09-19"
+      },
+      "paging": {
+        "mode": "unknown",
         "verified": false
       },
-      "extraction": "none",
-      "pacing_seconds": 8,
-      "verified": "pending",
-      "notes": "Şehir sayfaları var ama liste JS ile geliyor; kart DOM'da bulunamadı (gövde ~4 KB). Ağ kayıtlarındaki API şeması yakalanmalı."
+      "pacing_seconds": 7,
+      "verified": "verified",
+      "verified_at": "2026-09-19",
+      "notes": "Stellantis ağı (Peugeot/Citroën/Opel). Kart: 'Peugeot 2008 | 1.5 GT LİNE BLUE HDI FAP EAT6 | 114 066 km | Dizel | 2020 | Otomatik | 1 550 000 TL'. Binlik ayırıcı BOŞLUK olduğu için parseTrNumber gerekir; ayrıca 'Garanti CLASSIC 6 ay' etiketi varyant sanılmamalı. 5 şehir sayfası doğrulandı (İzmir/İstanbul/Ankara/Bursa/Antalya: 11'er kart). Kocaeli/Adana/Konya'da sonuç yok."
     },
     "otosistem": {
       "label": "OtoSistem (galeri rehberi)",
@@ -193,7 +209,7 @@
       "extraction": "none",
       "pacing_seconds": 8,
       "verified": "pending",
-      "notes": "İlan sitesi değil, GALERİ REHBERİ (İzmir'de 810 galeri). Değeri: yeni provider keşfi ve galeri doğrulama için dizin."
+      "notes": "İlan sitesi değil, GALERİ REHBERİ (İzmir'de 810 galeri). Yeni provider keşfi için dizin; kapsam dışı bırakıldı."
     },
     "carvak": {
       "label": "carvak.com",
@@ -234,13 +250,25 @@
       "notes": "POST apigw.ikinciyeni.com/ListedVehicles açık ve JSON döner ({data:{vehiclesList,...}}) ama filtre gövdesi şeması bilinmiyor; 12 farklı gövde denendi, hepsi totalCount=0. Şema sayfada filtre tıklaması sırasında fetch kancasıyla yakalanmalı."
     },
     "otomerkezi": {
-      "label": "Otomerkezi",
+      "label": "otomerkezi.net",
       "homepage": "https://www.otomerkezi.net",
       "listing_url": "https://www.otomerkezi.net/ikinci-el",
-      "extraction": "none",
-      "pacing_seconds": 8,
-      "verified": "pending",
-      "notes": "Liste JS ile. Grup sitesi trinkoto.com ücretsiz değerleme sunuyor (Oto360 alternatifi adayı)."
+      "extraction": "text-pattern",
+      "extractor": "loose-price",
+      "geo": {
+        "mode": null,
+        "verified": false
+      },
+      "paging": {
+        "param": "page",
+        "verified": true,
+        "verified_at": "2026-09-19",
+        "note": "page=2/3 farklı kartlar döndü (14-15 kart/sayfa)"
+      },
+      "pacing_seconds": 6,
+      "verified": "verified",
+      "verified_at": "2026-09-19",
+      "notes": "Kart: 'PEUGEOT 208 | 2015 • 115.467 KM | ₺769.500 | Otomatik | Benzinli | 5 Kişi | ARACI İNCELE'. Sayfalama çalışıyor; şehir şablonu doğrulanmadı. Grup sitesi trinkoto.com değerleme servisi hâlâ aday (P5)."
     }
   }
 }

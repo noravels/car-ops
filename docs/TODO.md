@@ -54,25 +54,24 @@ Sayfalama deseni hâlâ yok (marka/model/yıl yolları kullanılıyor).
 
 ## P3 — JS ile gelen liste siteleri (spoticar, otokoc, otomerkezi)
 
-**Durum:** `açık`
+**Durum:** `bitti` (2/3) · 2026-09-19 · **spoticar ✅ · otomerkezi ✅ · otokoc açık**
 
-**Ne biliniyor:** Sayfalar açılıyor (gövde 1–4 KB), ilanlar hydration sonrası JS/API ile geliyor; kart DOM'da bulunamadı. Şehir sayfaları var (ör. `spoticar.com.tr/ikinci-el-araclar/izmir`).
+**Çözüm:** Liste DOM'daydı; engel **ayrıştırıcı** ve **çıkarıcı** deseniydi:
+- spoticar binlik ayırıcı olarak **boşluk** kullanıyor (`1 550 000 TL`, `114 066 km`) → `parseTrNumber` nokta/boşluk/NBSP desteği.
+- Çıkarıcı, kart içindeki **fiyat bloğu kırıntılarını** da kart sanıyordu (`₺ 1.378.750 | ₺130.743 x 12 ay | …`) → çıkarıcı başında `^(₺|TL)` koruması + `npm run check:providers` fixture oranı ile doğrulama.
+- İki sinsi hata düzeltildi: `toLowerCase()` Türkçe **'İ'** harfini 2 kod noktasına çevirdiği için km konumu kayıyordu (indeks artık orijinal metinden) ve `\s` binlik ayırıcı sayesinde **"2023 122.222 km"** tek sayı sanılıyordu (lookbehind + pencere düzeltmesi).
 
-**Sonraki adım:** P2'deki ağ kancası yöntemiyle liste API'sini bul; ya da tarayıcıda filtreyi tetikleyip HTML'i `--from-dump` ile doğrula. **Bonus:** otomerkezi grubunun `trinkoto.com` değerleme servisi Oto360'a alternatif olabilir.
-
-**Kabul kriteri:** En az ikisi `verified`; her biri için bir fixture kart dosyaya giriyor ve `npm test` kırılmıyor.
+**Sonuç:** spoticar 5 şehirde doğrulandı (11'er kart), otomerkezi sayfalama çalışıyor (14-15 kart/sayfa), toplam 203 yeni ilan kataloğa girdi.
+**Açık kalan:** otokoc — liste DOM'a render edilmiyor (gövde ~1,2 KB), gezinme zaman aşımına düşüyor → API şeması gerekir.
 
 ---
 
 ## P4 — otosor statik blok
 
-**Durum:** `açık`
+**Durum:** `bitti` · 2026-09-19
 
-**Ne biliniyor:** Kart formatı zengin (peşin fiyat + aylık taksit ayrı hücrede), 30 sayfa linki görünüyor ama **tüm il/sayfa kombinasyonları aynı 8 kartı** döndürüyor → liste statik blok, sayfalama JS ile.
-
-**Sonraki adım:** Sayfada sayfalama tıklandığında ağ isteğini yakala; gerçek liste ucunu bul. Bulunana kadar `verified: pending` kalır (yanlış ilanları "aynı il" sanıp katalogu kirletmek yok).
-
-**Kabul kriteri:** Farklı sayfalarda farklı ilanlar geliyor; `provider-check` `ok` veriyor.
+**Yanlış teşhis düzeltildi:** "statik blok" değildi — sayfalama (`?page=N`) çalışıyor ve farklı kartlar dönüyor. İlk gözlemde 8 kart görünmesinin nedeni, eski çıkarıcının kart metnini bulamamasıydı (fiyat deseni). Şimdi: İzmir/İstanbul/Ankara 20 kart/sayfa, Manisa/Aydın 8 kart/sayfa; 3 sayfa × 5 il toplandı → 149 ilan (120 kırıntı elendi).
+**Ders:** "erişilemiyor" sonucundan önce çıkarıcı desenini ve binlik ayırıcı biçimini doğrula.
 
 ---
 

@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   normalizeCardText,
+  parseTrNumber,
   parseCardText,
   splitHeading,
   detectFuel,
@@ -190,4 +191,22 @@ test('carvak kartı: ayırıcılı para birimi ve madde işareti normalize edili
 
 test('normalizeCardText: para birimi ve madde işareti temizlenir, dikey çizgiler korunur', () => {
   assert.equal(normalizeCardText('Volkswagen • Polo | ₺ | 1.278.000'), 'Volkswagen Polo | ₺ 1.278.000');
+});
+
+test('boşluklu binlik ayırıcı (spoticar biçimi) desteklenir', () => {
+  assert.equal(parseTrNumber('1 550 000'), 1550000);
+  assert.equal(parseTrNumber('114 066'), 114066);
+  assert.equal(parseTrNumber('1.550.000'), 1550000);
+  assert.equal(parseTrNumber('1 550 000,50'), 1550000.5);
+  const row = parseCardText(
+    'Garanti CLASSIC 6 ay | Peugeot 2008 | 1.5 GT LİNE BLUE HDI FAP EAT6 | 114 066 km | Dizel | 2020 | Otomatik | 1 550 000 TL',
+    { source: 'spoticar' },
+  );
+  assert.equal(row.make, 'Peugeot');
+  assert.equal(row.model, '2008');
+  assert.equal(row.year, 2020);
+  assert.equal(row.km, 114066);
+  assert.equal(row.price_try, 1550000);
+  assert.equal(row.fuel, 'Dizel');
+  assert.equal(row.gearbox, 'Otomatik');
 });

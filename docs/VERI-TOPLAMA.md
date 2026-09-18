@@ -179,8 +179,8 @@ Katı bant (yıl ±1, km ±%35) sonrası örneklem 4'ün altındaysa otomatik ge
 | **renewturkiye.com** | ✅ | marka model · varyant · yıl · km · yakıt · vites · fiyat (21 kart/sayfa) | 63 ilan (İzmir/İstanbul/Ankara) |
 | **otoplus.com** | ✅ | marka · yıl · varyant · fiyat (**km yok**) | 72 ilan (yalnızca İstanbul şehir sayfası + genel liste) |
 | **otofora.com** | ✅ | yıl + marka model varyant · fiyat · yakıt · kasa · vites (İzmir merkezli) | 10 ilan |
-| **otosor.com.tr** | ⚠️ | marka model varyant · fiyat · taksit · vites · km · yıl | Liste **statik blok**: tüm il/sayfa kombinasyonları aynı 8 kartı döndürüyor → doğrulanana kadar kullanılmıyor |
-| **spoticar.com.tr** | ⚠️ | — | Şehir sayfaları var (`/ikinci-el-araclar/izmir`) ama liste JS ile geliyor |
+| **otosor.com.tr** | ✅ | marka model varyant · **peşin fiyat** · taksit · vites · km · yıl | `?page=N` çalışıyor (20 kart/sayfa); peşin fiyat ile taksit ayrı okunur |
+| **spoticar.com.tr** | ✅ | marka model · varyant · km · yakıt · yıl · vites · fiyat (**boşluklu binlik**: `1 550 000 TL`) | 54 ilan, 5 şehir sayfası doğrulandı |
 | **otosistem.com** | ⚠️ | — | Galeri rehberi (İzmir 810 galeri); ilan kartı yok, dizin olarak değerli |
 
 **Kart ayrıştırma tuzakları (düzeltildi ve teste bağlandı):**
@@ -188,6 +188,8 @@ Katı bant (yıl ±1, km ±%35) sonrası örneklem 4'ün altındaysa otomatik ge
 - `₺130.743 x 12 ay` → taksit tutarı ana fiyat sanılıyordu. Yalnızca `x N ay` ile takip edilen tutarlar elenir; `₺` önekli ana fiyat korunur.
 - `0 KM` beyanı → km istatistiğini bozmasın diye km=null yapılır ve `notes` alanına gerekçe yazılır.
 - `Istanbul / İstanbul` ikilemi → şehir adları normalize edilir.
+- **Binlik ayırıcı boşluk olabilir** (`1 550 000 TL`) → `parseTrNumber` nokta/boşluk/NBSP destekler. Ayrıca `toLowerCase()` Türkçe **'İ'** harfini 2 kod noktasına çevirdiği için konum hesaplarında indeks kayar (km konumu orijinal metinden bulunur).
+- **Kırıntı kartlar**: çıkarıcı yalnızca fiyat bloğunu kart sanabilir → metin `₺/TL` ile başlıyorsa atlanır.
 
 ## 12. Coğrafi tarama (İzmir çevresi → İstanbul/Ankara)
 
