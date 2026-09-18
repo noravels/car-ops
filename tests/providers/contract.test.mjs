@@ -124,3 +124,10 @@ test('parseTable: kolon düzeni tanımsız provider tablo ayrıştıramaz (sessi
   const p = createGenericProvider('sahibinden-kopya', copy);
   assert.throws(() => p.parseTable([['', 'Fiat', 'Egea', '1.4', 't', '2023', '50.000', '900.000 TL', 'd', 'İzmir']]), /table_layout/);
 });
+
+test('yavaş siteler için canlı kontrol bekleme süresi tanımlanabilir', () => {
+  const om = providers.find((p) => p.id === 'otomerkezi');
+  assert.ok(om.liveWaitMs >= 10000, 'otomerkezi için uzun bekleme tanımlı olmalı');
+  const fast = providers.filter((p) => p.liveWaitMs == null);
+  assert.ok(fast.length > 0, 'bekleme tanımlanmamışsa pacing kullanılır');
+});

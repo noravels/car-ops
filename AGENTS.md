@@ -98,7 +98,7 @@ Kullanıcı iki tür soru sorar; her sorunun cevabı ayrı modülden gelir. Ceva
 | Veri bakımı: ham kartları yeniden işleme | `reparse.mjs` |
 | Aday karşılaştırma sayfası (HTML/PDF) | `report-export.mjs`, `scripts/print-pdf.mjs` |
 | Genel (tarif tabanlı) provider | `providers/generic.mjs` + `config/providers-generic.json` |
-| Provider entegrasyon kontrolü | `provider-check.mjs` (`npm run check:providers`, `--live`, `--from-dump`) |
+| Provider entegrasyon kontrolü | `provider-check.mjs` (`npm run check:providers`, `check:providers:live`, `--from-dump`) |
 | Kart metni ayrıştırıcı (tüm text-pattern siteler) | `lib/card-parse.mjs` |
 | Chrome debug (CDP) istemcisi | `lib/cdp.mjs` |
 | Açık işler ve bilinen sınırlar | `docs/TODO.md` |

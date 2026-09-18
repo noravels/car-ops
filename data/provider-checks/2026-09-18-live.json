@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-09-18T23:12:12.890Z",
+  "transport": "ws",
+  "browser": "Chrome (WS üzerinden)",
+  "results": [
+    {
+      "id": "otomerkezi",
+      "url": "https://www.otomerkezi.net/ikinci-el",
+      "cards": 0,
+      "rows": 0,
+      "status": "empty",
+      "ms": 18312,
+      "title": "",
+      "bodyLength": 0,
+      "hint": "gövde 0 karakter — liste JS/API ile geliyor olabilir: "
+    }
+  ]
+}

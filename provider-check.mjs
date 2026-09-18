@@ -22,7 +22,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { loadRegistry, validateRegistry } from './providers/generic.mjs';
 import { loadGenericProviders } from './providers/generic.mjs';
-import { cdpAvailable, ensureTab, connect, navigate, cardExtractionScript, pageStateScript } from './lib/cdp.mjs';
+import { cdpAvailable, connectWs, openPage, cardExtractionScript, tableExtractionScript, pageStateScript } from './lib/cdp.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 const registry = loadRegistry();
@@ -141,44 +141,69 @@ if (args.live) {
   if (!avail.ok) {
     console.error(`\n❌ Chrome debug oturumuna bağlanılamadı: ${avail.error}`);
     console.error('   Chrome\'u şu şekilde başlatın: open -na "Google Chrome" --args --remote-debugging-port=9222');
-    console.error('   Bu makinede 9222 HTTP /json uçları 404 döndürüyorsa DOM dökümü ile kontrol edin:');
-    console.error('     node provider-check.mjs --from-dump data/provider-dumps/<tarih>.json');
+    console.error('   Not: Chrome HTTP /json uçlarını reddediyorsa bu araç /devtools/browser WebSocket yolunu dener.');
+    console.error('   Alternatif: node provider-check.mjs --from-dump data/provider-dumps/<tarih>.json');
     process.exitCode = 2;
   } else {
-    console.log(`\n## Canlı kontrol (CDP: ${avail.browser})\n`);
+    console.log(`\n## Canlı kontrol (CDP: ${avail.transport} · ${avail.browser})\n`);
+    const client = await connectWs(avail.wsUrl);
     const results = [];
-    for (const p of targets) {
-      const started = Date.now();
-      const rec = { id: p.id, url: p.listingUrl, cards: 0, rows: 0, status: 'unknown', ms: 0 };
-      try {
-        const tab = await ensureTab(p.listingUrl);
-        const client = await connect(tab);
-        await navigate(client, p.listingUrl, { waitMs: Math.max(6000, p.pacingSeconds * 1000) });
-        const state = await client.evaluate(pageStateScript());
-        const cards = (await client.evaluate(cardExtractionScript())) || [];
-        const rows = p.parseCards(cards);
-        rec.cards = cards.length;
-        rec.rows = rows.length;
-        rec.title = state?.title;
-        rec.bodyLength = state?.bodyLength;
-        rec.status = rows.length >= 3 ? 'ok' : cards.length === 0 ? 'empty' : 'parse-low';
-        if (rec.status === 'empty') rec.hint = `gövde ${state?.bodyLength} karakter — liste JS/API ile geliyor olabilir: ${String(state?.bodySample || '').slice(0, 120)}`;
-        client.close();
-      } catch (err) {
-        rec.status = 'error';
-        rec.error = String(err?.message || err).slice(0, 160);
+    try {
+      for (const p of targets) {
+        const started = Date.now();
+        const rec = { id: p.id, url: p.listingUrl, cards: 0, rows: 0, status: 'unknown', ms: 0 };
+        let targetId = null;
+        try {
+          const waitMs = p.liveWaitMs || Math.max(6000, p.pacingSeconds * 1000);
+          const page = await openPage(client, p.listingUrl, { waitMs });
+          targetId = page.targetId;
+          const state = await client.evaluate(page.sessionId, pageStateScript());
+          let rows = [];
+          let inputCount = 0;
+          if (p.extraction === 'table') {
+            const table = (await client.evaluate(page.sessionId, tableExtractionScript())) || [];
+            inputCount = table.length;
+            rows = p.parseTable(table);
+          } else {
+            const cards = (await client.evaluate(page.sessionId, cardExtractionScript())) || [];
+            inputCount = cards.length;
+            rows = p.parseCards(cards);
+          }
+          rec.cards = inputCount;
+          rec.rows = rows.length;
+          rec.title = state?.title;
+          rec.bodyLength = state?.bodyLength;
+          rec.status = rows.length >= 3 ? 'ok' : inputCount === 0 ? 'empty' : 'parse-low';
+          if (rec.status === 'empty') {
+            rec.hint = `gövde ${state?.bodyLength} karakter — liste JS/API ile geliyor olabilir: ${String(state?.bodySample || '').slice(0, 120)}`;
+          }
+          if (rows[0]) rec.sample = `${rows[0].make} ${rows[0].model} ${rows[0].year ?? ''} ${rows[0].price_try ?? ''}`;
+        } catch (err) {
+          rec.status = 'error';
+          rec.error = String(err?.message || err).slice(0, 160);
+        } finally {
+          if (targetId) {
+            try {
+              await client.send('Target.closeTarget', { targetId });
+            } catch {
+              /* yok say */
+            }
+          }
+        }
+        rec.ms = Date.now() - started;
+        results.push(rec);
+        const icon = rec.status === 'ok' ? '✅' : rec.status === 'empty' ? '⚠️' : '❌';
+        console.log(`${icon} ${p.id.padEnd(13)} kart ${String(rec.cards).padStart(3)} → satır ${String(rec.rows).padStart(3)} (${rec.ms} ms) ${rec.hint || rec.error || rec.sample || ''}`);
+        await new Promise((r) => setTimeout(r, Math.max(2000, p.pacingSeconds * 400)));
       }
-      rec.ms = Date.now() - started;
-      results.push(rec);
-      const icon = rec.status === 'ok' ? '✅' : rec.status === 'empty' ? '⚠️' : '❌';
-      console.log(`${icon} ${p.id.padEnd(13)} kart ${String(rec.cards).padStart(3)} → satır ${String(rec.rows).padStart(3)} (${rec.ms} ms) ${rec.hint || rec.error || ''}`);
-      await new Promise((r) => setTimeout(r, Math.max(3000, p.pacingSeconds * 500)));
+    } finally {
+      client.close();
     }
-    const out = args.json || `data/provider-checks/${new Date().toISOString().slice(0, 10)}.json`;
+    const out = args.json || `data/provider-checks/${new Date().toISOString().slice(0, 10)}-live.json`;
     mkdirSync(dirname(out), { recursive: true });
-    writeFileSync(out, `${JSON.stringify({ checked_at: new Date().toISOString(), browser: avail.browser, results }, null, 2)}\n`);
+    writeFileSync(out, `${JSON.stringify({ checked_at: new Date().toISOString(), transport: avail.transport, browser: avail.browser, results }, null, 2)}\n`);
     console.log(`\nrapor yazıldı: ${out}`);
-    const failed = results.filter((r) => r.status !== 'ok');
+    const failed = results.filter((r) => r.status !== 'ok' && r.status !== 'empty');
     if (failed.length) process.exitCode = 1;
   }
 }

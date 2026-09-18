@@ -257,7 +257,16 @@ node provider-check.mjs --from-dump data/provider-dumps/2026-09-18.json   # DOM 
 
 Durumlar: `ok` (≥3 satır ve ≥%60 ayrıştı), `empty` (sayfa liste vermedi — JS/API ile geliyor olabilir), `low-parse` (kartlar var ama ayrışmıyor → ayrıştırıcı/tarif güncellenmeli), `error`.
 
-**Bu makinedeki CDP gerçeği:** Hermes browser katmanı `BU_CDP_URL=http://127.0.0.1:9222` ile çalışıyor ama **saf HTTP `/json/version` ve `/json/list` 404 döndürüyor** (Chrome 9222'de dinliyor, fd 107u). Bu yüzden script doğrudan sekmeleri keşfedemiyor; `--live` bunu dürüstçe bildirip `--from-dump` öneriyor. Döküm, gerçek Chrome oturumundan alınır (agent tool veya çalışan bir CDP ucu) ve **aynı ayrıştırıcıyla** kontrol edilir.
+**Bu makinedeki CDP gerçeği (2026-09-19'da çözüldü):** Chrome 9222'de dinliyor ama **HTTP uçları 403 "Connection rejected"** veriyor
+(`/json/version`, `/json/list`, `/`) — sanılanın aksine bir proxy değil, Chrome'un kendi kısıtı. Buna karşılık
+**`GET /devtools/browser` + `Upgrade: websocket` → 101** kabul ediliyor (UUID gerekmiyor).
+`lib/cdp.mjs` bu yüzden HTTP keşfini bırakıp **doğrudan WS'e bağlanıyor** ve sekmeleri `Target.getTargets` /
+`Target.createTarget` ile buluyor. Ek düzeltmeler:
+- `Page.navigate` bazı sitelerde asılı kalıyor → hedef **doğrudan URL ile** oluşturulur (`Target.createTarget({url})`).
+- Yavaş siteler için registry'de `live_wait_ms` alanı (ör. otomerkezi 18 sn).
+- Hâlâ `--from-dump` yolu var: taze sekmede yüklenmeyen siteler (ör. otomerkezi) için.
+
+**Canlı kontrol sonucu (2026-09-19):** 10 sağlayıcı · 9 `ok` · 1 `empty` (gerekçeli).
 
 ### 13.3 Test paketleri (update sonrası çalıştır)
 

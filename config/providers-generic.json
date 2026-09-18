@@ -104,7 +104,8 @@
       "model_url_template": "https://www.otokocikinciel.com/ikinci-el/{make}/{model}",
       "extraction": "none",
       "verified": "pending",
-      "notes": "Liste DOM'da render edilmiyor (gövde ~1.2 KB, sadece menü/bülten metni; gezinme zaman aşımına düşüyor). Model sayfaları açılıyor ama ilan kartı yok → API/JS şeması gerekir."
+      "notes": "Liste DOM'da render edilmiyor (gövde ~1.2 KB, sadece menü/bülten metni; gezinme zaman aşımına düşüyor). Model sayfaları açılıyor ama ilan kartı yok → API/JS şeması gerekir.",
+      "live_wait_ms": 12000
     },
     "renewturkiye": {
       "label": "Renew (kurumsal)",
@@ -200,7 +201,8 @@
       "pacing_seconds": 7,
       "verified": "verified",
       "verified_at": "2026-09-19",
-      "notes": "Stellantis ağı (Peugeot/Citroën/Opel). Kart: 'Peugeot 2008 | 1.5 GT LİNE BLUE HDI FAP EAT6 | 114 066 km | Dizel | 2020 | Otomatik | 1 550 000 TL'. Binlik ayırıcı BOŞLUK olduğu için parseTrNumber gerekir; ayrıca 'Garanti CLASSIC 6 ay' etiketi varyant sanılmamalı. 5 şehir sayfası doğrulandı (İzmir/İstanbul/Ankara/Bursa/Antalya: 11'er kart). Kocaeli/Adana/Konya'da sonuç yok."
+      "notes": "Stellantis ağı (Peugeot/Citroën/Opel). Kart: 'Peugeot 2008 | 1.5 GT LİNE BLUE HDI FAP EAT6 | 114 066 km | Dizel | 2020 | Otomatik | 1 550 000 TL'. Binlik ayırıcı BOŞLUK olduğu için parseTrNumber gerekir; ayrıca 'Garanti CLASSIC 6 ay' etiketi varyant sanılmamalı. 5 şehir sayfası doğrulandı (İzmir/İstanbul/Ankara/Bursa/Antalya: 11'er kart). Kocaeli/Adana/Konya'da sonuç yok.",
+      "live_wait_ms": 10000
     },
     "otosistem": {
       "label": "OtoSistem (galeri rehberi)",
@@ -233,7 +235,8 @@
       "pacing_seconds": 8,
       "verified": "verified",
       "verified_at": "2026-09-19",
-      "notes": "Kavak'ın yeni markası. Kart: 'Volkswagen • Polo | 2023 • 122.222 km • 1.0 TSI Life • Otomatik | ₺ | 1.278.000' — marka/model/yıl/km/varyant/vites/fiyat gelir. Fiyat ile ₺ AYRI span'da olduğu için çıkarıcı 'loose-price' deseni ister (lib/cdk: cardExtractionScript) ve lib/card-parse normalizeCardText para birimini birleştirir. Marka sayfası canlı doğrulandı (VW: 9 sonuç, 6 kart ayrıştı). Sayfalama deseni henüz yok; marka/model/yıl yolları kullanılır."
+      "notes": "Kavak'ın yeni markası. Kart: 'Volkswagen • Polo | 2023 • 122.222 km • 1.0 TSI Life • Otomatik | ₺ | 1.278.000' — marka/model/yıl/km/varyant/vites/fiyat gelir. Fiyat ile ₺ AYRI span'da olduğu için çıkarıcı 'loose-price' deseni ister (lib/cdk: cardExtractionScript) ve lib/card-parse normalizeCardText para birimini birleştirir. Marka sayfası canlı doğrulandı (VW: 9 sonuç, 6 kart ayrıştı). Sayfalama deseni henüz yok; marka/model/yıl yolları kullanılır.",
+      "live_wait_ms": 10000
     },
     "ikinciyeni": {
       "label": "ikinciyeni.com",
@@ -268,7 +271,8 @@
       "pacing_seconds": 6,
       "verified": "verified",
       "verified_at": "2026-09-19",
-      "notes": "Kart: 'PEUGEOT 208 | 2015 • 115.467 KM | ₺769.500 | Otomatik | Benzinli | 5 Kişi | ARACI İNCELE'. Sayfalama çalışıyor; şehir şablonu doğrulanmadı. Grup sitesi trinkoto.com değerleme servisi hâlâ aday (P5)."
+      "notes": "Kart: 'PEUGEOT 208 | 2015 • 115.467 KM | ₺769.500 | Otomatik | Benzinli | 5 Kişi | ARACI İNCELE'. Sayfalama çalışıyor; şehir şablonu doğrulanmadı. Grup sitesi trinkoto.com değerleme servisi hâlâ aday (P5).",
+      "live_wait_ms": 18000
     }
   }
 }

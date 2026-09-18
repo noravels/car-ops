@@ -48,6 +48,7 @@ export function createGenericProvider(id, recipe) {
     verificationState: recipe.verified,
     geo: recipe.geo || { mode: null, verified: false },
     pacingSeconds: recipe.pacing_seconds ?? 8,
+    liveWaitMs: recipe.live_wait_ms ?? null, // canlı kontrolde sayfa yüklemeyi bekleme
     notes: recipe.notes,
 
     /** Tarif yeterli mi: çıkarım yapılabilir mi? */
