@@ -162,3 +162,57 @@ export function renderListingMd(rec) {
   }
   return lines.join('\n') + '\n';
 }
+
+
+// ---------------------------------------------------------------------------
+// Abstract provider uygulaması
+// ---------------------------------------------------------------------------
+import { MarketplaceProvider, extractClaims as extractClaimsShared } from './base.mjs';
+
+export class SahibindenProvider extends MarketplaceProvider {
+  static get id() {
+    return 'sahibinden';
+  }
+
+  static get urlPattern() {
+    return listingUrlPattern;
+  }
+
+  /** Liste sayfası metninden satırlar: "Fiat Egea 1.4 Fire 2023 50.000 km 1.200.000 TL ..." */
+  parseListings(pageText, ctx = {}) {
+    const rows = [];
+    const text = String(pageText || '');
+    for (const line of text.split(/\n{2,}|(?=\b(?:Fiat|Renault|Ford|Toyota|Honda|Hyundai|Volkswagen|Opel|Peugeot|Citroen|Dacia|Skoda|Seat|Audi|BMW|Mercedes|Nissan|Kia|Volvo|MG|Chery)\b)/)) {
+      const raw = line.replace(/\s+/g, ' ').trim();
+      const priceM = raw.match(/([\d.]{4,})\s*TL/);
+      if (!priceM) continue;
+      const kmM = raw.match(/([\d.]{3,})\s*(?:km|KM)/);
+      const yearM = raw.match(/\b(19[89]\d|20[0-4]\d)\b/);
+      const cityM = raw.match(/\b(İstanbul|Ankara|İzmir|Bursa|Antalya|Adana|Konya|Gaziantep|Kayseri|Mersin|Eskişehir|Kocaeli|Samsun|Trabzon|Çanakkale|Denizli|Malatya|Sakarya|Tokat|Nevşehir|Aksaray|Elazığ|Yozgat|Adıyaman|Isparta|Edirne|Muğla|Hatay|Balıkesir|Manisa|Tekirdağ)\b/);
+      rows.push({
+        source: 'sahibinden.com',
+        raw: raw.slice(0, 220),
+        price_try: Number(priceM[1].replace(/\./g, '')),
+        km: kmM ? Number(kmM[1].replace(/\./g, '')) : null,
+        year: yearM ? Number(yearM[1]) : null,
+        city: cityM ? cityM[1] : (ctx.city || null),
+        seller_type: /galeri|yetkili\s*bayi/i.test(raw) ? 'galeri' : 'bilinmiyor',
+      });
+    }
+    const seen = new Set();
+    return rows.filter((r) => {
+      const k = `${r.year}|${r.km}|${r.price_try}`;
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+  }
+
+  parseDetail(html, ctx = {}) {
+    return parseSahibindenHtml(html, ctx);
+  }
+
+  parseClaims(descriptionText) {
+    return extractClaimsShared(descriptionText);
+  }
+}

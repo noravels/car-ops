@@ -90,6 +90,17 @@ node search-urls.mjs --make Fiat --model "Egea Cross" \
 destekler (sahibinden, arabam), bazıları desteklemez (vavacars, otokoc) → onlarda
 süzme rapor aşamasında yapılır ve bu açıkça yazılır.
 
+Tüm filtreler (38 kanonik filtre: vites, yakıt, kasa, renk, satıcı tipi, takas,
+ağır hasar, değişen/boyalı parça, motor hacmi/gücü, çekiş, koltuk/kapı, ilan tarihi,
+anahtar kelime…) kullanılabilir. Hangi filtrenin hangi sitede nasıl uygulandığını görmek için:
+
+```bash
+node search-urls.mjs --matris
+```
+
+Doğrulanmamış parametre adları `config/filters.json`'da `verified: false` ile işaretlidir;
+sistem bunları uydurmaz, rapor süzmesine düşürür ve planda "(doğrulanmadı)" diye belirtir.
+
 ## 5. Agent'a devret
 
 Agent'ı aç ve şunu söyle:
@@ -139,7 +150,7 @@ güncellemesi bunlara dokunmaz.
 |---|---|
 | Sakıbından'da "Olağan dışı erişim" | Rate limit (~15 dk blok). Bekle, sonra 20–30 sn/ilan temposuyla devam et (`providers/rate-guard.mjs`). |
 | Cloudflare "Bir dakika lütfen" | Otomatik erişim engellendi; kendi tarayıcından açıp agent'a bağlanmasını söyle ya da ilan HTML'ini paste moduna ver. |
-| Tüm providerlar boş liste | Marka/model yolu hatalı olabilir; `config/search-params.json` içindeki yol şemasını sitede doğrula. |
+| Tüm providerlar boş liste | Marka/model yolu hatalı olabilir; `config/filters.json` içindeki yol/parametre şemasını sitede doğrula. |
 | `doctor.mjs` "unpersonalized" diyor | Profil hâlâ şablon içeriği taşıyor; doldur. |
 
 ## Diğer marketler

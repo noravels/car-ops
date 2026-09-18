@@ -1,73 +1,85 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildSearchUrls, slugify, providerSearchPlan } from '../search-urls.mjs';
+import { buildSearchUrls, providerSearchPlan, normalizeFilters, slugify } from '../search-urls.mjs';
 
-const params = JSON.parse(readFileSync(new URL('../config/search-params.json', import.meta.url), 'utf8'));
+const PROFILE = {
+  location: { province: 'Kocaeli', radius: 1 },
+  budget: { mode: 'kredi', down_payment_try: 800000, monthly_max_try: 28000, months: 24, monthly_rate_max: 0.035 },
+  vehicle_target: { make: 'Fiat', model: 'Egea Cross' },
+  limits: { year_min: 2022, km_max: 120000, gearbox: 'otomatik', body: 'crossover' },
+  risk: { tolerance: 'low', max_changed_parts: 1, max_painted_parts: 2 },
+  must_have: [],
+  seller_preference: 'any',
+};
 
-test('slugify: marka/model adlarını URL slugına çevirir', () => {
-  assert.equal(slugify('Egea Cross'), 'egea-cross');
-  assert.equal(slugify('Mercedes-Benz'), 'mercedes-benz');
-  assert.equal(slugify('Clio 1.0 SCe'), 'clio-1-0-sce');
-  assert.equal(slugify('Şahin'), 'sahin');
+test('normalizeFilters: profilden kanonik filtre seti üretir', () => {
+  const f = normalizeFilters({ profile: PROFILE });
+  assert.equal(f.make, 'Fiat');
+  assert.equal(f.model, 'Egea Cross');
+  assert.equal(f.year_min, 2022);
+  assert.equal(f.km_max, 120000);
+  assert.equal(f.gearbox, 'otomatik');
+  assert.equal(f.body, 'crossover');
+  assert.equal(f.changed_parts_max, 1);
+  assert.ok(f.location);
+  assert.equal(f.location.province, 'Kocaeli');
+  assert.equal(f.location.plate, '41');
 });
 
-test('buildSearchUrls: sahibinden için il + filtre parametreli URL üretir', () => {
-  const urls = buildSearchUrls(
-    {
-      make: 'Fiat',
-      model: 'Egea Cross',
-      price_max: 1200000,
-      year_min: 2022,
-      km_max: 120000,
-      location: { province: 'Ankara', plate: '06', cities: ['Ankara', 'Konya'] },
-    },
-    params,
-  );
-  const sb = urls.find((u) => u.provider === 'sahibinden');
-  assert.ok(sb.url.startsWith('https://www.sahibinden.com/fiat-egea-cross'));
-  assert.match(sb.url, /price_max=1200000/);
+test('normalizeFilters: boş/any değerler temizlenir', () => {
+  const f = normalizeFilters({ reach: null, gearbox: 'any', fuel: '', make: 'Fiat' });
+  assert.equal(f.reach, undefined);
+  assert.equal(f.gearbox, undefined);
+  assert.equal(f.fuel, undefined);
+  assert.equal(f.make, 'Fiat');
+});
+
+test('buildSearchUrls: 4 provider için plan üretir', () => {
+  const urls = buildSearchUrls({ profile: PROFILE });
+  assert.equal(urls.length, 4);
+  for (const u of urls) {
+    assert.ok(u.url.startsWith('http'), `${u.provider} URL yok`);
+    assert.ok(u.plan.length > 0, `${u.provider} plan boş`);
+  }
+});
+
+test('sahibinden planı: doğrulanmış URL filtreleri + rapor süzmesi listesi', () => {
+  const sb = buildSearchUrls({ profile: PROFILE }).find((u) => u.provider === 'sahibinden');
+  assert.match(sb.url, /fiat-egea-cross/);
   assert.match(sb.url, /a5_min=2022/);
   assert.match(sb.url, /a4_max=120000/);
-  assert.match(sb.url, /address_city=06/);
-  assert.equal(sb.verified, true);
+  assert.match(sb.url, /a109_max=1/);
+  assert.match(sb.url, /address_city=41/);
+  // vites/yakıt sahibinden'de rapor süzmesine düşer (parametre doğrulanmadı)
+  const pf = sb.postfilters.map((p) => p.filter);
+  assert.ok(pf.includes('gearbox'));
+  assert.ok(pf.includes('body'));
+  assert.match(sb.plan, /rapor süzmesi/);
 });
 
-test('buildSearchUrls: arabam model yolu + parametreler', () => {
-  const urls = buildSearchUrls({ make: 'Fiat', model: 'Egea Cross', price_max: 1200000 }, params);
-  const a = urls.find((u) => u.provider === 'arabam');
-  assert.ok(a.url.startsWith('https://www.arabam.com/ikinci-el/otomobil/fiat-egea-cross'));
-  assert.match(a.url, /maxPrice=1200000/);
+test('arabam planı: kasa tipi kategori yolunu, vites yol ekini belirler', () => {
+  const a = buildSearchUrls({ profile: PROFILE }).find((u) => u.provider === 'arabam');
+  assert.match(a.url, /\/ikinci-el\/arazi-suv-pick-up\/fiat-egea-cross-otomatik/);
+  assert.match(a.plan, /gearbox→yol eki/);
 });
 
-test('buildSearchUrls: vavacars/otokoc URL parametresi yok → süzme notu düşülür', () => {
-  const urls = buildSearchUrls({ make: 'Fiat', model: 'Egea Cross', price_max: 1200000 }, params);
-  const v = urls.find((u) => u.provider === 'vavacars');
-  assert.equal(v.url, 'https://tr.vava.cars/buy/cars/Fiat/Egea%20Cross');
-  assert.equal(v.filter_in_page, true);
-  const o = urls.find((u) => u.provider === 'otokoc');
-  assert.equal(o.url, 'https://www.otokocikinciel.com/ikinci-el/fiat/egea-cross');
-  assert.equal(o.filter_in_page, true);
+test('vavacars/otokoc: filtrelerin tamamı rapor süzmesinde, URL sadece model yolu', () => {
+  for (const id of ['vavacars', 'otokoc']) {
+    const u = buildSearchUrls({ profile: PROFILE }).find((x) => x.provider === id);
+    assert.equal(u.filter_in_page, true);
+    assert.match(u.plan, /rapor süzmesi/);
+  }
 });
 
-test('buildSearchUrls: il listesi (komşu iller) plan çıktısına girer', () => {
-  const urls = buildSearchUrls(
-    { make: 'Fiat', model: 'Egea', location: { province: 'Kocaeli', cities: ['Kocaeli', 'Sakarya', 'Bursa', 'Yalova', 'İstanbul'] } },
-    params,
-  );
-  const sb = urls.find((u) => u.provider === 'sahibinden');
-  assert.deepEqual(sb.cities, ['Kocaeli', 'Sakarya', 'Bursa', 'Yalova', 'İstanbul']);
-  assert.match(sb.plan, /il listesinde rapor bazlı süzme/);
-});
-
-test('buildSearchUrls: bilinmeyen provider sessizce atlanmaz, listelenir', () => {
-  const urls = buildSearchUrls({ make: 'Fiat', model: 'Egea' }, { ...params, bilinmeyen: params.sahibinden });
-  const u = urls.find((x) => x.provider === 'bilinmeyen');
-  assert.ok(u);
-  assert.equal(u.supported, true);
-});
-
-test('providerSearchPlan: eksik model bilgisinde uyarı üretir', () => {
-  const plan = providerSearchPlan({ make: 'Fiat' }, params);
+test('providerSearchPlan: eksik bilgilerde uyarı üretir', () => {
+  const plan = providerSearchPlan({ make: 'Fiat', must_have: ['otomatik vites', 'geri görüş kamerası', 'sıfır boya'] });
   assert.ok(plan.warnings.some((w) => /model/.test(w)));
+  assert.ok(plan.warnings.some((w) => /konum/.test(w)));
+  assert.ok(plan.warnings.some((w) => /must_have/.test(w)));
+});
+
+test('slugify: Türkçe karakter + boşluk dönüşümü (dışa açık)', () => {
+  assert.equal(slugify('Egea Cross'), 'egea-cross');
+  assert.equal(slugify('Şahin 1.6'), 'sahin-1-6');
 });

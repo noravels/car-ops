@@ -6,7 +6,7 @@ import { existsSync, readFileSync } from 'node:fs';
 const REQUIRED_SYSTEM_FILES = [
   'AGENTS.md',
   'config/markets.yml',
-  'config/search-params.json',
+  'config/filters.json',
   'config/locations/tr-provinces.json',
   'watchlist.yml',
 ];

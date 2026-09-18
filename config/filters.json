@@ -1,0 +1,825 @@
+{
+  "meta": {
+    "note": "Kanonik filtre kaydı. Her filtre her provider için bir strateji taşımak ZORUNDA: 'query' | 'path' | 'postfilter' | 'unsupported'. Doğrulanmamış parametre adları verified:false ile işaretlenir ve ASLA uydurulmaz. tests/provider-base.test.mjs bu kapsama invariantını zorlar.",
+    "version": 1,
+    "verified_providers_note": "sahibinden ve arabam parametreleri canlı test edildi (2026-09-18); vavacars/otokoc filtreleri JS tabanlı → postfilter."
+  },
+  "filters": {
+    "make": {
+      "label": "Marka",
+      "type": "text",
+      "role": "path"
+    },
+    "model": {
+      "label": "Model",
+      "type": "text",
+      "role": "path"
+    },
+    "variant": {
+      "label": "Donanım/Varyant",
+      "type": "text",
+      "role": "path"
+    },
+    "price_min": {
+      "label": "Fiyat (min)",
+      "type": "number",
+      "currency_sensitive": true
+    },
+    "price_max": {
+      "label": "Fiyat (max)",
+      "type": "number",
+      "currency_sensitive": true
+    },
+    "year_min": {
+      "label": "Yıl (min)",
+      "type": "number"
+    },
+    "year_max": {
+      "label": "Yıl (max)",
+      "type": "number"
+    },
+    "km_min": {
+      "label": "Kilometre (min)",
+      "type": "number"
+    },
+    "km_max": {
+      "label": "Kilometre (max)",
+      "type": "number"
+    },
+    "city": {
+      "label": "İl",
+      "type": "location"
+    },
+    "town": {
+      "label": "İlçe",
+      "type": "location"
+    },
+    "fuel": {
+      "label": "Yakıt tipi",
+      "type": "enum",
+      "values": [
+        "benzin",
+        "dizel",
+        "lpg",
+        "hibrit",
+        "elektrik"
+      ]
+    },
+    "gearbox": {
+      "label": "Vites",
+      "type": "enum",
+      "values": [
+        "manuel",
+        "otomatik",
+        "yari-otomatik"
+      ]
+    },
+    "body": {
+      "label": "Kasa tipi",
+      "type": "enum",
+      "values": [
+        "sedan",
+        "hatchback",
+        "crossover",
+        "suv",
+        "sw",
+        "coupe",
+        "mpv",
+        "pickup",
+        "van"
+      ]
+    },
+    "color": {
+      "label": "Renk",
+      "type": "enum",
+      "values": [
+        "beyaz",
+        "siyah",
+        "gri",
+        "gumus",
+        "mavi",
+        "kirmizi",
+        "bordo",
+        "yesil",
+        "sari",
+        "turuncu",
+        "kahverengi",
+        "fume"
+      ]
+    },
+    "condition": {
+      "label": "Araç durumu",
+      "type": "enum",
+      "values": [
+        "ikinci-el",
+        "sifir"
+      ]
+    },
+    "seller_type": {
+      "label": "İlan sahibi",
+      "type": "enum",
+      "values": [
+        "bireysel",
+        "galeri",
+        "yetkili-bayi",
+        "kurumsal"
+      ]
+    },
+    "trade_in": {
+      "label": "Takasa uygun",
+      "type": "bool"
+    },
+    "heavy_damage": {
+      "label": "Ağır hasar kayıtlı",
+      "type": "bool"
+    },
+    "changed_parts_max": {
+      "label": "Değişen parça (max)",
+      "type": "number"
+    },
+    "painted_parts_max": {
+      "label": "Boyalı parça (max)",
+      "type": "number"
+    },
+    "engine_cc_min": {
+      "label": "Motor hacmi (min)",
+      "type": "number"
+    },
+    "engine_cc_max": {
+      "label": "Motor hacmi (max)",
+      "type": "number"
+    },
+    "power_hp_min": {
+      "label": "Motor gücü (min hp)",
+      "type": "number"
+    },
+    "power_hp_max": {
+      "label": "Motor gücü (max hp)",
+      "type": "number"
+    },
+    "drive": {
+      "label": "Çekiş",
+      "type": "enum",
+      "values": [
+        "onden",
+        "arkadan",
+        "4x4"
+      ]
+    },
+    "range_km_min": {
+      "label": "Menzil (min km, EV)",
+      "type": "number"
+    },
+    "fast_charge": {
+      "label": "Hızlı şarj",
+      "type": "bool"
+    },
+    "service_warranty": {
+      "label": "Servis garantisi",
+      "type": "bool"
+    },
+    "plate_origin": {
+      "label": "Plaka / Uyruk",
+      "type": "enum",
+      "values": [
+        "tr",
+        "yabanci"
+      ]
+    },
+    "listed_within_days": {
+      "label": "İlan tarihi (son N gün)",
+      "type": "number"
+    },
+    "has_photo": {
+      "label": "Fotoğraf var",
+      "type": "bool"
+    },
+    "has_video": {
+      "label": "Video var",
+      "type": "bool"
+    },
+    "keyword": {
+      "label": "Anahtar kelime",
+      "type": "text"
+    },
+    "seats_min": {
+      "label": "Koltuk (min)",
+      "type": "number"
+    },
+    "doors": {
+      "label": "Kapı sayısı",
+      "type": "number"
+    },
+    "equipment": {
+      "label": "Donanım seviyesi",
+      "type": "text"
+    },
+    "sort": {
+      "label": "Sıralama",
+      "type": "enum",
+      "values": [
+        "fiyat-artan",
+        "fiyat-azalan",
+        "yil-yeni",
+        "yil-eski",
+        "km-dusuk",
+        "km-yuksek",
+        "tarih-yeni"
+      ]
+    }
+  },
+  "providers": {
+    "sahibinden": {
+      "label": "sahibinden.com",
+      "base": "https://www.sahibinden.com",
+      "verified": true,
+      "path": "/{make-slug}-{model-slug}",
+      "category_segments": [
+        "otomobil",
+        "arazi-suv-pickup"
+      ],
+      "map": {
+        "price_min": {
+          "strategy": "query",
+          "param": "price_min",
+          "verified": true
+        },
+        "price_max": {
+          "strategy": "query",
+          "param": "price_max",
+          "verified": true
+        },
+        "year_min": {
+          "strategy": "query",
+          "param": "a5_min",
+          "verified": true
+        },
+        "year_max": {
+          "strategy": "query",
+          "param": "a5_max",
+          "verified": true
+        },
+        "km_max": {
+          "strategy": "query",
+          "param": "a4_max",
+          "verified": true
+        },
+        "changed_parts_max": {
+          "strategy": "query",
+          "param": "a109_max",
+          "verified": true
+        },
+        "city": {
+          "strategy": "query",
+          "param": "address_city",
+          "encode": "plate",
+          "verified": true
+        },
+        "keyword": {
+          "strategy": "query",
+          "param": "query_text",
+          "verified": true
+        },
+        "sort": {
+          "strategy": "query",
+          "param": "sorting",
+          "verified": false
+        },
+        "paging_size": {
+          "strategy": "query",
+          "param": "pagingSize",
+          "verified": true
+        },
+        "gearbox": {
+          "strategy": "postfilter",
+          "reason": "parametre adı doğrulanmadı; filtre URL'de uygulanır"
+        },
+        "fuel": {
+          "strategy": "postfilter",
+          "reason": "parametre adı doğrulanmadı"
+        },
+        "body": {
+          "strategy": "postfilter"
+        },
+        "color": {
+          "strategy": "postfilter"
+        },
+        "seller_type": {
+          "strategy": "postfilter"
+        },
+        "trade_in": {
+          "strategy": "postfilter"
+        },
+        "heavy_damage": {
+          "strategy": "postfilter"
+        },
+        "painted_parts_max": {
+          "strategy": "postfilter"
+        },
+        "condition": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_min": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_max": {
+          "strategy": "postfilter"
+        },
+        "power_hp_min": {
+          "strategy": "postfilter"
+        },
+        "power_hp_max": {
+          "strategy": "postfilter"
+        },
+        "drive": {
+          "strategy": "postfilter"
+        },
+        "service_warranty": {
+          "strategy": "postfilter"
+        },
+        "plate_origin": {
+          "strategy": "postfilter"
+        },
+        "listed_within_days": {
+          "strategy": "postfilter"
+        },
+        "has_photo": {
+          "strategy": "postfilter"
+        },
+        "has_video": {
+          "strategy": "postfilter"
+        },
+        "km_min": {
+          "strategy": "postfilter"
+        },
+        "range_km_min": {
+          "strategy": "unsupported"
+        },
+        "fast_charge": {
+          "strategy": "unsupported"
+        },
+        "seats_min": {
+          "strategy": "postfilter"
+        },
+        "doors": {
+          "strategy": "postfilter"
+        },
+        "equipment": {
+          "strategy": "postfilter"
+        },
+        "town": {
+          "strategy": "postfilter"
+        },
+        "make": {
+          "strategy": "path",
+          "verified": true
+        },
+        "model": {
+          "strategy": "path",
+          "verified": true
+        },
+        "variant": {
+          "strategy": "postfilter",
+          "reason": "varyant süzmesi raporda (yol şeması varyant içermiyor)"
+        }
+      }
+    },
+    "arabam": {
+      "label": "arabam.com",
+      "base": "https://www.arabam.com",
+      "verified": true,
+      "category_by_body": {
+        "crossover": "arazi-suv-pick-up",
+        "suv": "arazi-suv-pick-up",
+        "pickup": "arazi-suv-pick-up",
+        "default": "otomobil"
+      },
+      "path": "/ikinci-el/{category}/{make-slug}-{model-slug}",
+      "currency_param": {
+        "param": "currency",
+        "value": "TL"
+      },
+      "map": {
+        "price_min": {
+          "strategy": "query",
+          "param": "minPrice",
+          "verified": true,
+          "requires": [
+            "currency"
+          ]
+        },
+        "price_max": {
+          "strategy": "query",
+          "param": "maxPrice",
+          "verified": true,
+          "requires": [
+            "currency"
+          ]
+        },
+        "year_min": {
+          "strategy": "query",
+          "param": "minYear",
+          "verified": true
+        },
+        "year_max": {
+          "strategy": "query",
+          "param": "maxYear",
+          "verified": false
+        },
+        "km_max": {
+          "strategy": "query",
+          "param": "maxKm",
+          "verified": true
+        },
+        "km_min": {
+          "strategy": "query",
+          "param": "minKm",
+          "verified": false
+        },
+        "gearbox": {
+          "strategy": "path",
+          "encode": "suffix",
+          "values": {
+            "manuel": "duz",
+            "otomatik": "otomatik",
+            "yari-otomatik": "yari-otomatik"
+          },
+          "verified": true
+        },
+        "fuel": {
+          "strategy": "path",
+          "encode": "suffix",
+          "values": {
+            "benzin": "benzin",
+            "dizel": "dizel",
+            "lpg": "lpg",
+            "hibrit": "hibrit",
+            "elektrik": "elektrik"
+          },
+          "verified": true
+        },
+        "city": {
+          "strategy": "query",
+          "param": "city",
+          "encode": "plate",
+          "verified": false
+        },
+        "keyword": {
+          "strategy": "query",
+          "param": "keyword",
+          "verified": false
+        },
+        "sort": {
+          "strategy": "query",
+          "param": "sort",
+          "verified": false
+        },
+        "body": {
+          "strategy": "postfilter",
+          "reason": "kasa tipi kategori yolunu belirler; alt-tip süzmesi raporda"
+        },
+        "color": {
+          "strategy": "postfilter"
+        },
+        "seller_type": {
+          "strategy": "postfilter"
+        },
+        "trade_in": {
+          "strategy": "postfilter"
+        },
+        "heavy_damage": {
+          "strategy": "postfilter"
+        },
+        "changed_parts_max": {
+          "strategy": "postfilter",
+          "reason": "'Boya, Değişen Parça' filtresi yapısal alan; süzme raporda"
+        },
+        "painted_parts_max": {
+          "strategy": "postfilter"
+        },
+        "condition": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_min": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_max": {
+          "strategy": "postfilter"
+        },
+        "power_hp_min": {
+          "strategy": "postfilter"
+        },
+        "power_hp_max": {
+          "strategy": "postfilter"
+        },
+        "drive": {
+          "strategy": "postfilter"
+        },
+        "range_km_min": {
+          "strategy": "unsupported"
+        },
+        "fast_charge": {
+          "strategy": "unsupported"
+        },
+        "service_warranty": {
+          "strategy": "postfilter"
+        },
+        "plate_origin": {
+          "strategy": "postfilter"
+        },
+        "listed_within_days": {
+          "strategy": "postfilter"
+        },
+        "has_photo": {
+          "strategy": "postfilter"
+        },
+        "has_video": {
+          "strategy": "postfilter"
+        },
+        "seats_min": {
+          "strategy": "postfilter"
+        },
+        "doors": {
+          "strategy": "postfilter"
+        },
+        "equipment": {
+          "strategy": "postfilter"
+        },
+        "town": {
+          "strategy": "postfilter"
+        },
+        "make": {
+          "strategy": "path",
+          "verified": true
+        },
+        "model": {
+          "strategy": "path",
+          "verified": true
+        },
+        "variant": {
+          "strategy": "path",
+          "encode": "suffix",
+          "verified": false,
+          "reason": "varyant yol eki olarak denenir; doğrulanmadı"
+        }
+      }
+    },
+    "vavacars": {
+      "label": "VavaCars",
+      "base": "https://tr.vava.cars",
+      "verified": true,
+      "path": "/buy/cars/{Make}/{Model}",
+      "map": {
+        "make": {
+          "strategy": "path",
+          "verified": true
+        },
+        "model": {
+          "strategy": "path",
+          "verified": true
+        },
+        "price_min": {
+          "strategy": "postfilter",
+          "reason": "filtreler sayfa içi JS; URL'e yansımıyor"
+        },
+        "price_max": {
+          "strategy": "postfilter"
+        },
+        "year_min": {
+          "strategy": "postfilter"
+        },
+        "year_max": {
+          "strategy": "postfilter"
+        },
+        "km_max": {
+          "strategy": "postfilter"
+        },
+        "km_min": {
+          "strategy": "postfilter"
+        },
+        "gearbox": {
+          "strategy": "postfilter"
+        },
+        "fuel": {
+          "strategy": "postfilter"
+        },
+        "body": {
+          "strategy": "postfilter"
+        },
+        "color": {
+          "strategy": "postfilter"
+        },
+        "city": {
+          "strategy": "postfilter"
+        },
+        "seller_type": {
+          "strategy": "unsupported",
+          "reason": "tek satıcı (kurumsal platform)"
+        },
+        "trade_in": {
+          "strategy": "unsupported"
+        },
+        "heavy_damage": {
+          "strategy": "postfilter",
+          "reason": "'Boyasız, değişensiz, tramersiz' etiketi ile süzülür"
+        },
+        "changed_parts_max": {
+          "strategy": "postfilter"
+        },
+        "painted_parts_max": {
+          "strategy": "postfilter"
+        },
+        "condition": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_min": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_max": {
+          "strategy": "postfilter"
+        },
+        "power_hp_min": {
+          "strategy": "postfilter"
+        },
+        "power_hp_max": {
+          "strategy": "postfilter"
+        },
+        "drive": {
+          "strategy": "postfilter"
+        },
+        "range_km_min": {
+          "strategy": "postfilter"
+        },
+        "fast_charge": {
+          "strategy": "postfilter"
+        },
+        "service_warranty": {
+          "strategy": "postfilter",
+          "reason": "'3 ay garanti dahil' alanı ile süzülür"
+        },
+        "plate_origin": {
+          "strategy": "postfilter"
+        },
+        "listed_within_days": {
+          "strategy": "postfilter"
+        },
+        "has_photo": {
+          "strategy": "postfilter"
+        },
+        "has_video": {
+          "strategy": "postfilter"
+        },
+        "seats_min": {
+          "strategy": "postfilter"
+        },
+        "doors": {
+          "strategy": "postfilter"
+        },
+        "equipment": {
+          "strategy": "postfilter"
+        },
+        "town": {
+          "strategy": "postfilter"
+        },
+        "keyword": {
+          "strategy": "postfilter"
+        },
+        "sort": {
+          "strategy": "unsupported"
+        },
+        "variant": {
+          "strategy": "postfilter",
+          "reason": "varyant süzmesi raporda (yol şeması varyant içermiyor)"
+        }
+      }
+    },
+    "otokoc": {
+      "label": "Otokoç 2. El",
+      "base": "https://www.otokocikinciel.com",
+      "verified": true,
+      "path": "/ikinci-el/{make-slug}/{model-slug}",
+      "map": {
+        "make": {
+          "strategy": "path",
+          "verified": true
+        },
+        "model": {
+          "strategy": "path",
+          "verified": true
+        },
+        "price_min": {
+          "strategy": "postfilter",
+          "reason": "filtreler JS tabanlı"
+        },
+        "price_max": {
+          "strategy": "postfilter"
+        },
+        "year_min": {
+          "strategy": "postfilter"
+        },
+        "year_max": {
+          "strategy": "postfilter"
+        },
+        "km_max": {
+          "strategy": "postfilter"
+        },
+        "km_min": {
+          "strategy": "postfilter"
+        },
+        "gearbox": {
+          "strategy": "postfilter"
+        },
+        "fuel": {
+          "strategy": "postfilter"
+        },
+        "body": {
+          "strategy": "postfilter"
+        },
+        "color": {
+          "strategy": "postfilter"
+        },
+        "city": {
+          "strategy": "postfilter"
+        },
+        "seller_type": {
+          "strategy": "unsupported",
+          "reason": "tek satıcı (kurumsal yetkili)"
+        },
+        "trade_in": {
+          "strategy": "postfilter"
+        },
+        "heavy_damage": {
+          "strategy": "postfilter"
+        },
+        "changed_parts_max": {
+          "strategy": "postfilter"
+        },
+        "painted_parts_max": {
+          "strategy": "postfilter"
+        },
+        "condition": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_min": {
+          "strategy": "postfilter"
+        },
+        "engine_cc_max": {
+          "strategy": "postfilter"
+        },
+        "power_hp_min": {
+          "strategy": "postfilter"
+        },
+        "power_hp_max": {
+          "strategy": "postfilter"
+        },
+        "drive": {
+          "strategy": "postfilter"
+        },
+        "range_km_min": {
+          "strategy": "postfilter"
+        },
+        "fast_charge": {
+          "strategy": "postfilter"
+        },
+        "service_warranty": {
+          "strategy": "postfilter",
+          "reason": "tüm araçlarda Otokoç 2. El Garanti"
+        },
+        "plate_origin": {
+          "strategy": "postfilter"
+        },
+        "listed_within_days": {
+          "strategy": "postfilter"
+        },
+        "has_photo": {
+          "strategy": "postfilter"
+        },
+        "has_video": {
+          "strategy": "postfilter"
+        },
+        "seats_min": {
+          "strategy": "postfilter"
+        },
+        "doors": {
+          "strategy": "postfilter"
+        },
+        "equipment": {
+          "strategy": "postfilter"
+        },
+        "town": {
+          "strategy": "postfilter"
+        },
+        "keyword": {
+          "strategy": "postfilter"
+        },
+        "sort": {
+          "strategy": "unsupported"
+        },
+        "variant": {
+          "strategy": "postfilter",
+          "reason": "varyant süzmesi raporda (yol şeması varyant içermiyor)"
+        }
+      }
+    }
+  }
+}

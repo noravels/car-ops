@@ -27,10 +27,22 @@ node location.mjs --il "Kocaeli" --cevre 1
 node search-urls.mjs --make Fiat --model "Egea Cross" --il Kocaeli --cevre 1 \
   --max 1200000 --yil-min 2022 --km-max 120000
 ```
-Her provider için URL + süzme planı üretir. İki tür provider vardır:
-- **URL filtresi destekleyen** (sahibinden, arabam): il/yıl/km/fiyat sunucu tarafında süzülür.
-- **URL filtresi desteklemeyen** (vavacars, otokoc): liste sayfası alınır, süzme
-  `market-scan.mjs` aşamasında yapılır (çıktıda `filter_in_page: true`).
+Her provider için URL + süzme planı üretir. Filtre eşlemesi **provider sınıflarında**
+(`providers/base.mjs` + `config/filters.json`) tanımlıdır; hiçbir filtre sessizce düşmez —
+her filtre ya URL'de (query/path), ya rapor süzmesinde, ya da açıkça "desteklenmiyor" olarak bildirilir.
+
+Hangi filtrenin nerede uygulandığını görmek için:
+
+```
+node search-urls.mjs --matris
+```
+
+Filtre stratejileri üç türlüdür:
+- **URL query** (ör. sahibinden `price_max`, arabam `maxPrice` + `currency=TL`)
+- **Yol eki** (ör. arabam `fiat-egea-cross-otomatik-benzin` — vites ve yakıt yola gömülür)
+- **Rapor süzmesi** (postfilter) — vavacars/otokoc filtreleri JS tabanlı olduğu için
+  ve sahibinden'in doğrulanmamış alanları (vites, yakıt, kasa, renk, satıcı, takas…)
+  için. Bu durumda liste alınır, süzme `market-scan.mjs` aşamasında yapılır.
 
 ## Adım 3 — İlan toplama (agent browser)
 

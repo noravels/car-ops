@@ -77,3 +77,35 @@ export function renderOtokocRow(r) {
   const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('tr-TR'));
   return `${r.year} | ${fmt(r.km)} km | ${fmt(r.price_try)} TL | ${[r.fuel, r.gearbox].filter(Boolean).join('/')} | ${r.city || '—'} | ${r.guarantee}`;
 }
+
+
+// ---------------------------------------------------------------------------
+// Abstract provider uygulaması
+// ---------------------------------------------------------------------------
+import { MarketplaceProvider } from './base.mjs';
+
+export class OtokocProvider extends MarketplaceProvider {
+  static get id() {
+    return 'otokoc';
+  }
+
+  static get urlPattern() {
+    return otokocUrlPattern;
+  }
+
+  parseListings(pageText, ctx = {}) {
+    return parseOtokocHtml(pageText, ctx);
+  }
+
+  parseDetail(pageText, ctx = {}) {
+    const raw = String(pageText || '');
+    const r = parseOtokocRow(raw, ctx);
+    return {
+      ...r,
+      guarantee: 'otokoc-2el-garanti',
+      perks: ['Koşulsuz İade', 'Otokoç 2. El Garanti'],
+      seller_type: 'kurumsal-yetkili',
+      unverifiable: ['kaporta durumu', 'motor durumu', 'ekspertiz raporu'],
+    };
+  }
+}

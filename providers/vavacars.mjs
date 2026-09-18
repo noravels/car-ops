@@ -62,3 +62,58 @@ export function renderVavacarsRow(c) {
   const drop = c.price_drop_try ? ` ↓${fmt(c.price_drop_try)} TL` : '';
   return `${c.year} | ${fmt(c.km)} km | ${c.gearbox} ${c.fuel} | ${fmt(c.price_try)} TL${drop} | ${c.variant}${c.tramer_claim === 'temiz' ? ' | boyasız-değişensiz-tramersiz' : ''}`;
 }
+
+
+// ---------------------------------------------------------------------------
+// Abstract provider uygulaması
+// ---------------------------------------------------------------------------
+import { MarketplaceProvider } from './base.mjs';
+
+export class VavacarsProvider extends MarketplaceProvider {
+  static get id() {
+    return 'vavacars';
+  }
+
+  static get urlPattern() {
+    return vavacarsUrlPattern;
+  }
+
+  parseListings(pageText) {
+    return parseVavacarsCards(pageText);
+  }
+
+  // Kurumsal platform: detay sayfası metninden durum raporunu da okur
+  parseDetail(pageText, ctx = {}) {
+    const raw = String(pageText || '');
+    const parts = ['sol ön çamurluk', 'sol ön kapı', 'sol arka çamurluk', 'sol arka kapı', 'ön tampon', 'kaput', 'ön cam', 'tavan', 'arka cam', 'bagaj', 'arka tampon', 'sağ ön çamurluk', 'sağ ön kapı', 'sağ arka çamurluk', 'sağ arka kapı'];
+    const panelStatus = {};
+    for (const part of parts) {
+      const re = new RegExp(`${part}\\s*\\n\\s*(Orijinal|Lokal boya|Boyalı|Değişen)`, 'i');
+      const m = raw.match(re);
+      panelStatus[part] = m ? m[1] : null;
+    }
+    const plateM = raw.match(/Plaka numarası\s*\n\s*([0-9]{2}[A-Z]{1,3}[0-9]{2,4})/i);
+    const vinM = raw.match(/Şasi\s*\n\s*([A-Z0-9]{10,20})/i);
+    const kmM = raw.match(/([\d.]+)\s*km/);
+    const priceM = raw.match(/([\d.]+)₺/);
+    const keysM = raw.match(/Anahtar sayısı\s*\n\s*(\d)/);
+    return {
+      source_site: 'vava.cars',
+      url: ctx.url || null,
+      listing_id: ctx.listing_id || null,
+      price_try: priceM ? Number(priceM[1].replace(/\./g, '')) : null,
+      km: kmM ? Number(kmM[1].replace(/\./g, '')) : null,
+      plate: plateM ? plateM[1] : null,
+      vin: vinM ? vinM[1] : null,
+      keys: keysM ? Number(keysM[1]) : null,
+      panel_status: panelStatus,
+      tramer_claim: /Boyasız, değişensiz, tramersiz/i.test(raw) ? 'temiz' : null,
+      perks: [
+        /3 ay garanti/i.test(raw) ? '3 ay garanti' : null,
+        /14 gün iade/i.test(raw) ? '14 gün iade' : null,
+        /takas indirimi/i.test(raw) ? 'takas indirimi' : null,
+      ].filter(Boolean),
+      seller_type: 'kurumsal',
+    };
+  }
+}

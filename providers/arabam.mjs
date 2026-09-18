@@ -93,3 +93,96 @@ export function renderArabamRow(r) {
   const drop = r.price_drop_try ? ` ↓${fmt(r.price_drop_try)} TL (${fmt(r.price_previous_try)}'den)` : '';
   return `${r.year} | ${fmt(r.km)} km | ${fmt(r.price_try)} TL${drop} | ${r.city || '—'} | ${r.seller_type}`;
 }
+
+
+// ---------------------------------------------------------------------------
+// Abstract provider uygulaması
+// ---------------------------------------------------------------------------
+import { MarketplaceProvider, extractClaims } from './base.mjs';
+
+export class ArabamProvider extends MarketplaceProvider {
+  static get id() {
+    return 'arabam';
+  }
+
+  static get urlPattern() {
+    return arabamUrlPattern;
+  }
+
+  /** Liste sayfası metninden satırlar (arabam kartları: model / başlık / yıl / km / renk / fiyat / tarih / şehir) */
+  parseListings(pageText, ctx = {}) {
+    const out = [];
+    for (const chunk of String(pageText || '').split(/\n{2,}|(?=\b(?:Fiat|Renault|Ford|Toyota|Honda|Hyundai|Volkswagen|Opel|Peugeot|Citroen|Dacia|Skoda|Seat|Audi|BMW|Mercedes|Nissan|Kia|Volvo|MG|Chery)\b)/)) {
+      const r = parseArabamRowText(chunk, ctx);
+      if (r && r.price_try && r.year) out.push(r);
+    }
+    const seen = new Set();
+    return out.filter((r) => {
+      const k = `${r.year}|${r.km}|${r.price_try}|${r.city}`;
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+  }
+
+  /** Detay sayfası: yapısal alanlar + "Boya, Değişen ve Tramer" bölümü + açıklama */
+  parseDetail(pageText, ctx = {}) {
+    const raw = String(pageText || '');
+    const field = (label) => {
+      const m = raw.match(new RegExp(`${label}\\s*\\n\\s*([^\\n]{1,60})`, 'i'));
+      return m ? m[1].trim() : null;
+    };
+    const priceM = raw.match(/([\d.]{4,})\s*TL/);
+    const boyaM = raw.match(/Boya-değişen\s*\n\s*([^\n]{1,60})/i);
+    const expM = raw.match(/EXPERT[İI]Z[\s\S]{0,600}/i);
+    const tramerM = raw.match(/TRAMER\s*[:=]?\s*([\d.,]+)\s*(?:TL|BİN|bin)?/i);
+    const idM = raw.match(/İlan No\s*\n\s*(\d{6,})/) || (ctx.url ? String(ctx.url).match(/(\d{6,})/) : null);
+    const listingNo = idM ? (Array.isArray(idM) ? idM[1] : idM) : null;
+
+    const expertizText = expM ? expM[0] : '';
+    const changed = [...expertizText.matchAll(/([A-ZÇĞİÖŞÜ\s]{4,30}?)\s*DEĞİŞEN/gi)].map((m) => m[1].trim());
+    const painted = [...expertizText.matchAll(/([A-ZÇĞİÖŞÜ\s]{4,30}?)\s*BOYALI/gi)].map((m) => m[1].trim());
+
+    return {
+      schema: 'car-ops/listing@1',
+      listing_id: listingNo ? `arabam-${listingNo}` : null,
+      market: 'tr',
+      source_site: 'arabam.com',
+      url: ctx.url || null,
+      captured_at: ctx.captured_at || new Date().toISOString(),
+      title: field('İlan Başlığı') || raw.slice(0, 120),
+      price_try: priceM ? Number(priceM[1].replace(/\./g, '')) : null,
+      price_history_site: null,
+      seller: {
+        type: /Galeriden/i.test(raw) ? 'galeri' : /Sahibinden/i.test(raw) ? 'bireysel' : 'bilinmiyor',
+        name: ctx.seller_name || null,
+        member_since: null,
+        other_listings_hint: null,
+      },
+      vehicle: {
+        make: field('Marka'),
+        model: field('Model'),
+        year: Number(field('Yıl')) || null,
+        km: field('Kilometre') ? Number(String(field('Kilometre')).replace(/[^\d]/g, '')) : null,
+        fuel: field('Yakıt Tipi'),
+        gearbox: field('Vites Tipi'),
+        body: field('Kasa Tipi'),
+        color: field('Renk'),
+      },
+      claims: extractClaims(raw),
+      damage_records: tramerM ? [{ year: null, amount_try: Number(tramerM[1].replace(/\./g, '')), source: 'seller-claim', kind: 'tramer beyanı' }] : [],
+      inspection: {
+        present: !!(changed.length || painted.length),
+        changed_parts: changed,
+        painted_parts: painted,
+        report_url: null,
+        structured_field: boyaM ? boyaM[1].trim() : null,
+      },
+      unverifiable: ['kaporta durumu', 'motor durumu', 'şanzıman sesi'],
+    };
+  }
+
+  parseClaims(descriptionText) {
+    return extractClaims(descriptionText);
+  }
+}
