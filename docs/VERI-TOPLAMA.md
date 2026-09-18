@@ -120,3 +120,49 @@ gözlemlenmediği (belirsiz), medyan fiyat/yıl aralığı ve varsa teknik veri 
 - Katalogdan **kayıt silinmez**; bilgi birikir. Yanlış kayıt varsa `data/catalog/catalog.json`
   içinde ilgili modelin `observed` bloğu elle düzeltilebilir (dosya kullanıcı katmanında).
 - Hangi modelin teknik verisi eksik: `node catalog.mjs --stats` + `specsCoverage()` çıktısı.
+
+
+---
+
+## 7. Provider durumu ve toplama yöntemleri (2026-09-18 ölçümü)
+
+| Provider | Durum | Toplama yöntemi | Not |
+|---|---|---|---|
+| **sahibinden.com** | ✅ Çalışıyor | `?pagingSize=50&pagingOffset=N` + gerçek filtre parametreleri (bkz. §8) | Bot korumalı: **20 sn/ sayfa** tempoyla git; hızlı gezinme "olağan dışı erişim" bloğu tetikler |
+| **arabam.com** | ✅ Çalışıyor | `?currency=TL&maxPrice=…&take=50&page=N&sorting=startedAt.desc` | `currency=TL` yoksa fiyat filtresi **sessizce yok sayılır**; hücrede iki fiyat varsa ilki eski (üstü çizili) fiyattır → `price_drop_try` |
+| **vava.cars** | ✅ Çalışıyor | `https://tr.vava.cars/buy/cars/` + "N tane daha göster" düğmesi | Kartlar **en zengin**: hasar etiketi ("Boyasız, değişensiz, tramersiz"), kasa, yakıt, vites, plaka, fiyat |
+| **carvak.com** (eski kavak) | ⚠️ API bekliyor | Liste DOM'da yok; `carvak.com/advanced-search-api/public/v2/...` (NestJS) | Uç yolları bilinmiyor: sayfa filtresini tetikleyip `fetch`/XHR kancasıyla yakalanmalı. kavak.com → carvak.com'a yönleniyor |
+| **ikinciyeni.com** | ⚠️ API bekliyor | `POST https://apigw.ikinciyeni.com/ListedVehicles` | Uç açık ve JSON döner ama filtre gövdesi şeması bilinmiyor (denenen 12 gövde → `totalCount: 0`). Şema, sayfada filtre etkileşimi sırasında `fetch` kancasıyla yakalanmalı |
+| **otokocikinciel.com** | ⚠️ Kısmi | `/ikinci-el/<marka>/<model>` sayfaları açılıyor ama ilanlar JS ile geliyor | Stok az; model sayfası "stok yok" durumunu metin olarak veriyor |
+| **otomerkezi.net** | ⚠️ Kısmi | `/ikinci-el` | Liste JS ile; `trinkoto.com` (grup sitesi) **ücretsiz değerleme** servisi sunuyor — Oto360 alternatifi olabilir |
+
+**Kural (kalıcı):** bot duvarını aşmaya çalışılmaz. Erişim kullanıcının gerçek Chrome oturumu (CDP) üzerinden, insan temposuyla yapılır; API şeması bilinmiyorsa **tahmin edilmez**, yakalanır.
+
+## 8. Toplanan veri setleri (2026-09-18)
+
+| Dosya | Kaynak | Adet | Kapsam |
+|---|---|---|---|
+| `data/market/tr-sahibinden-genis-2026-09-18.json` | sahibinden | 454 | otomobil + arazi-suv-pickup, ≤1.5M TL ve ≤700K TL bantları |
+| `data/market/tr-arabam-genis-2026-09-18.json` | arabam | 599 | otomobil ≤1.5M TL (12 sayfa) |
+| `data/market/tr-vavacars-genis-2026-09-18.json` | vava.cars | 29 | kurumsal stok, hasar etiketli |
+| `data/market/tr-suv-crossover-scan-2026-09-18.json` | sahibinden | 151 | SUV/crossover, otomatik, ≤1.26M |
+| `data/market/egea-cross-2026-09-18.json` | 5 kaynak | 38 | Egea Cross aday havuzu |
+
+Katalog (2026-09-18): **318 model, 1.271 ilan örneği, 99 marka sınıflaması, 2 teknik özellik kaydı.**
+
+## 9. Katalogun değerlemeyi beslemesi
+
+Katalog artık ilan **örneklerini kalıcı** tutar (`observed.samples`), bu yüzden değerleme karşılaştırma seti doğrudan katalogdan alınabilir:
+
+```bash
+node valuation-cli.mjs --katalog --fiyat 1015000 --marka "Fiat" --model "Egea Cross" \
+  --motor "1.4 Fire" --yil 2023 --km 26000 --tramer 38000 --tramer-yil 2023 --boyali 2 --degisen 1
+```
+
+- Örnekler `source`, `variant`, `body`, `fuel`, `gearbox`, `city` alanlarını taşır → motor ailesi filtresi ve çelişen yakıt sınıfı dışlama katalogdan beslenen sette de çalışır.
+- Model başına üst sınır 2000 örnek (`MAX_SAMPLES`); aşılırsa en yeni örnekler tutulur.
+- Düzeltme: örnekler dosyaya yazılmayınca istatistikler her yüklemede son partiden hesaplanıyordu (Clio: 67 ilan görülmüş, sayı 3 görünüyordu) → `observed.samples` kalıcılığı ile giderildi; regresyon testi `tests/catalog-specs.test.mjs` içinde.
+
+## 10. Bant genişletme (değerleme)
+
+Katı bant (yıl ±1, km ±%35) sonrası örneklem 4'ün altındaysa otomatik genişletilir: **km ±%60 → yıl ±2**. Genişletme raporda `bant genişletildi:` olarak yazılır; motor ailesi filtresi her durumda korunur.

@@ -95,37 +95,43 @@ export function baselineFromComparables(listings = [], criteria = {}) {
 
   const year = criteria.year ?? null;
   const km = criteria.km ?? null;
-  let pool = rows;
-  if (year != null) pool = pool.filter((l) => l.year == null || Math.abs(l.year - year) <= 1);
-  // km bandı yalnızca çağıran km verdiyse ve örneklemi EZMEDEN uygulanabilirse
-  if (km != null) {
-    const banded = pool.filter((l) => l.km == null || Math.abs(l.km - km) / km <= 0.35);
-    if (banded.length >= 3) pool = banded;
-  }
-  // MOTOR AİLESİ: aynı modelin dizel/benzin sürümleri fiyatta %25+ ayrışır —
-  // karışık bant yanlış "ucuz/pahalı" kararı üretir. Yeterli örnek varsa daralt.
+  const wantEngine = criteria.engine ? engineKey(criteria.engine) : null;
+  let relaxation = null;
   let engine_filtered = false;
   let engine_loose = false;
-  const wantEngine = criteria.engine ? engineKey(criteria.engine) : null;
+
+  // Bant daraltma sırası: yıl ±1 & km ±35 → km ±60 → yıl ±2
+  const bands = [[1, 0.35], [1, 0.6], [2, 0.6]];
+  let pool = rows;
+  for (let i = 0; i < bands.length; i++) {
+    const [yrBand, kmBand] = bands[i];
+    let p = rows;
+    if (year != null) p = p.filter((l) => l.year == null || Math.abs(l.year - year) <= yrBand);
+    if (km != null) {
+      const banded = p.filter((l) => l.km == null || Math.abs(l.km - km) / km <= kmBand);
+      if (banded.length >= 3) p = banded;
+    }
+    pool = p;
+    relaxation = i === 0 ? null : `yıl ±${yrBand}, km ±%${Math.round(kmBand * 100)}`;
+    if (pool.length >= 4) break;
+  }
+
+  // MOTOR AİLESİ: aynı modelin dizel/benzin sürümleri fiyatta %25+ ayrışır.
   if (wantEngine) {
     let matched = pool.filter((l) => engineMatches(listingEngine(l), wantEngine));
-    // katı/gevşek eşleşme yetmezse: ÇELİŞEN yakıt sınıfını (dizel↔benzin) dışla
     if (matched.length < 2) {
       const wantFuel = fuelClass(wantEngine);
-      if (wantFuel) {
-        matched = pool.filter((l) => {
-          const fc = fuelClass(listingEngine(l));
-          return fc == null || fc === wantFuel;
-        });
-      }
+      if (wantFuel) matched = pool.filter((l) => { const fc = fuelClass(listingEngine(l)); return fc == null || fc === wantFuel; });
     }
     if (matched.length >= 2) {
-      pool = matched;
-      engine_filtered = true;
+      const wantTech = String(wantEngine).split('-')[1] || null;
       engine_loose = matched.some((l) => {
         const k = listingEngine(l);
-        return !k || !String(k).includes('-') || String(k).split('-')[1] !== String(wantEngine).split('-')[1];
+        const tech = k && String(k).includes('-') ? String(k).split('-')[1] : null;
+        return !tech || tech !== wantTech;
       });
+      pool = matched;
+      engine_filtered = true;
     }
   }
   if (!pool.length) pool = rows;
@@ -140,8 +146,8 @@ export function baselineFromComparables(listings = [], criteria = {}) {
     sample_size: pool.length,
     iqr_ratio: med ? round3((q75 - q25) / med) : null,
     median: med,
-    p25: quantile(prices, 0.25),
-    p75: quantile(prices, 0.75),
+    p25: q25,
+    p75: q75,
     min: prices[0],
     max: prices[prices.length - 1],
     km_median: median(kms),
@@ -149,6 +155,7 @@ export function baselineFromComparables(listings = [], criteria = {}) {
     engine_filtered,
     engine_loose,
     engine_mixed: !engine_filtered && new Set(pool.map(listingEngine).filter(Boolean)).size > 1,
+    relaxation,
     members: pool.length,
   };
 }
@@ -614,7 +621,10 @@ export function renderValuation(v) {
         ? ', MOTOR KARIŞIK (temkinli yorum)'
         : ''
     : '';
-  L.push(`- Karşılaştırma seti: ${v.baseline_sample_size} ilan (yıl ±1, km ±%35${engInfo}) — medyan ${fmt(v.baseline.own_median_try)} TL`);
+  const relaxInfo = v.baseline.comparables && v.baseline.comparables.relaxation
+    ? `, bant genişletildi: ${v.baseline.comparables.relaxation}`
+    : '';
+  L.push(`- Karşılaştırma seti: ${v.baseline_sample_size} ilan (yıl ±1, km ±%35${engInfo}${relaxInfo}) — medyan ${fmt(v.baseline.own_median_try)} TL`);
   if (v.baseline.reference_try != null) L.push('- Oto360 Araç Değerleme (sahibinden.com, son 30 gün ilan verisiyle istatistiksel model) — boya/hasar gözetmez, bu yüzden durum düzeltmesi bizim katmanımızda yapılır.');
   L.push(`- Katsayı kaynağı: ${ASSUMPTION_FACTORS.calibrated ? 'kendi verimizden kestirim' : 'temkinli varsayım (veri biriktikçe kalibre edilecek)'}`);
   L.push('- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.');

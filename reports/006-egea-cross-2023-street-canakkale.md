@@ -69,21 +69,22 @@ Karşılaştırma (aynı taramada bulunan normalize kayıtlar):
 ### Fiyat Değerlemesi (Bluebook)
 
 - **İstenen fiyat:** 1.165.000 TL
-- **Adil değer (düzeltilmiş):** 1.135.695 TL
-- **Beklenen bant:** 1.044.839 – 1.226.551 TL
-- **Karar:** ⚪ **Piyasa değerinde** (sapma +%2.6)
-- **Güven:** orta (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; karşılaştırma örneklemi n=10)
+- **Adil değer (düzeltilmiş):** 1.051.440 TL
+- **Beklenen bant:** 967.325 – 1.135.555 TL
+- **Karar:** 🟡 **Pahalı** (sapma +%10.8)
+- **Güven:** orta (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; karşılaştırma örneklemi n=13)
 
 #### Neden bu değer
 
 | Etken | Etki | Kaynak | Açıklama |
 |---|---|---|---|
-| baz değer | — | kendi karşılaştırma seti | 1.124.450 TL |
-| km | +1.0% | varsayım | 7.200 km (set medyanı 42.000 km) — medyanın altındaki her 10.000 km |
+| baz değer | — | kendi karşılaştırma seti | 1.040.000 TL |
+| km | +1.1% | varsayım | 7.200 km (set medyanı 43.000 km) — medyanın altındaki her 10.000 km |
 
 #### Saptanan riskler
 
-- 🟡 **km_outlier** — Kilometre set medyanından %83 sapıyor (7.200 km / medyan 42.000 km): fiyat etkisi ayrıca hesaplandı, km doğrulaması (servis kaydı) isteyin.
+- 🟡 **expensive** — Adil değerin %10.8 üzerinde: gerekçe isteyin (donanım, km, bakım geçmişi).
+- 🟡 **km_outlier** — Kilometre set medyanından %83 sapıyor (7.200 km / medyan 43.000 km): fiyat etkisi ayrıca hesaplandı, km doğrulaması (servis kaydı) isteyin.
 
 #### Veri notları
 
@@ -92,7 +93,7 @@ Karşılaştırma (aynı taramada bulunan normalize kayıtlar):
 
 #### Kaynak
 
-- Karşılaştırma seti: 10 ilan (yıl ±1, km ±%35, aynı motor ailesi) — medyan 1.124.450 TL
+- Karşılaştırma seti: 13 ilan (yıl ±1, km ±%35, aynı motor ailesi) — medyan 1.040.000 TL
 - Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
 - Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.
 

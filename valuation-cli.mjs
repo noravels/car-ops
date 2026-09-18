@@ -12,6 +12,7 @@
 
 import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { valueListing, renderValuation, parseOto360Bands, ASSUMPTION_FACTORS } from './valuation.mjs';
+import { loadCatalogFile, exportSamples } from './catalog.mjs';
 import { normalizeAmountTufe, classifySeverity } from './tramer-normalize.mjs';
 
 const args = parseArgs(process.argv.slice(2));
@@ -29,6 +30,7 @@ if (args.help || (!args.fiyat && !args['json-ilan'])) {
   --degisen <n>         Değişen parça sayısı
   --ekspertiz var|yok   Bağımsız ekspertiz raporu durumu
   --aciklama "<metin>"  İlan açıklaması (beyan/kayıt çelişkisi taraması)
+  --katalog [dosya]     Karşılaştırma setini katalogdan al (data/catalog/catalog.json) — --marka/--model ile
   --data <dosya.json>   Karşılaştırma seti (market tarama çıktısı)
   --oto360 "<bant metni>"  Oto360 Araç Değerleme çıktısı
   --out <dosya.md>      Raporu dosyaya yaz
@@ -41,8 +43,14 @@ const anchors = loadJson('config/inflation/tr-tufe.json');
 // referans yıl: çapa dosyasının kendi ref_year'ı, yoksa en yeni endeks yılı
 const refYear = String(anchors.ref_year || Object.keys(anchors.index).sort().pop());
 
-// 1) karşılaştırma seti
+// 1) karşılaştırma seti — katalogdan (--katalog) veya dosyadan (--data)
 let comparables = [];
+const catalogPath = typeof args.katalog === 'string' ? args.katalog : 'data/catalog/catalog.json';
+if (args.katalog && existsSync(catalogPath) && args.marka && args.model) {
+  const catalog = loadCatalogFile(catalogPath);
+  comparables = exportSamples(catalog, args.marka, args.model);
+  console.log(`(kaynak: katalog — ${args.marka} ${args.model}, ${comparables.length} ilan örneği)`);
+}
 if (args.data) {
   const payload = loadJson(args.data);
   const rows = Array.isArray(payload) ? payload : payload.listings || payload.items || [];

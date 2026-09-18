@@ -55,27 +55,27 @@
 ### Fiyat Değerlemesi (Bluebook)
 
 - **İstenen fiyat:** 1.025.000 TL
-- **Adil değer (düzeltilmiş):** 1.124.500 TL
-- **Beklenen bant:** 989.560 – 1.259.440 TL
-- **Karar:** ⚪ **Piyasa değerinde** (sapma %-8.8)
-- **Güven:** düşük (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; bağımsız ekspertiz raporu yok (hasar gizli olabilir); karşılaştırma örneklemi n=4)
+- **Adil değer (düzeltilmiş):** 1.111.943 TL
+- **Beklenen bant:** 1.022.988 – 1.200.898 TL
+- **Karar:** ⚪ **Piyasa değerinde** (sapma %-7.8)
+- **Güven:** orta (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; bağımsız ekspertiz raporu yok (hasar gizli olabilir); karşılaştırma örneklemi n=8)
 
 #### Neden bu değer
 
 | Etken | Etki | Kaynak | Açıklama |
 |---|---|---|---|
-| baz değer | — | kendi karşılaştırma seti | 1.124.500 TL |
+| baz değer | — | kendi karşılaştırma seti | 1.113.056 TL |
+| km | -0.1% | varsayım | 42.500 km (set medyanı 41.277 km) — medyanın üstündeki her 10.000 km |
 | ekspertiz:yok | değer etkisi yok | kural | Bağımsız ekspertiz raporu yok: değer düşürülmez, belirsizlik artar ve fiyat pazarlık payı doğrulanamaz. |
 
 #### Veri notları
 
 - Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
 - Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
-- Karşılaştırma örneklemi küçük (n=4).
 
 #### Kaynak
 
-- Karşılaştırma seti: 4 ilan (yıl ±1, km ±%35, aynı motor ailesi) — medyan 1.124.500 TL
+- Karşılaştırma seti: 8 ilan (yıl ±1, km ±%35, aynı motor ailesi) — medyan 1.113.056 TL
 - Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
 - Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.
 

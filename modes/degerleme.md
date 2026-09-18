@@ -16,6 +16,13 @@ node valuation-cli.mjs \
   --out reports/004-degerleme.md
 ```
 
+Katalogdan beslenen kısa yol (önerilen — karşılaştırma seti daha geniş):
+
+```bash
+node valuation-cli.mjs --katalog --fiyat 1015000 --marka "Fiat" --model "Egea Cross" \
+  --motor "1.4 Fire" --yil 2023 --km 26000 --tramer 38000 --tramer-yil 2023 --boyali 2 --degisen 1
+```
+
 Kısaltmalar: `npm run degerleme`.
 
 ## Katmanlar

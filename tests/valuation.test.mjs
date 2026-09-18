@@ -363,3 +363,22 @@ test('motor filtresi: yeterli aynı-motor ilan yoksa çelişen yakıt sınıfı 
   assert.ok(b.median < 1400000, `dizel fiyatları medyanı yukarı çekmemeli (medyan=${b.median})`);
   assert.equal(b.engine_mixed, false);
 });
+
+test('baselineFromComparables: örneklem küçükse bant kademeli genişletilir ve işaretlenir', () => {
+  const pool = [
+    { year: 2025, km: 8288, price_try: 1198000, note: '1.4 Fire' },   // kendisi (hariç tutulur)
+    { year: 2020, km: 90000, price_try: 900000, note: '1.4 Fire' },   // bant dışı yıl/km
+    { year: 2021, km: 80000, price_try: 950000, note: '1.4 Fire' },
+    { year: 2019, km: 120000, price_try: 820000, note: '1.4 Fire' },
+  ];
+  const strict = pool.slice(1).filter((l) => Math.abs(l.year - 2025) <= 1 && Math.abs(l.km - 8288) / 8288 <= 0.35);
+  assert.equal(strict.length, 0, 'katı bantta hiç ilan yok (senaryo doğrulaması)');
+  const b = baselineFromComparables(pool.slice(1), { year: 2025, km: 8288, engine: '1.4 Fire' });
+  assert.ok(b.relaxation, 'genişletme işaretlenmeli');
+  assert.ok(b.sample_size >= 3, `genişletme sonrası örneklem büyümeli (n=${b.sample_size})`);
+});
+
+test('baselineFromComparables: bant hiç genişletilmezse relaxation null kalır', () => {
+  const b = baselineFromComparables(CMP, { year: 2023, km: 30000 });
+  assert.equal(b.relaxation, null);
+});

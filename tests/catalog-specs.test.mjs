@@ -1,6 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { emptyCatalog, upsertSpecs, upsertTaxonomy, upsertObserved, suggestModels, catalogStats, specsCoverage } from '../catalog.mjs';
+import { emptyCatalog, upsertSpecs, upsertTaxonomy, upsertObserved, suggestModels, catalogStats, specsCoverage, saveCatalogFile, loadCatalogFile, exportSamples } from '../catalog.mjs';
+import { writeFileSync, mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 const SPECS = [
   { make: 'Fiat', model: 'Egea Cross', body: 'SUV', fuel: 'Dizel', gearbox: 'Otomatik', year: 2026, price_min_try: 1890900, price_max_try: 1999900, variant_count: 4, source: 'oto360' },
@@ -77,4 +80,34 @@ test('catalogStats: spec ve taxonomy sayıları raporlanır', () => {
   assert.equal(s.with_specs, 2);
   assert.equal(s.with_taxonomy, 1);
   assert.ok(s.sources.includes('oto360'));
+});
+
+test('KALICILIK: örnekler dosyaya yazılır ve yeniden yüklenince istatistikler korunur', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'cat-'));
+  const path = join(dir, 'catalog.json');
+  let c = upsertObserved(emptyCatalog(), [
+    { make: 'Renault', model: 'Clio', year: 2020, km: 60000, price_try: 900000, source: 'sahibinden.com', listing_id: 'a' },
+    { make: 'Renault', model: 'Clio', year: 2021, km: 40000, price_try: 1000000, source: 'arabam.com', listing_id: 'b' },
+  ]);
+  assert.equal(c.models['renault-clio'].observed.listings_count, 2);
+  saveCatalogFile(path, c);
+  const reloaded = loadCatalogFile(path);
+  assert.equal(reloaded.models['renault-clio'].observed.listings_count, 2, 'yeniden yüklemede sayı korunmalı');
+  assert.equal(reloaded.models['renault-clio'].observed.price_try.median, 950000);
+  // ikinci parti eklenince sayı ARTAR, sıfırlanmaz
+  const c2 = upsertObserved(reloaded, [
+    { make: 'Renault', model: 'Clio', year: 2022, km: 20000, price_try: 1100000, source: 'sahibinden.com', listing_id: 'c' },
+  ]);
+  assert.equal(c2.models['renault-clio'].observed.listings_count, 3);
+});
+
+test('exportSamples: katalogdan değerleme için karşılaştırma seti çıkarır', () => {
+  const c = upsertObserved(emptyCatalog(), [
+    { make: 'Fiat', model: 'Egea Cross', year: 2023, km: 26000, price_try: 1015000, source: 'sahibinden.com', listing_id: 'x', variant: '1.4 Fire Urban' },
+    { make: 'Fiat', model: 'Egea Cross', year: 2024, km: 42500, price_try: 1025000, source: 'arabam.com', listing_id: 'y', variant: '1.4 Fire Street' },
+  ]);
+  const rows = exportSamples(c, 'Fiat', 'Egea Cross');
+  assert.equal(rows.length, 2);
+  assert.equal(rows[0].price_try, 1015000);
+  assert.equal(rows[0].variant, '1.4 Fire Urban');
 });

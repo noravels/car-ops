@@ -63,6 +63,7 @@ function initModel(catalog, id, { make, model, series, segment } = {}) {
       observed: {
         listings_count: 0,
         seen_ids: [],
+      samples: [],
         first_seen: null,
         last_seen: null,
         year: { min: null, max: null, median: null },
@@ -84,7 +85,7 @@ function initModel(catalog, id, { make, model, series, segment } = {}) {
 
 function aggregate(catalog, modelId) {
   const m = catalog.models[modelId];
-  const rows = m._rows || [];
+  const rows = (m.observed && m.observed.samples) || m._rows || [];
   if (!rows.length) return;
   const prices = rows.map((r) => r.price_try).filter(Boolean);
   const kms = rows.map((r) => r.km).filter(Boolean);
@@ -120,13 +121,22 @@ export function upsertObserved(catalog, listings = []) {
       series: listing.series || null,
       segment: listing.body || null,
     });
-    m._rows = m._rows || [];
-    m._rows.push({
+    // ÖRNEKLER KALICI: fiyat istatistikleri ve değerleme karşılaştırma seti buradan gelir.
+    m.observed.samples = m.observed.samples || [];
+    m.observed.samples.push({
       price_try: listing.price_try ?? null,
       km: listing.km ?? null,
       year: listing.year ?? null,
       power_hp: listing.power_hp ?? null,
+      body: listing.body ?? null,
+      fuel: listing.fuel ?? null,
+      gearbox: listing.gearbox ?? null,
+      variant: listing.variant ?? null,
+      city: listing.city ?? null,
+      source: listing.source || listing.source_site || null,
+      listing_id: listing.listing_id ?? null,
     });
+    if (m.observed.samples.length > MAX_SAMPLES) m.observed.samples = m.observed.samples.slice(-MAX_SAMPLES);
     m.observed.seen_ids.push(dedupeKey || `${id}|${added}`);
     bump(m.observed.bodies, listing.body);
     bump(m.observed.fuels, listing.fuel);
@@ -408,6 +418,14 @@ export function renderSuggestions(suggestions, { criteria = {}, limit = 10 } = {
   return lines.join('\n');
 }
 
+/** Katalogdan tek model için değerleme karşılaştırma setini çıkarır. */
+export function exportSamples(catalog, make, model) {
+  const id = slug(`${make} ${model}`);
+  const m = catalog.models[id];
+  if (!m) return [];
+  return (m.observed.samples || []).map((s) => ({ ...s, make, model }));
+}
+
 export function catalogStats(catalog) {
   const models = Object.values(catalog.models || {});
   const sources = new Set();
@@ -431,10 +449,12 @@ export function loadCatalogFile(path) {
   return JSON.parse(readFileSync(path, 'utf8'));
 }
 
+export const MAX_SAMPLES = 2000;
+
 export function saveCatalogFile(path, catalog) {
   mkdirSync(dirname(path), { recursive: true });
   const clean = JSON.parse(JSON.stringify(catalog));
-  for (const m of Object.values(clean.models || {})) delete m._rows;
+  for (const m of Object.values(clean.models || {})) delete m._rows; // örnekler observed.samples'ta kalıcı
   writeFileSync(path, JSON.stringify(clean, null, 2) + '\n', 'utf8');
   return path;
 }
