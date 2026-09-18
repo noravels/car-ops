@@ -36,6 +36,19 @@ Bu dosya market-bağımsız kuralları taşır. Market özel kavramları
 G Bloğundaki tek bir hard red-flag, skoru bağımsız olarak 3.0'ın altına
 çeker (blok skorlarıyla uzlaşmaz).
 
+## Raporlarda denge kuralı (zorunlu)
+
+Her araç raporunda **"Neden alınmalı"** ve **"Neden alınmamalı"** blokları
+birlikte yazılır. Sistem promosyon aracı değildir: bir aracı satmak için
+değil, karar vermek için değerlendirir. Bu yüzden:
+
+- Artılar da eksiler de kanıtla yazılır; kanıtsız övgü de kanıtsız suçlama da
+  yasaktır.
+- Doğrulanamayan her alan eksi hanesine yazılır (belirsizlik = risk).
+- Satıcının anlattığı hikâye ile kayıtlar çeliştiğinde çelişki ayrıca yazılır.
+- Rapor sonunda net duruş belirtilir: **al / şu koşulla al / vazgeç**,
+  gerekçesiyle.
+
 ## Dil
 
 Rapor dili kullanıcının konuştuğu dildedir (varsayılan Türkçe). Araç

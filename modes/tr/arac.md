@@ -65,10 +65,27 @@ varsa H skoru 3.0'ın altına iner; birden fazlaysa öneri "yaklaşma".
 
 ## H — Tavsiye ve Fiziksel İnceleme Checklist
 
-1–5 skor (bütünsel; `modes/_shared.md` tablosu). Ardından `[İNSAN]`
-checklist'in bu araca özelleştirilmiş hâli: beyan edilen boya/değişen
-parçaların neresine bakılacak, hangi testler (soğuk start, yokuş tutma,
-çekme testi), model-bilinen sorunlar (agent araştırması eklerse kaynakla).
+1–5 skor (bütünsel; `modes/_shared.md` tablosu).
+
+**Ardından iki zorunlu blok — her raporda, atlanamaz:**
+
+**Neden alınmalı (artılar):** Madde madde, her biri kanıt/kaynak referanslı
+(ör. "ekspertiz raporu ilanda mevcut", "km dizisi tutarlı", "piyasa medyanının
+%13 altı", "gerçek fiyat düşüşü belgeli"). Genel geçer övgü yazılmaz.
+
+**Neden alınmamalı (eksiler):** Madde madde, aynı disiplinle. Doğrulanamayan
+her alan, her çelişki, her belirsizlik burada yazılır — "ama muhtemelen
+sorun yoktur" gibi yumuşatma yasak. Belirsizlik "belirsizlik" olarak yazılır.
+
+İki blok dengeli uzunlukta olur; birinde 5 madde varsa diğerinde de karşılığı
+aranır. Negatif yazmamak için sebep uydurma yok, pozitif yazmamak için de
+saklama yok. Sonunda tek satır **net duruş**: "al", "şu koşulla al",
+"vazgeç" — gerekçesiyle.
+
+Sonra `[İNSAN]` checklist'in bu araca özelleştirilmiş hâli: beyan edilen
+boya/değişen parçaların neresine bakılacak, hangi testler (soğuk start,
+yokuş tutma, çekme testi), model-bilinen sorunlar (agent araştırması eklerse
+kaynakla).
 
 ## Rapor iskeleti
 

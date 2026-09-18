@@ -96,5 +96,33 @@ uyumlu (çelişki yok)** → G bloğu hard değil. Aciliyet/pay pal kalıpları 
 6. Soğuk start, yokuş tutma, çekme testi; park sensör + geri görüş kamerası testi
 7. Kapoor: yüzyüze, tutanaklı; ödeme noter kadışesinde son imza öncesi
 
+## Artı / Eksi Değerlendirmesi (2026-09-18 eki)
+
+### Neden alınmalı (artılar)
+1. **Fiyat medyanın %10,3 altında** (1.050.000 vs 1.165.000; n=37) — bütçeye rahat oturuyor.
+2. **Taksit çok düşük:** 800k peşinat → 15.405 TL/ay (24 ay) — 25–30k bütçenin yarısından azı.
+3. **Tramer beyanı açık:** "Hasat kaydı 129 bin TL" + hasarın yeri (bagaj kapağı lokal boya, bagaj havuzu, arka tampon) yazılı → beyan-kayıt çelişkisi **yok** (Rapor 004'ün tam tersi).
+4. **Servis garantisi alanı "Evet"** doldurulmuş (garanti devam beyanı).
+5. **Km makul:** 15.000 km / 2024 → yıllık ~7-8 bin; yaşına uygun.
+6. İlan metni **ciddi ve düzenli**, donanım listesi soru bırakmıyor (şeffaflık sinyali).
+7. Galeri (Kerem Auto Plaza, yetki belge 2700777) → kurumsal satıcı, gizli ayıp koruması.
+8. Bütçe üst limitine göre **210.000 TL marj** var (ekspertiz, bakım, sigorta).
+
+### Neden alınmamalı (eksiler)
+1. **Tramer yılı belirtilmemiş:** 129.000 TL 2023 kaynaklıysa normalize **178.190 TL** (%17,8 — ağır sınıra yakın); 2024 ise 143.606 TL. Belirsizlik ciddi fiyat riski.
+2. **Boya geçmişi var:** bagaj kapağı lokal boya + arka tampon boya → kaporta işlemi görmüş.
+3. **Satıcının kendi ekspertiz beyanı dışında rapor yok:** PDF/görsel ilanda paylaşılmamış.
+4. **Servis bakım kayıtları gösterilmemiş** ("yıllık bakımları serviste" beyanı kanıtsız).
+5. **Muayene geçerliliği ve km dizisi doğrulanmadı.**
+6. **Agresif satış altyapısı:** "tüm kredi işlemleri 1 saatte", "12 aya kadar taksit", katılım finans kuruluşları → alıcıyı hızlandırma amaçlı sunum; kaporo baskısına karşı dikkat.
+7. **Galeri finansmanı teşvik ediliyor:** kendi finansmanlarında vade farkı oranı belirtilmemiş → efektif maliyet gizli kalabilir.
+8. **Gaziantep'te:** İstanbul/Ankara dışı → görme + ekspertiz + teslim lojistiği.
+
+### Net duruş
+**"Şu koşulla al" — bu turun fiyat/kalite dengesi en iyi ikinci adayı.**
+Ekspertiz raporu + hasar yılı netleşirse 1.050.000 TL güçlü bir alım; hasar
+2023 kaynaklı çıkarsa normalized şiddet %17,8 ile fiyat 990.000 altına inmedikçe
+beklemede kalınır.
+
 **Kontrol:** `node --test tests/` | Veri: data/listings/sahibinden-1340705293.md
 | Snapshot: data/snapshots/sahibinden-1340705293.jsonl

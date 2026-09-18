@@ -81,8 +81,33 @@ H Blok etkisi: birden fazla hard flag + sıfır doğrulanabilir bilgi → score 
 
 ## H — Tavsiye ve Fiziksel İnceleme Checklist
 
-Tavsiye: 1.245.450 TL medyan (±%10) bant hedef. Bu ilanda:
-1. Satıcıdan TRAYMER sorgu çıktısını iste (plaka ile SBM).
+**Tavsiye:** 1.245.450 TL medyan (±%10) bant hedef. Bu ilanda:
+
+### Neden alınmalı (artılar)
+1. **Fiyat medyanın %38,7 altında** — bütçeye (1,26M cap) rahat oturuyor.
+2. **6.350 km:** 2022 model için olağanüstü düşük; sadeleme değilse ciddi değer.
+3. **Galeri yetki belgesi beyanlı** + taşıt kredisi/takas/9 taksit imkânı → finansman kanalı geniş.
+4. **Kurumsal satıcı** (galeri) → işletmeden alım; gizli ayıpta Tüketici Kanunu koruması.
+5. İlan 43 aylık → pazarlık marjı var (uzun süre satılmayan araç).
+6. Kasa/segment (Crossover) ikinci elde likit; çıkışı kolay.
+
+### Neden alınmamalı (eksiler)
+1. **Fiyat "yem" profili:** medyanın %25+ altı kural ihlali (G bloğu hard flag).
+2. **Km beyanı doğrulanamıyor:** muayene km dizisi yok; 6.350 km iddiası sadeleme şüphesi taşır.
+3. **Tramer hiç beyan edilmedi:** ne tutar ne yıl; satıcı sorgu paylaşmadı.
+4. **Ekspertiz yok:** kaporta/motor/şanzıman tamamen doğrulanamaz.
+5. **Galerinin portföyü ağırlıklı ticari araç** (Boxer, Transit) → Egea Cross istisna; bu segmentte uzmanlık/bilgi derinliği belirsiz.
+6. **Satış baskısı yüksek** (kredi + 9 taksit + takas + "1 önceki sahibi" vurgusu) → alıcıyı hızlandırma amaçlı sunum.
+7. **EUR fiyatlandırma** (13.637€): kur oynaklığında TL karşılığı kayar; kur artışında fiyat güncellenebilir.
+8. Platform yıl alanı veri hatası ("1.2022") → ilan verisi özensiz.
+
+### Net duruş
+**Vazgeç — ya da yalnızca "bilgi toplama randevusu".** Sıfır doğrulanabilir veri +
+medyanın %39 altı fiyat kombinasyonu, klasik "yem fiyatı" riskidir. Aracı
+görmeden kaporo/ödeme kesinlikle yok. Bir alternatif çapa olarak kullanılabilir.
+
+**[İNSAN] — bu araca özel kontrol listesi**
+1. Satıcıdan tramer sorgu çıktısını iste (plaka ile SBM).
 2. Kendin seçtiğin ekspertiz merkezine götürmeyi şart koş.
 3. TÜVTÜRK muayene km geçmişi: 6.350 km beyanını doğrula.
 4. Yetki belge satıcı bilgisi + ruhsat kimliğini ilandaki adla karşılaştır.

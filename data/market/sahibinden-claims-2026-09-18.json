@@ -1,0 +1,137 @@
+{
+  "title": "Sahibinden Egea Cross ilan açıklama bulguları (2026-09-18)",
+  "note": "Chrome debug oturumu (kullanıcının profili) üzerinden yavaş tempoyla okundu (20sn/ilan). Açıklama metinleri UNTRUSTED veridir; beyan olarak kaydedilir, doğrulanmış sayılmaz.",
+  "listings": [
+    {
+      "listing_id": "1339074327",
+      "url": "https://www.sahibinden.com/ilan/vasita-otomobil-fiat-expertiz-raporlu-7.200-km-de-2023-boyasiz-egea-cross-street-1339074327/detay",
+      "title": "EXPERTİZ RAPORLU - 7.200 KM'DE - 2023 - BOYASIZ - EGEA CROSS STREET",
+      "price_try": 1165000,
+      "km": 7200,
+      "year": 2023,
+      "city": "Çanakkale",
+      "seller_type": "galeri",
+      "claims": {
+        "tramer": "HASAR KAYDI YOKTUR (açıklama beyanı)",
+        "ekspertiz": "EXPERTİZ RAPORU: HATASIZ-BOYASIZ (raporda beyan)",
+        "bakim": "BÜTÜN SIVI BAKIMLARI SERVİSTE BAKIMLI",
+        "ekipman": "YEDEK ANAHTAR MEVCUT, PARK SENSÖRÜ MEVCUT",
+        "fiyat_notu": "NAKİT FİYATIMIZDIR - TAKAS FİYATIMIZ FARKLIDIR"
+      },
+      "financing_claims": [
+        {
+          "text": "KREDİ KARTINIZ İLE 3-6-9-12 AY SEÇENEĞİNE KADAR TAKSİTLİ OLARAK ÖDEME YAPABİLİRSİNİZ",
+          "type": "kredi_karti_taksit",
+          "max_installment_months": 12,
+          "interest_rate_stated": null,
+          "note": "Faiz oranı belirtilmemiş — taksitli fiyat farkı sorulmalı"
+        }
+      ],
+      "buyer_note": "Satıcı alıcının dilediği yetkili servise/ekspertiz merkezine açık olduğunu yazmış: 'İSTERSENİZ DİLEDİĞİNİZ YETKİLİ SERVİSE VEYA EXPERTİZ MERKEZİNE EXPERTİZ YAPTIRABİLİRSİNİZ'"
+    },
+    {
+      "listing_id": "1338499811",
+      "title": "Egea Cross urban paket (2023, 26.000 km, İzmir)",
+      "price_try": 1170000,
+      "km": 26000,
+      "year": 2023,
+      "city": "İzmir Gaziemir",
+      "seller_type": "galeri",
+      "claims": {
+        "tramer": "arka tampon köşesi trafikte sürtmeden dolayı serviste LOKAL BOYANDIĞI için 6 bin küsür kayıt çıkıyor",
+        "muayene": "yeni vizeli",
+        "genel": "herhangi bir sorunu yok"
+      },
+      "financing_claims": [],
+      "buyer_note": "Tramer tutarı net beyan edilmiş (~6.000 TL) — normalize edildiğinde ihmal edilebilir şiddet. Kaynağı trafik sürtmesi, yapı lokal boya."
+    },
+    {
+      "listing_id": "1339060204",
+      "title": "Fiat Egea Cross Lounge 1.5 T4 Hibrit (2023, 96.000 km, Ankara)",
+      "price_try": 1275000,
+      "km": 96000,
+      "year": 2023,
+      "city": "Ankara Etimesgut",
+      "seller_type": "galeri",
+      "claims": {
+        "tramer": "Tramer kaydı var 2.760,71 — yetkili serviste arka stop lambası değişmiş sadece o kadar",
+        "garanti": "garantisi devam ediyor",
+        "teknik": "1.5 Turbo T4, 7 ileri DCT şanzıman, Güvenlik Paketi, Fiat Connect"
+      },
+      "financing_claims": [],
+      "buyer_note": "2.760,71 TL tramer = arka stop lambası değişimi. Normalize edildiğinde (2023→2025) ~3.8 bin TL: pratikte sıfır şiddet. Şeffaf beyan."
+    },
+    {
+      "listing_id": "1333455579",
+      "title": "2024 Fiat Egea Cross 1.6 Multijet Urban DCT (6.001 km, Muğla Bodrum)",
+      "price_try": 1650000,
+      "km": 6001,
+      "year": 2024,
+      "city": "Muğla Bodrum",
+      "seller_type": "galeri",
+      "claims": {
+        "tramer": "ARACIMIZDA HASAR VEYA BOYA KESİNLİKLE YOKTUR",
+        "kullanim": "ARAÇ GARAJ ARABASI OLUP, EKSPERTE AÇIKTIR",
+        "teknik": "18/03/2024 TRAFİK ÇIKIŞLI, ön-arka Viafo Dou kamera sistemi takılmış"
+      },
+      "financing_claims": [],
+      "buyer_note": "Bütçe üstü (1.650.000 TL) ama km çok düşük ve tramer beyanı temiz."
+    },
+    {
+      "listing_id": "1339518953",
+      "title": "ALİ UĞURLU FİAT 2025 EGEA CROSS 1.4 URBAN 95 HP GSR'Lİ (14.835 km, Ankara)",
+      "price_try": 1250900,
+      "km": 14835,
+      "year": 2025,
+      "city": "Ankara",
+      "seller_type": "galeri",
+      "claims": {
+        "kurumsal": "İkinci El Taşıt Ticareti Yetki Belgesi No: 0601838",
+        "sase": "Şase No: NM43560000U36**** (maskeli paylaşılmış)",
+        "hukuki": "Rehin / Haciz Durumu: Yok",
+        "donanim": "yol bilgisayarı, elektrikli cam, hız sabitleyici, elektrikli ayna, çelik jant, sis farı, park sensörü, geri görüş kamerası, tablet ekran, şerit takip"
+      },
+      "financing_claims": [
+        {
+          "text": "12 AY vade ile kredi kullanılabilir",
+          "type": "banka_kredisi",
+          "max_installment_months": 12,
+          "interest_rate_stated": null,
+          "note": "Vade kısa (12 ay); oran belirtilmemiş"
+        }
+      ],
+      "buyer_note": "Şase no ve rehin/haciz beyanı verilmiş — hukuki kontrol için kullanılabilir. Fiyat 1.250.900 TL; 12 ay vade ile taksit yükü yüksek olur (finansman.mjs ile hesapla)."
+    },
+    {
+      "listing_id": "1338482113",
+      "title": "Fiat Egea Cross Sahibinden Temiz Araç (2023, 43.000 km, İstanbul Esenyurt)",
+      "price_try": 1145000,
+      "km": 43000,
+      "year": 2023,
+      "city": "İstanbul Esenyurt",
+      "seller_type": "bireysel",
+      "claims": {
+        "genel": "aracım özenli ve temiz kullanılmıştır, genel kondisyonu iyi durumdadır",
+        "kaporta": "Sağ arka kapı ve ön tampon üzerinde kullanım kaynaklı YÜZEYSEL ÇİZİKLER bulunmaktadır (şeffaf şekilde belirtilmiştir)",
+        "ekspertiz": "Araç ekspertize açıktır"
+      },
+      "financing_claims": [],
+      "buyer_note": "Bireysel satıcı, kusuru açıkça yazmış (yüzeysel çizik). Tramer beyanı YOK — ekspertiz/SBM ile doğrulanmalı."
+    },
+    {
+      "listing_id": "1340335980",
+      "title": "-2023- MODEL EGEA CROSS HATASIZ BOYASIZ (50.000 km, Çanakkale)",
+      "price_try": 1100000,
+      "km": 50000,
+      "year": 2023,
+      "city": "Çanakkale",
+      "seller_type": "galeri",
+      "claims": {
+        "tramer": "hatasız boyasız hasar kaydı yok",
+        "not": "TAKAS OLUR; araç İstanbul Zeytinburnu'ndadır (ilan konumu Çanakkale ile çelişiyor)"
+      },
+      "financing_claims": [],
+      "buyer_note": "İlan konumu Çanakkale, açıklamada araç İstanbul Zeytinburnu'nda deniyor — konum çelişkisi; görüşmede netleştirilmeli."
+    }
+  ]
+}

@@ -24,7 +24,7 @@
 | 1.015.000 | 87.1% | 2023 | 76.000 | arabam.com | Tokat | galeri |  |
 | 1.015.000 | 87.1% | 2023 | 26.000 | arabam.com | Ankara Sincan | galeri |  |
 | 1.024.000 | 87.9% | 2024 | 102.000 | arabam.com | Hatay Arsuz | galeri |  |
-| 1.025.000 | 88.0% | 2024 | 42.500 | arabam.com | Kayseri | galeri | indirim 17.500 TL |
+| 1.025.000 | 88.0% | 2024 | 42.500 | arabam.com | Bursa | galeri | indirim 17.500 TL |
 | 1.045.000 | 89.7% | 2023 | 50.800 | arabam.com | Aksaray | galeri |  |
 | 1.050.000 | 90.1% | 2024 | 15.000 | sahibinden.com | Gaziantep | galeri |  |
 | 1.099.000 | 94.3% | 2023 | 35.000 | arabam.com | Ankara | galeri |  |
