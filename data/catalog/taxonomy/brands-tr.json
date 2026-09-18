@@ -1,0 +1,502 @@
+{
+  "source": "sahibinden.com/kategori/otomobil",
+  "fetched_at": "2026-09-18",
+  "note": "Marka envanteri + aktif ilan sayısı (otomobil kategorisi). Sayılar o günkü ilan hacmidir.",
+  "brands": [
+    {
+      "make": "Yedek Parça",
+      "count": 2635067,
+      "slug": "yedek-parca"
+    },
+    {
+      "make": "Jant & Lastik",
+      "count": 324484,
+      "slug": "jant-&-lastik"
+    },
+    {
+      "make": "Renault",
+      "count": 55280,
+      "slug": "renault"
+    },
+    {
+      "make": "Volkswagen",
+      "count": 48059,
+      "slug": "volkswagen"
+    },
+    {
+      "make": "Fiat",
+      "count": 33106,
+      "slug": "fiat"
+    },
+    {
+      "make": "Opel",
+      "count": 29361,
+      "slug": "opel"
+    },
+    {
+      "make": "BMW",
+      "count": 27777,
+      "slug": "bmw"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "count": 23896,
+      "slug": "mercedes-benz"
+    },
+    {
+      "make": "Ford",
+      "count": 23193,
+      "slug": "ford"
+    },
+    {
+      "make": "Hyundai",
+      "count": 17651,
+      "slug": "hyundai"
+    },
+    {
+      "make": "Toyota",
+      "count": 16725,
+      "slug": "toyota"
+    },
+    {
+      "make": "Audi",
+      "count": 16196,
+      "slug": "audi"
+    },
+    {
+      "make": "Peugeot",
+      "count": 13686,
+      "slug": "peugeot"
+    },
+    {
+      "make": "Honda",
+      "count": 12350,
+      "slug": "honda"
+    },
+    {
+      "make": "Skoda",
+      "count": 12038,
+      "slug": "skoda"
+    },
+    {
+      "make": "Citroen",
+      "count": 9556,
+      "slug": "citroen"
+    },
+    {
+      "make": "Tofaş",
+      "count": 8666,
+      "slug": "tofas"
+    },
+    {
+      "make": "Seat",
+      "count": 7231,
+      "slug": "seat"
+    },
+    {
+      "make": "Dacia",
+      "count": 3681,
+      "slug": "dacia"
+    },
+    {
+      "make": "Volvo",
+      "count": 3334,
+      "slug": "volvo"
+    },
+    {
+      "make": "Chevrolet",
+      "count": 3301,
+      "slug": "chevrolet"
+    },
+    {
+      "make": "Kia",
+      "count": 3077,
+      "slug": "kia"
+    },
+    {
+      "make": "Nissan",
+      "count": 2054,
+      "slug": "nissan"
+    },
+    {
+      "make": "Klasik Otomobiller",
+      "count": 1362,
+      "slug": "klasik-otomobiller"
+    },
+    {
+      "make": "Mini",
+      "count": 1240,
+      "slug": "mini"
+    },
+    {
+      "make": "Porsche",
+      "count": 1113,
+      "slug": "porsche"
+    },
+    {
+      "make": "Mazda",
+      "count": 1024,
+      "slug": "mazda"
+    },
+    {
+      "make": "Alfa Romeo",
+      "count": 732,
+      "slug": "alfa-romeo"
+    },
+    {
+      "make": "Lada",
+      "count": 667,
+      "slug": "lada"
+    },
+    {
+      "make": "Mitsubishi",
+      "count": 647,
+      "slug": "mitsubishi"
+    },
+    {
+      "make": "Tesla",
+      "count": 565,
+      "slug": "tesla"
+    },
+    {
+      "make": "Suzuki",
+      "count": 563,
+      "slug": "suzuki"
+    },
+    {
+      "make": "DS Automobiles",
+      "count": 376,
+      "slug": "ds-automobiles"
+    },
+    {
+      "make": "Jaguar",
+      "count": 370,
+      "slug": "jaguar"
+    },
+    {
+      "make": "Cupra",
+      "count": 272,
+      "slug": "cupra"
+    },
+    {
+      "make": "Chrysler",
+      "count": 263,
+      "slug": "chrysler"
+    },
+    {
+      "make": "Subaru",
+      "count": 241,
+      "slug": "subaru"
+    },
+    {
+      "make": "Tata",
+      "count": 218,
+      "slug": "tata"
+    },
+    {
+      "make": "BYD",
+      "count": 204,
+      "slug": "byd"
+    },
+    {
+      "make": "Maserati",
+      "count": 201,
+      "slug": "maserati"
+    },
+    {
+      "make": "Geely",
+      "count": 138,
+      "slug": "geely"
+    },
+    {
+      "make": "TOGG",
+      "count": 134,
+      "slug": "togg"
+    },
+    {
+      "make": "MG",
+      "count": 128,
+      "slug": "mg"
+    },
+    {
+      "make": "Rover",
+      "count": 127,
+      "slug": "rover"
+    },
+    {
+      "make": "Lancia",
+      "count": 112,
+      "slug": "lancia"
+    },
+    {
+      "make": "Ferrari",
+      "count": 109,
+      "slug": "ferrari"
+    },
+    {
+      "make": "Daihatsu",
+      "count": 95,
+      "slug": "daihatsu"
+    },
+    {
+      "make": "Smart",
+      "count": 93,
+      "slug": "smart"
+    },
+    {
+      "make": "Bentley",
+      "count": 85,
+      "slug": "bentley"
+    },
+    {
+      "make": "Proton",
+      "count": 85,
+      "slug": "proton"
+    },
+    {
+      "make": "Daewoo",
+      "count": 84,
+      "slug": "daewoo"
+    },
+    {
+      "make": "Volta",
+      "count": 81,
+      "slug": "volta"
+    },
+    {
+      "make": "Chery",
+      "count": 76,
+      "slug": "chery"
+    },
+    {
+      "make": "Saab",
+      "count": 56,
+      "slug": "saab"
+    },
+    {
+      "make": "Dodge",
+      "count": 51,
+      "slug": "dodge"
+    },
+    {
+      "make": "Arora",
+      "count": 50,
+      "slug": "arora"
+    },
+    {
+      "make": "Nieve",
+      "count": 50,
+      "slug": "nieve"
+    },
+    {
+      "make": "Infiniti",
+      "count": 46,
+      "slug": "infiniti"
+    },
+    {
+      "make": "Regal Raptor",
+      "count": 46,
+      "slug": "regal-raptor"
+    },
+    {
+      "make": "Rolls-Royce",
+      "count": 45,
+      "slug": "rolls-royce"
+    },
+    {
+      "make": "Lamborghini",
+      "count": 43,
+      "slug": "lamborghini"
+    },
+    {
+      "make": "Cadillac",
+      "count": 41,
+      "slug": "cadillac"
+    },
+    {
+      "make": "Aston Martin",
+      "count": 39,
+      "slug": "aston-martin"
+    },
+    {
+      "make": "Lexus",
+      "count": 38,
+      "slug": "lexus"
+    },
+    {
+      "make": "Kuba",
+      "count": 31,
+      "slug": "kuba"
+    },
+    {
+      "make": "Alpine",
+      "count": 23,
+      "slug": "alpine"
+    },
+    {
+      "make": "Yuki",
+      "count": 22,
+      "slug": "yuki"
+    },
+    {
+      "make": "Ortimobil",
+      "count": 15,
+      "slug": "ortimobil"
+    },
+    {
+      "make": "Reeder",
+      "count": 15,
+      "slug": "reeder"
+    },
+    {
+      "make": "Leapmotor",
+      "count": 13,
+      "slug": "leapmotor"
+    },
+    {
+      "make": "Relive",
+      "count": 13,
+      "slug": "relive"
+    },
+    {
+      "make": "RKS",
+      "count": 12,
+      "slug": "rks"
+    },
+    {
+      "make": "Pontiac",
+      "count": 11,
+      "slug": "pontiac"
+    },
+    {
+      "make": "Lincoln",
+      "count": 10,
+      "slug": "lincoln"
+    },
+    {
+      "make": "Buick",
+      "count": 9,
+      "slug": "buick"
+    },
+    {
+      "make": "Vanderhall",
+      "count": 9,
+      "slug": "vanderhall"
+    },
+    {
+      "make": "Ikco",
+      "count": 7,
+      "slug": "ikco"
+    },
+    {
+      "make": "Lotus",
+      "count": 7,
+      "slug": "lotus"
+    },
+    {
+      "make": "McLaren",
+      "count": 6,
+      "slug": "mclaren"
+    },
+    {
+      "make": "Morgan",
+      "count": 6,
+      "slug": "morgan"
+    },
+    {
+      "make": "XEV",
+      "count": 5,
+      "slug": "xev"
+    },
+    {
+      "make": "Micro",
+      "count": 4,
+      "slug": "micro"
+    },
+    {
+      "make": "Abarth",
+      "count": 3,
+      "slug": "abarth"
+    },
+    {
+      "make": "Luqi",
+      "count": 3,
+      "slug": "luqi"
+    },
+    {
+      "make": "Motolux",
+      "count": 3,
+      "slug": "motolux"
+    },
+    {
+      "make": "Polestar",
+      "count": 3,
+      "slug": "polestar"
+    },
+    {
+      "make": "The London Taxi",
+      "count": 3,
+      "slug": "the-london-taxi"
+    },
+    {
+      "make": "Aion",
+      "count": 2,
+      "slug": "aion"
+    },
+    {
+      "make": "I-GO",
+      "count": 2,
+      "slug": "i-go"
+    },
+    {
+      "make": "Saipa",
+      "count": 2,
+      "slug": "saipa"
+    },
+    {
+      "make": "Zlin Motors",
+      "count": 2,
+      "slug": "zlin-motors"
+    },
+    {
+      "make": "Bajaj",
+      "count": 1,
+      "slug": "bajaj"
+    },
+    {
+      "make": "Devinci",
+      "count": 1,
+      "slug": "devinci"
+    },
+    {
+      "make": "Eagle",
+      "count": 1,
+      "slug": "eagle"
+    },
+    {
+      "make": "Jiayuan",
+      "count": 1,
+      "slug": "jiayuan"
+    },
+    {
+      "make": "Joyce",
+      "count": 1,
+      "slug": "joyce"
+    },
+    {
+      "make": "Marcos",
+      "count": 1,
+      "slug": "marcos"
+    },
+    {
+      "make": "Mercury",
+      "count": 1,
+      "slug": "mercury"
+    },
+    {
+      "make": "Rainwoll",
+      "count": 1,
+      "slug": "rainwoll"
+    }
+  ]
+}

@@ -11,7 +11,10 @@
    "city": "Gaziantep",
    "seller_type": "galeri",
    "url": "https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2024-fiat-egea-cross-1.4-fire-urban-sadece-15-bin-de-1340705293/detay",
-   "note": "tramer beyan 129.000 TL, bagaj kapağı lokal boya"
+   "note": "tramer beyan 129.000 TL, bagaj kapağı lokal boya",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "sahibinden.com",
@@ -21,7 +24,10 @@
    "price_try": 1100000,
    "city": "Çanakkale",
    "seller_type": "galeri",
-   "note": "hatasız boyasız beyanı"
+   "note": "hatasız boyasız beyanı",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "sahibinden.com",
@@ -31,7 +37,10 @@
    "price_try": 1250900,
    "city": "Ankara",
    "seller_type": "galeri",
-   "note": "GSR'li"
+   "note": "GSR'li",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "sahibinden.com",
@@ -41,7 +50,11 @@
    "price_try": 1275000,
    "city": "Ankara Etimesgut",
    "seller_type": "galeri",
-   "note": "1.5 T4 Lounge hibrit"
+   "note": "1.5 T4 Lounge hibrit",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover",
+   "fuel": "Hibrit"
   },
   {
    "source": "sahibinden.com",
@@ -51,7 +64,10 @@
    "price_try": 1165000,
    "city": "Çanakkale",
    "seller_type": "galeri",
-   "note": "expertiz raporlu, boyasız"
+   "note": "expertiz raporlu, boyasız",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "sahibinden.com",
@@ -61,7 +77,10 @@
    "price_try": 1650000,
    "city": "Muğla Bodrum",
    "seller_type": "galeri",
-   "note": "1.6 Multijet Urban DCT"
+   "note": "1.6 Multijet Urban DCT",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "sahibinden.com",
@@ -71,7 +90,10 @@
    "price_try": 1145000,
    "city": "İstanbul Esenyurt",
    "seller_type": "bireysel",
-   "note": "sahibinden"
+   "note": "sahibinden",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "sahibinden.com",
@@ -81,7 +103,10 @@
    "price_try": 1170000,
    "city": "İzmir Gaziemir",
    "seller_type": "galeri",
-   "note": "urban paket"
+   "note": "urban paket",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "sahibinden.com",
@@ -91,7 +116,11 @@
    "price_try": 1185000,
    "city": "Sakarya",
    "seller_type": "galeri",
-   "note": "1.5 T Hybrid otomatik"
+   "note": "1.5 T Hybrid otomatik",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover",
+   "gearbox": "Otomatik"
   },
   {
    "source": "arabam.com",
@@ -100,7 +129,10 @@
    "price_try": 1015000,
    "city": "Tokat",
    "seller_type": "galeri",
-   "note": "1.4 Fire Street"
+   "note": "1.4 Fire Street",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -109,7 +141,10 @@
    "price_try": 1024000,
    "city": "Hatay Arsuz",
    "seller_type": "galeri",
-   "note": "1.4 Fire Street"
+   "note": "1.4 Fire Street",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -118,7 +153,12 @@
    "price_try": 1399750,
    "city": "Eskişehir",
    "seller_type": "galeri",
-   "note": "1.6 MJ Urban dizel otomatik"
+   "note": "1.6 MJ Urban dizel otomatik",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover",
+   "fuel": "Dizel",
+   "gearbox": "Otomatik"
   },
   {
    "source": "arabam.com",
@@ -127,7 +167,10 @@
    "price_try": 1420000,
    "city": "Elazığ",
    "seller_type": "galeri",
-   "note": "1.6 MJ Lounge"
+   "note": "1.6 MJ Lounge",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -136,7 +179,10 @@
    "price_try": 1220000,
    "city": "Bursa İnegöl",
    "seller_type": "bireysel",
-   "note": "1.3 MJ Urban, 'Acil'"
+   "note": "1.3 MJ Urban, 'Acil'",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -145,7 +191,10 @@
    "price_try": 1725000,
    "city": "Kayseri",
    "seller_type": "galeri",
-   "note": "PayCars 1.6 MJ Urban"
+   "note": "PayCars 1.6 MJ Urban",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -154,7 +203,11 @@
    "price_try": 1150000,
    "city": "Konya",
    "seller_type": "galeri",
-   "note": "1.6 MJ Urban otomatik"
+   "note": "1.6 MJ Urban otomatik",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover",
+   "gearbox": "Otomatik"
   },
   {
    "source": "arabam.com",
@@ -163,7 +216,10 @@
    "price_try": 1486750,
    "city": "Bursa",
    "seller_type": "galeri",
-   "note": "1.6 MJ Wagon Lounge"
+   "note": "1.6 MJ Wagon Lounge",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -172,7 +228,10 @@
    "price_try": 1165000,
    "city": "İzmir Dikili",
    "seller_type": "galeri",
-   "note": "'NOKTA hatasız' 1.4 Urban"
+   "note": "'NOKTA hatasız' 1.4 Urban",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -181,7 +240,10 @@
    "price_try": 995000,
    "city": "Denizli",
    "seller_type": "galeri",
-   "note": "1.4 Street hatasız boyasız tramersiz"
+   "note": "1.4 Street hatasız boyasız tramersiz",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -190,7 +252,10 @@
    "price_try": 1015000,
    "city": "Ankara Sincan",
    "seller_type": "galeri",
-   "note": "YMS Car, servis bakımlı"
+   "note": "YMS Car, servis bakımlı",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -199,7 +264,10 @@
    "price_try": 1045000,
    "city": "Aksaray",
    "seller_type": "galeri",
-   "note": "1.4 Street hatasız boyasız"
+   "note": "1.4 Street hatasız boyasız",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -208,7 +276,10 @@
    "price_try": 1195000,
    "city": "Tokat Zile",
    "seller_type": "galeri",
-   "note": "1.4 Urban 11 bin km"
+   "note": "1.4 Urban 11 bin km",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -217,7 +288,10 @@
    "price_try": 1165000,
    "city": "Nevşehir",
    "seller_type": "galeri",
-   "note": "1.4 Urban 15 bin km"
+   "note": "1.4 Urban 15 bin km",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -228,7 +302,10 @@
    "price_drop_try": 17500,
    "city": "Bursa",
    "seller_type": "galeri",
-   "note": "gerçek fiyat düşüşü 17.500 TL (1.042.500→1.025.000); boya-değişen: belirtilmemiş"
+   "note": "gerçek fiyat düşüşü 17.500 TL (1.042.500→1.025.000); boya-değişen: belirtilmemiş",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -237,7 +314,10 @@
    "price_try": 1149900,
    "city": "Kayseri",
    "seller_type": "galeri",
-   "note": "Pay Cars 1.4 Urban"
+   "note": "Pay Cars 1.4 Urban",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -246,7 +326,10 @@
    "price_try": 1099000,
    "city": "Ankara",
    "seller_type": "galeri",
-   "note": "1.4 Urban hatasız boyasız"
+   "note": "1.4 Urban hatasız boyasız",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -255,7 +338,10 @@
    "price_try": 1600000,
    "city": "Bursa",
    "seller_type": "galeri",
-   "note": "1.6 MJ Limited PPF kaplı"
+   "note": "1.6 MJ Limited PPF kaplı",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -264,7 +350,10 @@
    "price_try": 1290000,
    "city": "Yozgat",
    "seller_type": "galeri",
-   "note": "1.4 Fire Lounge"
+   "note": "1.4 Fire Lounge",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "arabam.com",
@@ -273,7 +362,10 @@
    "price_try": 1150000,
    "city": "Adıyaman",
    "seller_type": "galeri",
-   "note": "1.4 Urban boyasız"
+   "note": "1.4 Urban boyasız",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "vava.cars",
@@ -282,7 +374,12 @@
    "price_try": 1570000,
    "city": null,
    "seller_type": "kurumsal",
-   "note": "1.6 MJ Lounge otomatik dizel"
+   "note": "1.6 MJ Lounge otomatik dizel",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover",
+   "fuel": "Dizel",
+   "gearbox": "Otomatik"
   },
   {
    "source": "vava.cars",
@@ -291,7 +388,12 @@
    "price_try": 1185000,
    "city": null,
    "seller_type": "kurumsal",
-   "note": "1.4 Urban manuel benzin"
+   "note": "1.4 Urban manuel benzin",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover",
+   "fuel": "Benzin",
+   "gearbox": "Manuel"
   },
   {
    "source": "vava.cars",
@@ -300,7 +402,10 @@
    "price_try": 1640000,
    "city": null,
    "seller_type": "kurumsal",
-   "note": "1.6 MJ Lounge, boyasız-değişensiz-tramersiz"
+   "note": "1.6 MJ Lounge, boyasız-değişensiz-tramersiz",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "vava.cars",
@@ -311,7 +416,10 @@
    "price_drop_try": 17000,
    "city": null,
    "seller_type": "kurumsal",
-   "note": "Özel indirim 17.000₺, boyasız-değişensiz-tramersiz"
+   "note": "Özel indirim 17.000₺, boyasız-değişensiz-tramersiz",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "tr.autoexus.com",
@@ -320,7 +428,10 @@
    "price_try": 762947,
    "city": "İstanbul Esenler",
    "seller_type": "galeri",
-   "note": "EUR fiyatlı 13.637€; medyan -%38 (yem fiyatı profili)"
+   "note": "EUR fiyatlı 13.637€; medyan -%38 (yem fiyatı profili)",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "tr.autoexus.com",
@@ -329,7 +440,10 @@
    "price_try": 922619,
    "city": "İstanbul",
    "seller_type": "galeri",
-   "note": "EUR 16.491€"
+   "note": "EUR 16.491€",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "otonomi.com",
@@ -338,7 +452,10 @@
    "price_try": 1145000,
    "city": "Ankara",
    "seller_type": "bireysel",
-   "note": "garanti devam, tramer ~30.000 TL beyan"
+   "note": "garanti devam, tramer ~30.000 TL beyan",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   },
   {
    "source": "otonomi.com",
@@ -347,7 +464,11 @@
    "price_try": 1345900,
    "city": "Ankara Akyurt",
    "seller_type": "galeri",
-   "note": "1.5 T4 hibrit DCT"
+   "note": "1.5 T4 hibrit DCT",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover",
+   "fuel": "Hibrit"
   },
   {
    "source": "sahibinden.com",
@@ -357,7 +478,10 @@
    "price_try": 1349000,
    "city": "İzmir Menderes",
    "seller_type": "galeri",
-   "note": "2025 Urban Traction+ GSR (Viago Yeniel Motors) — bütçe üstü"
+   "note": "2025 Urban Traction+ GSR (Viago Yeniel Motors) — bütçe üstü",
+   "make": "Fiat",
+   "model": "Egea Cross",
+   "body": "Crossover"
   }
  ]
 }

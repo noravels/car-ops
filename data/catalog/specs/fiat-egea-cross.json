@@ -1,0 +1,14 @@
+{
+  "make": "Fiat",
+  "model": "Egea Cross",
+  "body": "SUV",
+  "fuel": "Dizel",
+  "gearbox": "Otomatik",
+  "year": 2026,
+  "price_min_try": 1890900,
+  "price_max_try": 1999900,
+  "variant_count": 4,
+  "source": "sahibinden.com/oto360/sifir-araclar/fiat-egea-cross-fiyat-listesi",
+  "license": "JATO Dynamics",
+  "fetched_at": "2026-09-18"
+}

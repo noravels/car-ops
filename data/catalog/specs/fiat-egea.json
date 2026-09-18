@@ -1,0 +1,14 @@
+{
+  "make": "Fiat",
+  "model": "Egea",
+  "body": "Sedan",
+  "fuel": "Dizel",
+  "gearbox": null,
+  "year": 2026,
+  "price_min_try": 1449900,
+  "price_max_try": 1990900,
+  "variant_count": 6,
+  "source": "sahibinden.com/oto360/sifir-araclar/fiat-egea-fiyat-listesi",
+  "license": "JATO Dynamics",
+  "fetched_at": "2026-09-18"
+}

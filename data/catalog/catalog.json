@@ -1,0 +1,7906 @@
+{
+  "meta": {
+    "version": 1,
+    "learned_from_listings": 175,
+    "last_updated": "2026-09-18T18:58:14.792Z",
+    "note": "observed = ilanlardan gözlenen dağılımlar; taxonomy = sitenin kategori sınıflaması. Teknik özellik tahmini yapılmaz.",
+    "specs_models": 2
+  },
+  "models": {
+    "ford-puma": {
+      "id": "ford-puma",
+      "make": "Ford",
+      "model": "Puma",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|ford-puma|2023|75000|999000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.464Z",
+        "last_seen": "2026-09-18T18:58:14.464Z",
+        "year": {
+          "min": 2023,
+          "max": 2023,
+          "median": 2023
+        },
+        "km": {
+          "min": 75000,
+          "max": 75000,
+          "median": 75000
+        },
+        "price_try": {
+          "min": 999000,
+          "max": 999000,
+          "median": 999000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Pursaklar": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "fiat-egea-cross": {
+      "id": "fiat-egea-cross",
+      "make": "Fiat",
+      "model": "Egea Cross",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": {
+        "body": "SUV",
+        "fuel": "Dizel",
+        "gearbox": "Otomatik",
+        "seats": null,
+        "doors": null,
+        "engine_cc": null,
+        "power_hp": null,
+        "year": 2026,
+        "price_min_try": 1890900,
+        "price_max_try": 1999900,
+        "variant_count": 4,
+        "source": "sahibinden.com/oto360/sifir-araclar/fiat-egea-cross-fiyat-listesi",
+        "license": "JATO Dynamics",
+        "url": null,
+        "fetched_at": "2026-09-18"
+      },
+      "observed": {
+        "listings_count": 38,
+        "seen_ids": [
+          "sahibinden.com|fiat-egea-cross|2025|23000|1250000",
+          "sahibinden.com|fiat-egea-cross|2024|30000|1111111",
+          "sahibinden.com|fiat-egea-cross|2022|74000|1035000",
+          "sahibinden.com|fiat-egea-cross|2024|45000|1250000",
+          "sahibinden.com|fiat-egea-cross|2023|43000|1150000",
+          "sahibinden.com|fiat-egea-cross|2021|65000|1125000",
+          "sahibinden.com|fiat-egea-cross|2023|76000|1015000",
+          "sahibinden.com|fiat-egea-cross|2023|40000|1040000",
+          "sahibinden.com|fiat-egea-cross|2023|27000|1040000",
+          "sahibinden.com|fiat-egea-cross|2021|65000|1225000",
+          "sahibinden.com|fiat-egea-cross|2023|59000|1250000",
+          "sahibinden.com|fiat-egea-cross|2025|6001|1120000",
+          "sahibinden.com|fiat-egea-cross|2023|40553|1190000",
+          "sahibinden.com|fiat-egea-cross|2023|48000|1115000",
+          "1340705293",
+          "1340335980",
+          "1339518953",
+          "1339060204",
+          "1339074327",
+          "1333455579",
+          "1338482113",
+          "1338499811",
+          "1336392757",
+          "arabam.com|fiat-egea-cross|2023|76000|1015000",
+          "arabam.com|fiat-egea-cross|2024|102000|1024000",
+          "arabam.com|fiat-egea-cross|2024|74000|1399750",
+          "arabam.com|fiat-egea-cross|2023|100000|1420000",
+          "arabam.com|fiat-egea-cross|2021|68000|1220000",
+          "arabam.com|fiat-egea-cross|2026|6001|1725000",
+          "arabam.com|fiat-egea-cross|2022|158000|1150000",
+          "arabam.com|fiat-egea-cross|2023|69000|1486750",
+          "arabam.com|fiat-egea-cross|2023|10400|1165000",
+          "arabam.com|fiat-egea-cross|2024|77000|995000",
+          "arabam.com|fiat-egea-cross|2023|26000|1015000",
+          "arabam.com|fiat-egea-cross|2023|50800|1045000",
+          "arabam.com|fiat-egea-cross|2024|11000|1195000",
+          "arabam.com|fiat-egea-cross|2023|15000|1165000",
+          "arabam.com|fiat-egea-cross|2024|42500|1025000",
+          "arabam.com|fiat-egea-cross|2023|20000|1149900",
+          "arabam.com|fiat-egea-cross|2023|35000|1099000",
+          "arabam.com|fiat-egea-cross|2023|53000|1600000",
+          "arabam.com|fiat-egea-cross|2025|33000|1290000",
+          "arabam.com|fiat-egea-cross|2023|49000|1150000",
+          "vava.cars|fiat-egea-cross|2023|20270|1570000",
+          "vava.cars|fiat-egea-cross|2025|17771|1185000",
+          "vava.cars|fiat-egea-cross|2025|8989|1640000",
+          "vava.cars|fiat-egea-cross|2025|8288|1198000",
+          "tr.autoexus.com|fiat-egea-cross|2022|6350|762947",
+          "tr.autoexus.com|fiat-egea-cross|2022|65317|922619",
+          "otonomi.com|fiat-egea-cross|2022|26500|1145000",
+          "otonomi.com|fiat-egea-cross|2022|87000|1345900",
+          "1340917268"
+        ],
+        "first_seen": "2026-09-18T18:58:14.465Z",
+        "last_seen": "2026-09-18T18:58:14.576Z",
+        "year": {
+          "min": 2021,
+          "max": 2026,
+          "median": 2023
+        },
+        "km": {
+          "min": 6001,
+          "max": 158000,
+          "median": 34000
+        },
+        "price_try": {
+          "min": 762947,
+          "max": 1725000,
+          "median": 1167500
+        },
+        "bodies": {
+          "SUV": 14,
+          "Crossover": 38
+        },
+        "fuels": {
+          "Hibrit": 2,
+          "Dizel": 2,
+          "Benzin": 1
+        },
+        "gearboxes": {
+          "Otomatik": 18,
+          "Manuel": 1
+        },
+        "colors": {},
+        "seller_types": {
+          "galeri": 31,
+          "bireysel": 3,
+          "kurumsal": 4
+        },
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Tekirdağ Çorlu": 1,
+          "İstanbul Ümraniye": 1,
+          "Kocaeli Gebze": 1,
+          "İstanbul Ataşehir": 1,
+          "Mersin Erdemli": 1,
+          "Antalya Muratpaşa": 1,
+          "Tokat Merkez": 1,
+          "Isparta Merkez": 1,
+          "Aydın İncirliova": 1,
+          "Bursa Osmangazi": 1,
+          "Gaziantep Şehitkamil": 1,
+          "Hatay Reyhanlı": 1,
+          "İzmir Gaziemir": 2,
+          "Kütahya Merkez": 1,
+          "Gaziantep": 1,
+          "Çanakkale": 2,
+          "Ankara": 3,
+          "Ankara Etimesgut": 1,
+          "Muğla Bodrum": 1,
+          "İstanbul Esenyurt": 1,
+          "Sakarya": 1,
+          "Tokat": 1,
+          "Hatay Arsuz": 1,
+          "Eskişehir": 1,
+          "Elazığ": 1,
+          "Bursa İnegöl": 1,
+          "Kayseri": 2,
+          "Konya": 1,
+          "Bursa": 3,
+          "İzmir Dikili": 1,
+          "Denizli": 1,
+          "Ankara Sincan": 1,
+          "Aksaray": 1,
+          "Tokat Zile": 1,
+          "Nevşehir": 1,
+          "Yozgat": 1,
+          "Adıyaman": 1,
+          "İstanbul Esenler": 1,
+          "İstanbul": 1,
+          "Ankara Akyurt": 1,
+          "İzmir Menderes": 1
+        },
+        "sources": {
+          "sahibinden.com": 24,
+          "arabam.com": 20,
+          "vava.cars": 4,
+          "tr.autoexus.com": 2,
+          "otonomi.com": 2
+        }
+      }
+    },
+    "opel-mokka": {
+      "id": "opel-mokka",
+      "make": "Opel",
+      "model": "Mokka",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 3,
+        "seen_ids": [
+          "sahibinden.com|opel-mokka|2012|235000|600000",
+          "sahibinden.com|opel-mokka|2016|102000|1199500",
+          "sahibinden.com|opel-mokka|2016|107500|1140000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.465Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2012,
+          "max": 2016,
+          "median": 2016
+        },
+        "km": {
+          "min": 102000,
+          "max": 235000,
+          "median": 107500
+        },
+        "price_try": {
+          "min": 600000,
+          "max": 1199500,
+          "median": 1140000
+        },
+        "bodies": {
+          "SUV": 3
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Uşak Banaz": 1,
+          "Bursa Nilüfer": 1,
+          "İstanbul Beylikdüzü": 1
+        },
+        "sources": {
+          "sahibinden.com": 3
+        }
+      }
+    },
+    "dacia-duster": {
+      "id": "dacia-duster",
+      "make": "Dacia",
+      "model": "Duster",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 16,
+        "seen_ids": [
+          "sahibinden.com|dacia-duster|2023|86000|1135000",
+          "sahibinden.com|dacia-duster|2022|119000|1165000",
+          "sahibinden.com|dacia-duster|2022|157000|1200000",
+          "sahibinden.com|dacia-duster|2021|150000|1190000",
+          "sahibinden.com|dacia-duster|2022|145000|1025000",
+          "sahibinden.com|dacia-duster|2012|228000|730000",
+          "sahibinden.com|dacia-duster|2017|230000|835000",
+          "sahibinden.com|dacia-duster|2016|89000|1175000",
+          "sahibinden.com|dacia-duster|2015|309000|652500",
+          "sahibinden.com|dacia-duster|2021|80000|1199000",
+          "sahibinden.com|dacia-duster|2022|100000|989950",
+          "sahibinden.com|dacia-duster|2018|162000|1135000",
+          "sahibinden.com|dacia-duster|2017|330000|775000",
+          "sahibinden.com|dacia-duster|2020|230000|1025000",
+          "sahibinden.com|dacia-duster|2014|152750|975000",
+          "sahibinden.com|dacia-duster|2022|194200|1169000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.465Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2012,
+          "max": 2023,
+          "median": 2021
+        },
+        "km": {
+          "min": 80000,
+          "max": 330000,
+          "median": 154875
+        },
+        "price_try": {
+          "min": 652500,
+          "max": 1200000,
+          "median": 1080000
+        },
+        "bodies": {
+          "SUV": 16
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 16
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Pendik": 2,
+          "Konya Selçuklu": 1,
+          "Çanakkale Merkez": 1,
+          "Bursa Osmangazi": 1,
+          "Ankara Akyurt": 1,
+          "İstanbul Esenyurt": 2,
+          "İstanbul Maltepe": 1,
+          "İstanbul Küçükçekmece": 1,
+          "Şanlıurfa Eyyübiye": 1,
+          "Çanakkale Biga": 1,
+          "Adana Sarıçam": 1,
+          "İstanbul Sultangazi": 1,
+          "Adana Kozan": 1,
+          "Gaziantep Şehitkamil": 1
+        },
+        "sources": {
+          "sahibinden.com": 16
+        }
+      }
+    },
+    "dacia-sandero-stepway": {
+      "id": "dacia-sandero-stepway",
+      "make": "Dacia",
+      "model": "Sandero Stepway",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 3,
+        "seen_ids": [
+          "sahibinden.com|dacia-sandero-stepway|2023|55000|1149000",
+          "sahibinden.com|dacia-sandero-stepway|2024|43000|1230000",
+          "sahibinden.com|dacia-sandero-stepway|2025|19000|1249000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.465Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2023,
+          "max": 2025,
+          "median": 2024
+        },
+        "km": {
+          "min": 19000,
+          "max": 55000,
+          "median": 43000
+        },
+        "price_try": {
+          "min": 1149000,
+          "max": 1249000,
+          "median": 1230000
+        },
+        "bodies": {
+          "SUV": 3
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İzmir Gaziemir": 1,
+          "Sakarya Erenler": 1,
+          "İstanbul Güngören": 1
+        },
+        "sources": {
+          "sahibinden.com": 3
+        }
+      }
+    },
+    "mitsubishi-l-200": {
+      "id": "mitsubishi-l-200",
+      "make": "Mitsubishi",
+      "model": "L 200",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 6,
+        "seen_ids": [
+          "sahibinden.com|mitsubishi-l-200|2013|258000|717000",
+          "sahibinden.com|mitsubishi-l-200|1996|400000|350000",
+          "sahibinden.com|mitsubishi-l-200|2011|360000|865000",
+          "sahibinden.com|mitsubishi-l-200|2015|137000|1185000",
+          "sahibinden.com|mitsubishi-l-200|2008|151100|550000",
+          "sahibinden.com|mitsubishi-l-200|2016|240000|985000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.465Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 1996,
+          "max": 2016,
+          "median": 2012
+        },
+        "km": {
+          "min": 137000,
+          "max": 400000,
+          "median": 249000
+        },
+        "price_try": {
+          "min": 350000,
+          "max": 1185000,
+          "median": 791000
+        },
+        "bodies": {
+          "SUV": 6
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 6
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Mersin Tarsus": 1,
+          "Gaziantep Nizip": 1,
+          "Ankara Yenimahalle": 1,
+          "Kocaeli Çayırova": 1,
+          "Şırnak Merkez": 1,
+          "Antalya Manavgat": 1
+        },
+        "sources": {
+          "sahibinden.com": 6
+        }
+      }
+    },
+    "nissan-x-trail": {
+      "id": "nissan-x-trail",
+      "make": "Nissan",
+      "model": "X-Trail",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|nissan-x-trail|2011|275000|849000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.465Z",
+        "last_seen": "2026-09-18T18:58:14.465Z",
+        "year": {
+          "min": 2011,
+          "max": 2011,
+          "median": 2011
+        },
+        "km": {
+          "min": 275000,
+          "max": 275000,
+          "median": 275000
+        },
+        "price_try": {
+          "min": 849000,
+          "max": 849000,
+          "median": 849000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Denizli Sarayköy": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "hyundai-ix35": {
+      "id": "hyundai-ix35",
+      "make": "Hyundai",
+      "model": "ix35",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|hyundai-ix35|2013|68370|1049000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.465Z",
+        "last_seen": "2026-09-18T18:58:14.465Z",
+        "year": {
+          "min": 2013,
+          "max": 2013,
+          "median": 2013
+        },
+        "km": {
+          "min": 68370,
+          "max": 68370,
+          "median": 68370
+        },
+        "price_try": {
+          "min": 1049000,
+          "max": 1049000,
+          "median": 1049000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Bahçelievler": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "chevrolet-captiva": {
+      "id": "chevrolet-captiva",
+      "make": "Chevrolet",
+      "model": "Captiva",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 10,
+        "seen_ids": [
+          "sahibinden.com|chevrolet-captiva|2007|297000|528000",
+          "sahibinden.com|chevrolet-captiva|2011|248000|670000",
+          "sahibinden.com|chevrolet-captiva|2012|110000|925000",
+          "sahibinden.com|chevrolet-captiva|2011|223000|679900",
+          "sahibinden.com|chevrolet-captiva|2009|263000|660000",
+          "sahibinden.com|chevrolet-captiva|2013|206000|920000",
+          "sahibinden.com|chevrolet-captiva|2013|310000|775000",
+          "sahibinden.com|chevrolet-captiva|2011|246000|725000",
+          "sahibinden.com|chevrolet-captiva|2007|330000|550000",
+          "sahibinden.com|chevrolet-captiva|2012|195000|725000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2007,
+          "max": 2013,
+          "median": 2011
+        },
+        "km": {
+          "min": 110000,
+          "max": 330000,
+          "median": 247000
+        },
+        "price_try": {
+          "min": 528000,
+          "max": 925000,
+          "median": 702450
+        },
+        "bodies": {
+          "SUV": 10
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 10
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Polatlı": 1,
+          "İstanbul Ataşehir": 2,
+          "Ankara Gölbaşı": 1,
+          "Afyonkarahisar Dinar": 1,
+          "Elazığ Merkez": 1,
+          "Konya Selçuklu": 1,
+          "İstanbul Başakşehir": 1,
+          "Kütahya Merkez": 1,
+          "Ankara Çankaya": 1
+        },
+        "sources": {
+          "sahibinden.com": 10
+        }
+      }
+    },
+    "land-rover-range-rover-sport": {
+      "id": "land-rover-range-rover-sport",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|land-rover-range-rover-sport|2006|333000|815000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2006,
+          "max": 2006,
+          "median": 2006
+        },
+        "km": {
+          "min": 333000,
+          "max": 333000,
+          "median": 333000
+        },
+        "price_try": {
+          "min": 815000,
+          "max": 815000,
+          "median": 815000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Eskişehir Odunpazarı": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "peugeot-3008": {
+      "id": "peugeot-3008",
+      "make": "Peugeot",
+      "model": "3008",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 3,
+        "seen_ids": [
+          "sahibinden.com|peugeot-3008|2010|72000|695000",
+          "sahibinden.com|peugeot-3008|2017|209000|1225000",
+          "sahibinden.com|peugeot-3008|2011|281000|640000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2010,
+          "max": 2017,
+          "median": 2011
+        },
+        "km": {
+          "min": 72000,
+          "max": 281000,
+          "median": 209000
+        },
+        "price_try": {
+          "min": 640000,
+          "max": 1225000,
+          "median": 695000
+        },
+        "bodies": {
+          "SUV": 3
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Ümraniye": 1,
+          "Hatay Reyhanlı": 1,
+          "Afyonkarahisar Merkez": 1
+        },
+        "sources": {
+          "sahibinden.com": 3
+        }
+      }
+    },
+    "ford-ecosport": {
+      "id": "ford-ecosport",
+      "make": "Ford",
+      "model": "EcoSport",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 3,
+        "seen_ids": [
+          "sahibinden.com|ford-ecosport|2020|40000|1165000",
+          "sahibinden.com|ford-ecosport|2022|125000|880000",
+          "sahibinden.com|ford-ecosport|2018|84000|969000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2018,
+          "max": 2022,
+          "median": 2020
+        },
+        "km": {
+          "min": 40000,
+          "max": 125000,
+          "median": 84000
+        },
+        "price_try": {
+          "min": 880000,
+          "max": 1165000,
+          "median": 969000
+        },
+        "bodies": {
+          "SUV": 3
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İzmir Gaziemir": 1,
+          "Antalya Konyaaltı": 1,
+          "İstanbul Pendik": 1
+        },
+        "sources": {
+          "sahibinden.com": 3
+        }
+      }
+    },
+    "kia-soul": {
+      "id": "kia-soul",
+      "make": "Kia",
+      "model": "Soul",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|kia-soul|2015|189812|949000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2015,
+          "max": 2015,
+          "median": 2015
+        },
+        "km": {
+          "min": 189812,
+          "max": 189812,
+          "median": 189812
+        },
+        "price_try": {
+          "min": 949000,
+          "max": 949000,
+          "median": 949000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Bahçelievler": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "opel-grandland-x": {
+      "id": "opel-grandland-x",
+      "make": "Opel",
+      "model": "Grandland X",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|opel-grandland-x|2021|187511|1159000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2021,
+          "max": 2021,
+          "median": 2021
+        },
+        "km": {
+          "min": 187511,
+          "max": 187511,
+          "median": 187511
+        },
+        "price_try": {
+          "min": 1159000,
+          "max": 1159000,
+          "median": 1159000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Bahçelievler": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "nissan-qashqai": {
+      "id": "nissan-qashqai",
+      "make": "Nissan",
+      "model": "Qashqai",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 6,
+        "seen_ids": [
+          "sahibinden.com|nissan-qashqai|2010|76650|799000",
+          "sahibinden.com|nissan-qashqai|2012|110000|1035000",
+          "sahibinden.com|nissan-qashqai|2012|125000|1160000",
+          "sahibinden.com|nissan-qashqai|2015|158000|1189500",
+          "sahibinden.com|nissan-qashqai|2014|214000|1045000",
+          "sahibinden.com|nissan-qashqai|2013|168000|1009000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2010,
+          "max": 2015,
+          "median": 2013
+        },
+        "km": {
+          "min": 76650,
+          "max": 214000,
+          "median": 141500
+        },
+        "price_try": {
+          "min": 799000,
+          "max": 1189500,
+          "median": 1040000
+        },
+        "bodies": {
+          "SUV": 6
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 6
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Bahçelievler": 1,
+          "Ankara Sincan": 1,
+          "Isparta Merkez": 1,
+          "İstanbul Üsküdar": 1,
+          "Ankara Keçiören": 1,
+          "Aksaray Merkez": 1
+        },
+        "sources": {
+          "sahibinden.com": 6
+        }
+      }
+    },
+    "kia-sportage": {
+      "id": "kia-sportage",
+      "make": "Kia",
+      "model": "Sportage",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 10,
+        "seen_ids": [
+          "sahibinden.com|kia-sportage|2016|258000|990000",
+          "sahibinden.com|kia-sportage|2012|142000|1096000",
+          "sahibinden.com|kia-sportage|2011|157000|968000",
+          "sahibinden.com|kia-sportage|2016|258000|1200000",
+          "sahibinden.com|kia-sportage|2012|128000|1039000",
+          "sahibinden.com|kia-sportage|2012|199000|899000",
+          "sahibinden.com|kia-sportage|2012|168000|965000",
+          "sahibinden.com|kia-sportage|2014|110000|1190000",
+          "sahibinden.com|kia-sportage|2007|338000|545000",
+          "sahibinden.com|kia-sportage|2015|191885|1215000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2007,
+          "max": 2016,
+          "median": 2012
+        },
+        "km": {
+          "min": 110000,
+          "max": 338000,
+          "median": 179943
+        },
+        "price_try": {
+          "min": 545000,
+          "max": 1215000,
+          "median": 1014500
+        },
+        "bodies": {
+          "SUV": 10
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 10
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Aksaray Merkez": 1,
+          "Ankara Çankaya": 1,
+          "Balıkesir Karesi": 1,
+          "AnkaraÇankaya": 1,
+          "Ankara Akyurt": 2,
+          "İstanbul Maltepe": 1,
+          "Balıkesir Ayvalık": 1,
+          "Sakarya Adapazarı": 1,
+          "Aydın Efeler": 1
+        },
+        "sources": {
+          "sahibinden.com": 10
+        }
+      }
+    },
+    "kia-stonic": {
+      "id": "kia-stonic",
+      "make": "Kia",
+      "model": "Stonic",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|kia-stonic|2020|90500|1260000",
+          "sahibinden.com|kia-stonic|2023|94000|1065000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2020,
+          "max": 2023,
+          "median": 2022
+        },
+        "km": {
+          "min": 90500,
+          "max": 94000,
+          "median": 92250
+        },
+        "price_try": {
+          "min": 1065000,
+          "max": 1260000,
+          "median": 1162500
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Kocaeli Çayırova": 1,
+          "Nevşehir Merkez": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "peugeot-2008": {
+      "id": "peugeot-2008",
+      "make": "Peugeot",
+      "model": "2008",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 5,
+        "seen_ids": [
+          "sahibinden.com|peugeot-2008|2016|134500|1095000",
+          "sahibinden.com|peugeot-2008|2016|160000|927990",
+          "sahibinden.com|peugeot-2008|2015|128000|790000",
+          "sahibinden.com|peugeot-2008|2017|165000|1069000",
+          "sahibinden.com|peugeot-2008|2016|193000|850000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2015,
+          "max": 2017,
+          "median": 2016
+        },
+        "km": {
+          "min": 128000,
+          "max": 193000,
+          "median": 160000
+        },
+        "price_try": {
+          "min": 790000,
+          "max": 1095000,
+          "median": 927990
+        },
+        "bodies": {
+          "SUV": 5
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 5
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Arnavutköy": 1,
+          "İstanbul Büyükçekmece": 1,
+          "Kocaeli Körfez": 1,
+          "Antalya Muratpaşa": 1,
+          "Osmaniye Merkez": 1
+        },
+        "sources": {
+          "sahibinden.com": 5
+        }
+      }
+    },
+    "hyundai-galloper": {
+      "id": "hyundai-galloper",
+      "make": "Hyundai",
+      "model": "Galloper",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|hyundai-galloper|2000|235300|529000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2000,
+          "max": 2000,
+          "median": 2000
+        },
+        "km": {
+          "min": 235300,
+          "max": 235300,
+          "median": 235300
+        },
+        "price_try": {
+          "min": 529000,
+          "max": 529000,
+          "median": 529000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Silivri": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "citroen-c4-cactus": {
+      "id": "citroen-c4-cactus",
+      "make": "Citroen",
+      "model": "C4 Cactus",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|citroen-c4-cactus|2018|141000|1090000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2018,
+          "max": 2018,
+          "median": 2018
+        },
+        "km": {
+          "min": 141000,
+          "max": 141000,
+          "median": 141000
+        },
+        "price_try": {
+          "min": 1090000,
+          "max": 1090000,
+          "median": 1090000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Kocaeli Körfez": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "ford-ranger": {
+      "id": "ford-ranger",
+      "make": "Ford",
+      "model": "Ranger",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|ford-ranger|2015|260000|1100000",
+          "sahibinden.com|ford-ranger|2017|191000|1125000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2015,
+          "max": 2017,
+          "median": 2016
+        },
+        "km": {
+          "min": 191000,
+          "max": 260000,
+          "median": 225500
+        },
+        "price_try": {
+          "min": 1100000,
+          "max": 1125000,
+          "median": 1112500
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Konya Selçuklu": 1,
+          "İstanbul Sultangazi": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "volkswagen-touareg": {
+      "id": "volkswagen-touareg",
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|volkswagen-touareg|2004|380000|795000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2004,
+          "max": 2004,
+          "median": 2004
+        },
+        "km": {
+          "min": 380000,
+          "max": 380000,
+          "median": 380000
+        },
+        "price_try": {
+          "min": 795000,
+          "max": 795000,
+          "median": 795000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İzmir Bayraklı": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "kia-sorento": {
+      "id": "kia-sorento",
+      "make": "Kia",
+      "model": "Sorento",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|kia-sorento|2006|284000|599900"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2006,
+          "max": 2006,
+          "median": 2006
+        },
+        "km": {
+          "min": 284000,
+          "max": 284000,
+          "median": 284000
+        },
+        "price_try": {
+          "min": 599900,
+          "max": 599900,
+          "median": 599900
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Akyurt": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "opel-mokka-x": {
+      "id": "opel-mokka-x",
+      "make": "Opel",
+      "model": "Mokka X",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|opel-mokka-x|2017|96000|1110500",
+          "sahibinden.com|opel-mokka-x|2017|98000|1194000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2017,
+          "max": 2017,
+          "median": 2017
+        },
+        "km": {
+          "min": 96000,
+          "max": 98000,
+          "median": 97000
+        },
+        "price_try": {
+          "min": 1110500,
+          "max": 1194000,
+          "median": 1152250
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Bahçelievler": 1,
+          "İstanbul Kadıköy": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "renault-captur": {
+      "id": "renault-captur",
+      "make": "Renault",
+      "model": "Captur",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|renault-captur|2016|175000|1024990",
+          "sahibinden.com|renault-captur|2018|107000|1214990"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2016,
+          "max": 2018,
+          "median": 2017
+        },
+        "km": {
+          "min": 107000,
+          "max": 175000,
+          "median": 141000
+        },
+        "price_try": {
+          "min": 1024990,
+          "max": 1214990,
+          "median": 1119990
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Büyükçekmece": 2
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "jeep-cherokee": {
+      "id": "jeep-cherokee",
+      "make": "Jeep",
+      "model": "Cherokee",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|jeep-cherokee|2012|260000|1190000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2012,
+          "max": 2012,
+          "median": 2012
+        },
+        "km": {
+          "min": 260000,
+          "max": 260000,
+          "median": 260000
+        },
+        "price_try": {
+          "min": 1190000,
+          "max": 1190000,
+          "median": 1190000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Başakşehir": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "nissan-juke": {
+      "id": "nissan-juke",
+      "make": "Nissan",
+      "model": "Juke",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 3,
+        "seen_ids": [
+          "sahibinden.com|nissan-juke|2017|152000|995000",
+          "sahibinden.com|nissan-juke|2016|50000|1235000",
+          "sahibinden.com|nissan-juke|2016|215000|775000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2016,
+          "max": 2017,
+          "median": 2016
+        },
+        "km": {
+          "min": 50000,
+          "max": 215000,
+          "median": 152000
+        },
+        "price_try": {
+          "min": 775000,
+          "max": 1235000,
+          "median": 995000
+        },
+        "bodies": {
+          "SUV": 3
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Bayrampaşa": 1,
+          "Antalya Kepez": 1,
+          "Bursa Yıldırım": 1
+        },
+        "sources": {
+          "sahibinden.com": 3
+        }
+      }
+    },
+    "citroen-c3-aircross": {
+      "id": "citroen-c3-aircross",
+      "make": "Citroen",
+      "model": "C3 AirCross",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|citroen-c3-aircross|2024|28000|1250000",
+          "sahibinden.com|citroen-c3-aircross|2023|70000|1245000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2023,
+          "max": 2024,
+          "median": 2024
+        },
+        "km": {
+          "min": 28000,
+          "max": 70000,
+          "median": 49000
+        },
+        "price_try": {
+          "min": 1245000,
+          "max": 1250000,
+          "median": 1247500
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Ümraniye": 1,
+          "İstanbul Beylikdüzü": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "kgm-ssangyong-rexton": {
+      "id": "kgm-ssangyong-rexton",
+      "make": "KGM SsangYong",
+      "model": "Rexton",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|kgm-ssangyong-rexton|2015|135000|1149000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2015,
+          "max": 2015,
+          "median": 2015
+        },
+        "km": {
+          "min": 135000,
+          "max": 135000,
+          "median": 135000
+        },
+        "price_try": {
+          "min": 1149000,
+          "max": 1149000,
+          "median": 1149000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Antalya Muratpaşa": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "renault-kadjar": {
+      "id": "renault-kadjar",
+      "make": "Renault",
+      "model": "Kadjar",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 3,
+        "seen_ids": [
+          "sahibinden.com|renault-kadjar|2016|103000|1195000",
+          "sahibinden.com|renault-kadjar|2015|198200|1239000",
+          "sahibinden.com|renault-kadjar|2017|170000|1240000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2015,
+          "max": 2017,
+          "median": 2016
+        },
+        "km": {
+          "min": 103000,
+          "max": 198200,
+          "median": 170000
+        },
+        "price_try": {
+          "min": 1195000,
+          "max": 1240000,
+          "median": 1239000
+        },
+        "bodies": {
+          "SUV": 3
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Silivri": 1,
+          "Ankara Etimesgut": 1,
+          "Ankara Yenimahalle": 1
+        },
+        "sources": {
+          "sahibinden.com": 3
+        }
+      }
+    },
+    "honda-cr-v": {
+      "id": "honda-cr-v",
+      "make": "Honda",
+      "model": "CR-V",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|honda-cr-v|2014|185000|725000",
+          "sahibinden.com|honda-cr-v|2009|356000|735000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2009,
+          "max": 2014,
+          "median": 2012
+        },
+        "km": {
+          "min": 185000,
+          "max": 356000,
+          "median": 270500
+        },
+        "price_try": {
+          "min": 725000,
+          "max": 735000,
+          "median": 730000
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Mamak": 1,
+          "Konya Selçuklu": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "hyundai-santa-fe": {
+      "id": "hyundai-santa-fe",
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|hyundai-santa-fe|2001|230000|425000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2001,
+          "max": 2001,
+          "median": 2001
+        },
+        "km": {
+          "min": 230000,
+          "max": 230000,
+          "median": 230000
+        },
+        "price_try": {
+          "min": 425000,
+          "max": 425000,
+          "median": 425000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Sivas Merkez": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "jeep-grand-cherokee": {
+      "id": "jeep-grand-cherokee",
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|jeep-grand-cherokee|2000|201000|820000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2000,
+          "max": 2000,
+          "median": 2000
+        },
+        "km": {
+          "min": 201000,
+          "max": 201000,
+          "median": 201000
+        },
+        "price_try": {
+          "min": 820000,
+          "max": 820000,
+          "median": 820000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Yenimahalle": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "subaru-xv": {
+      "id": "subaru-xv",
+      "make": "Subaru",
+      "model": "XV",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|subaru-xv|2014|111600|1139000",
+          "sahibinden.com|subaru-xv|2012|174000|1035000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2012,
+          "max": 2014,
+          "median": 2013
+        },
+        "km": {
+          "min": 111600,
+          "max": 174000,
+          "median": 142800
+        },
+        "price_try": {
+          "min": 1035000,
+          "max": 1139000,
+          "median": 1087000
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Yenimahalle": 1,
+          "İzmir Bornova": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "jeep-compass": {
+      "id": "jeep-compass",
+      "make": "Jeep",
+      "model": "Compass",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|jeep-compass|2014|150000|1039999",
+          "sahibinden.com|jeep-compass|2013|205000|935000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2013,
+          "max": 2014,
+          "median": 2014
+        },
+        "km": {
+          "min": 150000,
+          "max": 205000,
+          "median": 177500
+        },
+        "price_try": {
+          "min": 935000,
+          "max": 1039999,
+          "median": 987500
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Bursa Osmangazi": 1,
+          "İstanbul Ataşehir": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "ford-kuga": {
+      "id": "ford-kuga",
+      "make": "Ford",
+      "model": "Kuga",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|ford-kuga|2017|145000|1239000",
+          "sahibinden.com|ford-kuga|2008|278000|700000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2008,
+          "max": 2017,
+          "median": 2013
+        },
+        "km": {
+          "min": 145000,
+          "max": 278000,
+          "median": 211500
+        },
+        "price_try": {
+          "min": 700000,
+          "max": 1239000,
+          "median": 969500
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Sultangazi": 1,
+          "İstanbul Sultanbeyli": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "bmw-x5": {
+      "id": "bmw-x5",
+      "make": "BMW",
+      "model": "X5",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|bmw-x5|2007|290000|1175000",
+          "sahibinden.com|bmw-x5|2006|199000|1175000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2006,
+          "max": 2007,
+          "median": 2007
+        },
+        "km": {
+          "min": 199000,
+          "max": 290000,
+          "median": 244500
+        },
+        "price_try": {
+          "min": 1175000,
+          "max": 1175000,
+          "median": 1175000
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Keçiören": 1,
+          "Ankara Yenimahalle": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "suzuki-sj": {
+      "id": "suzuki-sj",
+      "make": "Suzuki",
+      "model": "SJ",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|suzuki-sj|1998|100000|500000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 1998,
+          "max": 1998,
+          "median": 1998
+        },
+        "km": {
+          "min": 100000,
+          "max": 100000,
+          "median": 100000
+        },
+        "price_try": {
+          "min": 500000,
+          "max": 500000,
+          "median": 500000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Kırklareli Vize": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "opel-antara": {
+      "id": "opel-antara",
+      "make": "Opel",
+      "model": "Antara",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|opel-antara|2010|298000|537000",
+          "sahibinden.com|opel-antara|2011|159800|819900"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2010,
+          "max": 2011,
+          "median": 2011
+        },
+        "km": {
+          "min": 159800,
+          "max": 298000,
+          "median": 228900
+        },
+        "price_try": {
+          "min": 537000,
+          "max": 819900,
+          "median": 678450
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Beylikdüzü": 1,
+          "Elazığ Merkez": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "volkswagen-tiguan": {
+      "id": "volkswagen-tiguan",
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 5,
+        "seen_ids": [
+          "sahibinden.com|volkswagen-tiguan|2014|208000|1180000",
+          "sahibinden.com|volkswagen-tiguan|2015|130000|1095000",
+          "sahibinden.com|volkswagen-tiguan|2013|330000|750000",
+          "sahibinden.com|volkswagen-tiguan|2017|278000|1139000",
+          "sahibinden.com|volkswagen-tiguan|2013|100500|1214900"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2013,
+          "max": 2017,
+          "median": 2014
+        },
+        "km": {
+          "min": 100500,
+          "max": 330000,
+          "median": 208000
+        },
+        "price_try": {
+          "min": 750000,
+          "max": 1214900,
+          "median": 1139000
+        },
+        "bodies": {
+          "SUV": 5
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 5
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Çankaya": 1,
+          "İstanbul Sultanbeyli": 1,
+          "Uşak Merkez": 1,
+          "Ankara Mamak": 1,
+          "İstanbul Esenyurt": 1
+        },
+        "sources": {
+          "sahibinden.com": 5
+        }
+      }
+    },
+    "jeep-renegade": {
+      "id": "jeep-renegade",
+      "make": "Jeep",
+      "model": "Renegade",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 3,
+        "seen_ids": [
+          "sahibinden.com|jeep-renegade|2014|219000|989000",
+          "sahibinden.com|jeep-renegade|2017|167000|1198000",
+          "sahibinden.com|jeep-renegade|2014|104000|1022000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2014,
+          "max": 2017,
+          "median": 2014
+        },
+        "km": {
+          "min": 104000,
+          "max": 219000,
+          "median": 167000
+        },
+        "price_try": {
+          "min": 989000,
+          "max": 1198000,
+          "median": 1022000
+        },
+        "bodies": {
+          "SUV": 3
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Avcılar": 1,
+          "İstanbul Sultanbeyli": 1,
+          "Kastamonu Merkez": 1
+        },
+        "sources": {
+          "sahibinden.com": 3
+        }
+      }
+    },
+    "mitsubishi-asx": {
+      "id": "mitsubishi-asx",
+      "make": "Mitsubishi",
+      "model": "ASX",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|mitsubishi-asx|2011|239000|665000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2011,
+          "max": 2011,
+          "median": 2011
+        },
+        "km": {
+          "min": 239000,
+          "max": 239000,
+          "median": 239000
+        },
+        "price_try": {
+          "min": 665000,
+          "max": 665000,
+          "median": 665000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İzmir Buca": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "fiat-freemont": {
+      "id": "fiat-freemont",
+      "make": "Fiat",
+      "model": "Freemont",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|fiat-freemont|2013|199500|879500"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2013,
+          "max": 2013,
+          "median": 2013
+        },
+        "km": {
+          "min": 199500,
+          "max": 199500,
+          "median": 199500
+        },
+        "price_try": {
+          "min": 879500,
+          "max": 879500,
+          "median": 879500
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Beşiktaş": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "seat-arona": {
+      "id": "seat-arona",
+      "make": "Seat",
+      "model": "Arona",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|seat-arona|2017|261000|990000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2017,
+          "max": 2017,
+          "median": 2017
+        },
+        "km": {
+          "min": 261000,
+          "max": 261000,
+          "median": 261000
+        },
+        "price_try": {
+          "min": 990000,
+          "max": 990000,
+          "median": 990000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Maltepe": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "land-rover-range-rover": {
+      "id": "land-rover-range-rover",
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|land-rover-range-rover|2005|420000|999000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2005,
+          "max": 2005,
+          "median": 2005
+        },
+        "km": {
+          "min": 420000,
+          "max": 420000,
+          "median": 420000
+        },
+        "price_try": {
+          "min": 999000,
+          "max": 999000,
+          "median": 999000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Pendik": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "skoda-yeti": {
+      "id": "skoda-yeti",
+      "make": "Skoda",
+      "model": "Yeti",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|skoda-yeti|2011|61000|1065000",
+          "sahibinden.com|skoda-yeti|2011|136000|895000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2011,
+          "max": 2011,
+          "median": 2011
+        },
+        "km": {
+          "min": 61000,
+          "max": 136000,
+          "median": 98500
+        },
+        "price_try": {
+          "min": 895000,
+          "max": 1065000,
+          "median": 980000
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Beykoz": 1,
+          "Adıyaman Kahta": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "hyundai-bayon": {
+      "id": "hyundai-bayon",
+      "make": "Hyundai",
+      "model": "Bayon",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|hyundai-bayon|2024|9000|1250000",
+          "sahibinden.com|hyundai-bayon|2025|10000|1180000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2024,
+          "max": 2025,
+          "median": 2025
+        },
+        "km": {
+          "min": 9000,
+          "max": 10000,
+          "median": 9500
+        },
+        "price_try": {
+          "min": 1180000,
+          "max": 1250000,
+          "median": 1215000
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Adana Çukurova": 1,
+          "İstanbul Esenyurt": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "audi-q7": {
+      "id": "audi-q7",
+      "make": "Audi",
+      "model": "Q7",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|audi-q7|2008|560000|1189028",
+          "sahibinden.com|audi-q7|2007|490000|850000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2007,
+          "max": 2008,
+          "median": 2008
+        },
+        "km": {
+          "min": 490000,
+          "max": 560000,
+          "median": 525000
+        },
+        "price_try": {
+          "min": 850000,
+          "max": 1189028,
+          "median": 1019514
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Pendik": 1,
+          "İzmir Menderes": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "audi-q5": {
+      "id": "audi-q5",
+      "make": "Audi",
+      "model": "Q5",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|audi-q5|2012|250000|1259000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2012,
+          "max": 2012,
+          "median": 2012
+        },
+        "km": {
+          "min": 250000,
+          "max": 250000,
+          "median": 250000
+        },
+        "price_try": {
+          "min": 1259000,
+          "max": 1259000,
+          "median": 1259000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Antalya Konyaaltı": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "opel-crossland": {
+      "id": "opel-crossland",
+      "make": "Opel",
+      "model": "Crossland",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|opel-crossland|2023|22900|1195000",
+          "sahibinden.com|opel-crossland|2021|86000|1219950"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2021,
+          "max": 2023,
+          "median": 2022
+        },
+        "km": {
+          "min": 22900,
+          "max": 86000,
+          "median": 54450
+        },
+        "price_try": {
+          "min": 1195000,
+          "max": 1219950,
+          "median": 1207475
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Mersin Yenişehir": 1,
+          "İstanbul Avcılar": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "volkswagen-amarok": {
+      "id": "volkswagen-amarok",
+      "make": "Volkswagen",
+      "model": "Amarok",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|volkswagen-amarok|2014|203165|1260000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2014,
+          "max": 2014,
+          "median": 2014
+        },
+        "km": {
+          "min": 203165,
+          "max": 203165,
+          "median": 203165
+        },
+        "price_try": {
+          "min": 1260000,
+          "max": 1260000,
+          "median": 1260000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Bursa Osmangazi": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "fiat-500-x": {
+      "id": "fiat-500-x",
+      "make": "Fiat",
+      "model": "500 X",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 2,
+        "seen_ids": [
+          "sahibinden.com|fiat-500-x|2015|225000|999900",
+          "sahibinden.com|fiat-500-x|2015|173000|1165000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2015,
+          "max": 2015,
+          "median": 2015
+        },
+        "km": {
+          "min": 173000,
+          "max": 225000,
+          "median": 199000
+        },
+        "price_try": {
+          "min": 999900,
+          "max": 1165000,
+          "median": 1082450
+        },
+        "bodies": {
+          "SUV": 2
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 2
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "İstanbul Bahçelievler": 1,
+          "İstanbul Esenyurt": 1
+        },
+        "sources": {
+          "sahibinden.com": 2
+        }
+      }
+    },
+    "toyota-hilux": {
+      "id": "toyota-hilux",
+      "make": "Toyota",
+      "model": "Hilux",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|toyota-hilux|2010|430000|910000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2010,
+          "max": 2010,
+          "median": 2010
+        },
+        "km": {
+          "min": 430000,
+          "max": 430000,
+          "median": 430000
+        },
+        "price_try": {
+          "min": 910000,
+          "max": 910000,
+          "median": 910000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Konya Karatay": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "opel-crossland-x": {
+      "id": "opel-crossland-x",
+      "make": "Opel",
+      "model": "Crossland X",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|opel-crossland-x|2019|59000|1190000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2019,
+          "max": 2019,
+          "median": 2019
+        },
+        "km": {
+          "min": 59000,
+          "max": 59000,
+          "median": 59000
+        },
+        "price_try": {
+          "min": 1190000,
+          "max": 1190000,
+          "median": 1190000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Bursa Osmangazi": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "bmw-x1": {
+      "id": "bmw-x1",
+      "make": "BMW",
+      "model": "X1",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|bmw-x1|2013|245000|1035000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.466Z",
+        "last_seen": "2026-09-18T18:58:14.466Z",
+        "year": {
+          "min": 2013,
+          "max": 2013,
+          "median": 2013
+        },
+        "km": {
+          "min": 245000,
+          "max": 245000,
+          "median": 245000
+        },
+        "price_try": {
+          "min": 1035000,
+          "max": 1035000,
+          "median": 1035000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Ankara Altındağ": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "mini-countryman": {
+      "id": "mini-countryman",
+      "make": "Mini",
+      "model": "Countryman",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|mini-countryman|2012|113000|1020000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.467Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2012,
+          "max": 2012,
+          "median": 2012
+        },
+        "km": {
+          "min": 113000,
+          "max": 113000,
+          "median": 113000
+        },
+        "price_try": {
+          "min": 1020000,
+          "max": 1020000,
+          "median": 1020000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Denizli Merkezefendi": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "toyota-c-hr": {
+      "id": "toyota-c-hr",
+      "make": "Toyota",
+      "model": "C-HR",
+      "series": null,
+      "segment": "SUV",
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "sahibinden.com|toyota-c-hr|2017|451000|1190000"
+        ],
+        "first_seen": "2026-09-18T18:58:14.467Z",
+        "last_seen": "2026-09-18T18:58:14.467Z",
+        "year": {
+          "min": 2017,
+          "max": 2017,
+          "median": 2017
+        },
+        "km": {
+          "min": 451000,
+          "max": 451000,
+          "median": 451000
+        },
+        "price_try": {
+          "min": 1190000,
+          "max": 1190000,
+          "median": 1190000
+        },
+        "bodies": {
+          "SUV": 1
+        },
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {
+          "Adana Seyhan": 1
+        },
+        "sources": {
+          "sahibinden.com": 1
+        }
+      }
+    },
+    "yedek-parca": {
+      "id": "yedek-parca",
+      "make": "Yedek Parça",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 2635067,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "jant-lastik": {
+      "id": "jant-lastik",
+      "make": "Jant & Lastik",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 324484,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "renault": {
+      "id": "renault",
+      "make": "Renault",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 55280,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "volkswagen": {
+      "id": "volkswagen",
+      "make": "Volkswagen",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 48059,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "fiat": {
+      "id": "fiat",
+      "make": "Fiat",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 33106,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "opel": {
+      "id": "opel",
+      "make": "Opel",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 29361,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "bmw": {
+      "id": "bmw",
+      "make": "BMW",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 27777,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "mercedes-benz": {
+      "id": "mercedes-benz",
+      "make": "Mercedes-Benz",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 23896,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "ford": {
+      "id": "ford",
+      "make": "Ford",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 23193,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "hyundai": {
+      "id": "hyundai",
+      "make": "Hyundai",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 17651,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "toyota": {
+      "id": "toyota",
+      "make": "Toyota",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 16725,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "audi": {
+      "id": "audi",
+      "make": "Audi",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 16196,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "peugeot": {
+      "id": "peugeot",
+      "make": "Peugeot",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 13686,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "honda": {
+      "id": "honda",
+      "make": "Honda",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 12350,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "skoda": {
+      "id": "skoda",
+      "make": "Skoda",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 12038,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "citroen": {
+      "id": "citroen",
+      "make": "Citroen",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 9556,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "tofas": {
+      "id": "tofas",
+      "make": "Tofaş",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 8666,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "seat": {
+      "id": "seat",
+      "make": "Seat",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 7231,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "dacia": {
+      "id": "dacia",
+      "make": "Dacia",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3681,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "volvo": {
+      "id": "volvo",
+      "make": "Volvo",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3334,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "chevrolet": {
+      "id": "chevrolet",
+      "make": "Chevrolet",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3301,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "kia": {
+      "id": "kia",
+      "make": "Kia",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3077,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "nissan": {
+      "id": "nissan",
+      "make": "Nissan",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 2054,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "klasik-otomobiller": {
+      "id": "klasik-otomobiller",
+      "make": "Klasik Otomobiller",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1362,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "mini": {
+      "id": "mini",
+      "make": "Mini",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1240,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "porsche": {
+      "id": "porsche",
+      "make": "Porsche",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1113,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "mazda": {
+      "id": "mazda",
+      "make": "Mazda",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1024,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "alfa-romeo": {
+      "id": "alfa-romeo",
+      "make": "Alfa Romeo",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 732,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "lada": {
+      "id": "lada",
+      "make": "Lada",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 667,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "mitsubishi": {
+      "id": "mitsubishi",
+      "make": "Mitsubishi",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 647,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "tesla": {
+      "id": "tesla",
+      "make": "Tesla",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 565,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "suzuki": {
+      "id": "suzuki",
+      "make": "Suzuki",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 563,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "ds-automobiles": {
+      "id": "ds-automobiles",
+      "make": "DS Automobiles",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 376,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "jaguar": {
+      "id": "jaguar",
+      "make": "Jaguar",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 370,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "cupra": {
+      "id": "cupra",
+      "make": "Cupra",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 272,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "chrysler": {
+      "id": "chrysler",
+      "make": "Chrysler",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 263,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "subaru": {
+      "id": "subaru",
+      "make": "Subaru",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 241,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "tata": {
+      "id": "tata",
+      "make": "Tata",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 218,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "byd": {
+      "id": "byd",
+      "make": "BYD",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 204,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "maserati": {
+      "id": "maserati",
+      "make": "Maserati",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 201,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "geely": {
+      "id": "geely",
+      "make": "Geely",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 138,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "togg": {
+      "id": "togg",
+      "make": "TOGG",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 134,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "mg": {
+      "id": "mg",
+      "make": "MG",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 128,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "rover": {
+      "id": "rover",
+      "make": "Rover",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 127,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "lancia": {
+      "id": "lancia",
+      "make": "Lancia",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 112,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "ferrari": {
+      "id": "ferrari",
+      "make": "Ferrari",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 109,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "daihatsu": {
+      "id": "daihatsu",
+      "make": "Daihatsu",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 95,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "smart": {
+      "id": "smart",
+      "make": "Smart",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 93,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "bentley": {
+      "id": "bentley",
+      "make": "Bentley",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 85,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "proton": {
+      "id": "proton",
+      "make": "Proton",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 85,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "daewoo": {
+      "id": "daewoo",
+      "make": "Daewoo",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 84,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "volta": {
+      "id": "volta",
+      "make": "Volta",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 81,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "chery": {
+      "id": "chery",
+      "make": "Chery",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 76,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "saab": {
+      "id": "saab",
+      "make": "Saab",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 56,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "dodge": {
+      "id": "dodge",
+      "make": "Dodge",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 51,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "arora": {
+      "id": "arora",
+      "make": "Arora",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 50,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "nieve": {
+      "id": "nieve",
+      "make": "Nieve",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 50,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "nfiniti": {
+      "id": "nfiniti",
+      "make": "Infiniti",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 46,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "regal-raptor": {
+      "id": "regal-raptor",
+      "make": "Regal Raptor",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 46,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "rolls-royce": {
+      "id": "rolls-royce",
+      "make": "Rolls-Royce",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 45,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "lamborghini": {
+      "id": "lamborghini",
+      "make": "Lamborghini",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 43,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "cadillac": {
+      "id": "cadillac",
+      "make": "Cadillac",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 41,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "aston-martin": {
+      "id": "aston-martin",
+      "make": "Aston Martin",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 39,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "lexus": {
+      "id": "lexus",
+      "make": "Lexus",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 38,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "kuba": {
+      "id": "kuba",
+      "make": "Kuba",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 31,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "alpine": {
+      "id": "alpine",
+      "make": "Alpine",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 23,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "yuki": {
+      "id": "yuki",
+      "make": "Yuki",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 22,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "ortimobil": {
+      "id": "ortimobil",
+      "make": "Ortimobil",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 15,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "reeder": {
+      "id": "reeder",
+      "make": "Reeder",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 15,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "leapmotor": {
+      "id": "leapmotor",
+      "make": "Leapmotor",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 13,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "relive": {
+      "id": "relive",
+      "make": "Relive",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 13,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "rks": {
+      "id": "rks",
+      "make": "RKS",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 12,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "pontiac": {
+      "id": "pontiac",
+      "make": "Pontiac",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 11,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "lincoln": {
+      "id": "lincoln",
+      "make": "Lincoln",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 10,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "buick": {
+      "id": "buick",
+      "make": "Buick",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 9,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "vanderhall": {
+      "id": "vanderhall",
+      "make": "Vanderhall",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 9,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "kco": {
+      "id": "kco",
+      "make": "Ikco",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 7,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "lotus": {
+      "id": "lotus",
+      "make": "Lotus",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 7,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "mclaren": {
+      "id": "mclaren",
+      "make": "McLaren",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 6,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "morgan": {
+      "id": "morgan",
+      "make": "Morgan",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 6,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "xev": {
+      "id": "xev",
+      "make": "XEV",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 5,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "micro": {
+      "id": "micro",
+      "make": "Micro",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 4,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "abarth": {
+      "id": "abarth",
+      "make": "Abarth",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "luqi": {
+      "id": "luqi",
+      "make": "Luqi",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "motolux": {
+      "id": "motolux",
+      "make": "Motolux",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "polestar": {
+      "id": "polestar",
+      "make": "Polestar",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "the-london-taxi": {
+      "id": "the-london-taxi",
+      "make": "The London Taxi",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 3,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "aion": {
+      "id": "aion",
+      "make": "Aion",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 2,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "go": {
+      "id": "go",
+      "make": "I-GO",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 2,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "saipa": {
+      "id": "saipa",
+      "make": "Saipa",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 2,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "zlin-motors": {
+      "id": "zlin-motors",
+      "make": "Zlin Motors",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 2,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "bajaj": {
+      "id": "bajaj",
+      "make": "Bajaj",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "devinci": {
+      "id": "devinci",
+      "make": "Devinci",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "eagle": {
+      "id": "eagle",
+      "make": "Eagle",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "jiayuan": {
+      "id": "jiayuan",
+      "make": "Jiayuan",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "joyce": {
+      "id": "joyce",
+      "make": "Joyce",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "marcos": {
+      "id": "marcos",
+      "make": "Marcos",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "mercury": {
+      "id": "mercury",
+      "make": "Mercury",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "rainwoll": {
+      "id": "rainwoll",
+      "make": "Rainwoll",
+      "model": null,
+      "series": null,
+      "segment": null,
+      "taxonomy": {
+        "source": "sahibinden.com/kategori/otomobil",
+        "series": null,
+        "segment": null,
+        "listing_count_hint": 1,
+        "url": null
+      },
+      "specs": null,
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    },
+    "fiat-egea": {
+      "id": "fiat-egea",
+      "make": "Fiat",
+      "model": "Egea",
+      "series": null,
+      "segment": "Sedan",
+      "taxonomy": null,
+      "specs": {
+        "body": "Sedan",
+        "fuel": "Dizel",
+        "gearbox": null,
+        "seats": null,
+        "doors": null,
+        "engine_cc": null,
+        "power_hp": null,
+        "year": 2026,
+        "price_min_try": 1449900,
+        "price_max_try": 1990900,
+        "variant_count": 6,
+        "source": "sahibinden.com/oto360/sifir-araclar/fiat-egea-fiyat-listesi",
+        "license": "JATO Dynamics",
+        "url": null,
+        "fetched_at": "2026-09-18"
+      },
+      "observed": {
+        "listings_count": 0,
+        "seen_ids": [],
+        "first_seen": null,
+        "last_seen": null,
+        "year": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "km": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "price_try": {
+          "min": null,
+          "max": null,
+          "median": null
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {},
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {}
+      }
+    }
+  }
+}
