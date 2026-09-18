@@ -215,3 +215,69 @@ node geo-urls.mjs --iller "İzmir,Manisa,Aydın" --providerlar sahibinden,arabam
 | `data/market/tr-geo-sahibinden-2026-09-18.json` | sahibinden | 507 | İzmir 102, Manisa 102, Aydın 101, İstanbul 101, Ankara 101 |
 | `data/market/tr-geo-arabam-2026-09-18.json` | arabam | 499 | İzmir 99, Manisa 100, Aydın 100, İstanbul 100, Ankara 100 |
 | `data/market/tr-yeni-providerlar-2026-09-18.json` | renew/otoplus/otofora | 145 | İzmir 31, İstanbul 68, Ankara 21 |
+
+
+---
+
+## 13. Generic provider ve provider entegrasyon testleri (2026-09-18)
+
+### 13.1 Tarif tabanlı provider
+
+Yeni bir site eklemek için KOD yazılmaz; `config/providers-generic.json`'a **tarif** yazılır:
+
+```json
+"otosor": {
+  "label": "Otosor",
+  "homepage": "https://www.otosor.com.tr",
+  "listing_url": "https://www.otosor.com.tr/araclar/izmir-ikinci-el-araba",
+  "extraction": "text-pattern",
+  "geo": { "mode": "path", "template": "https://www.otosor.com.tr/araclar/{slug}-ikinci-el-araba", "verified": false },
+  "pacing_seconds": 8,
+  "verified": "pending",
+  "notes": "Desen var ama liste statik blok; sayfalama JS ile."
+}
+```
+
+Tarifi `providers/generic.mjs` uygular; çıkarım `lib/card-parse.mjs` ile yapılır (fiyat merkezli, taksit/model-yılı tuzakları çözülmüş).
+
+**Kurallar:**
+- `verified` üç durumdan biri: `verified | pending | blocked`. `extraction: none|api` iken `verified` olamaz (çelişki testi var).
+- `extraction: table` olan tariflerde **`table_layout` zorunlu**: kolon düzeni doğrulanmadan tablo ayrıştırılmaz (sahibinden ve arabam'ın kolon düzenleri farklıdır — bu, entegrasyon kontrolünde yakalanan gerçek bir hataydı).
+- `geo` doğrulanmadıysa `geoUrl()` **null** döner; sessizce filtresiz arama yapılmaz.
+
+### 13.2 Entegrasyon kontrolü — `provider-check.mjs`
+
+```bash
+npm run check:providers                      # çevrimdışı: tarif doğrulama + capability matrisi + fixture
+npm run check:providers:live -- --idler renewturkiye,otoplus   # CDP üzerinden canlı (Chromium debug)
+node provider-check.mjs --from-dump data/provider-dumps/2026-09-18.json   # DOM dökümüyle kontrol
+```
+
+Durumlar: `ok` (≥3 satır ve ≥%60 ayrıştı), `empty` (sayfa liste vermedi — JS/API ile geliyor olabilir), `low-parse` (kartlar var ama ayrışmıyor → ayrıştırıcı/tarif güncellenmeli), `error`.
+
+**Bu makinedeki CDP gerçeği:** Hermes browser katmanı `BU_CDP_URL=http://127.0.0.1:9222` ile çalışıyor ama **saf HTTP `/json/version` ve `/json/list` 404 döndürüyor** (Chrome 9222'de dinliyor, fd 107u). Bu yüzden script doğrudan sekmeleri keşfedemiyor; `--live` bunu dürüstçe bildirip `--from-dump` öneriyor. Döküm, gerçek Chrome oturumundan alınır (agent tool veya çalışan bir CDP ucu) ve **aynı ayrıştırıcıyla** kontrol edilir.
+
+### 13.3 Test paketleri (update sonrası çalıştır)
+
+```bash
+npm test                 # 198 test: birim + sözleşme + fixture (ağ gerekmez)
+npm run test:providers   # yalnızca provider sözleşme/fixture testleri
+npm run check:all        # npm test + check:providers
+```
+
+- `tests/providers/contract.test.mjs`: her provider kimlik/çıkarım/durum/geo sözleşmesine uyar; fixture kartlarının ≥%80'i ayrışmalı; tablo düzeni yanlışsa **açıkça hata** verir.
+- `tests/fixtures/provider-cards.json`: canlı toplanmış GERÇEK kart metinleri (site değişirse test kırılır → fark edilir).
+- `tests/card-parse.test.mjs`: tuzak vakaları (Peugeot 2008 yıl, taksit-fiyat, 0 KM, iki kelimeli model, ₺ önek/sonek).
+- `data/provider-checks/`: her kontrolün JSON raporu (hangi sağlayıcı o gün kaç satır verdi).
+
+### 13.4 Son kontrol sonucu (2026-09-18, gerçek Chrome dökümü)
+
+| provider | mod | kayıt | ayrışan | durum |
+|---|---|---|---|---|
+| renewturkiye | text-pattern | 21 | 21 | ✅ |
+| otoplus | text-pattern | 12 | 12 | ✅ |
+| otofora | text-pattern | 12 | 10 | ✅ |
+| vavacars | text-pattern | 12 | 12 | ✅ |
+| sahibinden | table | 50 | 50 | ✅ |
+| arabam | table | 50 | 50 | ✅ |
+| otosor / spoticar / otokoc | — | 0 | 0 | ⚠️ empty (beklenen: liste JS/API ile) |

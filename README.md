@@ -131,3 +131,17 @@ Katalog verisinin nasıl büyütüleceği: `docs/VERI-TOPLAMA.md`.
 
 # 4) Şehir bazlı arama URL'leri (doğrulanmış desenler)
 node geo-urls.mjs --iller "İzmir,Manisa,Aydın" --providerlar sahibinden,arabam,renewturkiye
+
+
+## Provider bakımı
+
+```bash
+npm run provider:defter                    # kayıtlı siteler ve doğrulama durumları
+npm test                                   # birim + provider sözleşme/fixture testleri
+npm run check:providers                    # entegrasyon: tarif doğrulama + fixture ayrıştırma
+node provider-check.mjs --from-dump <dump>  # gerçek Chrome dökümüyle entegrasyon kontrolü
+node geo-urls.mjs --iller "İzmir,Manisa,Aydın"   # şehir bazlı doğrulanmış URL'ler
+```
+
+Yeni site eklemek: `config/providers-generic.json`'a tarif yaz (URL, sayfalama, `extraction`, `geo`, `verified`, `notes`).
+Tablo kazıyan sitelerde `table_layout` zorunlu. Ayrıntı: `docs/VERI-TOPLAMA.md` §13.

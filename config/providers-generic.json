@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "name": "car-ops generic provider kayıt defteri",
+    "created": "2026-09-18",
+    "how": "Her kayıt bir site TARİFİDİR: nasıl açılır, kart nasıl alınır, hangi alanlar güvenilir. Kod bu tarifi uygular (providers/generic.mjs); site başına ayrı kod yazılmaz.",
+    "extraction_modes": {
+      "text-pattern": "Sayfadaki kart metinleri fiyat+yıl deseniyle bulunur ve lib/card-parse.mjs ile ayrıştırılır.",
+      "table": "HTML tablo satırları hücre hücre okunur (sahibinden/arabam gibi).",
+      "api": "Sitenin JSON API'si çağrılır (şema bilinmeden kullanılmaz).",
+      "none": "Liste DOM'da yok / şema bilinmiyor — toplama yapılamaz."
+    },
+    "verified_states": {
+      "verified": "Canlı testte kart alındı ve alanlar doğru ayrıştı (2026-09-18).",
+      "pending": "Erişilebiliyor ama liste alınamıyor ya da şema bilinmiyor.",
+      "blocked": "Bot koruması/rate limit."
+    }
+  },
+  "providers": {
+    "sahibinden": {
+      "label": "sahibinden.com",
+      "homepage": "https://www.sahibinden.com",
+      "listing_url": "https://www.sahibinden.com/otomobil",
+      "extraction": "table",
+      "geo": {
+        "mode": "query",
+        "param": "address_city",
+        "value": "plate_no_leading_zero",
+        "verified": true
+      },
+      "paging": {
+        "param": "pagingOffset",
+        "size_param": "pagingSize",
+        "size": 50,
+        "verified": true
+      },
+      "pacing_seconds": 20,
+      "verified": "verified",
+      "notes": "Bot korumalı: sayfa başına 20 sn. Filtre parametreleri config/filters.json'da (a6/a17/a3/a8/a706...).",
+      "table_layout": {
+        "make": 1,
+        "model": 2,
+        "variant": 3,
+        "title": 4,
+        "year": 5,
+        "km": 6,
+        "price": 7,
+        "date": 8,
+        "city": 9,
+        "verified": true,
+        "note": "Hücre düzeni canlı dökümle doğrulandı (2026-09-18): ['',Marka,Model,Varyant,Başlık,Yıl,KM,Fiyat,Tarih,İl/İlçe]"
+      }
+    },
+    "arabam": {
+      "label": "arabam.com",
+      "homepage": "https://www.arabam.com",
+      "listing_url": "https://www.arabam.com/ikinci-el/otomobil",
+      "extraction": "table",
+      "geo": {
+        "mode": "path",
+        "template": "https://www.arabam.com/ikinci-el/{slug}",
+        "verified": true
+      },
+      "paging": {
+        "param": "page",
+        "size_param": "take",
+        "size": 50,
+        "sorting": "startedAt.desc",
+        "verified": true
+      },
+      "pacing_seconds": 15,
+      "verified": "verified",
+      "notes": "currency=TL zorunlu; şehir sayfasında km kolonu yok. Hücrede iki fiyat = eski/yeni (üstü çizili).",
+      "table_layout": {
+        "heading": 1,
+        "title": 2,
+        "year": 3,
+        "km": 4,
+        "color": 5,
+        "price": 6,
+        "date": 7,
+        "city": 8,
+        "verified": true,
+        "note": "Hücre düzeni canlı dökümle doğrulandı (2026-09-18): ['', 'Marka Model Varyant', Başlık, Yıl, KM, Renk, Fiyat, Tarih, İl/İlçe] — marka/model tek hücrede"
+      }
+    },
+    "vavacars": {
+      "label": "vava.cars",
+      "homepage": "https://vava.cars",
+      "listing_url": "https://tr.vava.cars/buy/cars/",
+      "extraction": "text-pattern",
+      "load_more_selector_text": "tane daha göster",
+      "paging": {
+        "mode": "button",
+        "verified": false
+      },
+      "pacing_seconds": 8,
+      "verified": "verified",
+      "notes": "Kart zengin: hasar etiketi (Boyasız, değişensiz, tramersiz), kasa, yakıt, vites, plaka. 'Sonraki' tıklaması yeni kart getirmedi."
+    },
+    "otokoc": {
+      "label": "otokoç 2. el",
+      "homepage": "https://www.otokocikinciel.com",
+      "listing_url": "https://www.otokocikinciel.com/ikinci-el",
+      "model_url_template": "https://www.otokocikinciel.com/ikinci-el/{make}/{model}",
+      "extraction": "none",
+      "verified": "pending",
+      "notes": "Model sayfaları sunucu tarafında açılıyor (stok yok bilgisi metin olarak geliyor) ama liste JS ile geliyor; şehir filtresi URL deseni yok."
+    },
+    "renewturkiye": {
+      "label": "Renew (kurumsal)",
+      "homepage": "https://renewturkiye.com",
+      "listing_url": "https://renewturkiye.com/otomobil",
+      "extraction": "text-pattern",
+      "geo": {
+        "mode": "path",
+        "template": "https://renewturkiye.com/otomobil/{slug}",
+        "verified": true
+      },
+      "paging": {
+        "mode": "unknown",
+        "verified": false
+      },
+      "pacing_seconds": 6,
+      "verified": "verified",
+      "notes": "21 kart/sayfa. Kart: marka model | varyant | yıl | km | yakıt | vites | fiyat."
+    },
+    "otoplus": {
+      "label": "Otoplus",
+      "homepage": "https://www.otoplus.com",
+      "listing_url": "https://www.otoplus.com/ikinci-el-araba",
+      "extraction": "text-pattern",
+      "geo": {
+        "mode": "path",
+        "template": "https://www.otoplus.com/{slug}-ikinci-el-araba",
+        "only": [
+          "İstanbul"
+        ],
+        "verified": true
+      },
+      "paging": {
+        "param": "sayfa",
+        "verified": true
+      },
+      "pacing_seconds": 6,
+      "verified": "verified",
+      "notes": "Kartta km YOK (km null kaydedilir). Şehir sayfası yalnızca İstanbul için var."
+    },
+    "otofora": {
+      "label": "Otofora (İzmir)",
+      "homepage": "https://www.otofora.com",
+      "listing_url": "https://www.otofora.com/",
+      "extraction": "text-pattern",
+      "geo": {
+        "mode": null,
+        "verified": false
+      },
+      "pacing_seconds": 6,
+      "verified": "verified",
+      "notes": "İzmir merkezli; şehir filtresi URL ile taşınmıyor. Kart yılla başlar ve '0 KM' beyanı olabilir (km null + not)."
+    },
+    "otosor": {
+      "label": "Otosor",
+      "homepage": "https://www.otosor.com.tr",
+      "listing_url": "https://www.otosor.com.tr/araclar/izmir-ikinci-el-araba",
+      "geo": {
+        "mode": "path",
+        "template": "https://www.otosor.com.tr/araclar/{slug}-ikinci-el-araba",
+        "verified": false
+      },
+      "extraction": "text-pattern",
+      "pacing_seconds": 8,
+      "verified": "pending",
+      "notes": "Desen var (30 sayfa linki) ama tüm il/sayfa kombinasyonları AYNI 8 kartı döndürdü → liste statik blok, sayfalama JS ile. Kart formatı zengin: peşin fiyat + aylık taksit ayrı."
+    },
+    "spoticar": {
+      "label": "Spoticar (Stellantis)",
+      "homepage": "https://www.spoticar.com.tr",
+      "listing_url": "https://www.spoticar.com.tr/ikinci-el-araclar/izmir",
+      "geo": {
+        "mode": "path",
+        "template": "https://www.spoticar.com.tr/ikinci-el-araclar/{slug}",
+        "verified": false
+      },
+      "extraction": "none",
+      "pacing_seconds": 8,
+      "verified": "pending",
+      "notes": "Şehir sayfaları var ama liste JS ile geliyor; kart DOM'da bulunamadı (gövde ~4 KB). Ağ kayıtlarındaki API şeması yakalanmalı."
+    },
+    "otosistem": {
+      "label": "OtoSistem (galeri rehberi)",
+      "homepage": "https://www.otosistem.com",
+      "listing_url": "https://www.otosistem.com/galeriler/izmir",
+      "extraction": "none",
+      "pacing_seconds": 8,
+      "verified": "pending",
+      "notes": "İlan sitesi değil, GALERİ REHBERİ (İzmir'de 810 galeri). Değeri: yeni provider keşfi ve galeri doğrulama için dizin."
+    },
+    "carvak": {
+      "label": "Carvak (eski Kavak)",
+      "homepage": "https://carvak.com",
+      "listing_url": "https://carvak.com/tr/satilik-arac",
+      "extraction": "api",
+      "api_base": "https://carvak.com/advanced-search-api/public/v2/",
+      "verified": "pending",
+      "notes": "kavak.com → carvak.com yönleniyor. Liste advanced-search-api'den geliyor; uç yolları bilinmiyor (campaigns/active görüldü). Şema sayfada filtre etkileşimi sırasında fetch kancasıyla yakalanmalı."
+    },
+    "ikinciyeni": {
+      "label": "ikinciyeni.com",
+      "homepage": "https://www.ikinciyeni.com",
+      "listing_url": "https://www.ikinciyeni.com/araba-al",
+      "extraction": "api",
+      "api_base": "https://apigw.ikinciyeni.com/",
+      "api_endpoints_seen": [
+        "ListedVehicles",
+        "GetProducts",
+        "GetCities"
+      ],
+      "verified": "pending",
+      "notes": "POST apigw.ikinciyeni.com/ListedVehicles açık ve JSON döner ({data:{vehiclesList,...}}) ama filtre gövdesi şeması bilinmiyor; 12 farklı gövde denendi, hepsi totalCount=0. Şema sayfada filtre tıklaması sırasında fetch kancasıyla yakalanmalı."
+    },
+    "otomerkezi": {
+      "label": "Otomerkezi",
+      "homepage": "https://www.otomerkezi.net",
+      "listing_url": "https://www.otomerkezi.net/ikinci-el",
+      "extraction": "none",
+      "pacing_seconds": 8,
+      "verified": "pending",
+      "notes": "Liste JS ile. Grup sitesi trinkoto.com ücretsiz değerleme sunuyor (Oto360 alternatifi adayı)."
+    }
+  }
+}

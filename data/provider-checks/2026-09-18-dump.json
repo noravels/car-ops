@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-09-18T20:38:59.720Z",
+  "source": "data/provider-dumps/2026-09-18.json",
+  "results": [
+    {
+      "id": "renewturkiye",
+      "url": "https://renewturkiye.com/otomobil/izmir",
+      "title": "İzmir 2. El Araç İlanları | Renew",
+      "body_length": 5771,
+      "status": "ok",
+      "parsed": 21,
+      "input": 21,
+      "sample": "Dacia Sandero 2021 1129000"
+    },
+    {
+      "id": "otoplus",
+      "url": "https://www.otoplus.com/istanbul-ikinci-el-araba",
+      "title": "İstanbul İkinci El Araba Fiyatları",
+      "body_length": 4262,
+      "status": "ok",
+      "parsed": 12,
+      "input": 12,
+      "sample": "Opel COMBO 2024 1295000"
+    },
+    {
+      "id": "otofora",
+      "url": "https://www.otofora.com/",
+      "title": "🐴 Otofora | İzmir' de 2. el otomobilin güvenilir adresi",
+      "body_length": 6471,
+      "status": "ok",
+      "parsed": 10,
+      "input": 12,
+      "sample": "Land Rover Range Rover 2023 17250000"
+    },
+    {
+      "id": "otosor",
+      "url": "https://www.otosor.com.tr/araclar/izmir-ikinci-el-araba?page=1",
+      "title": "🐴 İzmir İkinci El Araba Fiyatları ve Modelleri",
+      "body_length": 10524,
+      "status": "empty",
+      "parsed": 0,
+      "input": 0,
+      "sample": null
+    },
+    {
+      "id": "vavacars",
+      "url": "https://tr.vava.cars/buy/cars/",
+      "title": "Satılık İkinci El Araçlar",
+      "body_length": 2487,
+      "status": "ok",
+      "parsed": 12,
+      "input": 12,
+      "sample": "Peugeot 2008 2023 1670000"
+    },
+    {
+      "id": "sahibinden",
+      "url": "https://www.sahibinden.com/otomobil?price_max=1500000&sorting=date_desc&pagingSize=50",
+      "title": "🐴 2.El Arabalar ve Satılık Sıfır Km Otomobil Fiyatları sahibinden.com'da",
+      "body_length": 9662,
+      "status": "ok",
+      "parsed": 50,
+      "input": 50,
+      "sample": "Opel Astra 2012 740000"
+    },
+    {
+      "id": "arabam",
+      "url": "https://www.arabam.com/ikinci-el/otomobil?currency=TL&maxPrice=1500000&take=50&sorting=startedAt.desc",
+      "title": "🐴 Satılık 2. El Araba Fiyatları ve Modelleri - arabam.com",
+      "body_length": 16658,
+      "status": "ok",
+      "parsed": 50,
+      "input": 50,
+      "sample": "Renault Symbol 2017 786500"
+    },
+    {
+      "id": "spoticar",
+      "url": "https://www.spoticar.com.tr/ikinci-el-araclar/izmir",
+      "title": "🐴 İkinci El Araçlar - İzmir | Spoticar",
+      "body_length": 4082,
+      "status": "empty",
+      "parsed": 0,
+      "input": 0,
+      "sample": null
+    },
+    {
+      "id": "otokoc",
+      "url": "https://www.otokocikinciel.com/ikinci-el",
+      "title": "🐴 İkinci El Araba Fiyatları ve Modelleri | Otokoç 2. El",
+      "body_length": 1196,
+      "status": "empty",
+      "parsed": 0,
+      "input": 0,
+      "sample": null
+    }
+  ]
+}

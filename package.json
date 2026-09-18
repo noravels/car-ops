@@ -5,12 +5,17 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "node --test tests/",
+    "test": "node --test",
     "degerleme": "node valuation-cli.mjs",
     "oneri": "node catalog.mjs --suggest",
     "katalog": "node catalog.mjs",
     "tamir": "node doctor.mjs",
-    "tarama": "node market-scan.mjs"
+    "tarama": "node market-scan.mjs",
+    "test:providers": "node --test tests/providers/contract.test.mjs",
+    "check:providers": "node provider-check.mjs",
+    "check:providers:live": "node provider-check.mjs --live",
+    "provider:defter": "node providers/generic.mjs",
+    "check:all": "npm test && npm run check:providers"
   },
   "engines": {
     "node": ">=20"
