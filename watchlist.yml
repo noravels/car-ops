@@ -9,3 +9,32 @@
 # queries:
 #   - name: "civic-2017-otomatik"
 #     url: "https://www.sahibinden.com/satilik-otomobil/honda/civic-1.6-ecvt?..."
+
+# 2026-09-18 taramasından adaylar (Rapor 003)
+listings:
+  - id: arabam-2023-urban-26000-ankara
+    label: "2023 Urban 26.000 km — 1.015.000 TL (Ankara Sincan)"
+    source: arabam.com
+    price_try: 1015000
+    added: 2026-09-18
+    note: "medyan -%13; servis bakımlı beyanı"
+  - id: arabam-2024-street-42500-kayseri
+    label: "2024 Street 42.500 km — 1.025.000 TL (Kayseri)"
+    source: arabam.com
+    price_try: 1025000
+    price_previous_try: 1042500
+    added: 2026-09-18
+    note: "gerçek fiyat düşüşü 17.500 TL"
+  - id: sahibinden-1339074327
+    label: "2023 Street 7.200 km — 1.165.000 TL (Çanakkale, expertiz raporlu)"
+    source: sahibinden.com
+    price_try: 1165000
+    added: 2026-09-18
+    note: "ekspertiz raporu ilanda — en düşük riskli aday"
+  - id: vavacars-2025-urban-8288
+    label: "2025 Urban 8.288 km — 1.198.000 TL (vava.cars)"
+    source: vava.cars
+    price_try: 1198000
+    price_previous_try: 1215000
+    added: 2026-09-18
+    note: "boyasız-değişensiz-tramersiz + 17.000₺ indirim; kurumsal"
