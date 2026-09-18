@@ -292,3 +292,24 @@ npm run check:all        # npm test + check:providers
 | sahibinden | table | 50 | 50 | ✅ |
 | arabam | table | 50 | 50 | ✅ |
 | otosor / spoticar / otokoc | — | 0 | 0 | ⚠️ empty (beklenen: liste JS/API ile) |
+
+
+---
+
+## 14. API şeması keşfi — `tools/capture-api.mjs`
+
+SPA sitelerde liste DOM'a değil bir XHR/fetch çağrısından gelir. İstek gövdesini **tahmin etmek yasak** (şema uydurma);
+gerçek çağrı yakalanır:
+
+```bash
+node tools/capture-api.mjs --url "https://www.ikinciyeni.com/araba-al" --host apigw --sure 15000
+node tools/capture-api.mjs --url "https://www.otokocikinciel.com/ikinci-el" --tumu
+```
+
+Araç CDP `Network.requestWillBeSent` olaylarını dinler (kendi WS istemcimizle), statik varlıkları eler ve
+method/url/gövde özetini yazar. Bu yöntemle 2026-09-19'da **ikinciyeni'nin gerçek istek gövdesi** çıkarıldı.
+
+**Bulgu — ikinciyeni:** şema alındı ama envanter herkese açık değil (site ve API `totalCount: 0`; giriş şartı).
+
+**Bulgu — otokoc:** `cdn-cgi/challenge-platform/.../jsd/oneshot` istekleri → **Cloudflare challenge**. Kullanıcının kendi
+Chrome'unda da liste render edilmiyor. Proje kuralı: bot duvarı aşılmaz → sağlayıcı `blocked`.

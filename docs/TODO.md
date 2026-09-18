@@ -47,8 +47,10 @@ Fiyat ile ₺ **ayrı span**'da olduğu için standart fiyat deseni kartı bulam
 Sonuç: 16 marka sayfasından **68/68 kart (%100) ayrıştı**, `verified`; katalog 424 model / 2428 ilan.
 Sayfalama deseni hâlâ yok (marka/model/yıl yolları kullanılıyor).
 
-**ikinciyeni (açık):**
-- Liste `apigw.ikinciyeni.com/ListedVehicles` (POST) üzerinden; canlı sayfada `fetch`/XHR kancası çağrı yakalamadı → istek büyük olasılıkla filtre seçilmeden atılmıyor.
+**ikinciyeni (`bloklu`, neden belgelendi):** İstek şeması **yakalandı** — `tools/capture-api.mjs` (CDP `Network` alanı) ile:
+`POST apigw.ikinciyeni.com/ListedVehicles` gövdesi `{page,pageSize,sortingType,endedVehicles,isFavorite,filter:{brands,fuelTypes,gearTypes,colors,locations,isAuction,isListing,auctionListFilterIds}}`.
+Ancak hem sitenin kendi çağrısı hem 8 gövde varyasyonu **`totalCount: 0`** döndürüyor ve sayfa ilan render etmiyor → envanter herkese açık değil (giriş/şube şartı).
+Çözüm yolu: kullanıcı giriş yaptığı oturumda aynı araç çalıştırılır; şema registry'de `api_call` olarak kayıtlı.
 - ikinciyeni: `POST https://apigw.ikinciyeni.com/ListedVehicles` açık ve JSON döndürüyor (`{data:{vehiclesList,totalCount,brands,...}}`) ama 12 farklı gövde denemesinde `totalCount: 0` → filtre gövdesi şeması bilinmiyor.
 
 **Sonraki adım:** Sayfada **gezinmeden** `fetch`/`XHR.open` kancası kur (`window.__cap`), sonra filtre etkileşimini tetikle (marka seç, "Ara"/sayfalama) ve yakalanan istek gövdesini oku. Şema yakalanınca `extraction: "api"` tarifini `verified`'a çevir.
@@ -67,7 +69,7 @@ Sayfalama deseni hâlâ yok (marka/model/yıl yolları kullanılıyor).
 - İki sinsi hata düzeltildi: `toLowerCase()` Türkçe **'İ'** harfini 2 kod noktasına çevirdiği için km konumu kayıyordu (indeks artık orijinal metinden) ve `\s` binlik ayırıcı sayesinde **"2023 122.222 km"** tek sayı sanılıyordu (lookbehind + pencere düzeltmesi).
 
 **Sonuç:** spoticar 5 şehirde doğrulandı (11'er kart), otomerkezi sayfalama çalışıyor (14-15 kart/sayfa), toplam 203 yeni ilan kataloğa girdi.
-**Açık kalan:** otokoc — liste DOM'a render edilmiyor (gövde ~1,2 KB), gezinme zaman aşımına düşüyor → API şeması gerekir.
+**Açık kalan: otokoc — `bloklu`.** Cloudflare challenge (`cdn-cgi/challenge-platform/.../jsd/oneshot`) sunuyor; kullanıcının kendi Chrome'unda da liste render edilmiyor (gövde ~1,2 KB, yalnız menü). Proje kuralı gereği bot duvarı aşılmaz → kapsam dışı.
 
 ---
 

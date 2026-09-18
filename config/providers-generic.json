@@ -103,9 +103,10 @@
       "listing_url": "https://www.otokocikinciel.com/ikinci-el",
       "model_url_template": "https://www.otokocikinciel.com/ikinci-el/{make}/{model}",
       "extraction": "none",
-      "verified": "pending",
-      "notes": "Liste DOM'da render edilmiyor (gövde ~1.2 KB, sadece menü/bülten metni; gezinme zaman aşımına düşüyor). Model sayfaları açılıyor ama ilan kartı yok → API/JS şeması gerekir.",
-      "live_wait_ms": 12000
+      "verified": "blocked",
+      "notes": "Cloudflare koruması: sayfa 'cdn-cgi/challenge-platform/.../jsd/oneshot' istekleriyle challenge sunuyor; kullanıcının kendi Chrome'unda da liste render edilmiyor (gövde ~1,2 KB, yalnız menü/bülten; fiyat öğeleri promosyon). Bot duvarı AŞILMAZ (proje kuralı) → bu sağlayıcı kapsam dışı; ilanları sahibinden/arabam üzerinden zaten görülüyor.",
+      "live_wait_ms": 12000,
+      "verified_at": "2026-09-19"
     },
     "renewturkiye": {
       "label": "Renew (kurumsal)",
@@ -249,8 +250,31 @@
         "GetProducts",
         "GetCities"
       ],
-      "verified": "pending",
-      "notes": "POST apigw.ikinciyeni.com/ListedVehicles açık ve JSON döner ({data:{vehiclesList,...}}) ama filtre gövdesi şeması bilinmiyor; 12 farklı gövde denendi, hepsi totalCount=0. Şema sayfada filtre tıklaması sırasında fetch kancasıyla yakalanmalı."
+      "verified": "blocked",
+      "notes": "API şeması YAKALANDI (tools/capture-api.mjs): POST apigw.ikinciyeni.com/ListedVehicles gövdesi {\"page\":1,\"pageSize\":30,\"sortingType\":0,\"endedVehicles\":false,\"isFavorite\":false,\"filter\":{brands,fuelTypes,gearTypes,colors,locations,isAuction,isListing,auctionListFilterIds}}. Ancak hem sitenin kendi çağrısı hem 8 gövde varyasyonu totalCount=0 döndürüyor ve sayfa da ilan render etmiyor → envanter herkese açık değil (giriş/şube şartı). Giriş yapılmış oturumda aynı araçla toplanabilir.",
+      "verified_at": "2026-09-19",
+      "api_call": {
+        "url": "https://apigw.ikinciyeni.com/ListedVehicles",
+        "method": "POST",
+        "body_template": {
+          "page": 1,
+          "pageSize": 30,
+          "sortingType": 0,
+          "endedVehicles": false,
+          "isFavorite": false,
+          "filter": {
+            "brands": [],
+            "fuelTypes": [],
+            "gearTypes": [],
+            "colors": [],
+            "locations": [],
+            "isAuction": false,
+            "isListing": false,
+            "auctionListFilterIds": []
+          }
+        },
+        "items_path": "data.vehiclesList"
+      }
     },
     "otomerkezi": {
       "label": "otomerkezi.net",
