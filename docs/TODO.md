@@ -8,7 +8,7 @@ ve hangi commit'te kapandığı yazılır.
 
 ## P1 — CDP soket keşfi (provider-check --live doğrudan çalışsın)
 
-**Durum:** `açık` · 2026-09-18
+**Durum:** `bitti` · 2026-09-19 · commit `af8a25f`
 
 **Ne biliniyor:**
 - Hermes browser katmanı `BU_CDP_URL=http://127.0.0.1:9222` ile çalışıyor ve sekmeleri görebiliyor.
@@ -37,7 +37,7 @@ doğrulama `--from-dump` veya agent akışıyla yapılır; registry notunda yaz�
 
 ## P2 — carvak ve ikinciyeni API şemaları (`pending` → `verified`)
 
-**Durum:** `devam` — **carvak BİTTİ** (2026-09-19), ikinciyeni açık
+**Durum:** `bitti` · 2026-09-19 · commit `10795ee` — **carvak `verified`**, ikinciyeni `blocked` (gerekçeli)
 
 **carvak ÇÖZÜMÜ (API'ye gerek kalmadan):** Liste API'de değil, DOM'da bulundu. Kart biçimi:
 `Volkswagen • Polo | 2023 • 122.222 km • 1.0 TSI Life • Otomatik | ₺ | 1.278.000`.
@@ -84,7 +84,7 @@ Ancak hem sitenin kendi çağrısı hem 8 gövde varyasyonu **`totalCount: 0`** 
 
 ## P5 — Oto360 Araç Değerleme otomasyonu
 
-**Durum:** `devam` (otomasyon `bloklu`, referans akışı bitti) · 2026-09-19
+**Durum:** `bitti` (referans akışı) · otomasyon kısmı `bloklu` (giriş gerekiyor) · 2026-09-19 · commit `db84935`
 
 **Otomasyon denemesi (neden bloklu):** Değerleme sayfası taze oturumda **form render etmiyor** (`select: 0`, `formVar: false`),
 bantlar görünüyor ama "Araç Değerle" tıklaması ve **girişli oturum** gerekiyor. Sayfa "Giriş Yap" gösteriyor. Yani sadece
