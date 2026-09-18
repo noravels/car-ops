@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  normalizeCardText,
   parseCardText,
   splitHeading,
   detectFuel,
@@ -173,4 +174,20 @@ test('indirim etiketi: araç fiyatı sanılmaz, varyant sanılmaz', () => {
 
 test('birden fazla fiyat varsa araç fiyatı (sonuncu) alınır', () => {
   assert.equal(pickPrice('Peşin 900.000 TL | Kredi ile 950.000 TL'), 950000);
+});
+
+test('carvak kartı: ayırıcılı para birimi ve madde işareti normalize edilir', () => {
+  const row = parseCardText('Volkswagen • Polo | 2023 • 122.222 km • 1.0 TSI Life • Otomatik | ₺ | 1.278.000', { source: 'carvak' });
+  assert.ok(row, 'kart ayrışmalı');
+  assert.equal(row.make, 'Volkswagen');
+  assert.equal(row.model, 'Polo');
+  assert.equal(row.year, 2023);
+  assert.equal(row.km, 122222);
+  assert.equal(row.price_try, 1278000);
+  assert.equal(row.gearbox, 'Otomatik');
+  assert.match(row.variant, /1\.0 TSI Life/i);
+});
+
+test('normalizeCardText: para birimi ve madde işareti temizlenir, dikey çizgiler korunur', () => {
+  assert.equal(normalizeCardText('Volkswagen • Polo | ₺ | 1.278.000'), 'Volkswagen Polo | ₺ 1.278.000');
 });

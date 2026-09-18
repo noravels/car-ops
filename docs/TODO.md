@@ -32,10 +32,18 @@ Döküm şablonu `data/provider-dumps/2026-09-18.json`'da örnek olarak duruyor.
 
 ## P2 — carvak ve ikinciyeni API şemaları (`pending` → `verified`)
 
-**Durum:** `açık`
+**Durum:** `devam` — **carvak BİTTİ** (2026-09-19), ikinciyeni açık
 
-**Ne biliniyor:**
-- carvak: liste `carvak.com/advanced-search-api/public/v2/...` üzerinden; `campaigns/active` ucu görüldü, `vehicles` vb. denemeler 404. DOM'da ilan kartı yok.
+**carvak ÇÖZÜMÜ (API'ye gerek kalmadan):** Liste API'de değil, DOM'da bulundu. Kart biçimi:
+`Volkswagen • Polo | 2023 • 122.222 km • 1.0 TSI Life • Otomatik | ₺ | 1.278.000`.
+Fiyat ile ₺ **ayrı span**'da olduğu için standart fiyat deseni kartı bulamıyordu; iki düzeltme yapıldı:
+(a) `normalizeCardText` para birimi ile tutarı birleştirir ("₺ | 1.278.000" → "₺ 1.278.000") ve `•` ayırıcıyı boşluğa çevirir,
+(b) varyant yıl/km ile aynı segmentte geldiğinde `stripVariantNoise` temizler ("2023 122.222 km 1.0 TSI Life Otomatik" → "1.0 TSI Life").
+Sonuç: 16 marka sayfasından **68/68 kart (%100) ayrıştı**, `verified`; katalog 424 model / 2428 ilan.
+Sayfalama deseni hâlâ yok (marka/model/yıl yolları kullanılıyor).
+
+**ikinciyeni (açık):**
+- Liste `apigw.ikinciyeni.com/ListedVehicles` (POST) üzerinden; canlı sayfada `fetch`/XHR kancası çağrı yakalamadı → istek büyük olasılıkla filtre seçilmeden atılmıyor.
 - ikinciyeni: `POST https://apigw.ikinciyeni.com/ListedVehicles` açık ve JSON döndürüyor (`{data:{vehiclesList,totalCount,brands,...}}`) ama 12 farklı gövde denemesinde `totalCount: 0` → filtre gövdesi şeması bilinmiyor.
 
 **Sonraki adım:** Sayfada **gezinmeden** `fetch`/`XHR.open` kancası kur (`window.__cap`), sonra filtre etkileşimini tetikle (marka seç, "Ara"/sayfalama) ve yakalanan istek gövdesini oku. Şema yakalanınca `extraction: "api"` tarifini `verified`'a çevir.

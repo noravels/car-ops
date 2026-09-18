@@ -73,8 +73,18 @@ for (const [id, cards] of Object.entries(fixtures)) {
 }
 
 test('parseCards: text-pattern olmayan provider\'da açıkça hata verir (sessiz boş liste yok)', () => {
-  const carvak = createGenericProvider('carvak', registry.providers.carvak);
-  assert.throws(() => carvak.parseCards(['x']), /text-pattern/);
+  const ikinciyeni = createGenericProvider('ikinciyeni', registry.providers.ikinciyeni);
+  assert.throws(() => ikinciyeni.parseCards(['x']), /text-pattern/);
+});
+
+test('carvak: text-pattern + loose-price çıkarımıyla doğrulandı (Kavak rebrand)', () => {
+  const carvak = providers.find((p) => p.id === 'carvak');
+  assert.equal(carvak.extraction, 'text-pattern');
+  assert.equal(carvak.verificationState, 'verified');
+  assert.equal(carvak.geoUrl({ slug: 'izmir' }), null, 'şehir deseni doğrulanmadı → URL üretilmez');
+  const rows = carvak.parseCards(['Volkswagen • Polo | 2023 • 122.222 km • 1.0 TSI Life • Otomatik | ₺ | 1.278.000']);
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].price_try, 1278000);
 });
 
 test('parseTable: tablo provider\'ı satırları normalize eder', () => {

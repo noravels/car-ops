@@ -196,13 +196,28 @@
       "notes": "İlan sitesi değil, GALERİ REHBERİ (İzmir'de 810 galeri). Değeri: yeni provider keşfi ve galeri doğrulama için dizin."
     },
     "carvak": {
-      "label": "Carvak (eski Kavak)",
+      "label": "carvak.com",
       "homepage": "https://carvak.com",
-      "listing_url": "https://carvak.com/tr/satilik-arac",
-      "extraction": "api",
-      "api_base": "https://carvak.com/advanced-search-api/public/v2/",
-      "verified": "pending",
-      "notes": "kavak.com → carvak.com yönleniyor. Liste advanced-search-api'den geliyor; uç yolları bilinmiyor (campaigns/active görüldü). Şema sayfada filtre etkileşimi sırasında fetch kancasıyla yakalanmalı."
+      "listing_url": "https://carvak.com/tr/satilik-arac/volkswagen",
+      "url_templates": {
+        "brand": "https://carvak.com/tr/satilik-arac/{brand_slug}",
+        "brand_model": "https://carvak.com/tr/satilik-arac/{brand_slug}/{model_slug}",
+        "brand_year": "https://carvak.com/tr/satilik-arac/{brand_slug}/{year}"
+      },
+      "extraction": "text-pattern",
+      "extractor": "loose-price",
+      "geo": {
+        "mode": null,
+        "verified": false
+      },
+      "paging": {
+        "mode": "unknown",
+        "verified": false
+      },
+      "pacing_seconds": 8,
+      "verified": "verified",
+      "verified_at": "2026-09-19",
+      "notes": "Kavak'ın yeni markası. Kart: 'Volkswagen • Polo | 2023 • 122.222 km • 1.0 TSI Life • Otomatik | ₺ | 1.278.000' — marka/model/yıl/km/varyant/vites/fiyat gelir. Fiyat ile ₺ AYRI span'da olduğu için çıkarıcı 'loose-price' deseni ister (lib/cdk: cardExtractionScript) ve lib/card-parse normalizeCardText para birimini birleştirir. Marka sayfası canlı doğrulandı (VW: 9 sonuç, 6 kart ayrıştı). Sayfalama deseni henüz yok; marka/model/yıl yolları kullanılır."
     },
     "ikinciyeni": {
       "label": "ikinciyeni.com",

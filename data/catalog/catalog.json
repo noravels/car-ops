@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": 1,
-    "learned_from_listings": 2360,
-    "last_updated": "2026-09-18T22:19:51.145Z",
+    "learned_from_listings": 2428,
+    "last_updated": "2026-09-18T22:26:18.911Z",
     "note": "observed = ilanlardan gözlenen dağılımlar; taxonomy = sitenin kategori sınıflaması. Teknik özellik tahmini yapılmaz.",
     "specs_models": 2
   },
@@ -16,7 +16,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 47,
+        "listings_count": 48,
         "seen_ids": [
           "1340969663",
           "1340968105",
@@ -64,7 +64,8 @@
           "arabam.com|volkswagen-golf|2015|null|1130000",
           "arabam.com|volkswagen-golf|2015|null|989000",
           "arabam.com|volkswagen-golf|2012|null|899000",
-          "otoplus.com|volkswagen-golf|2016|null|1165000"
+          "otoplus.com|volkswagen-golf|2016|null|1165000",
+          "carvak.com|volkswagen-golf|2017|44485|1198000"
         ],
         "samples": [
           {
@@ -677,14 +678,27 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1198000,
+            "km": 44485,
+            "year": 2017,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Manuel",
+            "variant": null,
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 1994,
           "max": 2023,
-          "median": 2014
+          "median": 2015
         },
         "km": {
           "min": 32000,
@@ -694,17 +708,17 @@
         "price_try": {
           "min": 100000,
           "max": 1480000,
-          "median": 1115000
+          "median": 1122500
         },
         "bodies": {
           "Hatchback": 2
         },
         "fuels": {
           "Dizel": 15,
-          "Benzin": 19
+          "Benzin": 20
         },
         "gearboxes": {
-          "Manuel": 4,
+          "Manuel": 5,
           "Otomatik": 6
         },
         "colors": {
@@ -760,7 +774,8 @@
           "sahibinden.com": 18,
           "arabam.com": 26,
           "vava.cars": 2,
-          "otoplus.com": 1
+          "otoplus.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -1650,7 +1665,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 133,
+        "listings_count": 134,
         "seen_ids": [
           "1340969245",
           "1325344330",
@@ -1784,7 +1799,8 @@
           "renewturkiye.com|renault-clio|2024|74923|1245000",
           "renewturkiye.com|renault-clio|2025|20764|1490000",
           "renewturkiye.com|renault-clio|2025|28984|1392900",
-          "renewturkiye.com|renault-clio|2023|63916|1287900"
+          "renewturkiye.com|renault-clio|2023|63916|1287900",
+          "carvak.com|renault-clio|2023|49634|1059000"
         ],
         "samples": [
           {
@@ -3515,10 +3531,23 @@
             "city": "Ankara",
             "source": "renewturkiye.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1059000,
+            "km": 49634,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Manuel",
+            "variant": "1.0 TCe Joy",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2000,
           "max": 2025,
@@ -3527,23 +3556,23 @@
         "km": {
           "min": 8500,
           "max": 524000,
-          "median": 105000
+          "median": 103000
         },
         "price_try": {
           "min": 1500,
           "max": 1490000,
-          "median": 968000
+          "median": 971500
         },
         "bodies": {
           "Hatchback": 3
         },
         "fuels": {
           "Dizel": 30,
-          "Benzin": 60,
+          "Benzin": 61,
           "LPG": 1
         },
         "gearboxes": {
-          "Manuel": 3,
+          "Manuel": 4,
           "Otomatik": 20
         },
         "colors": {
@@ -3651,7 +3680,8 @@
           "sahibinden.com": 50,
           "arabam.com": 66,
           "vava.cars": 3,
-          "renewturkiye.com": 14
+          "renewturkiye.com": 14,
+          "carvak.com": 1
         }
       }
     },
@@ -5247,7 +5277,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 50,
+        "listings_count": 52,
         "seen_ids": [
           "1334162273",
           "1340933696",
@@ -5298,7 +5328,9 @@
           "arabam.com|ford-focus|2012|null|890000",
           "arabam.com|ford-focus|2010|null|389000",
           "arabam.com|ford-focus|2015|null|985000",
-          "arabam.com|ford-focus|2015|null|980000"
+          "arabam.com|ford-focus|2015|null|980000",
+          "carvak.com|ford-focus|2023|51567|1598000",
+          "carvak.com|ford-focus|2020|73727|1468000"
         ],
         "samples": [
           {
@@ -5950,32 +5982,58 @@
             "city": "Ankara Yenimahalle",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1598000,
+            "km": 51567,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.5 EcoBlue Active X",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1468000,
+            "km": 73727,
+            "year": 2020,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 TDCi 8AT E62 TITANIUM",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 1999,
           "max": 2024,
-          "median": 2013
+          "median": 2014
         },
         "km": {
-          "min": 62000,
+          "min": 51567,
           "max": 374500,
-          "median": 193500
+          "median": 190678
         },
         "price_try": {
           "min": 345000,
-          "max": 1490000,
-          "median": 904500
+          "max": 1598000,
+          "median": 915000
         },
         "bodies": {},
         "fuels": {
-          "Dizel": 22,
+          "Dizel": 23,
           "LPG": 2
         },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 4
         },
         "colors": {
           "Gri (metalik)": 2,
@@ -6038,7 +6096,8 @@
         },
         "sources": {
           "sahibinden.com": 23,
-          "arabam.com": 27
+          "arabam.com": 27,
+          "carvak.com": 2
         }
       }
     },
@@ -7255,7 +7314,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 104,
+        "listings_count": 106,
         "seen_ids": [
           "1297997782",
           "1338157735",
@@ -7360,7 +7419,9 @@
           "otoplus.com|renault-megane|2025|null|1680000",
           "otoplus.com|renault-megane|2024|null|1720000",
           "otoplus.com|renault-megane|2024|null|1525000",
-          "otoplus.com|renault-megane|2025|null|1700000"
+          "otoplus.com|renault-megane|2025|null|1700000",
+          "carvak.com|renault-megane|2017|102106|1019000",
+          "carvak.com|renault-megane|2024|17000|1629000"
         ],
         "samples": [
           {
@@ -8714,10 +8775,36 @@
             "city": null,
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1019000,
+            "km": 102106,
+            "year": 2017,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Manuel",
+            "variant": "1.5 dCi Touch",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1629000,
+            "km": 17000,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.3 TCe Touch",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 1998,
           "max": 2025,
@@ -8726,7 +8813,7 @@
         "km": {
           "min": 6001,
           "max": 400000,
-          "median": 166000
+          "median": 164500
         },
         "price_try": {
           "min": 189999,
@@ -8737,13 +8824,13 @@
           "Sedan": 17
         },
         "fuels": {
-          "Benzin": 32,
-          "Dizel": 28,
+          "Benzin": 33,
+          "Dizel": 29,
           "Elektrik": 3
         },
         "gearboxes": {
-          "Otomatik": 24,
-          "Manuel": 1
+          "Otomatik": 25,
+          "Manuel": 2
         },
         "colors": {
           "Beyaz": 15,
@@ -8835,7 +8922,8 @@
           "arabam.com": 46,
           "vava.cars": 1,
           "renewturkiye.com": 13,
-          "otoplus.com": 6
+          "otoplus.com": 6,
+          "carvak.com": 2
         }
       }
     },
@@ -10053,7 +10141,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 15,
+        "listings_count": 16,
         "seen_ids": [
           "846753026",
           "1335270492",
@@ -10069,7 +10157,8 @@
           "1340974422",
           "arabam.com|toyota-auris|2012|null|915000",
           "arabam.com|toyota-auris|2008|null|810000",
-          "arabam.com|toyota-auris|2010|null|925000"
+          "arabam.com|toyota-auris|2010|null|925000",
+          "carvak.com|toyota-auris|2016|88513|909000"
         ],
         "samples": [
           {
@@ -10266,19 +10355,32 @@
             "city": "Ankara Yenimahalle",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 909000,
+            "km": 88513,
+            "year": 2016,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Manuel",
+            "variant": "1.33 Life",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2008,
-          "max": 2014,
+          "max": 2016,
           "median": 2012
         },
         "km": {
-          "min": 110000,
+          "min": 88513,
           "max": 231000,
-          "median": 153750
+          "median": 137500
         },
         "price_try": {
           "min": 695000,
@@ -10290,7 +10392,8 @@
           "Dizel": 1
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 1,
+          "Manuel": 1
         },
         "colors": {
           "Beyaz": 3,
@@ -10319,7 +10422,8 @@
         },
         "sources": {
           "sahibinden.com": 5,
-          "arabam.com": 10
+          "arabam.com": 10,
+          "carvak.com": 1
         }
       }
     },
@@ -10470,7 +10574,7 @@
         "fetched_at": "2026-09-18"
       },
       "observed": {
-        "listings_count": 113,
+        "listings_count": 116,
         "seen_ids": [
           "1340957441",
           "1338158460",
@@ -10584,7 +10688,10 @@
           "renewturkiye.com|fiat-egea|2022|89736|1129000",
           "renewturkiye.com|fiat-egea|2023|86002|1239000",
           "otoplus.com|fiat-egea|2025|null|1150000",
-          "otoplus.com|fiat-egea|2023|null|1095000"
+          "otoplus.com|fiat-egea|2023|null|1095000",
+          "carvak.com|fiat-egea|2023|41029|1098000",
+          "carvak.com|fiat-egea|2023|44234|1258000",
+          "carvak.com|fiat-egea|2023|41350|939000"
         ],
         "samples": [
           {
@@ -12055,10 +12162,49 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1098000,
+            "km": 41029,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Manuel",
+            "variant": "1.4 Fire Limited",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1258000,
+            "km": 44234,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.6 Multijet Urban",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 939000,
+            "km": 41350,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Manuel",
+            "variant": "1.4 Fire Urban",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2015,
           "max": 2026,
@@ -12067,24 +12213,24 @@
         "km": {
           "min": 6001,
           "max": 285000,
-          "median": 100000
+          "median": 96000
         },
         "price_try": {
           "min": 1500,
           "max": 1486750,
-          "median": 928000
+          "median": 929000
         },
         "bodies": {
           "Sedan": 2
         },
         "fuels": {
-          "Benzin": 28,
-          "Dizel": 52,
+          "Benzin": 30,
+          "Dizel": 53,
           "LPG": 1
         },
         "gearboxes": {
-          "Otomatik": 19,
-          "Manuel": 2
+          "Otomatik": 20,
+          "Manuel": 4
         },
         "colors": {
           "Mavi": 3,
@@ -12182,7 +12328,8 @@
           "sahibinden.com": 40,
           "arabam.com": 68,
           "renewturkiye.com": 3,
-          "otoplus.com": 2
+          "otoplus.com": 2,
+          "carvak.com": 3
         }
       }
     },
@@ -12259,7 +12406,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 64,
+        "listings_count": 65,
         "seen_ids": [
           "1335210577",
           "1340950316",
@@ -12324,7 +12471,8 @@
           "arabam.com|honda-civic|2009|null|965000",
           "arabam.com|honda-civic|2011|null|719750",
           "arabam.com|honda-civic|2012|null|1279750",
-          "arabam.com|honda-civic|2018|null|1399900"
+          "arabam.com|honda-civic|2018|null|1399900",
+          "carvak.com|honda-civic|2025|42341|2220000"
         ],
         "samples": [
           {
@@ -13158,32 +13306,45 @@
             "city": "Ankara Altındağ",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 2220000,
+            "km": 42341,
+            "year": 2025,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 VTEC Elegance Plus",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 1995,
-          "max": 2021,
+          "max": 2025,
           "median": 2011
         },
         "km": {
           "min": 25000,
           "max": 417500,
-          "median": 190000
+          "median": 189500
         },
         "price_try": {
           "min": 259000,
-          "max": 1480000,
-          "median": 925000
+          "max": 2220000,
+          "median": 960000
         },
         "bodies": {},
         "fuels": {
-          "Benzin": 28,
+          "Benzin": 29,
           "LPG": 1
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 2
         },
         "colors": {
           "Beyaz": 9,
@@ -13255,7 +13416,8 @@
         },
         "sources": {
           "sahibinden.com": 22,
-          "arabam.com": 42
+          "arabam.com": 42,
+          "carvak.com": 1
         }
       }
     },
@@ -14447,7 +14609,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 20,
+        "listings_count": 22,
         "seen_ids": [
           "1312374235",
           "1340937595",
@@ -14468,7 +14630,9 @@
           "1338089529",
           "1340953300",
           "arabam.com|seat-leon|2016|null|1100000",
-          "arabam.com|seat-leon|2017|null|1050000"
+          "arabam.com|seat-leon|2017|null|1050000",
+          "carvak.com|seat-leon|2017|119064|1168000",
+          "carvak.com|seat-leon|2017|115199|1179000"
         ],
         "samples": [
           {
@@ -14730,24 +14894,50 @@
             "city": "İstanbul Pendik",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1168000,
+            "km": 119064,
+            "year": 2017,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.0 EcoTSI Ecomotive Style",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1179000,
+            "km": 115199,
+            "year": 2017,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.0 EcoTSI Ecomotive Style",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.150Z",
-        "last_seen": "2026-09-18T22:19:50.817Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2000,
           "max": 2021,
-          "median": 2014
+          "median": 2015
         },
         "km": {
-          "min": 120000,
+          "min": 115199,
           "max": 386000,
-          "median": 212000
+          "median": 210000
         },
         "price_try": {
           "min": 345000,
           "max": 1200000,
-          "median": 1050000
+          "median": 1065000
         },
         "bodies": {},
         "fuels": {
@@ -14756,7 +14946,7 @@
           "LPG": 1
         },
         "gearboxes": {
-          "Otomatik": 2,
+          "Otomatik": 4,
           "Manuel": 1
         },
         "colors": {
@@ -14792,7 +14982,8 @@
         },
         "sources": {
           "sahibinden.com": 9,
-          "arabam.com": 11
+          "arabam.com": 11,
+          "carvak.com": 2
         }
       }
     },
@@ -18099,7 +18290,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 12,
+        "listings_count": 13,
         "seen_ids": [
           "1340955995",
           "1340962796",
@@ -18112,7 +18303,8 @@
           "arabam.com|skoda-octavia|2016|200000|1000000",
           "1329488951",
           "arabam.com|skoda-octavia|2004|null|399000",
-          "arabam.com|skoda-octavia|2015|null|1288500"
+          "arabam.com|skoda-octavia|2015|null|1288500",
+          "carvak.com|skoda-octavia|2023|61312|1838000"
         ],
         "samples": [
           {
@@ -18270,31 +18462,44 @@
             "city": "Ankara Yenimahalle",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1838000,
+            "km": 61312,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.5 e-Tec Premium",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2000,
-          "max": 2018,
+          "max": 2023,
           "median": 2015
         },
         "km": {
-          "min": 148981,
+          "min": 61312,
           "max": 398000,
-          "median": 208000
+          "median": 200000
         },
         "price_try": {
           "min": 340000,
-          "max": 1340000,
-          "median": 999500
+          "max": 1838000,
+          "median": 1000000
         },
         "bodies": {},
         "fuels": {
           "Dizel": 10
         },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 3
         },
         "colors": {
           "Diğer": 1,
@@ -18322,7 +18527,8 @@
         },
         "sources": {
           "sahibinden.com": 3,
-          "arabam.com": 9
+          "arabam.com": 9,
+          "carvak.com": 1
         }
       }
     },
@@ -19411,7 +19617,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 63,
+        "listings_count": 65,
         "seen_ids": [
           "1328552186",
           "1340967707",
@@ -19475,7 +19681,9 @@
           "arabam.com|volkswagen-polo|2016|null|1075000",
           "otofora.com|volkswagen-polo|2023|37041|1215000",
           "otoplus.com|volkswagen-polo|2023|null|1020000",
-          "otoplus.com|volkswagen-polo|2015|null|995000"
+          "otoplus.com|volkswagen-polo|2015|null|995000",
+          "carvak.com|volkswagen-polo|2023|122222|1278000",
+          "carvak.com|volkswagen-polo|2017|54561|828000"
         ],
         "samples": [
           {
@@ -20296,10 +20504,36 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1278000,
+            "km": 122222,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.0 TSI Life",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 828000,
+            "km": 54561,
+            "year": 2017,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Manuel",
+            "variant": "1.0 TRENDLINE",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 1996,
           "max": 2024,
@@ -20308,7 +20542,7 @@
         "km": {
           "min": 23000,
           "max": 323000,
-          "median": 169000
+          "median": 168000
         },
         "price_try": {
           "min": 230999,
@@ -20319,12 +20553,12 @@
           "Hatchback": 2
         },
         "fuels": {
-          "Benzin": 15,
+          "Benzin": 16,
           "Dizel": 16
         },
         "gearboxes": {
-          "Manuel": 1,
-          "Otomatik": 13
+          "Manuel": 2,
+          "Otomatik": 14
         },
         "colors": {
           "Siyah": 3,
@@ -20398,7 +20632,8 @@
           "arabam.com": 35,
           "vava.cars": 1,
           "otofora.com": 1,
-          "otoplus.com": 2
+          "otoplus.com": 2,
+          "carvak.com": 2
         }
       }
     },
@@ -25709,7 +25944,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 14,
+        "listings_count": 17,
         "seen_ids": [
           "1338154466",
           "1340961055",
@@ -25724,7 +25959,10 @@
           "otoplus.com|peugeot-3008|2017|null|1525000",
           "otoplus.com|peugeot-3008|2016|null|1675000",
           "otoplus.com|peugeot-3008|2022|null|2075000",
-          "otoplus.com|peugeot-3008|2016|null|1295000"
+          "otoplus.com|peugeot-3008|2016|null|1295000",
+          "carvak.com|peugeot-3008|2018|90425|1528000",
+          "carvak.com|peugeot-3008|2022|45677|1928000",
+          "carvak.com|peugeot-3008|2022|75769|1898000"
         ],
         "samples": [
           {
@@ -25908,35 +26146,74 @@
             "city": null,
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1528000,
+            "km": 90425,
+            "year": 2018,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.6 BlueHDi Active Sport Pack",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1928000,
+            "km": 45677,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.6 PureTech Allure",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1898000,
+            "km": 75769,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.6 PureTech Allure",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2010,
           "max": 2025,
           "median": 2017
         },
         "km": {
-          "min": 72000,
+          "min": 45677,
           "max": 281000,
-          "median": 185471
+          "median": 158000
         },
         "price_try": {
           "min": 600000,
           "max": 2090000,
-          "median": 1394500
+          "median": 1450000
         },
         "bodies": {
           "SUV": 3
         },
         "fuels": {
-          "Dizel": 7,
-          "Benzin": 3,
+          "Dizel": 8,
+          "Benzin": 5,
           "Hibrit": 1
         },
         "gearboxes": {
-          "Otomatik": 9
+          "Otomatik": 12
         },
         "colors": {},
         "seller_types": {},
@@ -25958,7 +26235,8 @@
         },
         "sources": {
           "sahibinden.com": 9,
-          "otoplus.com": 5
+          "otoplus.com": 5,
+          "carvak.com": 3
         }
       }
     },
@@ -26289,11 +26567,15 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 3,
+        "listings_count": 7,
         "seen_ids": [
           "1324099508",
           "otoplus.com|opel-grandland|2025|null|2195000",
-          "otoplus.com|opel-grandland|2023|null|1675000"
+          "otoplus.com|opel-grandland|2023|null|1675000",
+          "carvak.com|opel-grandland|2025|6100|2225000",
+          "carvak.com|opel-grandland|2020|88000|1450000",
+          "carvak.com|opel-grandland|2018|133333|1465000",
+          "carvak.com|opel-grandland|2023|45610|1859000"
         ],
         "samples": [
           {
@@ -26334,32 +26616,84 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 2225000,
+            "km": 6100,
+            "year": 2025,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Hibrit",
+            "gearbox": "Otomatik",
+            "variant": "1.2 Hybrid GS",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1450000,
+            "km": 88000,
+            "year": 2020,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "X",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1465000,
+            "km": 133333,
+            "year": 2018,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "X",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1859000,
+            "km": 45610,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.5 D Ultimate",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
-          "min": 2023,
+          "min": 2018,
           "max": 2025,
           "median": 2023
         },
         "km": {
-          "min": 145500,
+          "min": 6100,
           "max": 145500,
-          "median": 145500
+          "median": 88000
         },
         "price_try": {
-          "min": 1499000,
-          "max": 2195000,
+          "min": 1450000,
+          "max": 2225000,
           "median": 1675000
         },
         "bodies": {},
         "fuels": {
-          "Hibrit": 1,
+          "Hibrit": 2,
           "Dizel": 1
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 5
         },
         "colors": {},
         "seller_types": {},
@@ -26373,7 +26707,8 @@
         },
         "sources": {
           "sahibinden.com": 1,
-          "otoplus.com": 2
+          "otoplus.com": 2,
+          "carvak.com": 4
         }
       }
     },
@@ -26386,14 +26721,16 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 6,
+        "listings_count": 8,
         "seen_ids": [
           "1305612143",
           "1318252701",
           "vava.cars|seat-arona|2022|25344|1470000",
           "sahibinden.com|seat-arona|2017|261000|990000",
           "arabam.com|seat-arona|2020|null|1360000",
-          "otoplus.com|seat-arona|2020|null|1265000"
+          "otoplus.com|seat-arona|2020|null|1265000",
+          "carvak.com|seat-arona|2022|80464|1238000",
+          "carvak.com|seat-arona|2024|17113|1578000"
         ],
         "samples": [
           {
@@ -26473,23 +26810,49 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1238000,
+            "km": 80464,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.0 EcoTSI Style",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1578000,
+            "km": 17113,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.0 EcoTSI FR",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2017,
-          "max": 2022,
-          "median": 2020
+          "max": 2024,
+          "median": 2021
         },
         "km": {
-          "min": 25344,
+          "min": 17113,
           "max": 261000,
-          "median": 75500
+          "median": 69232
         },
         "price_try": {
           "min": 990000,
-          "max": 1470000,
+          "max": 1578000,
           "median": 1342500
         },
         "bodies": {
@@ -26499,7 +26862,7 @@
           "Benzin": 3
         },
         "gearboxes": {
-          "Otomatik": 3
+          "Otomatik": 5
         },
         "colors": {},
         "seller_types": {},
@@ -26518,7 +26881,8 @@
           "sahibinden.com": 3,
           "vava.cars": 1,
           "arabam.com": 1,
-          "otoplus.com": 1
+          "otoplus.com": 1,
+          "carvak.com": 2
         }
       }
     },
@@ -27327,7 +27691,7 @@
         "fetched_at": "2026-09-18"
       },
       "observed": {
-        "listings_count": 67,
+        "listings_count": 68,
         "seen_ids": [
           "1313922459",
           "1338157188",
@@ -27395,7 +27759,8 @@
           "1340917268",
           "renewturkiye.com|fiat-egea-cross|2021|45855|1189000",
           "otoplus.com|fiat-egea-cross|2025|null|1325000",
-          "otoplus.com|fiat-egea-cross|2025|null|1350000"
+          "otoplus.com|fiat-egea-cross|2025|null|1350000",
+          "carvak.com|fiat-egea-cross|2021|68661|1288000"
         ],
         "samples": [
           {
@@ -28268,10 +28633,23 @@
             "city": null,
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1288000,
+            "km": 68661,
+            "year": 2021,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Manuel",
+            "variant": "1.6 MULTIJET E6D LOUNGE",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2021,
           "max": 2026,
@@ -28280,7 +28658,7 @@
         "km": {
           "min": 6001,
           "max": 158000,
-          "median": 43000
+          "median": 44000
         },
         "price_try": {
           "min": 762947,
@@ -28292,13 +28670,13 @@
           "SUV": 14
         },
         "fuels": {
-          "Dizel": 7,
+          "Dizel": 8,
           "Benzin": 12,
           "Hibrit": 2
         },
         "gearboxes": {
           "Otomatik": 19,
-          "Manuel": 3
+          "Manuel": 4
         },
         "colors": {},
         "seller_types": {
@@ -28371,7 +28749,8 @@
           "tr.autoexus.com": 2,
           "otonomi.com": 2,
           "renewturkiye.com": 1,
-          "otoplus.com": 2
+          "otoplus.com": 2,
+          "carvak.com": 1
         }
       }
     },
@@ -28542,7 +28921,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 10,
+        "listings_count": 11,
         "seen_ids": [
           "1318271387",
           "1338154430",
@@ -28553,7 +28932,8 @@
           "arabam.com|renault-captur|2015|null|890000",
           "arabam.com|renault-captur|2021|null|1415000",
           "renewturkiye.com|renault-captur|2020|58664|1310000",
-          "otoplus.com|renault-captur|2022|null|1279000"
+          "otoplus.com|renault-captur|2022|null|1279000",
+          "carvak.com|renault-captur|2025|6234|1798000"
         ],
         "samples": [
           {
@@ -28685,35 +29065,48 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1798000,
+            "km": 6234,
+            "year": 2025,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.3 TCe Techno",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2013,
-          "max": 2023,
+          "max": 2025,
           "median": 2018
         },
         "km": {
-          "min": 11332,
+          "min": 6234,
           "max": 175000,
-          "median": 119000
+          "median": 113000
         },
         "price_try": {
           "min": 737000,
-          "max": 1630000,
-          "median": 1119990
+          "max": 1798000,
+          "median": 1214990
         },
         "bodies": {
           "SUV": 3
         },
         "fuels": {
-          "Benzin": 3,
+          "Benzin": 4,
           "Dizel": 3,
           "Hibrit": 2
         },
         "gearboxes": {
-          "Otomatik": 5
+          "Otomatik": 6
         },
         "colors": {},
         "seller_types": {},
@@ -28735,7 +29128,8 @@
           "vava.cars": 1,
           "arabam.com": 2,
           "renewturkiye.com": 1,
-          "otoplus.com": 1
+          "otoplus.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -29614,7 +30008,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 8,
+        "listings_count": 9,
         "seen_ids": [
           "1340959955",
           "1340959017",
@@ -29623,7 +30017,8 @@
           "sahibinden.com|volkswagen-tiguan|2013|330000|750000",
           "sahibinden.com|volkswagen-tiguan|2017|278000|1139000",
           "sahibinden.com|volkswagen-tiguan|2013|100500|1214900",
-          "arabam.com|volkswagen-tiguan|2013|null|895000"
+          "arabam.com|volkswagen-tiguan|2013|null|895000",
+          "carvak.com|volkswagen-tiguan|2021|75155|1750000"
         ],
         "samples": [
           {
@@ -29729,33 +30124,46 @@
             "city": "Manisa Salihli",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1750000,
+            "km": 75155,
+            "year": 2021,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 TSI Life",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.815Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2010,
-          "max": 2017,
+          "max": 2021,
           "median": 2014
         },
         "km": {
-          "min": 100500,
+          "min": 75155,
           "max": 330000,
-          "median": 200000
+          "median": 199250
         },
         "price_try": {
           "min": 750000,
-          "max": 1214900,
-          "median": 1117000
+          "max": 1750000,
+          "median": 1139000
         },
         "bodies": {
           "SUV": 5
         },
         "fuels": {
-          "Benzin": 3
+          "Benzin": 4
         },
         "gearboxes": {
-          "Otomatik": 5
+          "Otomatik": 6
         },
         "colors": {},
         "seller_types": {},
@@ -29775,7 +30183,8 @@
         },
         "sources": {
           "sahibinden.com": 7,
-          "arabam.com": 1
+          "arabam.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -29788,7 +30197,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 24,
+        "listings_count": 28,
         "seen_ids": [
           "1340965353",
           "1340963160",
@@ -29813,7 +30222,11 @@
           "arabam.com|nissan-qashqai|2011|null|1020000",
           "arabam.com|nissan-qashqai|2012|null|1025000",
           "arabam.com|nissan-qashqai|2014|null|1275000",
-          "arabam.com|nissan-qashqai|2014|null|1495000"
+          "arabam.com|nissan-qashqai|2014|null|1495000",
+          "carvak.com|nissan-qashqai|2022|39591|1928000",
+          "carvak.com|nissan-qashqai|2024|17951|2248000",
+          "carvak.com|nissan-qashqai|2023|24000|2098000",
+          "carvak.com|nissan-qashqai|2023|35417|1978000"
         ],
         "samples": [
           {
@@ -30127,24 +30540,76 @@
             "city": "Ankara Yenimahalle",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1928000,
+            "km": 39591,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.3 DIG-T Sky Pack",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 2248000,
+            "km": 17951,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.3 DIG-T N Design",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 2098000,
+            "km": 24000,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.3 DIG-T Sky Pack",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1978000,
+            "km": 35417,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.3 DIG-T SkyPack",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2008,
-          "max": 2020,
-          "median": 2014
+          "max": 2024,
+          "median": 2015
         },
         "km": {
-          "min": 65000,
+          "min": 17951,
           "max": 394000,
-          "median": 164500
+          "median": 152750
         },
         "price_try": {
           "min": 650000,
-          "max": 1495000,
-          "median": 1165000
+          "max": 2248000,
+          "median": 1182250
         },
         "bodies": {
           "SUV": 6
@@ -30154,7 +30619,7 @@
           "LPG": 1
         },
         "gearboxes": {
-          "Otomatik": 7
+          "Otomatik": 11
         },
         "colors": {},
         "seller_types": {},
@@ -30189,7 +30654,8 @@
         },
         "sources": {
           "sahibinden.com": 20,
-          "arabam.com": 4
+          "arabam.com": 4,
+          "carvak.com": 4
         }
       }
     },
@@ -31065,13 +31531,15 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 5,
+        "listings_count": 7,
         "seen_ids": [
           "1307448642",
           "vava.cars|citroen-c3-aircross|2022|47747|1240000",
           "sahibinden.com|citroen-c3-aircross|2024|28000|1250000",
           "sahibinden.com|citroen-c3-aircross|2023|70000|1245000",
-          "renewturkiye.com|citroen-c3-aircross|2023|30400|1329000"
+          "renewturkiye.com|citroen-c3-aircross|2023|30400|1329000",
+          "carvak.com|citroen-c3-aircross|2020|88313|1259000",
+          "carvak.com|citroen-c3-aircross|2023|20735|1429000"
         ],
         "samples": [
           {
@@ -31138,33 +31606,60 @@
             "city": "İstanbul",
             "source": "renewturkiye.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1259000,
+            "km": 88313,
+            "year": 2020,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 BlueHDi Feel",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1429000,
+            "km": 20735,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.2 PureTech Shine",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.922Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
-          "min": 2022,
+          "min": 2020,
           "max": 2024,
           "median": 2023
         },
         "km": {
-          "min": 28000,
+          "min": 20735,
           "max": 123468,
           "median": 47747
         },
         "price_try": {
           "min": 1100000,
-          "max": 1329000,
-          "median": 1245000
+          "max": 1429000,
+          "median": 1250000
         },
         "bodies": {
           "SUV": 3
         },
         "fuels": {
-          "Benzin": 3
+          "Benzin": 4,
+          "Dizel": 1
         },
         "gearboxes": {
-          "Otomatik": 4
+          "Otomatik": 6
         },
         "colors": {},
         "seller_types": {},
@@ -31181,7 +31676,8 @@
         "sources": {
           "sahibinden.com": 3,
           "vava.cars": 1,
-          "renewturkiye.com": 1
+          "renewturkiye.com": 1,
+          "carvak.com": 2
         }
       }
     },
@@ -31194,7 +31690,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 8,
+        "listings_count": 9,
         "seen_ids": [
           "1340959297",
           "1340960478",
@@ -31203,7 +31699,8 @@
           "sahibinden.com|ford-kuga|2017|145000|1239000",
           "sahibinden.com|ford-kuga|2008|278000|700000",
           "arabam.com|ford-kuga|2017|null|1200000",
-          "arabam.com|ford-kuga|2018|null|1399000"
+          "arabam.com|ford-kuga|2018|null|1399000",
+          "carvak.com|ford-kuga|2023|44555|1819000"
         ],
         "samples": [
           {
@@ -31309,34 +31806,47 @@
             "city": "Manisa Akhisar",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1819000,
+            "km": 44555,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 EcoBoost Titanium",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.815Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2008,
-          "max": 2018,
-          "median": 2016
+          "max": 2023,
+          "median": 2017
         },
         "km": {
-          "min": 96200,
+          "min": 44555,
           "max": 376800,
-          "median": 191500
+          "median": 153000
         },
         "price_try": {
           "min": 589000,
-          "max": 1399000,
-          "median": 1219500
+          "max": 1819000,
+          "median": 1239000
         },
         "bodies": {
           "SUV": 2
         },
         "fuels": {
           "Dizel": 5,
-          "Benzin": 1
+          "Benzin": 2
         },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 3
         },
         "colors": {},
         "seller_types": {},
@@ -31356,7 +31866,8 @@
         },
         "sources": {
           "sahibinden.com": 6,
-          "arabam.com": 2
+          "arabam.com": 2,
+          "carvak.com": 1
         }
       }
     },
@@ -31545,11 +32056,12 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 3,
+        "listings_count": 4,
         "seen_ids": [
           "1340951015",
           "1340918780",
-          "renewturkiye.com|skoda-kamiq|2024|37879|1769000"
+          "renewturkiye.com|skoda-kamiq|2024|37879|1769000",
+          "carvak.com|skoda-kamiq|2023|21030|1889000"
         ],
         "samples": [
           {
@@ -31590,31 +32102,44 @@
             "city": "Ankara",
             "source": "renewturkiye.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1889000,
+            "km": 21030,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 TSI Premium",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.151Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2021,
           "max": 2024,
-          "median": 2022
+          "median": 2023
         },
         "km": {
-          "min": 37879,
+          "min": 21030,
           "max": 195000,
-          "median": 91000
+          "median": 64440
         },
         "price_try": {
           "min": 1215000,
-          "max": 1769000,
-          "median": 1465000
+          "max": 1889000,
+          "median": 1617000
         },
         "bodies": {},
         "fuels": {
-          "Benzin": 3
+          "Benzin": 4
         },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 3
         },
         "colors": {},
         "seller_types": {},
@@ -31629,7 +32154,8 @@
         },
         "sources": {
           "sahibinden.com": 2,
-          "renewturkiye.com": 1
+          "renewturkiye.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -32248,7 +32774,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 10,
+        "listings_count": 11,
         "seen_ids": [
           "1340960959",
           "1340926662",
@@ -32259,7 +32785,8 @@
           "sahibinden.com|renault-kadjar|2017|170000|1240000",
           "arabam.com|renault-kadjar|2018|null|1190000",
           "arabam.com|renault-kadjar|2017|null|1395000",
-          "arabam.com|renault-kadjar|2017|null|1198000"
+          "arabam.com|renault-kadjar|2017|null|1198000",
+          "carvak.com|renault-kadjar|2017|138000|1348000"
         ],
         "samples": [
           {
@@ -32391,10 +32918,23 @@
             "city": "Ankara Polatlı",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1348000,
+            "km": 138000,
+            "year": 2017,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 dCi Icon",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.152Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2015,
           "max": 2018,
@@ -32403,22 +32943,22 @@
         "km": {
           "min": 76000,
           "max": 198200,
-          "median": 115500
+          "median": 126750
         },
         "price_try": {
           "min": 1035000,
           "max": 1395000,
-          "median": 1192500
+          "median": 1195000
         },
         "bodies": {
           "SUV": 3
         },
         "fuels": {
-          "Dizel": 4,
+          "Dizel": 5,
           "Benzin": 3
         },
         "gearboxes": {
-          "Otomatik": 3
+          "Otomatik": 4
         },
         "colors": {},
         "seller_types": {},
@@ -32440,7 +32980,8 @@
         },
         "sources": {
           "sahibinden.com": 7,
-          "arabam.com": 3
+          "arabam.com": 3,
+          "carvak.com": 1
         }
       }
     },
@@ -32726,11 +33267,12 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 3,
+        "listings_count": 4,
         "seen_ids": [
           "1340960285",
           "sahibinden.com|honda-cr-v|2014|185000|725000",
-          "sahibinden.com|honda-cr-v|2009|356000|735000"
+          "sahibinden.com|honda-cr-v|2009|356000|735000",
+          "carvak.com|honda-cr-v|2020|77679|2100000"
         ],
         "samples": [
           {
@@ -32771,31 +33313,46 @@
             "city": "Konya Selçuklu",
             "source": "sahibinden.com",
             "listing_id": null
+          },
+          {
+            "price_try": 2100000,
+            "km": 77679,
+            "year": 2020,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 VTEC Executive Lifestyle",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.152Z",
-        "last_seen": "2026-09-18T22:19:50.484Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2009,
-          "max": 2015,
-          "median": 2014
+          "max": 2020,
+          "median": 2015
         },
         "km": {
-          "min": 185000,
+          "min": 77679,
           "max": 356000,
-          "median": 300547
+          "median": 242774
         },
         "price_try": {
           "min": 725000,
-          "max": 1200000,
-          "median": 735000
+          "max": 2100000,
+          "median": 967500
         },
         "bodies": {
           "SUV": 2
         },
-        "fuels": {},
+        "fuels": {
+          "Benzin": 1
+        },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 3
         },
         "colors": {},
         "seller_types": {},
@@ -32809,7 +33366,8 @@
           "Konya Selçuklu": 1
         },
         "sources": {
-          "sahibinden.com": 3
+          "sahibinden.com": 3,
+          "carvak.com": 1
         }
       }
     },
@@ -33077,10 +33635,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 3,
         "seen_ids": [
           "1340957957",
-          "1325024576"
+          "1325024576",
+          "carvak.com|honda-hr-v|2022|68276|2020000"
         ],
         "samples": [
           {
@@ -33108,30 +33667,45 @@
             "city": "Yozgat\nŞefaatli",
             "source": "sahibinden.com",
             "listing_id": "1325024576"
+          },
+          {
+            "price_try": 2020000,
+            "km": 68276,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.5 e-HEV Style",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.152Z",
-        "last_seen": "2026-09-18T22:19:50.152Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2005,
-          "max": 2017,
-          "median": 2011
+          "max": 2022,
+          "median": 2017
         },
         "km": {
-          "min": 135000,
+          "min": 68276,
           "max": 310000,
-          "median": 222500
+          "median": 135000
         },
         "price_try": {
           "min": 675000,
-          "max": 1500000,
-          "median": 1087500
+          "max": 2020000,
+          "median": 1500000
         },
         "bodies": {},
         "fuels": {
           "Benzin": 1
         },
-        "gearboxes": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
         "colors": {},
         "seller_types": {},
         "power_hp": {
@@ -33143,7 +33717,8 @@
           "Yozgat\nŞefaatli": 1
         },
         "sources": {
-          "sahibinden.com": 2
+          "sahibinden.com": 2,
+          "carvak.com": 1
         }
       }
     },
@@ -33876,11 +34451,12 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 3,
+        "listings_count": 4,
         "seen_ids": [
           "1339202541",
           "arabam.com|peugeot-508|2020|185400|1275000",
-          "1332383839"
+          "1332383839",
+          "carvak.com|peugeot-508|2022|101613|1750000"
         ],
         "samples": [
           {
@@ -33921,31 +34497,46 @@
             "city": "Akyurt",
             "source": "sahibinden.com",
             "listing_id": "1332383839"
+          },
+          {
+            "price_try": 1750000,
+            "km": 101613,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 BlueHDi GT Selection",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.152Z",
-        "last_seen": "2026-09-18T22:19:50.705Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2011,
-          "max": 2020,
-          "median": 2016
+          "max": 2022,
+          "median": 2018
         },
         "km": {
-          "min": 145000,
+          "min": 101613,
           "max": 192000,
-          "median": 185400
+          "median": 165200
         },
         "price_try": {
           "min": 890000,
-          "max": 1275000,
-          "median": 1149000
+          "max": 1750000,
+          "median": 1212000
         },
         "bodies": {},
         "fuels": {
           "Benzin": 1,
-          "Dizel": 1
+          "Dizel": 2
         },
-        "gearboxes": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
         "colors": {
           "Gri": 1
         },
@@ -33961,7 +34552,8 @@
         },
         "sources": {
           "sahibinden.com": 2,
-          "arabam.com": 1
+          "arabam.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -36242,7 +36834,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 13,
+        "listings_count": 14,
         "seen_ids": [
           "1334605328",
           "arabam.com|citroen-c4|2023|77000|1300000",
@@ -36256,7 +36848,8 @@
           "arabam.com|citroen-c4|2010|null|679000",
           "arabam.com|citroen-c4|2016|null|1063000",
           "arabam.com|citroen-c4|2008|null|390000",
-          "renewturkiye.com|citroen-c4|2025|43550|1539900"
+          "renewturkiye.com|citroen-c4|2025|43550|1539900",
+          "carvak.com|citroen-c4|2024|54238|1398000"
         ],
         "samples": [
           {
@@ -36427,32 +37020,45 @@
             "city": "İzmir",
             "source": "renewturkiye.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1398000,
+            "km": 54238,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "X",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.152Z",
-        "last_seen": "2026-09-18T22:19:50.922Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2007,
           "max": 2026,
-          "median": 2015
+          "median": 2016
         },
         "km": {
           "min": 43550,
           "max": 350000,
-          "median": 157500
+          "median": 124000
         },
         "price_try": {
           "min": 3000,
           "max": 1539900,
-          "median": 679000
+          "median": 739500
         },
         "bodies": {},
         "fuels": {
-          "Benzin": 5,
+          "Benzin": 6,
           "Dizel": 4
         },
         "gearboxes": {
-          "Otomatik": 3
+          "Otomatik": 4
         },
         "colors": {
           "Kırmızı": 1,
@@ -36477,7 +37083,8 @@
         "sources": {
           "sahibinden.com": 3,
           "arabam.com": 9,
-          "renewturkiye.com": 1
+          "renewturkiye.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -38066,10 +38673,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 3,
         "seen_ids": [
           "1340944694",
-          "sahibinden.com|nissan-x-trail|2011|275000|849000"
+          "sahibinden.com|nissan-x-trail|2011|275000|849000",
+          "carvak.com|nissan-x-trail|2022|48356|2660000"
         ],
         "samples": [
           {
@@ -38097,24 +38705,37 @@
             "city": "Denizli Sarayköy",
             "source": "sahibinden.com",
             "listing_id": null
+          },
+          {
+            "price_try": 2660000,
+            "km": 48356,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.5 e-4ORCE Skypack",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.153Z",
-        "last_seen": "2026-09-18T22:19:50.483Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2002,
-          "max": 2011,
-          "median": 2007
+          "max": 2022,
+          "median": 2011
         },
         "km": {
-          "min": 275000,
+          "min": 48356,
           "max": 348000,
-          "median": 311500
+          "median": 275000
         },
         "price_try": {
           "min": 500000,
-          "max": 849000,
-          "median": 674500
+          "max": 2660000,
+          "median": 849000
         },
         "bodies": {
           "SUV": 1
@@ -38123,7 +38744,7 @@
           "LPG": 1
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 2
         },
         "colors": {},
         "seller_types": {},
@@ -38136,7 +38757,8 @@
           "Denizli Sarayköy": 1
         },
         "sources": {
-          "sahibinden.com": 2
+          "sahibinden.com": 2,
+          "carvak.com": 1
         }
       }
     },
@@ -40050,10 +40672,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 3,
         "seen_ids": [
           "arabam.com|fiat-500|2017|135000|979000",
-          "arabam.com|fiat-500|2020|null|939000"
+          "arabam.com|fiat-500|2020|null|939000",
+          "carvak.com|fiat-500|2021|55276|900000"
         ],
         "samples": [
           {
@@ -40081,30 +40704,46 @@
             "city": "İzmir Menemen",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 900000,
+            "km": 55276,
+            "year": 2021,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Hibrit",
+            "gearbox": "Manuel",
+            "variant": "Ailesi",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.264Z",
-        "last_seen": "2026-09-18T22:19:50.814Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2017,
-          "max": 2020,
-          "median": 2019
+          "max": 2021,
+          "median": 2020
         },
         "km": {
-          "min": 135000,
+          "min": 55276,
           "max": 135000,
-          "median": 135000
+          "median": 95138
         },
         "price_try": {
-          "min": 939000,
+          "min": 900000,
           "max": 979000,
-          "median": 959000
+          "median": 939000
         },
         "bodies": {},
         "fuels": {
-          "Dizel": 1
+          "Dizel": 1,
+          "Hibrit": 1
         },
-        "gearboxes": {},
+        "gearboxes": {
+          "Manuel": 1
+        },
         "colors": {
           "Kırmızı": 1
         },
@@ -40118,7 +40757,8 @@
           "İzmir Menemen": 1
         },
         "sources": {
-          "arabam.com": 2
+          "arabam.com": 2,
+          "carvak.com": 1
         }
       }
     },
@@ -41684,10 +42324,13 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 5,
         "seen_ids": [
           "arabam.com|bmw-1|2009|198000|675000",
-          "arabam.com|bmw-1|2008|244000|800000"
+          "arabam.com|bmw-1|2008|244000|800000",
+          "carvak.com|bmw-1|2019|121135|1438000",
+          "carvak.com|bmw-1|2024|57338|2675000",
+          "carvak.com|bmw-1|2022|56140|2110000"
         ],
         "samples": [
           {
@@ -41715,28 +42358,69 @@
             "city": "Kırıkkale Yahşihan",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1438000,
+            "km": 121135,
+            "year": 2019,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "Serisi",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 2675000,
+            "km": 57338,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "Serisi",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 2110000,
+            "km": 56140,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "Serisi",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.266Z",
-        "last_seen": "2026-09-18T22:19:50.267Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2008,
-          "max": 2009,
-          "median": 2009
+          "max": 2024,
+          "median": 2019
         },
         "km": {
-          "min": 198000,
+          "min": 56140,
           "max": 244000,
-          "median": 221000
+          "median": 121135
         },
         "price_try": {
           "min": 675000,
-          "max": 800000,
-          "median": 737500
+          "max": 2675000,
+          "median": 1438000
         },
         "bodies": {},
         "fuels": {},
-        "gearboxes": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
         "colors": {
           "Gri": 1,
           "Siyah": 1
@@ -41751,7 +42435,8 @@
           "Kırıkkale Yahşihan": 1
         },
         "sources": {
-          "arabam.com": 2
+          "arabam.com": 2,
+          "carvak.com": 3
         }
       }
     },
@@ -42022,10 +42707,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 3,
         "seen_ids": [
           "vava.cars|hyundai-kona|2020|23099|1525000",
-          "arabam.com|hyundai-kona|2020|null|1250000"
+          "arabam.com|hyundai-kona|2020|null|1250000",
+          "carvak.com|hyundai-kona|2023|35403|2038000"
         ],
         "samples": [
           {
@@ -42053,33 +42739,47 @@
             "city": "İstanbul Beykoz",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 2038000,
+            "km": 35403,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Hibrit",
+            "gearbox": "Otomatik",
+            "variant": "1.6 GDI",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.371Z",
-        "last_seen": "2026-09-18T22:19:50.817Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2020,
-          "max": 2020,
+          "max": 2023,
           "median": 2020
         },
         "km": {
           "min": 23099,
-          "max": 23099,
-          "median": 23099
+          "max": 35403,
+          "median": 29251
         },
         "price_try": {
           "min": 1250000,
-          "max": 1525000,
-          "median": 1387500
+          "max": 2038000,
+          "median": 1525000
         },
         "bodies": {
           "SUV": 1
         },
         "fuels": {
-          "Dizel": 2
+          "Dizel": 2,
+          "Hibrit": 1
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 2
         },
         "colors": {},
         "seller_types": {},
@@ -42092,7 +42792,8 @@
         },
         "sources": {
           "vava.cars": 1,
-          "arabam.com": 1
+          "arabam.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -42105,10 +42806,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 3,
         "seen_ids": [
           "vava.cars|volkswagen-t-roc|2024|14064|1990000",
-          "vava.cars|volkswagen-t-roc|2025|11344|2175000"
+          "vava.cars|volkswagen-t-roc|2025|11344|2175000",
+          "carvak.com|volkswagen-t-roc|2023|68175|1858000"
         ],
         "samples": [
           {
@@ -42136,33 +42838,46 @@
             "city": null,
             "source": "vava.cars",
             "listing_id": null
+          },
+          {
+            "price_try": 1858000,
+            "km": 68175,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 TSI Style",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.371Z",
-        "last_seen": "2026-09-18T22:19:50.371Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
-          "min": 2024,
+          "min": 2023,
           "max": 2025,
-          "median": 2025
+          "median": 2024
         },
         "km": {
           "min": 11344,
-          "max": 14064,
-          "median": 12704
+          "max": 68175,
+          "median": 14064
         },
         "price_try": {
-          "min": 1990000,
+          "min": 1858000,
           "max": 2175000,
-          "median": 2082500
+          "median": 1990000
         },
         "bodies": {
           "SUV": 2
         },
         "fuels": {
-          "Benzin": 2
+          "Benzin": 3
         },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 3
         },
         "colors": {},
         "seller_types": {},
@@ -42172,7 +42887,8 @@
         },
         "cities": {},
         "sources": {
-          "vava.cars": 2
+          "vava.cars": 2,
+          "carvak.com": 1
         }
       }
     },
@@ -42251,10 +42967,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 3,
         "seen_ids": [
           "vava.cars|peugeot-rifter|2024|15374|1520000",
-          "arabam.com|peugeot-rifter|2025|null|1420900"
+          "arabam.com|peugeot-rifter|2025|null|1420900",
+          "carvak.com|peugeot-rifter|2025|25040|1418000"
         ],
         "samples": [
           {
@@ -42282,10 +42999,23 @@
             "city": "İstanbul Büyükçekmece",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1418000,
+            "km": 25040,
+            "year": 2025,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 BlueHDI Allure",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.371Z",
-        "last_seen": "2026-09-18T22:19:50.817Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2024,
           "max": 2025,
@@ -42293,20 +43023,20 @@
         },
         "km": {
           "min": 15374,
-          "max": 15374,
-          "median": 15374
+          "max": 25040,
+          "median": 20207
         },
         "price_try": {
-          "min": 1420900,
+          "min": 1418000,
           "max": 1520000,
-          "median": 1470450
+          "median": 1420900
         },
         "bodies": {},
         "fuels": {
-          "Dizel": 2
+          "Dizel": 3
         },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 3
         },
         "colors": {},
         "seller_types": {},
@@ -42319,7 +43049,8 @@
         },
         "sources": {
           "vava.cars": 1,
-          "arabam.com": 1
+          "arabam.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -43398,9 +44129,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 1,
+        "listings_count": 3,
         "seen_ids": [
-          "sahibinden.com|bmw-x1|2013|245000|1035000"
+          "sahibinden.com|bmw-x1|2013|245000|1035000",
+          "carvak.com|bmw-x1|2021|76874|2340000",
+          "carvak.com|bmw-x1|2022|77702|2540000"
         ],
         "samples": [
           {
@@ -43415,31 +44148,57 @@
             "city": "Ankara Altındağ",
             "source": "sahibinden.com",
             "listing_id": null
+          },
+          {
+            "price_try": 2340000,
+            "km": 76874,
+            "year": 2021,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": null,
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 2540000,
+            "km": 77702,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": null,
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.484Z",
-        "last_seen": "2026-09-18T22:19:50.484Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2013,
-          "max": 2013,
-          "median": 2013
+          "max": 2022,
+          "median": 2021
         },
         "km": {
-          "min": 245000,
+          "min": 76874,
           "max": 245000,
-          "median": 245000
+          "median": 77702
         },
         "price_try": {
           "min": 1035000,
-          "max": 1035000,
-          "median": 1035000
+          "max": 2540000,
+          "median": 2340000
         },
         "bodies": {
           "SUV": 1
         },
         "fuels": {},
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 3
         },
         "colors": {},
         "seller_types": {},
@@ -43451,7 +44210,8 @@
           "Ankara Altındağ": 1
         },
         "sources": {
-          "sahibinden.com": 1
+          "sahibinden.com": 1,
+          "carvak.com": 2
         }
       }
     },
@@ -43464,10 +44224,12 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 4,
         "seen_ids": [
           "sahibinden.com|toyota-c-hr|2017|451000|1190000",
-          "otoplus.com|toyota-c-hr|2018|null|1550000"
+          "otoplus.com|toyota-c-hr|2018|null|1550000",
+          "carvak.com|toyota-c-hr|2023|50912|2198000",
+          "carvak.com|toyota-c-hr|2018|110736|1399000"
         ],
         "samples": [
           {
@@ -43495,33 +44257,59 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 2198000,
+            "km": 50912,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Hibrit",
+            "gearbox": "Otomatik",
+            "variant": "1.8 Hybrid Passion X-Style",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1399000,
+            "km": 110736,
+            "year": 2018,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.2 Turbo Diamond",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.484Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2017,
-          "max": 2018,
+          "max": 2023,
           "median": 2018
         },
         "km": {
-          "min": 451000,
+          "min": 50912,
           "max": 451000,
-          "median": 451000
+          "median": 110736
         },
         "price_try": {
           "min": 1190000,
-          "max": 1550000,
-          "median": 1370000
+          "max": 2198000,
+          "median": 1474500
         },
         "bodies": {
           "SUV": 1
         },
         "fuels": {
-          "Hibrit": 1
+          "Hibrit": 2
         },
         "gearboxes": {
-          "Otomatik": 2
+          "Otomatik": 4
         },
         "colors": {},
         "seller_types": {},
@@ -43535,7 +44323,8 @@
         },
         "sources": {
           "sahibinden.com": 1,
-          "otoplus.com": 1
+          "otoplus.com": 1,
+          "carvak.com": 2
         }
       }
     },
@@ -44370,14 +45159,15 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 6,
+        "listings_count": 7,
         "seen_ids": [
           "1340977082",
           "1340961742",
           "1340973721",
           "1312487595",
           "arabam.com|peugeot-308|2010|null|485000",
-          "arabam.com|peugeot-308|2020|null|1252000"
+          "arabam.com|peugeot-308|2020|null|1252000",
+          "carvak.com|peugeot-308|2024|11264|1858000"
         ],
         "samples": [
           {
@@ -44457,30 +45247,45 @@
             "city": "Ankara Etimesgut",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1858000,
+            "km": 11264,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.2 Puretech GT",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.705Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2009,
-          "max": 2020,
+          "max": 2024,
           "median": 2012
         },
         "km": {
-          "min": 130000,
+          "min": 11264,
           "max": 220000,
-          "median": 185322
+          "median": 173643
         },
         "price_try": {
           "min": 485000,
-          "max": 1252000,
-          "median": 747500
+          "max": 1858000,
+          "median": 865000
         },
         "bodies": {},
         "fuels": {
-          "Benzin": 1
+          "Benzin": 2
         },
-        "gearboxes": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
         "colors": {},
         "seller_types": {},
         "power_hp": {
@@ -44497,7 +45302,8 @@
         },
         "sources": {
           "sahibinden.com": 4,
-          "arabam.com": 2
+          "arabam.com": 2,
+          "carvak.com": 1
         }
       }
     },
@@ -45253,7 +46059,7 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 15,
+        "listings_count": 17,
         "seen_ids": [
           "arabam.com|ford-tourneo|2022|null|815000",
           "arabam.com|ford-tourneo|2020|null|1130000",
@@ -45269,7 +46075,9 @@
           "arabam.com|ford-tourneo|2025|null|1300000",
           "arabam.com|ford-tourneo|2023|null|909000",
           "arabam.com|ford-tourneo|2022|null|779000",
-          "otoplus.com|ford-tourneo|2023|null|830000"
+          "otoplus.com|ford-tourneo|2023|null|830000",
+          "carvak.com|ford-tourneo|2025|42773|1035000",
+          "carvak.com|ford-tourneo|2022|51800|818000"
         ],
         "samples": [
           {
@@ -45466,31 +46274,59 @@
             "city": "İstanbul",
             "source": "otoplus.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1035000,
+            "km": 42773,
+            "year": 2025,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Manuel",
+            "variant": "Courier",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 818000,
+            "km": 51800,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Manuel",
+            "variant": "Courier",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.813Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2006,
           "max": 2025,
-          "median": 2017
+          "median": 2020
         },
         "km": {
-          "min": null,
-          "max": null,
-          "median": null
+          "min": 42773,
+          "max": 51800,
+          "median": 47287
         },
         "price_try": {
           "min": 405000,
           "max": 1300000,
-          "median": 779000
+          "median": 815000
         },
         "bodies": {},
         "fuels": {
-          "Benzin": 2,
+          "Benzin": 3,
           "Dizel": 11
         },
-        "gearboxes": {},
+        "gearboxes": {
+          "Manuel": 2
+        },
         "colors": {},
         "seller_types": {},
         "power_hp": {
@@ -45512,7 +46348,8 @@
         },
         "sources": {
           "arabam.com": 14,
-          "otoplus.com": 1
+          "otoplus.com": 1,
+          "carvak.com": 2
         }
       }
     },
@@ -45769,11 +46606,14 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 3,
+        "listings_count": 6,
         "seen_ids": [
           "arabam.com|citroen-berlingo|2004|null|230000",
           "arabam.com|citroen-berlingo|2023|null|1300000",
-          "arabam.com|citroen-berlingo|2023|null|1295000"
+          "arabam.com|citroen-berlingo|2023|null|1295000",
+          "carvak.com|citroen-berlingo|2024|28314|1358000",
+          "carvak.com|citroen-berlingo|2024|15402|1448000",
+          "carvak.com|citroen-berlingo|2022|69737|1198000"
         ],
         "samples": [
           {
@@ -45814,30 +46654,71 @@
             "city": "Ankara Akyurt",
             "source": "arabam.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1358000,
+            "km": 28314,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 Blue HDI Shine",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1448000,
+            "km": 15402,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 BlueHDI Shine Bold",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          },
+          {
+            "price_try": 1198000,
+            "km": 69737,
+            "year": 2022,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.5 BlueHdi SS EAT8 SHINE",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.814Z",
-        "last_seen": "2026-09-18T22:19:50.818Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2004,
-          "max": 2023,
+          "max": 2024,
           "median": 2023
         },
         "km": {
-          "min": null,
-          "max": null,
-          "median": null
+          "min": 15402,
+          "max": 69737,
+          "median": 28314
         },
         "price_try": {
           "min": 230000,
-          "max": 1300000,
-          "median": 1295000
+          "max": 1448000,
+          "median": 1297500
         },
         "bodies": {},
         "fuels": {
-          "Dizel": 2
+          "Dizel": 5
         },
-        "gearboxes": {},
+        "gearboxes": {
+          "Otomatik": 3
+        },
         "colors": {},
         "seller_types": {},
         "power_hp": {
@@ -45850,7 +46731,8 @@
           "Ankara Akyurt": 1
         },
         "sources": {
-          "arabam.com": 3
+          "arabam.com": 3,
+          "carvak.com": 3
         }
       }
     },
@@ -49368,10 +50250,11 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 2,
+        "listings_count": 3,
         "seen_ids": [
           "arabam.com|seat-ateca|2019|null|1448000",
-          "renewturkiye.com|seat-ateca|2025|49200|2149950"
+          "renewturkiye.com|seat-ateca|2025|49200|2149950",
+          "carvak.com|seat-ateca|2023|39687|1898000"
         ],
         "samples": [
           {
@@ -49399,24 +50282,37 @@
             "city": "İstanbul",
             "source": "renewturkiye.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1898000,
+            "km": 39687,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.5 EcoTSI Xperience",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.818Z",
-        "last_seen": "2026-09-18T22:19:50.922Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
           "min": 2019,
           "max": 2025,
-          "median": 2022
+          "median": 2023
         },
         "km": {
-          "min": 49200,
+          "min": 39687,
           "max": 49200,
-          "median": 49200
+          "median": 44444
         },
         "price_try": {
           "min": 1448000,
           "max": 2149950,
-          "median": 1798975
+          "median": 1898000
         },
         "bodies": {},
         "fuels": {
@@ -49424,7 +50320,7 @@
           "Benzin": 1
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 2
         },
         "colors": {},
         "seller_types": {},
@@ -49438,7 +50334,8 @@
         },
         "sources": {
           "arabam.com": 1,
-          "renewturkiye.com": 1
+          "renewturkiye.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -49775,9 +50672,10 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 1,
+        "listings_count": 2,
         "seen_ids": [
-          "otofora.com|skoda-kodiaq|2024|29100|2790000"
+          "otofora.com|skoda-kodiaq|2024|29100|2790000",
+          "carvak.com|skoda-kodiaq|2020|128058|1769000"
         ],
         "samples": [
           {
@@ -49792,33 +50690,46 @@
             "city": "İzmir",
             "source": "otofora.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1769000,
+            "km": 128058,
+            "year": 2020,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 TSI Elite",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.921Z",
-        "last_seen": "2026-09-18T22:19:50.921Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
-          "min": 2024,
+          "min": 2020,
           "max": 2024,
-          "median": 2024
+          "median": 2022
         },
         "km": {
           "min": 29100,
-          "max": 29100,
-          "median": 29100
+          "max": 128058,
+          "median": 78579
         },
         "price_try": {
-          "min": 2790000,
+          "min": 1769000,
           "max": 2790000,
-          "median": 2790000
+          "median": 2279500
         },
         "bodies": {
           "SUV": 1
         },
         "fuels": {
-          "Benzin": 1
+          "Benzin": 2
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 2
         },
         "colors": {},
         "seller_types": {},
@@ -49830,7 +50741,8 @@
           "İzmir": 1
         },
         "sources": {
-          "otofora.com": 1
+          "otofora.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -50205,9 +51117,10 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 1,
+        "listings_count": 2,
         "seen_ids": [
-          "renewturkiye.com|skoda-karoq|2024|24000|2599000"
+          "renewturkiye.com|skoda-karoq|2024|24000|2599000",
+          "carvak.com|skoda-karoq|2020|80522|1999000"
         ],
         "samples": [
           {
@@ -50222,31 +51135,45 @@
             "city": "İstanbul",
             "source": "renewturkiye.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1999000,
+            "km": 80522,
+            "year": 2020,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Dizel",
+            "gearbox": "Otomatik",
+            "variant": "1.6 TDI Prestige",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.922Z",
-        "last_seen": "2026-09-18T22:19:50.922Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
-          "min": 2024,
+          "min": 2020,
           "max": 2024,
-          "median": 2024
+          "median": 2022
         },
         "km": {
           "min": 24000,
-          "max": 24000,
-          "median": 24000
+          "max": 80522,
+          "median": 52261
         },
         "price_try": {
-          "min": 2599000,
+          "min": 1999000,
           "max": 2599000,
-          "median": 2599000
+          "median": 2299000
         },
         "bodies": {},
         "fuels": {
-          "Benzin": 1
+          "Benzin": 1,
+          "Dizel": 1
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 2
         },
         "colors": {},
         "seller_types": {},
@@ -50258,7 +51185,8 @@
           "İstanbul": 1
         },
         "sources": {
-          "renewturkiye.com": 1
+          "renewturkiye.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -50337,9 +51265,10 @@
       "taxonomy": null,
       "specs": null,
       "observed": {
-        "listings_count": 1,
+        "listings_count": 2,
         "seen_ids": [
-          "renewturkiye.com|renault-austral|2025|6100|2732900"
+          "renewturkiye.com|renault-austral|2025|6100|2732900",
+          "carvak.com|renault-austral|2024|78642|1888000"
         ],
         "samples": [
           {
@@ -50354,31 +51283,44 @@
             "city": "Ankara",
             "source": "renewturkiye.com",
             "listing_id": null
+          },
+          {
+            "price_try": 1888000,
+            "km": 78642,
+            "year": 2024,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Hibrit",
+            "gearbox": "Otomatik",
+            "variant": "1.3 Hybrid Evolution",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
           }
         ],
         "first_seen": "2026-09-18T22:19:50.923Z",
-        "last_seen": "2026-09-18T22:19:50.923Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
         "year": {
-          "min": 2025,
+          "min": 2024,
           "max": 2025,
           "median": 2025
         },
         "km": {
           "min": 6100,
-          "max": 6100,
-          "median": 6100
+          "max": 78642,
+          "median": 42371
         },
         "price_try": {
-          "min": 2732900,
+          "min": 1888000,
           "max": 2732900,
-          "median": 2732900
+          "median": 2310450
         },
         "bodies": {},
         "fuels": {
-          "Hibrit": 1
+          "Hibrit": 2
         },
         "gearboxes": {
-          "Otomatik": 1
+          "Otomatik": 2
         },
         "colors": {},
         "seller_types": {},
@@ -50390,7 +51332,8 @@
           "Ankara": 1
         },
         "sources": {
-          "renewturkiye.com": 1
+          "renewturkiye.com": 1,
+          "carvak.com": 1
         }
       }
     },
@@ -56140,6 +57083,322 @@
         },
         "cities": {},
         "sources": {}
+      }
+    },
+    "volkswagen-taigo": {
+      "id": "volkswagen-taigo",
+      "make": "Volkswagen",
+      "model": "Taigo",
+      "series": null,
+      "segment": null,
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "carvak.com|volkswagen-taigo|2023|12104|1798000"
+        ],
+        "samples": [
+          {
+            "price_try": 1798000,
+            "km": 12104,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.0 TSI Style",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          }
+        ],
+        "first_seen": "2026-09-18T22:26:18.911Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
+        "year": {
+          "min": 2023,
+          "max": 2023,
+          "median": 2023
+        },
+        "km": {
+          "min": 12104,
+          "max": 12104,
+          "median": 12104
+        },
+        "price_try": {
+          "min": 1798000,
+          "max": 1798000,
+          "median": 1798000
+        },
+        "bodies": {},
+        "fuels": {
+          "Benzin": 1
+        },
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {
+          "carvak.com": 1
+        }
+      }
+    },
+    "fiat-500x": {
+      "id": "fiat-500x",
+      "make": "Fiat",
+      "model": "500X",
+      "series": null,
+      "segment": null,
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "carvak.com|fiat-500x|2021|97375|1278000"
+        ],
+        "samples": [
+          {
+            "price_try": 1278000,
+            "km": 97375,
+            "year": 2021,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": "1.3 Cross Plus",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          }
+        ],
+        "first_seen": "2026-09-18T22:26:18.911Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
+        "year": {
+          "min": 2021,
+          "max": 2021,
+          "median": 2021
+        },
+        "km": {
+          "min": 97375,
+          "max": 97375,
+          "median": 97375
+        },
+        "price_try": {
+          "min": 1278000,
+          "max": 1278000,
+          "median": 1278000
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {
+          "carvak.com": 1
+        }
+      }
+    },
+    "hyundai-20": {
+      "id": "hyundai-20",
+      "make": "Hyundai",
+      "model": "I20",
+      "series": null,
+      "segment": null,
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "carvak.com|hyundai-20|2025|14642|1498000"
+        ],
+        "samples": [
+          {
+            "price_try": 1498000,
+            "km": 14642,
+            "year": 2025,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.0 T-GDI Elite",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          }
+        ],
+        "first_seen": "2026-09-18T22:26:18.911Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
+        "year": {
+          "min": 2025,
+          "max": 2025,
+          "median": 2025
+        },
+        "km": {
+          "min": 14642,
+          "max": 14642,
+          "median": 14642
+        },
+        "price_try": {
+          "min": 1498000,
+          "max": 1498000,
+          "median": 1498000
+        },
+        "bodies": {},
+        "fuels": {
+          "Benzin": 1
+        },
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {
+          "carvak.com": 1
+        }
+      }
+    },
+    "bmw-x": {
+      "id": "bmw-x",
+      "make": "Bmw",
+      "model": "Ix",
+      "series": null,
+      "segment": null,
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "carvak.com|bmw-x|2023|49076|4998000"
+        ],
+        "samples": [
+          {
+            "price_try": 4998000,
+            "km": 49076,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": null,
+            "gearbox": "Otomatik",
+            "variant": null,
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          }
+        ],
+        "first_seen": "2026-09-18T22:26:18.911Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
+        "year": {
+          "min": 2023,
+          "max": 2023,
+          "median": 2023
+        },
+        "km": {
+          "min": 49076,
+          "max": 49076,
+          "median": 49076
+        },
+        "price_try": {
+          "min": 4998000,
+          "max": 4998000,
+          "median": 4998000
+        },
+        "bodies": {},
+        "fuels": {},
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {
+          "carvak.com": 1
+        }
+      }
+    },
+    "seat-tarraco": {
+      "id": "seat-tarraco",
+      "make": "Seat",
+      "model": "Tarraco",
+      "series": null,
+      "segment": null,
+      "taxonomy": null,
+      "specs": null,
+      "observed": {
+        "listings_count": 1,
+        "seen_ids": [
+          "carvak.com|seat-tarraco|2023|58777|2398000"
+        ],
+        "samples": [
+          {
+            "price_try": 2398000,
+            "km": 58777,
+            "year": 2023,
+            "power_hp": null,
+            "body": null,
+            "fuel": "Benzin",
+            "gearbox": "Otomatik",
+            "variant": "1.5 TSI FR",
+            "city": null,
+            "source": "carvak.com",
+            "listing_id": null
+          }
+        ],
+        "first_seen": "2026-09-18T22:26:18.911Z",
+        "last_seen": "2026-09-18T22:26:18.911Z",
+        "year": {
+          "min": 2023,
+          "max": 2023,
+          "median": 2023
+        },
+        "km": {
+          "min": 58777,
+          "max": 58777,
+          "median": 58777
+        },
+        "price_try": {
+          "min": 2398000,
+          "max": 2398000,
+          "median": 2398000
+        },
+        "bodies": {},
+        "fuels": {
+          "Benzin": 1
+        },
+        "gearboxes": {
+          "Otomatik": 1
+        },
+        "colors": {},
+        "seller_types": {},
+        "power_hp": {
+          "min": null,
+          "max": null
+        },
+        "cities": {},
+        "sources": {
+          "carvak.com": 1
+        }
       }
     }
   }
