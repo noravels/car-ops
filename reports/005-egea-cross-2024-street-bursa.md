@@ -51,6 +51,34 @@
   tramer çıkarsa iskonto yetersiz kalır (aynı fiyat bandında 2024 tramersiz
   ilanlar mevcut: 1.195.000 TL / 11.000 km).
 
+
+### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.025.000 TL
+- **Adil değer (düzeltilmiş):** 1.124.500 TL
+- **Beklenen bant:** 989.560 – 1.259.440 TL
+- **Karar:** ⚪ **Piyasa değerinde** (sapma %-8.8)
+- **Güven:** düşük (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; bağımsız ekspertiz raporu yok (hasar gizli olabilir); karşılaştırma örneklemi n=4)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.124.500 TL |
+| ekspertiz:yok | değer etkisi yok | kural | Bağımsız ekspertiz raporu yok: değer düşürülmez, belirsizlik artar ve fiyat pazarlık payı doğrulanamaz. |
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+- Karşılaştırma örneklemi küçük (n=4).
+
+#### Kaynak
+
+- Karşılaştırma seti: 4 ilan (yıl ±1, km ±%35, aynı motor ailesi) — medyan 1.124.500 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.
+
 ## E — Satıcı Profili ve Davranışı
 
 - Galeri; **fiyat indirmiş** → satış baskısı/süre uzaması sinyali

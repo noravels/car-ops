@@ -109,3 +109,21 @@ Geliştirme TDD ile yapılır: önce test, sonra implementasyon.
 Yerel değerlendirme aracıdır; yatırım/alım tavsiyesi değildir. İlan verisi
 doğrulanmamış beyan içerebilir — karar öncesi bağımsız ekspertiz ve resmî kayıt
 sorgusu (SBM/tramer, TÜVTÜRK, haciz-rehin) şarttır.
+
+
+## Hızlı kullanım
+
+```bash
+# 1) Özellik say → model öner
+node catalog.mjs --suggest --max 1260000 --vites otomatik --kasa SUV --yil-min 2021
+
+# 2) Bulunan aracın fiyatı iyi mi? (Bluebook değerlemesi)
+node valuation-cli.mjs --fiyat 1198000 --marka "Fiat" --model "Egea Cross" --motor "1.4 Fire" \
+  --yil 2025 --km 8288 --ekspertiz var --data data/market/egea-cross-2026-09-18.json
+
+# 3) Katalog durumu
+node catalog.mjs --stats
+```
+
+Değerleme katmanları, karar bantları ve flag kuralları: `modes/degerleme.md`.
+Katalog verisinin nasıl büyütüleceği: `docs/VERI-TOPLAMA.md`.

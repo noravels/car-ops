@@ -34,13 +34,21 @@ Tablo sütunları: yıl, nominal, normalize, şiddet, not (eksper raporlu mu,
 cam/çalınma hariç tutulmuş mu). Toplam normalize hasar / ilan fiyatı oranı
 da verilir. Nominal karşılaştırma cümlesi kurma.
 
-## D — Fiyat vs Piyasa
+## D — Fiyat vs Adil Değer (Bluebook)
 
-- Aynı model-yıl-km (±%20 km) bandındaki ilanların medyanı ve aralığı;
-  ilanın bant içi konumu (% sapma).
-- Snapshot varsa: fiyat geçmişi grafiği (metin tablo), TL ve USD eşdeğeri,
-  düşüş sayısı/oranı, ilan yaşı.
-- Piyasa medyanının %25 altı → G bloğuna "yem fiyatı" notu.
+`node valuation-cli.mjs` çıktısı buraya girer; elle hesap yapılmaz.
+
+- **Adil değer + beklenen bant + karar** (şüpheli ucuz / piyasa altı / piyasa
+  değerinde / pahalı / belirgin pahalı) — onaylı eşikler: −%25 / ±%10 / +%25.
+- **Neden bu değer** tablosu: baz değer ve her düzeltme satırı (etki %, kaynak:
+  varsayım|kestirim|kural, açıklama).
+- **Riskler**: tramer fiyata yansımamış, ekspertiz yok + piyasa altı, km uç
+  değeri, beyan-kayıt çelişkisi, kaynak ayrışması, küçük örneklem.
+- **Güven düzeyi** ve gerekçeleri.
+- Snapshot varsa: fiyat geçmişi (TL + USD), düşüş sayısı/oranı, ilan yaşı.
+- Adil değerin %25 altı → G bloğuna "yem fiyatı / kaporo riski" notu.
+- Oto360 bandı alındıysa kaynak ve tarih yazılır; alınmadıysa "tek kaynak"
+  uyarısı raporda kalır.
 
 ## E — Satıcı Profili ve Davranışı
 

@@ -65,6 +65,37 @@ Karşılaştırma (aynı taramada bulunan normalize kayıtlar):
   ama kabul edilebilir (düşük km primi).
 - USD: ~23.907 USD.
 
+
+### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.165.000 TL
+- **Adil değer (düzeltilmiş):** 1.135.695 TL
+- **Beklenen bant:** 1.044.839 – 1.226.551 TL
+- **Karar:** ⚪ **Piyasa değerinde** (sapma +%2.6)
+- **Güven:** orta (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; karşılaştırma örneklemi n=10)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.124.450 TL |
+| km | +1.0% | varsayım | 7.200 km (set medyanı 42.000 km) — medyanın altındaki her 10.000 km |
+
+#### Saptanan riskler
+
+- 🟡 **km_outlier** — Kilometre set medyanından %83 sapıyor (7.200 km / medyan 42.000 km): fiyat etkisi ayrıca hesaplandı, km doğrulaması (servis kaydı) isteyin.
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+
+#### Kaynak
+
+- Karşılaştırma seti: 10 ilan (yıl ±1, km ±%35, aynı motor ailesi) — medyan 1.124.450 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.
+
 ## E — Satıcı Profili ve Davranışı
 
 - Galeri, Çanakkale. Açıklama **ayrıntılı ve düzenli** (donanım listesi, bakım

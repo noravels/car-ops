@@ -59,6 +59,42 @@ kontrolü zorunlu** (sadece kaporta kozmetiği değil).
   hasarının karşılığı fiyat.
 - Karşılaştırma: aynı bantta tramersiz/boyasız ilanlar 1.165.000–1.198.000 TL.
 
+
+### Fiyat Değerlemesi (Bluebook)
+
+- **İstenen fiyat:** 1.015.000 TL
+- **Adil değer (düzeltilmiş):** 978.272 TL
+- **Beklenen bant:** 860.879 – 1.095.665 TL
+- **Karar:** ⚪ **Piyasa değerinde** (sapma +%3.8)
+- **Güven:** düşük (Oto360 referansı yok — yalnızca kendi karşılaştırma seti; bağımsız ekspertiz raporu yok (hasar gizli olabilir); karşılaştırma örneklemi n=2)
+
+#### Neden bu değer
+
+| Etken | Etki | Kaynak | Açıklama |
+|---|---|---|---|
+| baz değer | — | kendi karşılaştırma seti | 1.124.450 TL |
+| tramer:orta | -6.0% | varsayım | normalize tramer 52.490 TL — orta tramer (normalize tutar araç değerinin %5–30 u) |
+| boyali:2 | -3.0% | varsayım | her boyalı panel (üst sınır %12) |
+| degisen:1 | -4.0% | varsayım | her değişen parça (üst sınır %20) |
+| ekspertiz:yok | değer etkisi yok | kural | Bağımsız ekspertiz raporu yok: değer düşürülmez, belirsizlik artar ve fiyat pazarlık payı doğrulanamaz. |
+
+#### Saptanan riskler
+
+- 🔴 **tramer_not_priced** — Tramer kaydı (orta) fiyata yansımamış: araç hasarsız muamelesi görüyor. Onarılmış hasarın ikinci el değer kaybı pazarlık konusu olmalı.
+- 🔴 **claim_conflict** — İlan metni "hatasiz boyasiz degisensizdir sag arka camurluk degisen sag arka kapi boyali tramer: 38" diyor ama kayıtta 1 değişen / 2 boyalı parça var: beyan ile kayıt çelişiyor.
+
+#### Veri notları
+
+- Oto360 baz servisi verisi yok: fiyat yalnızca kendi karşılaştırma setimize dayanıyor.
+- Tek kaynak: kendi karşılaştırma setimiz (güven sınırlı).
+- Karşılaştırma örneklemi küçük (n=2).
+
+#### Kaynak
+
+- Karşılaştırma seti: 2 ilan (yıl ±1, km ±%35, aynı motor ailesi) — medyan 1.124.450 TL
+- Katsayı kaynağı: temkinli varsayım (veri biriktikçe kalibre edilecek)
+- Bu rapor yatırım/alım tavsiyesi değildir: karar insana aittir, ödeme öncesi bağımsız ekspertiz şarttır.
+
 ## E — Satıcı Profili ve Davranışı
 
 - Galeri (YMS Car), Ankara Sincan. Yetki belgesi bilgisi ilanda yok.

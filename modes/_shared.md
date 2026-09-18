@@ -49,6 +49,27 @@ değil, karar vermek için değerlendirir. Bu yüzden:
 - Rapor sonunda net duruş belirtilir: **al / şu koşulla al / vazgeç**,
   gerekçesiyle.
 
+## Değerleme kuralları (Bluebook)
+
+1. **Adil değer uydurulmaz.** Değer iki kaynaktan gelir: (a) kendi karşılaştırma
+   setimiz (yıl ±1, km ±%35), (b) Oto360 Araç Değerleme bandı. İkisi de yoksa D
+   bloğu "hesaplanamadı" der — sayı üretilmez.
+2. **Oto360 boya/hasar gözetmez.** O yüzden durum düzeltmesi (normalize tramer
+   şiddeti, boyalı/değişen parça, km sapması) bizim katmanımızda uygulanır ve
+   raporda ayrı satırlar olarak görünür.
+3. **Katsayılar etiketlidir.** `varsayım` = temkinli, doğrulanmamış;
+   `kestirim` = kendi verimizden regresyonla. Rapor hangisinin kullanıldığını
+   yazar; varsayım katsayıyla verilen karar "kesin değer" diye sunulamaz.
+4. **Ekspertiz yokluğu değeri düşürmez, belirsizliği artırır.** Gerekçe:
+   kanıtsızlık fiyat indirimi değil risk primidir → fiyat altı + ekspertizsiz
+   kombinasyonu ayrı bir kırmızı bayraktır.
+5. **Tramer tutarı yalnızca ilanda YAZAN değerdir** ve **hasar yılı zorunludur**;
+   yıl yoksa en kötü senaryo (en eski yıl) hesaplanır ve bu açıkça yazılır.
+6. **İki kaynak %15+ ayrışırsa** fiyat kararı tek kaynağa dayandırılmaz; rapor
+   ayrışmayı ve olası nedenleri yazar.
+7. Eşikler kullanıcı onaylıdır: şüpheli ucuz ≤ −%25, piyasa altı −%25…−%10,
+   piyasa değerinde ±%10, pahalı +%10…+%25, belirgin pahalı ≥ +%25.
+
 ## Dil
 
 Rapor dili kullanıcının konuştuğu dildedir (varsayılan Türkçe). Araç

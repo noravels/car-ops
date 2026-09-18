@@ -5,7 +5,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "node --test tests/"
+    "test": "node --test tests/",
+    "degerleme": "node valuation-cli.mjs",
+    "oneri": "node catalog.mjs --suggest",
+    "katalog": "node catalog.mjs",
+    "tamir": "node doctor.mjs",
+    "tarama": "node market-scan.mjs"
   },
   "engines": {
     "node": ">=20"

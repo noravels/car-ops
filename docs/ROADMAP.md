@@ -76,3 +76,25 @@ Test sayısı: 78 (konum 9, arama URL 7, doctor 6, diğer çekirdek 56).
 - `search-params.json` parametrelerinin sahada doğrulanması (agent browser ile tek tek)
 
 
+
+
+## Değerleme (Bluebook) ve model önerisi (2026-09-18)
+
+Sistem artık iki soruya cevap veriyor: **"hangi model bana uyar"** ve **"bu araba bu parayı eder mi"**.
+
+| Parça | Dosya | İşlev |
+|---|---|---|
+| Katalog veri bankası | `catalog.mjs` + `data/catalog/catalog.json` | Üç katman: `observed` (ilanlardan gözlem), `taxonomy` (marka/model envanteri), `specs` (Oto360/JATO teknik verisi) |
+| Model önerisi | `node catalog.mjs --suggest --max ... --vites ... --kasa ...` | Özellik → model listesi; her öneri kaç ilana dayandığını ve hangi kriterin belirsiz olduğunu yazar |
+| Değerleme motoru | `valuation.mjs` | Baz değer (karşılaştırma medyanı + Oto360 bandı) → durum düzeltmesi (tramer/boya/km/motor) → karar → flag'ler |
+| Değerleme CLI | `valuation-cli.mjs` (`npm run degerleme`) | Tek araç için tam rapor (D bloğu metni) |
+| Katsayılar | `data/catalog/factors.json` | `varsayım`/`kestirim` etiketli; veri biriktikçe kalibre edilir |
+| Veri toplama rehberi | `docs/VERI-TOPLAMA.md` | Marka envanteri, Oto360 teknik sayfaları, çapraz marka ilan taraması |
+| Akış dokümanı | `modes/degerleme.md` | Katmanlar, karar bantları, flag kuralları, Oto360 kullanımı |
+
+**Değerlemede dikkat edilen başlıca tuzaklar (hepsi teste bağlandı):**
+- Karşılaştırma setine ilanın kendisi girmemeli (kendi kendine referans) → `excludeSelf`.
+- Aynı modelin **dizel/benzin** sürümleri fiyatta %25+ ayrışır → motor ailesi filtresi (`engineKey`, `engineMatches`, `fuelClass`); karışık bant `engine_mixed_band` olarak işaretlenir.
+- Türkçe büyük harf **I/İ/ı** regex'i kaçırır → beyan-kayıt çelişkisi `normTr` ile aranır.
+- Küçük Örneklem/geniş dağılımda "-%25 şüpheli ucuz" gibi keskin iddia yerine "veri yetersiz" kararı (`isWeakData`).
+- Tramer şiddeti **enflasyonla normalize** edilir, hasar yılı zorunlu; pert eşiği ayrı kırmızı bayrak.

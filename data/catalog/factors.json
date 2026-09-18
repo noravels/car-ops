@@ -1,0 +1,51 @@
+{
+  "name": "car-ops değerleme katsayıları",
+  "ref_year": 2026,
+  "generated_at": "2026-09-18",
+  "status": "varsayım",
+  "calibration": {
+    "min_sample_per_model": 20,
+    "note": "Bir model için gözlemlenen ilan sayısı 20'yi geçtiğinde aynı ilan setinden tramer/boya/km-fiyat ilişkisi regresyonla kestirilecek ve status 'kestirim' olacak. O zamana kadar aşağıdaki katsayılar temkinli VARSAYIM'dır ve raporlarda böyle etiketlenir."
+  },
+  "severity": {
+    "küçük": {
+      "pct": -0.02,
+      "sample": 0
+    },
+    "orta": {
+      "pct": -0.06,
+      "sample": 0
+    },
+    "ağır": {
+      "pct": -0.12,
+      "sample": 0
+    },
+    "pert": {
+      "pct": -0.35,
+      "sample": 0
+    }
+  },
+  "painted_each": {
+    "pct": -0.015,
+    "cap": -0.12,
+    "sample": 0
+  },
+  "changed_each": {
+    "pct": -0.04,
+    "cap": -0.2,
+    "sample": 0
+  },
+  "km_per_10k_above": {
+    "pct": -0.005,
+    "sample": 0
+  },
+  "km_per_10k_below": {
+    "pct": 0.003,
+    "sample": 0
+  },
+  "km_cap": 0.1,
+  "sources": [
+    "piyasa teamülü (temkinli)",
+    "kendi ilan verimizle kalibre edilecek"
+  ]
+}
