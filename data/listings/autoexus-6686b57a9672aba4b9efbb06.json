@@ -1,0 +1,60 @@
+{
+  "schema": "car-ops/listing@1",
+  "listing_id": "autoexus-6686b57a9672aba4b9efbb06",
+  "market": "tr",
+  "source_site": "tr.autoexus.com",
+  "url": "https://tr.autoexus.com/arabalar/satilik/fiat/egea-cross/1.4-fire-street/6686b57a9672aba4b9efbb06",
+  "captured_at": "2026-09-18T15:25:00+03:00",
+  "title": "Fiat Egea Cross 1.4 Fire Street (2022)",
+  "price_try": 762947,
+  "price_eur": 13637,
+  "price_history_site": null,
+  "seller": {
+    "type": "galeri",
+    "name": "Öztoprak Otomotiv",
+    "member_since": null,
+    "other_listings_hint": "ticari/hafif ticari ağırlıklı portföy"
+  },
+  "vehicle": {
+    "make": "Fiat",
+    "model": "Egea Cross",
+    "variant": "1.4 Fire Street",
+    "year": 2022,
+    "km": 6350,
+    "fuel": "Benzin",
+    "gearbox": "Manuel",
+    "body": "Cross/SW"
+  },
+  "claims": [
+    {
+      "claim": "1 önceki sahibi",
+      "category": "sahiplik",
+      "text": "1 Önceki sahipleri"
+    },
+    {
+      "claim": "galeri satışı (yetki belgesi var)",
+      "category": "satici",
+      "text": "Öztoprak Otomotiv / firma yetki belgesi"
+    },
+    {
+      "claim": "kredi/takas mevcut",
+      "category": "finansman",
+      "text": "TAŞIT KREDİSİ ÇIKARTILIR, TAKAS İMKANI"
+    }
+  ],
+  "damage_records": [],
+  "inspection": {
+    "present": false,
+    "changed_parts": [],
+    "painted_parts": [],
+    "report_url": null
+  },
+  "unverifiable": [
+    "kaporta durumu",
+    "motor durumu",
+    "tramer kaydı",
+    "şanzıman sesi",
+    "muayene durumu"
+  ],
+  "notes": "AutoExus aggregator'ından agent browser ile toplandı; EUR fiyatı güncel kurla TL'ye çevrildi"
+}

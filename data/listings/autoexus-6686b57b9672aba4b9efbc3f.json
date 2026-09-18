@@ -1,0 +1,55 @@
+{
+  "schema": "car-ops/listing@1",
+  "listing_id": "autoexus-6686b57b9672aba4b9efbc3f",
+  "market": "tr",
+  "source_site": "tr.autoexus.com",
+  "url": "https://tr.autoexus.com/arabalar/satilik/fiat/egea-cross/1.6-multijet-urban/6686b57b9672aba4b9efbc3f",
+  "captured_at": "2026-09-18T15:25:00+03:00",
+  "title": "Fiat Egea Cross 1.6 Multijet Urban (2022)",
+  "price_try": 922619,
+  "price_eur": 16491,
+  "price_history_site": null,
+  "seller": {
+    "type": "galeri",
+    "name": "Otostok Karoto",
+    "member_since": null,
+    "other_listings_hint": "ticari/hafif ticari ağırlıklı portföy"
+  },
+  "vehicle": {
+    "make": "Fiat",
+    "model": "Egea Cross",
+    "variant": "1.6 Multijet Urban",
+    "year": 2022,
+    "km": 65317,
+    "fuel": "Dizel",
+    "gearbox": "Otomatik",
+    "body": "Cross/SW"
+  },
+  "claims": [
+    {
+      "claim": "1 önceki sahibi",
+      "category": "sahiplik",
+      "text": "1 Önceki sahipleri"
+    },
+    {
+      "claim": "galeri satışı",
+      "category": "satici",
+      "text": "Otostok Karoto"
+    }
+  ],
+  "damage_records": [],
+  "inspection": {
+    "present": false,
+    "changed_parts": [],
+    "painted_parts": [],
+    "report_url": null
+  },
+  "unverifiable": [
+    "kaporta durumu",
+    "motor durumu",
+    "tramer kaydı",
+    "şanzıman sesi",
+    "muayene durumu"
+  ],
+  "notes": "AutoExus aggregator'ından agent browser ile toplandı; EUR fiyatı güncel kurla TL'ye çevrildi"
+}
