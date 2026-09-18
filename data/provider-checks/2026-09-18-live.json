@@ -1,18 +1,117 @@
 {
-  "checked_at": "2026-09-18T23:12:12.890Z",
+  "checked_at": "2026-09-18T23:27:09.535Z",
   "transport": "ws",
   "browser": "Chrome (WS üzerinden)",
   "results": [
     {
+      "id": "sahibinden",
+      "url": "https://www.sahibinden.com/otomobil",
+      "cards": 20,
+      "rows": 20,
+      "status": "ok",
+      "ms": 20302,
+      "title": "2.El Arabalar ve Satılık Sıfır Km Otomobil Fiyatları sahibinden.com'da",
+      "bodyLength": 6789,
+      "sample": "Peugeot 207 2011 470000"
+    },
+    {
+      "id": "arabam",
+      "url": "https://www.arabam.com/ikinci-el/otomobil",
+      "cards": 20,
+      "rows": 20,
+      "status": "ok",
+      "ms": 15054,
+      "title": "Satılık 2. El Araba Fiyatları ve Modelleri - arabam.com",
+      "bodyLength": 11813,
+      "sample": "Peugeot 301 2017 795000"
+    },
+    {
+      "id": "vavacars",
+      "url": "https://tr.vava.cars/buy/cars/",
+      "cards": 18,
+      "rows": 18,
+      "status": "ok",
+      "ms": 8049,
+      "title": "Satılık İkinci El Araçlar",
+      "bodyLength": 2519,
+      "sample": "Peugeot 2008 2023 1670000"
+    },
+    {
+      "id": "renewturkiye",
+      "url": "https://renewturkiye.com/otomobil",
+      "cards": 21,
+      "rows": 21,
+      "status": "ok",
+      "ms": 6052,
+      "title": "2.El Arabalar ve Satılık Otomobil Fiyatları renewturkiye.com'da | renew",
+      "bodyLength": 5744,
+      "sample": "Dacia Sandero Stepway 2024 1339000"
+    },
+    {
+      "id": "otoplus",
+      "url": "https://www.otoplus.com/ikinci-el-araba",
+      "cards": 12,
+      "rows": 12,
+      "status": "ok",
+      "ms": 6046,
+      "title": "İkinci El Araba Fiyatları ve İlanları",
+      "bodyLength": 4211,
+      "sample": "Opel MOKKA 2023 1550000"
+    },
+    {
+      "id": "otofora",
+      "url": "https://www.otofora.com/",
+      "cards": 12,
+      "rows": 10,
+      "status": "ok",
+      "ms": 6045,
+      "title": "Otofora | İzmir' de 2. el otomobilin güvenilir adresi",
+      "bodyLength": 6471,
+      "sample": "Land Rover Range Rover 2023 17250000"
+    },
+    {
+      "id": "otosor",
+      "url": "https://www.otosor.com.tr/araclar/izmir-ikinci-el-araba",
+      "cards": 12,
+      "rows": 12,
+      "status": "ok",
+      "ms": 6045,
+      "title": "İzmir İkinci El Araba Fiyatları ve Modelleri",
+      "bodyLength": 10524,
+      "sample": "Volvo XC60 2018 2850000"
+    },
+    {
+      "id": "spoticar",
+      "url": "https://www.spoticar.com.tr/ikinci-el-araclar/izmir",
+      "cards": 11,
+      "rows": 11,
+      "status": "ok",
+      "ms": 10047,
+      "title": "İkinci El Araçlar - İzmir | Spoticar",
+      "bodyLength": 4121,
+      "sample": "Peugeot 2008 2020 1550000"
+    },
+    {
+      "id": "carvak",
+      "url": "https://carvak.com/tr/satilik-arac/volkswagen",
+      "cards": 9,
+      "rows": 9,
+      "status": "ok",
+      "ms": 10044,
+      "title": "İkinci el Volkswagen arabalar Carvak'ta",
+      "bodyLength": 3820,
+      "sample": "Volkswagen Polo 2023 1278000"
+    },
+    {
       "id": "otomerkezi",
       "url": "https://www.otomerkezi.net/ikinci-el",
-      "cards": 0,
-      "rows": 0,
-      "status": "empty",
-      "ms": 18312,
-      "title": "",
-      "bodyLength": 0,
-      "hint": "gövde 0 karakter — liste JS/API ile geliyor olabilir: "
+      "cards": 15,
+      "rows": 14,
+      "status": "ok",
+      "ms": 18043,
+      "title": "İkinci El Araba Fiyatları | Otomerkezi",
+      "bodyLength": 7947,
+      "sample": "Peugeot 208 2015 769500"
     }
   ]
 }

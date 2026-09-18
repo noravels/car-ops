@@ -23,15 +23,18 @@ ve hangi commit'te kapandığı yazılır.
 3. Bulunamazsa: Chrome'u bilerek `--remote-debugging-port=<port> --remote-allow-origins=*` ile ayrı profilde açıp `CAROPS_CDP_URL` ile script'e ver.
 4. `--live` sonucunu `--from-dump` sonucuyla karşılaştır (aynı sayı gelmeli).
 
-**Kabul kriteri:** ✅ **KARŞILANDI** (2026-09-19) — `npm run check:providers:live` agent aracı olmadan 10 sağlayıcıyı kontrol etti; 9'u `ok` (sahibinden 21, arabam 20, renewturkiye 21, vavacars 18, otosor 12, otoplus 12, otofora 12, carvak 9, spoticar 11 satır), 1'i (`otomerkezi`) `empty` + gerekçe. Rapor `data/provider-checks/<tarih>-live.json`.
+**Kabul kriteri:** ✅ **AŞILDI** (2026-09-19) — `npm run check:providers:live` agent aracı olmadan **10/10 sağlayıcı `ok`**:
+sahibinden 20 · arabam 20 · renewturkiye 21 · vavacars 18 · otomerkezi 14 · otofora 10 · otosor 12 · otoplus 12 · spoticar 11 · carvak 9 satır.
+Rapor: `data/provider-checks/2026-09-18-live.json`.
 
 **ÇÖZÜM:** Chrome 9222'de dinliyor ama **HTTP uçları 403 "Connection rejected"** döndürüyordu (`/json/version`, `/json/list`);
 buna karşılık **`/devtools/browser` yolunda WebSocket el sıkışması 101** ile kabul ediliyor (UUID gerekmiyor).
 `lib/cdp.mjs` artık HTTP keşfine güvenmiyor: sırayla HTTP → doğrudan WS dener, hedefleri `Target.*` ile bulur.
 Ayrıca bazı sitelerde `Page.navigate` asılı kaldığı için hedef doğrudan URL ile oluşturuluyor (`Target.createTarget({url})`).
 
-**Kalan sınır:** `otomerkezi` taze CDP sekmesinde gövde 0 döndürüyor (oturum/sekme davranışı). Bu sağlayıcı için
-doğrulama `--from-dump` veya agent akışıyla yapılır; registry notunda yazılı.
+**Yavaş siteler:** `otomerkezi` taze sekmede 6 sn'de yüklenmiyordu (gövde 0) → registry'ye `live_wait_ms: 18000`
+eklendi, artık 14 satır veriyor. Ayrıca `/devtools/browser` **tek istemci** kabul ettiği için `--bekle <saniye>` ile
+yeniden deneme var (agent'ın tarayıcı oturumu boşta kalmasını bekler).
 
 ---
 

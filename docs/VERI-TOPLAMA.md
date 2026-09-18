@@ -266,7 +266,8 @@ Durumlar: `ok` (≥3 satır ve ≥%60 ayrıştı), `empty` (sayfa liste vermedi 
 - Yavaş siteler için registry'de `live_wait_ms` alanı (ör. otomerkezi 18 sn).
 - Hâlâ `--from-dump` yolu var: taze sekmede yüklenmeyen siteler (ör. otomerkezi) için.
 
-**Canlı kontrol sonucu (2026-09-19):** 10 sağlayıcı · 9 `ok` · 1 `empty` (gerekçeli).
+**Canlı kontrol sonucu (2026-09-19):** **10/10 sağlayıcı `ok`** — sahibinden 20 · arabam 20 · renewturkiye 21 · vavacars 18 ·
+otomerkezi 14 · otofora 10 · otosor 12 · otoplus 12 · spoticar 11 · carvak 9 satır (rapor: `data/provider-checks/2026-09-18-live.json`).
 
 ### 13.3 Test paketleri (update sonrası çalıştır)
 
