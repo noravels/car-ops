@@ -1,0 +1,76 @@
+{
+  "schema": "car-ops/listing@1",
+  "listing_id": "sahibinden-1340705293",
+  "market": "tr",
+  "source_site": "sahibinden.com",
+  "url": "https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2024-fiat-egea-cross-1.4-fire-urban-sadece-15-bin-de-1340705293/detay",
+  "captured_at": "2026-09-18T17:05:00+03:00",
+  "title": "2024 FİAT EGEA CROSS 1.4 FİRE URBAN SADECE 15 BİN'DE",
+  "price_try": 1050000,
+  "price_history_site": "https://gecmisi.com.tr/?q=1340705293",
+  "seller": {
+    "type": "galeri",
+    "name": "Kerem Auto Plaza (yetki belge no 2700777)",
+    "member_since": null,
+    "other_listings_hint": "katılım finansman kuruluşlarıyla çalışıyor"
+  },
+  "vehicle": {
+    "make": "Fiat",
+    "model": "Egea Cross 1.4 Fire Urban",
+    "year": 2024,
+    "km": 15000,
+    "fuel": "Benzin",
+    "gearbox": "Manuel",
+    "body": "Sedan (Cross/X kasası)",
+    "color": "Beyaz"
+  },
+  "claims": [
+    {
+      "claim": "İlk sahibinden, servis bakımları yetkili servis",
+      "category": "bakim"
+    },
+    {
+      "claim": "Garantisi devam ediyor",
+      "category": "garanti"
+    },
+    {
+      "claim": "Yedek anahtarı mevcut",
+      "category": "ekipman"
+    },
+    {
+      "claim": "HASAR KAYDI 129 BİN TL'DİR",
+      "category": "tramer"
+    },
+    {
+      "claim": "Bagaj kapağında lokal boya, bagaj havuzunda boya",
+      "category": "boya"
+    },
+    {
+      "claim": "Servis garantisi: Evet",
+      "category": "garanti"
+    }
+  ],
+  "damage_records": [
+    {
+      "year": null,
+      "amount_try": 129000,
+      "source": "seller-claim",
+      "kind": "ekspertiz beyanı (tramer)"
+    }
+  ],
+  "inspection": {
+    "present": false,
+    "changed_parts": [],
+    "painted_parts": [
+      "bagaj kapağı (lokal)",
+      "arka tampon"
+    ],
+    "report_url": null
+  },
+  "unverifiable": [
+    "motor durumu",
+    "şanzıman sesi",
+    "kaporta şasi muayenesi",
+    "muayene geçerliliği"
+  ]
+}
