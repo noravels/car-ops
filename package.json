@@ -1,0 +1,13 @@
+{
+  "name": "car-ops",
+  "version": "0.1.0",
+  "description": "AI-assisted used-car evaluation pipeline (career-ops patterns, TR-first, multi-market)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

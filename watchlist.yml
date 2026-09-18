@@ -1,0 +1,11 @@
+# İzleme listesi (kullanıcı katmanı — sistem güncellemesi dokunmaz)
+# Örnek yapı; gerçek kayıtlar kullanıcı onayıyla eklenir.
+#
+# listings:
+#   - id: sahibinden-1234567890
+#     url: https://www.sahibinden.com/ilan/...
+#     added: 2026-09-18
+#     note: "pazarlık kozu izleniyor"
+# queries:
+#   - name: "civic-2017-otomatik"
+#     url: "https://www.sahibinden.com/satilik-otomobil/honda/civic-1.6-ecvt?..."

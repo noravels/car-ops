@@ -1,0 +1,19 @@
+{
+  "name": "turkiye-usd-try-yillik-ortalama",
+  "description": "TCMB USD/TRY yıllık ortalama satış kuru. 2025 değeri yıl ortası yaklaşığıdır — yıl kapanınca TCMB'den doğrulanmalıdır.",
+  "ref_year": 2025,
+  "usd_try": {
+    "2010": 1.55,
+    "2015": 2.72,
+    "2016": 3.02,
+    "2017": 3.65,
+    "2018": 4.82,
+    "2019": 5.67,
+    "2020": 7.00,
+    "2021": 8.90,
+    "2022": 16.56,
+    "2023": 23.49,
+    "2024": 34.07,
+    "2025": 40.50
+  }
+}

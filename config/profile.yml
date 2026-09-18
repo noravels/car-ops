@@ -1,0 +1,8 @@
+# Kullanıcı profili — car-ops kişiselleştirme
+
+# Bütçe ve tercihler buraya gelir. Örnek alanlar:
+# budget_try_max: 900000
+# preferred_body: hatchback
+# max_km: 120000
+# city: istanbul
+# risk_tolerance: low   # low => tramer şiddetine çok hassas davran
