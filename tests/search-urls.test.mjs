@@ -91,3 +91,32 @@ test('slugify: Türkçe karakter + boşluk dönüşümü (dışa açık)', () =>
   assert.equal(slugify('Egea Cross'), 'egea-cross');
   assert.equal(slugify('Şahin 1.6'), 'sahin-1-6');
 });
+
+
+// --- arabam şehir filtresi: doğrulanmış gerçek (2026-09-18) -----------------
+// Bulgu: /ikinci-el/izmir şehri filtreler, ama /ikinci-el/izmir/fiat-egea şehri DÜŞÜRÜR
+// (canlı test: sonuçlar Ankara/İstanbul). Bu yüzden yok sayılan bir parametre üretilmez.
+
+test('arabam: şehir kökü listesinde şehir yolu kullanılır (doğrulanmış)', () => {
+  const results = buildSearchUrls({ location: { province: 'İzmir', plate: '35', cities: ['İzmir'] } });
+  const arabam = results.find((r) => r.provider === 'arabam' || r.id === 'arabam');
+  assert.ok(arabam, 'arabam sonucu bulunmalı');
+  assert.match(arabam.url, /arabam\.com\/ikinci-el\/izmir/);
+  assert.ok(!arabam.url.includes('city='), 'doğrulanmamış city parametresi üretilmemeli');
+  assert.ok(arabam.applied.some((f) => f.filter === 'city' && f.via === 'path-city-root'));
+});
+
+test('arabam: marka/model ile şehir URL ile filtrelenemez → postfilter + gerekçe', () => {
+  const results = buildSearchUrls({
+    make: 'Fiat',
+    model: 'Egea Cross',
+    location: { province: 'İzmir', plate: '35', cities: ['İzmir'] },
+  });
+  const arabam = results.find((r) => r.provider === 'arabam' || r.id === 'arabam');
+  assert.match(arabam.url, /arabam\.com\/ikinci-el\/otomobil\/fiat-egea-cross/);
+  assert.ok(!arabam.url.includes('city='), 'sessizce yok sayılan parametre üretilmemeli');
+  assert.ok(
+    arabam.postfilters.some((p) => p.filter === 'city' && /şehir|süzül/i.test(p.reason || '')),
+    'şehir filtresi postfilter olarak AÇIKÇA bildirilmeli',
+  );
+});

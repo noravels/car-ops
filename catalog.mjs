@@ -247,6 +247,7 @@ export function suggestModels(catalog, criteria = {}, { minListings = 1 } = {}) 
     const unknown = [];
     let score = 0;
     let weight = 0;
+    let unknownWeight = 0; // bilinmeyen kriterlerin ceza ağırlığı
 
     const push = (label, hit, w, detail) => {
       weight += w;
@@ -256,15 +257,21 @@ export function suggestModels(catalog, criteria = {}, { minListings = 1 } = {}) 
       } else if (hit === false) {
         reasons.push(`✗ ${label}: ${detail}`);
       } else {
-        unknown.push(label);
+        markUnknown(label);
       }
+    };
+    // bilinmeyen alanların tipik ağırlığı (push ile aynı büyüklük mertebesi)
+    const UNKNOWN_WEIGHT = 1.5;
+    const markUnknown = (label) => {
+      unknown.push(label);
+      unknownWeight += UNKNOWN_WEIGHT;
     };
 
     // bütçe (medyan fiyata göre)
     let budgetFit = null;
     if (criteria.price_max != null) {
       const med = obs.price_try && obs.price_try.median;
-      if (med == null) unknown.push('price_max');
+      if (med == null) markUnknown('price_max');
       else {
         budgetFit = med <= criteria.price_max;
         push(
@@ -298,18 +305,18 @@ export function suggestModels(catalog, criteria = {}, { minListings = 1 } = {}) 
         continue;
       }
       const s = share(obs[key], criterion);
-      if (s == null) unknown.push(key);
+      if (s == null) markUnknown(key);
       else push(key, s > 0, w, `ilanların %${Math.round(s * 100)}'i ${criterion}`);
     }
     // koltuk/kapı: katalogda varsa kullanılır (gözlemle öğrenilemeyen alanlar)
     if (criteria.seats_min != null) {
       if (m.specs && m.specs.seats != null) {
         push('seats_min', m.specs.seats >= criteria.seats_min, 2, `katalog: ${m.specs.seats} koltuk`);
-      } else unknown.push('seats_min');
+      } else markUnknown('seats_min');
     }
     if (criteria.engine_cc_min != null || criteria.engine_cc_max != null) {
       const cc = m.specs ? m.specs.engine_cc : null;
-      if (cc == null) unknown.push('engine_cc');
+      if (cc == null) markUnknown('engine_cc');
       else {
         const within = (criteria.engine_cc_min == null || cc >= criteria.engine_cc_min) && (criteria.engine_cc_max == null || cc <= criteria.engine_cc_max);
         push('motor hacmi', within, 2, `katalog: ${cc} cm3`);
@@ -318,29 +325,41 @@ export function suggestModels(catalog, criteria = {}, { minListings = 1 } = {}) 
 
     // yıl / km
     if (criteria.year_min != null) {
-      const mx = obs.year && obs.year.max;
-      if (mx == null) unknown.push('year_min');
-      else push('yıl', mx >= criteria.year_min, 1, `gözlenen en yeni ${mx}`);
+      const yrs = (obs.samples || []).map((x) => x.year).filter(Number.isFinite);
+      if (yrs.length) {
+        const okShare = yrs.filter((y) => y >= criteria.year_min).length / yrs.length;
+        push(
+          'yıl',
+          okShare >= 0.2,
+          2,
+          `ilanların %${Math.round(okShare * 100)}'i ${criteria.year_min} ve üstü (gözlenen aralık ${obs.year?.min ?? '—'}–${obs.year?.max ?? '—'})`,
+        );
+      } else if (obs.year && obs.year.max != null) {
+        push('yıl', obs.year.max >= criteria.year_min, 1, `gözlenen en yeni ${obs.year.max}`);
+      } else markUnknown('year_min');
     }
     if (criteria.km_max != null) {
       const mn = obs.km && obs.km.min;
       const medKm = obs.km && obs.km.median;
-      if (medKm == null) unknown.push('km_max');
+      if (medKm == null) markUnknown('km_max');
       else push('km', medKm <= criteria.km_max, 1, `gözlenen medyan ${medKm.toLocaleString('tr-TR')} km`);
     }
     if (criteria.city != null) {
       const s = share(obs.cities, criteria.city);
-      if (s == null) unknown.push('city');
+      if (s == null) markUnknown('city');
       else push('şehir', s > 0, 1, `ilanların %${Math.round(s * 100)}'i ${criteria.city}`);
     }
     if (criteria.power_hp_min != null) {
-      if (!obs.power_hp || obs.power_hp.max == null) unknown.push('power_hp_min');
+      if (!obs.power_hp || obs.power_hp.max == null) markUnknown('power_hp_min');
       else push('motor gücü', obs.power_hp.max >= criteria.power_hp_min, 1, `gözlenen aralık ${obs.power_hp.min}-${obs.power_hp.max} hp`);
     }
     // gözlemlenemeyen alanlar (site verisi yok)
-    for (const k of ['seats_min', 'doors', 'equipment']) if (criteria[k] != null) unknown.push(k);
+    for (const k of ['seats_min', 'doors', 'equipment']) if (criteria[k] != null) markUnknown(k);
 
-    const normalized = weight > 0 ? score / weight : 0;
+    // Bilinmeyen kriter cezası: skor yalnızca BİLİNEN kriterler üzerinden hesaplanır;
+    // belirsizlik arttıkça (bilinen ağırlık payı düşükçe) skor kök oranla indirilir.
+    const knownWeightRatio = weight + unknownWeight > 0 ? weight / (weight + unknownWeight) : 0;
+    const normalized = weight > 0 ? (score / weight) * Math.sqrt(knownWeightRatio) : 0;
     out.push({
       id,
       make: m.make,

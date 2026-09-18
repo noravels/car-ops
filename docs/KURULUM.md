@@ -183,3 +183,53 @@ Fark yoksa filtreyi dürüstçe "rapor süzmesi" olarak önerir — parametre ad
 5. `providers/<site>.mjs` + `config/search-params.json` kaydı.
 
 Çekirdek (skorlama, tramer normalizasyonu, snapshot, rapor iskeleti) değişmez.
+
+
+---
+
+## Yeni yetenekler (2026-09-19)
+
+### 1) Özellik say → model öner
+
+```bash
+node catalog.mjs --suggest --max 1300000 --vites otomatik --kasa SUV --yil-min 2021
+```
+
+Katalog iki kanıt kullanır: topladığın ilanlardan **gözlemlenen** dağılımlar ve başlangıçta
+gelen **teknik veri** (Oto360). Gözlemlenmeyen kriter "belirsiz" olarak işaretlenir; hiçbir
+özellik tahmin edilmez. Katalog durumu: `node catalog.mjs --stats`.
+
+### 2) Fiyat iyi mi? (Bluebook değerlemesi)
+
+```bash
+node valuation-cli.mjs --katalog --fiyat 1015000 --marka Fiat --model "Egea Cross" \
+  --motor "1.4 Fire" --yil 2023 --km 26000 --tramer 38000 --tramer-yil 2023 \
+  --boyali 2 --degisen 1 --ekspertiz yok
+```
+
+- `--katalog` karşılaştırma setini katalogdan alır (önerilen); `--data <dosya>` ile kendi
+  tarama dosyanı verebilirsin.
+- Oto360 bandı varsa `--oto360 "Piyasa Ortalaması 950.000 - 980.000 TL"` ile ekle.
+- Tramer **tutarı** ve **yılı** ilanda yazmıyorsa uydurulmaz; yıl yoksa en kötü senaryo
+  hesaplanıp rapora yazılır.
+
+### 3) Şehir bazlı arama URL'leri
+
+```bash
+node geo-urls.mjs --iller "İzmir,Manisa,Aydın,İstanbul,Ankara" --providerlar sahibinden,arabam,renewturkiye
+```
+
+Doğrulanmamış desende URL üretilmez; neden üretilmediği yazılır (sessiz filtresiz arama yok).
+
+### 4) Veri toplama ve provider bakımı
+
+```bash
+node catalog.mjs --learn data/market/<tarama>.json      # ilan verisi → katalog
+node catalog.mjs --learn-specs data/catalog/specs        # teknik özellik
+node providers/generic.mjs                               # kayıtlı siteler tablosu
+npm run check:providers                                  # entegrasyon kontrolü (çevrimdışı)
+node provider-check.mjs --from-dump data/provider-dumps/<tarih>.json   # gerçek Chrome dökümüyle
+```
+
+Yeni site eklemek: `config/providers-generic.json`'a tarif yaz (URL, `extraction`, sayfalama,
+`geo`, `verified`, `notes`). Ayrıntı: `docs/VERI-TOPLAMA.md` §13, açık işler: `docs/TODO.md`.

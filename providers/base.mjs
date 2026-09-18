@@ -128,6 +128,23 @@ export class MarketplaceProvider {
     }
     let path = this.buildPath({ ...filters, category });
 
+    // ŞEHİR (city_root): şehir yalnızca kök listede filtreler. Model/marka yolu eklenince
+    // site şehir filtresini düşürür (canlı doğrulandı) → o durumda şehir postfilter'a yazılır.
+    const cityRule = (spec.map || {}).city;
+    const hasModelPath = Boolean(filters.make || filters.model);
+    let cityApplied = false;
+    if (cityRule && cityRule.strategy === 'path' && cityRule.encode === 'city_root' && location && !hasModelPath) {
+      const slugRule = cityRule.slug === 'province' ? location.province : location.province;
+      path = `${spec.city_root_prefix || ''}/${slugify(slugRule)}`;
+      cityApplied = true;
+      applied.push({ filter: 'city', via: 'path-city-root', value: location.province });
+    } else if (cityRule && cityRule.strategy === 'path' && cityRule.encode === 'city_root' && location && hasModelPath) {
+      postfilters.push({
+        filter: 'city',
+        reason: cityRule.note || 'bu sitede şehir filtresi marka/model yoluyla birlikte çalışmıyor → raporda süzülür',
+      });
+    }
+
     // yol segmentine giren filtreleri (make/model) bildir
     for (const key of ['make', 'model']) {
       if (filters[key] != null && filters[key] !== '') {

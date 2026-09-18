@@ -1,7 +1,7 @@
 // finansman.mjs — Akış 1'in çekirdeği:
-// peşinat + aylık bütçe + vade + aylık faiz → ara Missingüst araç bütçe üst sınırı
+// peşinat + aylık bütçe + vade + aylık faiz → aracın üst bütçe sınırı
 // ve tersini (bütçenin gerekli taksiti). Galeriler kendi finansmanını yapabilir;
-// bu yüzden faiz senaryolar banka/kredi + galeri-finansmanı olarak üretilir.
+// bu yüzden faiz senaryoları banka/kredi + galeri finansmanı olarak üretilir.
 
 const TR_FC_MONTHLY_RATE_LIMIT = 0.035;
 
@@ -13,7 +13,7 @@ export function normFcRate(monthlyRate) {
   if (r >= TR_FC_MONTHLY_RATE_LIMIT) {
     return {
       ok: false,
-      note: `aylık faiz %${(r * 100).toFixed(2)} bu \`$>= %3.5 üst bandında — vadeyi kısalt veya başka finansman (banka/kredi kurumu) dene`,
+      note: `aylık faiz %${(r * 100).toFixed(2)} kabul edilen %3,50 sınırının üstünde — vadeyi kısalt veya başka finansman (banka/kredi) dene`,
       rate: r,
     };
   }

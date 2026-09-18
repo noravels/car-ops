@@ -76,6 +76,45 @@ verisi değildir.
 - "Bireysel satıcı" tespiti: satıcı tipi (bireysel/galeri/yetkili) ilandan
   çekilir + davranış sinyalleriyle desteklenir.
 
+## İki ana soru ve cevaplayan modüller (2026-09-19)
+
+Kullanıcı iki tür soru sorar; her sorunun cevabı ayrı modülden gelir. Cevaplar
+**kanıta dayanır**, uydurma yoktur.
+
+| Soru | Modül | Ne yapar |
+|---|---|---|
+| "İstediğim özelliklerde hangi model bana uyar?" | `catalog.mjs --suggest` | Katalogdan (observelen ilanlar + Oto360 teknik verisi) model önerir; her öneride kanıt ilan sayısı, belirsiz kriterler ve medyan fiyat yazar |
+| "Bu araba bu parayı eder mi?" | `valuation-cli.mjs` | Karşılaştırma medyanı + Oto360 bandı → tramer/boya/km/motor düzeltmesi → adil değer, karar bandı ve risk flag'leri |
+
+**Modül haritası:**
+
+| Konu | Dosya |
+|---|---|
+| Araç katalog veri bankası (observelen + sınıflama + teknik özellik) | `catalog.mjs`, `data/catalog/catalog.json`, `data/catalog/factors.json` |
+| Değerleme motoru ve karar bantları | `valuation.mjs` (`valueListing`, `renderValuation`) |
+| Değerleme CLI (raporun D bloğunu üretir) | `valuation-cli.mjs` (`--katalog` ile katalogdan beslenir) |
+| Şehir bazlı doğrulanmış arama URL'leri | `geo-urls.mjs` |
+| Genel (tarif tabanlı) provider | `providers/generic.mjs` + `config/providers-generic.json` |
+| Provider entegrasyon kontrolü | `provider-check.mjs` (`npm run check:providers`, `--live`, `--from-dump`) |
+| Kart metni ayrıştırıcı (tüm text-pattern siteler) | `lib/card-parse.mjs` |
+| Chrome debug (CDP) istemcisi | `lib/cdp.mjs` |
+| Açık işler ve bilinen sınırlar | `docs/TODO.md` |
+| Veri toplama yöntemleri (site başına) | `docs/VERI-TOPLAMA.md` |
+
+**Bu modüller için kurallar:**
+1. Değerlemede adil değer **uydurulmaz**: baz değer ya karşılaştırma setinden ya Oto360
+   bandından gelir; ikisi de yoksa "hesaplanamadı" denir.
+2. Düzeltme katsayıları etiketlidir (`varsayım` / `kestirim`); varsayımla verilen karar
+   "kesin" diye sunulamaz.
+3. Karşılaştırma setine **ilanın kendisi girmemeli**; aynı modelin dizel/benzin sürümleri
+   karışmamalı (motor ailesi filtresi zorunlu).
+4. Şehir filtresi **yalnızca doğrulanmış desenle** kullanılır (`geo-urls.mjs`); doğrulanmamış
+   desende URL üretilmez, filtre "rapor süzmesi" olarak açıkça bildirilir
+   (ör. arabam'da şehir + marka/model birlikte çalışmaz).
+5. Yeni site eklemek kod yazmak değil **tarif yazmaktır** (`config/providers-generic.json`);
+   tablo kazıyan sitelerde `table_layout` zorunludur.
+6. Provider değişikliğinden sonra `npm test` + `npm run check:providers` çalıştırılır.
+
 ## Değerlendirme akışı
 
 ```
@@ -117,5 +156,14 @@ almaz. AI değerlendirir ve önerir; insan karar verir ve action alır.
 
 ## Testler
 
-`node --test tests/` — TDD: önce test, sonra implementasyon. Snapshot append
-işlemleri dosya kilidiyle (writer lock) yapılır.
+```bash
+npm test                    # 202 test: birim + sözleşme + fixture (ağ gerekmez)
+npm run test:providers      # provider sözleşme/fixture testleri
+npm run check:providers     # entegrasyon: tarif doğrulama + fixture ayrıştırma
+npm run check:all           # ikisi birden
+```
+
+TDD kuralı: önce kırmızı test, sonra implementasyon. Yeni provider → tarif + fixture kart
+(`tests/fixtures/provider-cards.json`) + sözleşme testi.
+
+Snapshot append işlemleri dosya kilidiyle (writer lock) yapılır.

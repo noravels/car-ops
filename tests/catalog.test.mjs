@@ -97,3 +97,29 @@ test('catalogStats: katalog özeti', () => {
   assert.equal(s.listings, 6);
   assert.ok(s.sources.includes('observed'));
 });
+
+// --- öneri kalitesi: yanıltıcı sıralama düzeltmeleri (2026-09-19) -------------
+
+test('suggestModels: kasa bilinmiyorsa ceza alır — SUV sorgusunda sedan ilk sıraya çıkmaz', () => {
+  let c = upsertObserved(emptyCatalog(), [
+    // SUV'u BİLİNEN model (az ilan)
+    { make: 'Fiat', model: 'Egea Cross', year: 2023, km: 30000, price_try: 1000000, body: 'SUV', source: 's1', listing_id: 'a1' },
+    { make: 'Fiat', model: 'Egea Cross', year: 2024, km: 20000, price_try: 1100000, body: 'SUV', source: 's1', listing_id: 'a2' },
+    // kasası BİLİNMEYEN model (çok ilan) — eski ağırlıklı
+    ...Array.from({ length: 10 }, (_, i) => ({ make: 'Toyota', model: 'Corolla', year: 1998 + i, km: 200000, price_try: 500000, source: 's1', listing_id: `c${i}` })),
+  ]);
+  const sug = suggestModels(c, { body: 'SUV' });
+  assert.equal(sug[0].model, 'Egea Cross', 'kasa uyumu bilinen model öne geçmeli');
+  const corolla = sug.find((s) => s.model === 'Corolla');
+  assert.ok(corolla.score < sug[0].score, `belirsiz kasa cezalandırılmalı (${corolla.score} < ${sug[0].score})`);
+  assert.ok(corolla.unknown_attributes.includes('bodies'));
+});
+
+test('suggestModels: yıl kriteri DAĞILIM PAYI ile değerlendirilir (en yeni ilan yetmez)', () => {
+  const old = Array.from({ length: 9 }, (_, i) => ({ make: 'Toyota', model: 'Corolla', year: 1995 + i, km: 200000, price_try: 500000, source: 's1', listing_id: `o${i}` }));
+  const c = upsertObserved(emptyCatalog(), [...old, { make: 'Toyota', model: 'Corolla', year: 2024, km: 10000, price_try: 1400000, source: 's1', listing_id: 'new' }]);
+  const sug = suggestModels(c, { year_min: 2021 });
+  const corolla = sug.find((s) => s.model === 'Corolla');
+  const yearReason = corolla.reasons.find((r) => /yıl/.test(r));
+  assert.ok(yearReason.startsWith('✗'), `10 ilanın 1'i yeni → yıl kriteri TUTMAMALI (${yearReason})`);
+});

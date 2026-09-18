@@ -104,6 +104,21 @@ Döküm şablonu `data/provider-dumps/2026-09-18.json`'da örnek olarak duruyor.
 
 ---
 
+## P8 — Kasa bilgisinin yanlış modele yazılması (veri kalitesi)
+
+**Durum:** `açık`
+
+**Ne biliniyor:** Kasa tipi ilan **kart metninden** türetiliyor; varyant satırında geçen "SUV"
+kelimesi yanlış modele yazılabiliyor (ör. `Citroen C3 Aircross` kartı → model `C3`, kasa `SUV`).
+Öneri listesinde "C3 = SUV" görünebiliyor.
+
+**Sonraki adım:** Kasa bilgisini yalnızca (a) ilanın ayrı kasa alanından, (b) Oto360 teknik
+verisinden al; kart metninden türetme yalnızca varyantın kendisi kasa adıysa yapılsın
+(`Aircross`, `Cross`, `SUV` eki model adının parçasıysa modele yazılmalı).
+
+**Kabul kriteri:** `catalog.mjs --suggest --kasa SUV` çıktısında kasa bilgisi yalnızca
+doğrulanabilir modellerde görünür; yanlış atıf testi kırılır.
+
 ## Bilinen sınırlar (todo değil, tasarım sınırı)
 
 - **Sahibinden bot koruması:** sayfa başına ~20 sn; hızlı gezinme "olağan dışı erişim" bloğu tetikler. Aşılmaya çalışılmaz.
@@ -111,3 +126,6 @@ Döküm şablonu `data/provider-dumps/2026-09-18.json`'da örnek olarak duruyor.
 - **otoplus kartında km yok** → `km: null`, `notes` alanında gerekçe.
 - **vava.cars'ta "Sonraki" tıklaması yeni kart getirmiyor** → tek sayfa + "N tane daha göster" ile 29 kart.
 - **Balıkesir** İzmir'in komşusu (repo verisi) ama henüz taranmadı; istenirse `geo-urls.mjs --iller` listesine eklenir.
+- **arabam şehir filtresi marka/model ile birlikte çalışmaz** (canlı doğrulandı 2026-09-18:
+  `/ikinci-el/izmir/fiat-egea` sonuçları Ankara/İstanbul) → model aramasında şehir "rapor süzmesi"
+  olarak bildirilir, yok sayılan parametre üretilmez.

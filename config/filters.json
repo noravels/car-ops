@@ -612,10 +612,11 @@
           "verified": true
         },
         "city": {
-          "strategy": "query",
-          "param": "city",
-          "encode": "plate",
-          "verified": false
+          "strategy": "path",
+          "encode": "city_root",
+          "verified": true,
+          "verified_at": "2026-09-18",
+          "note": "Şehir YALNIZCA şehir kökü listesinde filtreler (/ikinci-el/izmir). Marka/model yolu eklenince şehir filtresi düşer (canlı doğrulandı: /ikinci-el/izmir/fiat-egea sonuçları Ankara/İstanbul) → model aramasında şehir raporda süzülür."
         },
         "keyword": {
           "strategy": "query",
@@ -715,7 +716,8 @@
           "verified": false,
           "reason": "varyant yol eki olarak denenir; doğrulanmadı"
         }
-      }
+      },
+      "city_root_prefix": "/ikinci-el"
     },
     "vavacars": {
       "label": "VavaCars",
