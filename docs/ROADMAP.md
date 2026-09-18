@@ -45,9 +45,34 @@
 
 ## Bekleyen
 
-- ⏳ **otokocikinciel.com** — filtreleri JS tabanlı; arama/filtre URL şeması
-  çıkarılıp provider yazılacak (Otokoç 2. El, kurumsal + garanti avantajı)
-- ⏳ sahibinden **ilan açıklaması okuma** (galeri finansman beyanı: "265 bin peşin
-  36 ay vade" tipi) — rate limit penceresi açılınca yavaş tempoyla
-- ⏳ arabam.com detay sayfası ayrıştırıcı (listede olmayan tramer/boya alanları)
+- ⏳ **otokocikinciel.com** — provider yazıldı (stokta Egea Cross yok); il filtresi JS
+  tabanlı olduğu için süzme rapor aşamasında
+- ⏳ sahibinden **ilan açıklaması okuma** — finansman beyanları alındı (12 ay vade,
+  kredi kartı 3-6-9-12 taksit); daha geniş ilan setinde sürdürülecek
+- ⏳ arabam.com detay sayfası ayrıştırıcısında "Boya, Değişen ve Tramer" sekmesi
+  otomatikleştirilecek (şu an agent tıklaması ile okunuyor)
+
+## Çok-kullanıcılı yapı (2026-09-18)
+
+Proje artık "başka biri de kurabilir" hâlinde:
+
+| Parça | Dosya | İşlev |
+|---|---|---|
+| Konum çözümleme | `location.mjs` + `config/locations/tr-provinces.json` | 81 il, kara komşuluğu, feribot bağlantıları, plaka kodları; "X ili + 1/2 çevre" |
+| Intake akışı | `modes/intake.md` | Sorularla profili doldurur (`config/profile.yml`), varsayım uydurmaz |
+| Arama akışı | `modes/ara.md` | Konum → URL → toplama → tarama → aday raporu → watchlist |
+| Arama URL üretici | `search-urls.mjs` + `config/search-params.json` | Provider başına parametre şeması; doğrulanmamış parametre açıkça işaretli |
+| Kurulum kontrolü | `doctor.mjs` | Eksik profil alanları, şablon içeriği, eksik dosyalar |
+| Profil şablonu | `templates/profile.template.yml` | Kullanıcı kopyalayıp doldurur |
+| Market tanımları | `config/markets.yml` | TR tam; yeni market iskeleti (para birimi, konum modeli, provider listesi) |
+| Kurulum rehberi | `docs/KURULUM.md` | Sıfırdan kurulum + sorun giderme tablosu |
+
+Test sayısı: 78 (konum 9, arama URL 7, doctor 6, diğer çekirdek 56).
+
+## Bekleyen (çok-kullanıcılı)
+
+- AGENTS.md akış tablosunun güncellenmesi (korunan dosya — kullanıcı onayı gerekiyor)
+- Yeni market örneği (ör. `modes/pl/` + provider) ile soyutlamanın gerçek testi
+- `search-params.json` parametrelerinin sahada doğrulanması (agent browser ile tek tek)
+
 
