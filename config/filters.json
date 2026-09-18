@@ -283,7 +283,16 @@
         "sort": {
           "strategy": "query",
           "param": "sorting",
-          "verified": false
+          "verified": true,
+          "value_map": {
+            "fiyat-artan": "price_asc",
+            "fiyat-azalan": "price_desc",
+            "tarih-yeni": "date_desc",
+            "km-dusuk": "km-nu_asc",
+            "km-yuksek": "km-nu_desc",
+            "yil-yeni": "yil-nu_desc",
+            "yil-eski": "yil-nu_asc"
+          }
         },
         "paging_size": {
           "strategy": "query",
@@ -291,75 +300,204 @@
           "verified": true
         },
         "gearbox": {
-          "strategy": "postfilter",
-          "reason": "parametre adı doğrulanmadı; filtre URL'de uygulanır"
+          "strategy": "query",
+          "param": "a6",
+          "verified": true,
+          "value_map": {
+            "manuel": "32467",
+            "otomatik": "32466"
+          }
         },
         "fuel": {
-          "strategy": "postfilter",
-          "reason": "parametre adı doğrulanmadı"
+          "strategy": "query",
+          "param": "a17",
+          "verified": true,
+          "value_map": {
+            "benzin": "21",
+            "dizel": "22",
+            "lpg": "50276",
+            "hibrit": "1312756",
+            "elektrik": "1202111"
+          }
         },
         "body": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a8",
+          "verified": true,
+          "value_map": {
+            "sedan": "250",
+            "hatchback": "62068",
+            "sw": "19",
+            "coupe": "48626",
+            "cabrio": "240",
+            "mpv": "1197465"
+          }
         },
         "color": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a3",
+          "verified": true,
+          "value_map": {
+            "bej": "655354",
+            "beyaz": "33611",
+            "bordo": "33617",
+            "fume": "658878",
+            "gri": "33612",
+            "gumus": "40948",
+            "kahverengi": "33621",
+            "kirmizi": "33613",
+            "lacivert": "33615",
+            "mavi": "33610",
+            "mor": "33624",
+            "pembe": "40167",
+            "sari": "33614",
+            "siyah": "33616"
+          }
         },
         "seller_type": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a706",
+          "verified": true,
+          "value_map": {
+            "bireysel": "32474",
+            "galeri": "32475",
+            "yetkili-bayi": "1160380"
+          }
         },
         "trade_in": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "exchange",
+          "verified": true,
+          "true_value": "yes",
+          "false_value": "no"
         },
         "heavy_damage": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a116445",
+          "verified": true,
+          "true_value": "1263353",
+          "false_value": "1263354"
         },
         "painted_parts_max": {
-          "strategy": "postfilter"
+          "strategy": "flag",
+          "param": "unpaintedParts",
+          "enable_when": {
+            "filter": "painted_parts_max",
+            "equals": 0
+          },
+          "fixed_value": "true",
+          "verified": true
         },
         "condition": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a113987",
+          "verified": true,
+          "value_map": {
+            "ikinci-el": "1252385",
+            "sifir": "1252387"
+          }
         },
         "engine_cc_min": {
-          "strategy": "postfilter"
+          "strategy": "postfilter",
+          "reason": "site bant bazlı (a1864: 1301-1600 cm3 gibi); kesin min raporda süzülür"
         },
         "engine_cc_max": {
-          "strategy": "postfilter"
+          "strategy": "postfilter",
+          "reason": "site bant bazlı (a1864)"
         },
         "power_hp_min": {
-          "strategy": "postfilter"
+          "strategy": "postfilter",
+          "reason": "site bant bazlı (a2320: 76-100 HP gibi)"
         },
         "power_hp_max": {
-          "strategy": "postfilter"
+          "strategy": "postfilter",
+          "reason": "site bant bazlı (a2320)"
         },
         "drive": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a9213",
+          "verified": true,
+          "value_map": {
+            "onden": "136269",
+            "arkadan": "136270",
+            "4x4": "136271"
+          }
         },
         "service_warranty": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a4054",
+          "verified": true,
+          "true_value": "72906",
+          "false_value": "72907"
         },
         "plate_origin": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "a9620",
+          "verified": true,
+          "value_map": {
+            "tr": "143038",
+            "yabanci": "142778"
+          }
         },
         "listed_within_days": {
-          "strategy": "postfilter"
+          "strategy": "query",
+          "param": "date",
+          "verified": true,
+          "band_map": [
+            {
+              "max": 1,
+              "value": "1day"
+            },
+            {
+              "max": 3,
+              "value": "3days"
+            },
+            {
+              "max": 7,
+              "value": "7days"
+            },
+            {
+              "max": 15,
+              "value": "15days"
+            },
+            {
+              "max": 30,
+              "value": "30days"
+            }
+          ]
         },
         "has_photo": {
-          "strategy": "postfilter"
+          "strategy": "postfilter",
+          "reason": "sitede fotoğraf bayrağı ayrı parametre değil"
         },
         "has_video": {
-          "strategy": "postfilter"
+          "strategy": "flag",
+          "param": "hasVideo",
+          "enable_when": {
+            "filter": "has_video",
+            "equals": true
+          },
+          "fixed_value": "true",
+          "verified": true
         },
         "km_min": {
           "strategy": "postfilter"
         },
         "range_km_min": {
-          "strategy": "unsupported"
+          "strategy": "postfilter",
+          "reason": "menzil filtresi EV ilanları için; URL parametresi doğrulanmadı"
         },
         "fast_charge": {
-          "strategy": "unsupported"
+          "strategy": "query",
+          "param": "a121200",
+          "verified": true,
+          "value_map": {
+            "true": "1308740"
+          }
         },
         "seats_min": {
-          "strategy": "postfilter"
+          "strategy": "postfilter",
+          "reason": "sitede koltuk sayısı filtresi URL parametresi olarak bulunamadı"
         },
         "doors": {
           "strategy": "postfilter"
@@ -368,7 +506,8 @@
           "strategy": "postfilter"
         },
         "town": {
-          "strategy": "postfilter"
+          "strategy": "postfilter",
+          "reason": "ilçe filtresi (address_town) doğrulanmadı"
         },
         "make": {
           "strategy": "path",
@@ -382,6 +521,20 @@
           "strategy": "postfilter",
           "reason": "varyant süzmesi raporda (yol şeması varyant içermiyor)"
         }
+      },
+      "notes": [
+        "Tüm parametreler canlı filtre paneli linklerinden doğrulandı (2026-09-18): a6=vites, a17=yakıt, a3=renk, a8=kasa, a706=kimden, a116445=ağır hasar, a4054=servis garantisi, exchange=takas, date=ilan tarihi, a9620=plaka, a9213=çekiş, a113987=durum, a109_max=değişen parça, unpaintedParts=boyasız, hasVideo/hasClip=video, sorting=sıralama",
+        "Motor hacmi (a1864) ve güç (a2320) site tarafında BANT bazlıdır; kesin min/max raporda süzülür.",
+        "Model yolu Egea için /fiat-egea; '/fiat-egea-cross' diye bir yol YOK (404 döner).",
+        "Egea Cross sahibinden'de ayrı model yolu DEĞİL (/fiat-egea-cross → 404). Doğru yol: /fiat-egea + query_text=cross (kelime araması). a8 kasa listesinde 'crossover' yok; Egea Cross 'Sedan' olarak sınıflanıyor."
+      ],
+      "model_path_overrides": {
+        "egea cross": "egea",
+        "egea-cross": "egea"
+      },
+      "keyword_for_variant": {
+        "crossover": "cross",
+        "cross": "cross"
       }
     },
     "arabam": {

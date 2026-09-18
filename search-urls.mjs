@@ -24,6 +24,20 @@ export function normalizeFilters(input = {}) {
     f.year_min = f.year_min ?? lim.year_min ?? null;
     f.year_max = f.year_max ?? lim.year_max ?? null;
     f.km_max = f.km_max ?? lim.km_max ?? null;
+    // bütçe → fiyat üst sınırı (peşin: toplam bütçe; kredi: finansman.mjs ile araç üst limiti)
+    const b = p.budget || {};
+    if (f.price_max == null) {
+      if (b.mode === 'pesin' && b.total_max_try != null) {
+        f.price_max = b.total_max_try;
+      } else if (b.mode === 'kredi' && b.down_payment_try != null && b.monthly_max_try != null) {
+        const rate = b.monthly_rate_max ?? 0.035;
+        const months = b.months ?? 24;
+        const i = rate;
+        const loan = i <= 0 ? b.monthly_max_try * months : b.monthly_max_try * (1 - Math.pow(1 + i, -months)) / i;
+        f.price_max = Math.floor(b.down_payment_try + loan);
+        f._budget_cap_note = `peşinat ${b.down_payment_try} + ${months}×${b.monthly_max_try} (aylık %${(rate*100).toFixed(2)}) → üst limit ${f.price_max}`;
+      }
+    }
     if (lim.gearbox && lim.gearbox !== 'any') f.gearbox = f.gearbox ?? lim.gearbox;
     if (lim.fuel && lim.fuel !== 'any') f.fuel = f.fuel ?? lim.fuel;
     if (lim.body && lim.body !== 'any') f.body = f.body ?? lim.body;

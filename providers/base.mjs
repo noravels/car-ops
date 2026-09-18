@@ -98,7 +98,7 @@ export class MarketplaceProvider {
     const unsupported = [];
     for (const [key, rule] of Object.entries(map)) {
       if (!rule) continue;
-      if (rule.strategy === 'query' || rule.strategy === 'path') {
+      if (rule.strategy === 'query' || rule.strategy === 'path' || rule.strategy === 'flag') {
         (rule.verified === false ? native_unverified : native).push(key);
       } else if (rule.strategy === 'postfilter') postfilter.push(key);
       else if (rule.strategy === 'unsupported') unsupported.push(key);
@@ -172,9 +172,64 @@ export class MarketplaceProvider {
         }
       }
       if (value == null || value === '') continue;
-      if (Array.isArray(value)) value = value.join(',');
-      url.searchParams.set(rule.param, String(value));
-      applied.push({ filter: key, via: 'query', param: rule.param, value: String(value), verified: rule.verified !== false });
+
+      // boolean filtreler: true_value / false_value ile kodlanır
+      let siteValue = value;
+      if (typeof value === 'boolean') {
+        const mapped = value ? rule.true_value : rule.false_value;
+        if (mapped == null) {
+          postfilters.push({ filter: key, reason: 'sitede boolean karşılığı yok → rapor süzmesi' });
+          continue;
+        }
+        siteValue = mapped;
+      } else if (rule.value_map) {
+        const mapped = rule.value_map[String(value).toLowerCase()] ?? rule.value_map[value];
+        if (mapped == null) {
+          // site bu değeri desteklemiyor → yanlış kod göndermek yerine rapora devret
+          postfilters.push({ filter: key, reason: `site bu değeri desteklemiyor (${key}=${value}) → rapor süzmesi` });
+          continue;
+        }
+        siteValue = mapped;
+      } else if (rule.band_map) {
+        const n = Number(value);
+        const band = rule.band_map
+          .slice()
+          .sort((a, b) => a.max - b.max)
+          .find((b) => n <= b.max);
+        if (!band) {
+          postfilters.push({ filter: key, reason: 'değer site bantlarının dışında → rapor süzmesi' });
+          continue;
+        }
+        siteValue = band.value;
+      }
+
+      if (Array.isArray(siteValue)) siteValue = siteValue.join(',');
+      url.searchParams.set(rule.param, String(siteValue));
+      applied.push({
+        filter: key,
+        via: 'query',
+        param: rule.param,
+        value: String(siteValue),
+        requested: String(value),
+        verified: rule.verified !== false,
+      });
+    }
+
+    // 3b) koşullu bayrak filtreleri (ör. painted_parts_max = 0 → unpaintedParts=true)
+    for (const [key, rule] of Object.entries(spec.map || {})) {
+      if (rule.strategy !== 'flag' || !rule.enable_when) continue;
+      const cond = rule.enable_when;
+      const condValue = filters[cond.filter];
+      if (condValue == null) continue;
+      const matches = 'equals' in cond ? condValue === cond.equals : condValue === true;
+      if (!matches) {
+        if (condValue !== cond.equals) {
+          postfilters.push({ filter: key, reason: `${cond.filter}=${condValue} için site bayrağı yok → rapor süzmesi` });
+        }
+        continue;
+      }
+      url.searchParams.set(rule.param, rule.fixed_value != null ? String(rule.fixed_value) : 'true');
+      applied.push({ filter: key, via: 'flag', param: rule.param, value: String(rule.fixed_value ?? 'true'), verified: rule.verified !== false });
     }
 
     // 4) site desteklemeyen ama raporda süzülebilen → postfilter; hiç desteklenmeyen → unsupported
@@ -189,7 +244,7 @@ export class MarketplaceProvider {
       }
       if (rule.strategy === 'postfilter') postfilters.push({ filter: key, reason: rule.reason || 'site URL filtresi yok → raporda süzülür' });
       else if (rule.strategy === 'unsupported') unsupported.push({ filter: key, reason: rule.reason || 'bu sitede desteklenmiyor' });
-      else if (rule.strategy === 'query' || rule.strategy === 'path') {
+      else if (rule.strategy === 'query' || rule.strategy === 'path' || rule.strategy === 'flag') {
         const already = applied.some((a) => a.filter === key);
         if (!already) {
           if (key === 'city' && !location) postfilters.push({ filter: key, reason: 'konum bilgisi verilmedi → rapor süzmesi' });
@@ -205,6 +260,14 @@ export class MarketplaceProvider {
       }
     }
 
+    // postfilter'ları filtre bazında tekilleştir (ilk/en bilgilendirici gerekçe korunur)
+    const seenPost = new Set();
+    const uniquePostfilters = postfilters.filter((p) => {
+      if (seenPost.has(p.filter)) return false;
+      seenPost.add(p.filter);
+      return true;
+    });
+
     // URL'in taşıdığı "süzülebilir" filtreler (make/model yol segmenti hariç):
     // bunlar yoksa site içi/rapor süzmesi gerekir.
     const refinable = applied.filter((a) => a.via === 'query' || a.via === 'path-suffix');
@@ -214,7 +277,7 @@ export class MarketplaceProvider {
       label: this.label,
       url: url.toString(),
       applied,
-      postfilters,
+      postfilters: uniquePostfilters,
       unsupported,
       verified: !!spec.verified,
       filter_in_page: refinable.length === 0,
@@ -224,11 +287,15 @@ export class MarketplaceProvider {
 
   buildPath({ make, model, category }) {
     const spec = this.spec;
+    // bazı sitelerde model adı yol olarak yoktur (ör. sahibinden'de Egea Cross → /fiat-egea)
+    const overrides = spec.model_path_overrides || {};
+    const key = String(model || '').toLocaleLowerCase('tr');
+    const effectiveModel = overrides[key] || model;
     return (spec.path || '/')
       .replace('{category}', category || '')
       .replace(/\/{2,}/g, '/')
       .replace('{make-slug}', slugify(make))
-      .replace('{model-slug}', slugify(model))
+      .replace('{model-slug}', slugify(effectiveModel))
       .replace('{Make}', encodeURIComponent(String(make || '')))
       .replace('{Model}', encodeURIComponent(String(model || '')));
   }

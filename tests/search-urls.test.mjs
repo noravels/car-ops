@@ -44,18 +44,26 @@ test('buildSearchUrls: 4 provider için plan üretir', () => {
   }
 });
 
-test('sahibinden planı: doğrulanmış URL filtreleri + rapor süzmesi listesi', () => {
+test('sahibinden planı: doğrulanmış URL filtreleri (artık vites/yakıt/kasa/satıcı da URL\'de)', () => {
   const sb = buildSearchUrls({ profile: PROFILE }).find((u) => u.provider === 'sahibinden');
-  assert.match(sb.url, /fiat-egea-cross/);
+  assert.match(sb.url, /fiat-egea-cross|fiat-egea/);
   assert.match(sb.url, /a5_min=2022/);
   assert.match(sb.url, /a4_max=120000/);
   assert.match(sb.url, /a109_max=1/);
   assert.match(sb.url, /address_city=41/);
-  // vites/yakıt sahibinden'de rapor süzmesine düşer (parametre doğrulanmadı)
+  // vites artık gerçek parametre (a6), kasa tipi a8 → rapor süzmesine düşmemeli
+  assert.match(sb.url, /a6=32466/);
   const pf = sb.postfilters.map((p) => p.filter);
-  assert.ok(pf.includes('gearbox'));
-  assert.ok(pf.includes('body'));
-  assert.match(sb.plan, /rapor süzmesi/);
+  assert.ok(!pf.includes('gearbox'), 'gearbox artık URL filtresi olmalı');
+  // hâlâ rapor süzmesinde olanlar (site bant bazlı / parametre yok)
+  // boya sınırı 0 değil → site bayrağı yok, rapor süzmesinde görünmeli
+  assert.ok(pf.includes('painted_parts_max'), 'boyalı parça sınırı rapor süzmesinde olmalı');
+  // kasa tipi "crossover" sahibinden a8 listesinde yok → uydurma kod göndermek yerine rapora düşer
+  assert.ok(pf.includes('body'), 'desteklenmeyen enum değeri rapor süzmesine düşmeli');
+  // tekilleştirme: aynı filtre iki kez bildirilmemeli
+  const dupes = pf.filter((k, i) => pf.indexOf(k) !== i);
+  assert.deepEqual(dupes, [], 'postfilter listesi tekilleştirilmeli');
+  assert.match(sb.plan, /gearbox=32466/);
 });
 
 test('arabam planı: kasa tipi kategori yolunu, vites yol ekini belirler', () => {
